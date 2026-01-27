@@ -207,3 +207,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .section-title {
+    @apply mb-3 text-xl font-semibold;
+  }
+
+  .tech-badge {
+    @apply px-3 py-1
+    flex items-center gap-1
+    text-base font-medium text-muted-foreground
+    rounded-md
+    transition-[gap,box-shadow,transform]
+    duration-200
+    ease-in-out
+    hover:gap-2
+    hover:shadow-sm
+    hover:border-chart-5;
+  }
+}

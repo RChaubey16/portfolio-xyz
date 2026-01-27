@@ -1,4 +1,5 @@
 import Profile from "@/components/Profile";
+import Technologies from "@/components/Technologies";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         {/* Intro */}
         <Profile />
 
+        <Technologies />
 
         {/* About (Description + Actions) */}
 

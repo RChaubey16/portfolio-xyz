@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtTree.variable} ${geistMono.variable} antialiased max-w-4xl mx-auto`}
+        className={`${figtTree.variable} ${geistMono.variable} antialiased max-w-3xl mx-auto px-4 lg:px-0`}
       >
         <ThemeProvider
           attribute="class"
