@@ -1,6 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
+import TechCard from "./TechCard";
 
 export default function Technologies() {
   const tech = [
@@ -157,19 +155,13 @@ export default function Technologies() {
   ];
 
   return (
-    <>
+    <section id="technologies">
       <h2 className="section-title">Stack</h2>
-
       <div className="flex flex-wrap gap-2">
         {tech.map((t) => (
-          <Link key={t.name} href={t.href} target="_blank">
-            <Badge variant="outline" className="tech-badge">
-              <Image src={t.icon} alt={t.name} width={20} height={20} />
-              <span>{t.name}</span>
-            </Badge>
-          </Link>
+          <TechCard key={t.name} name={t.name} logoSrc={t.icon} href={t.href} />
         ))}
       </div>
-    </>
+    </section>
   );
 }

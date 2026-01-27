@@ -173,6 +173,8 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 
+  /* Custom Styles */
+  --color-manatee: #909092;
   --animate-slide-in: slide-in 0.5s ease-out forwards;
   --animate-slide-out: slide-out 0.5s ease-in forwards;
 }
@@ -206,16 +208,20 @@
   body {
     @apply bg-background text-foreground;
   }
+  section {
+    @apply mt-12;
+  }
 }
 
 @layer utilities {
   .section-title {
-    @apply mb-3 text-xl font-semibold;
+    @apply mb-4 text-xl font-semibold;
   }
 
   .tech-badge {
     @apply px-3 py-1
     flex items-center gap-1
+    bg-card
     text-base font-medium text-muted-foreground
     rounded-md
     transition-[gap,box-shadow,transform]
@@ -224,5 +230,27 @@
     hover:gap-2
     hover:shadow-sm
     hover:border-chart-5;
+  }
+
+  .para {
+    @apply font-sans text-base leading-6 text-gray-600 dark:text-manatee;
+  }
+}
+
+@layer components {
+  .experience-accordion {
+    .accordion-header {
+      @apply w-full flex justify-between items-center font-sans font-semibold hover:no-underline text-left cursor-pointer;
+
+      .company {
+        @apply font-sans text-lg font-semibold text-gray-800 dark:text-white;
+      }
+
+      .role,
+      .duration,
+      .location {
+        @apply font-sans text-sm font-normal text-gray-600 dark:text-manatee;
+      }
+    }
   }
 }

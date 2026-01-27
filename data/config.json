@@ -1,0 +1,536 @@
+{
+  "nav": {
+    "portfolio_github_repo": "https://github.com/RChaubey16/ruturaj-xyz"
+  },
+  "tech": [
+    {
+      "id": "typescript",
+      "tech": "TypeScript",
+      "techHref": "https://www.typescriptlang.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+      },
+      "imageAltText": "TypeScript logo"
+    },
+    {
+      "id": "javascript",
+      "tech": "JavaScript",
+      "techHref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/JavaScript.svg"
+      },
+      "imageAltText": "JavaScript logo"
+    },
+    {
+      "id": "go",
+      "tech": "Go",
+      "techHref": "https://go.dev",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Go.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Go.svg"
+      },
+      "imageAltText": "Go lang logo"
+    },
+    {
+      "id": "python",
+      "tech": "Python",
+      "techHref": "https://www.python.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Python.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Python.svg"
+      },
+      "imageAltText": "Python logo"
+    },
+    {
+      "id": "php",
+      "tech": "PHP",
+      "techHref": "https://www.php.net",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+      },
+      "imageAltText": "PHP logo"
+    },
+    {
+      "id": "fast-api",
+      "tech": "Fast API",
+      "techHref": "https://fastapi.tiangolo.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
+      },
+      "imageAltText": "Fast API logo"
+    },
+    {
+      "id": "nodejs",
+      "tech": "Node.js",
+      "techHref": "https://nodejs.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Node.js.svg"
+      },
+      "imageAltText": "Node.js logo"
+    },
+    {
+      "id": "nextjs",
+      "tech": "Next.js",
+      "techHref": "https://nextjs.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+        "dark": "/images/tech/nextjs-dark-icon.png"
+      },
+      "imageAltText": "Next.js logo"
+    },
+    {
+      "id": "react",
+      "tech": "React",
+      "techHref": "https://react.dev",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+      },
+      "imageAltText": "React logo"
+    },
+    {
+      "id": "gatsby",
+      "tech": "Gatsby",
+      "techHref": "https://www.gatsbyjs.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
+      },
+      "imageAltText": "Gatsby logo"
+    },
+    {
+      "id": "tailwindcss",
+      "tech": "Tailwind CSS",
+      "techHref": "https://tailwindcss.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+      },
+      "imageAltText": "Tailwind CSS logo"
+    },
+    {
+      "id": "sass-lang",
+      "tech": "Sass",
+      "techHref": "https://sass-lang.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Sass.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Sass.svg"
+      },
+      "imageAltText": "Sass logo"
+    },
+    {
+      "id": "shadcnui",
+      "tech": "Shadcn UI",
+      "techHref": "https://ui.shadcn.com",
+      "imageUrl": {
+        "light": "/images/tech/shadcn-light-icon.png",
+        "dark": "/images/tech/shadcn-dark-icon.png"
+      },
+      "imageAltText": "Shadcn UI logo"
+    },
+    {
+      "id": "redux",
+      "tech": "Redux",
+      "techHref": "https://redux.js.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Redux.svg"
+      },
+      "imageAltText": "Redux logo"
+    },
+    {
+      "id": "graphql",
+      "tech": "GraphQL",
+      "techHref": "https://graphql.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
+      },
+      "imageAltText": "GraphQL logo"
+    },
+    {
+      "id": "mysql",
+      "tech": "MySQL",
+      "techHref": "https://www.mysql.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
+      },
+      "imageAltText": "MySQL logo"
+    },
+    {
+      "id": "postgresql",
+      "tech": "PostgreSQL",
+      "techHref": "https://www.postgresql.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+      },
+      "imageAltText": "PostgreSQL logo"
+    },
+    {
+      "id": "mongodb",
+      "tech": "MongoDB",
+      "techHref": "https://www.mongodb.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/MongoDB.svg"
+      },
+      "imageAltText": "MongoDB logo"
+    },
+    {
+      "id": "supabase",
+      "tech": "Supabase",
+      "techHref": "https://supabase.com",
+      "imageUrl": {
+        "light": "/images/tech/supabase-icon.png",
+        "dark": "/images/tech/supabase-icon.png"
+      },
+      "imageAltText": "Supabase logo"
+    },
+    {
+      "id": "drupal",
+      "tech": "Drupal",
+      "techHref": "https://www.drupal.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+      },
+      "imageAltText": "Drupal logo"
+    },
+    {
+      "id": "tanstack",
+      "tech": "Tanstack Start",
+      "techHref": "https://tanstack.com/",
+      "imageUrl": {
+        "light": "https://tanstack.com/images/logos/logo-color-100.png",
+        "dark": "https://tanstack.com/images/logos/logo-color-100.png"
+      },
+      "imageAltText": "Tanstack start logo"
+    },
+    {
+      "id": "sanity",
+      "tech": "Sanity",
+      "techHref": "https://www.sanity.io",
+      "imageUrl": {
+        "light": "/images/tech/sanity-icon.png",
+        "dark": "/images/tech/sanity-icon.png"
+      },
+      "imageAltText": "Sanity logo"
+    },
+    {
+      "id": "docker",
+      "tech": "Docker",
+      "techHref": "https://www.docker.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+      },
+      "imageAltText": "Docker logo"
+    },
+    {
+      "id": "git",
+      "tech": "Git",
+      "techHref": "https://git-scm.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Git.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Git.svg"
+      },
+      "imageAltText": "Git logo"
+    },
+    {
+      "id": "postman",
+      "tech": "Postman",
+      "techHref": "https://postman.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Postman.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Postman.svg"
+      },
+      "imageAltText": "Postman logo"
+    },
+    {
+      "id": "figma",
+      "tech": "Figma",
+      "techHref": "https://www.figma.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+      },
+      "imageAltText": "Figma logo"
+    },
+    {
+      "id": "vercel",
+      "tech": "Vercel",
+      "techHref": "https://www.vercel.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+        "dark": "/images/tech/vercel-light.png"
+      },
+      "imageAltText": "Vercel logo"
+    },
+    {
+      "id": "cloudflare",
+      "tech": "Cloudflare",
+      "techHref": "https://www.cloudflare.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+      },
+      "imageAltText": "Cloudflare logo"
+    },
+    {
+      "id": "claude",
+      "tech": "Claude",
+      "techHref": "https://claude.ai",
+      "imageUrl": {
+        "light": "/images/tech/claude-icon.png",
+        "dark": "/images/tech/claude-icon.png"
+      },
+      "imageAltText": "Claude logo"
+    }
+  ],
+  "experience": {
+    "full_stack_engineer": {
+      "work": [
+        "Architected and led the front-end development for a UNICEF-affiliated product using Next.js, focusing on performance, scalability, and clean UX.",
+        "Explored and implemented AI technologies, building proof-of-concept applications to strengthen understanding of applied AI and emerging trends.",
+        "Led a web development internship program, training and mentoring fresh graduates into industry-ready full stack engineers.",
+        "Conducted internal technical sessions, demonstrating Headless Drupal starter kits like Octahedriod to enhance the team's technical proficiency.",
+        "Contributed to Drupal Open Source, delivering code solutions and improvements for community-reported issues."
+      ],
+      "tech": [
+        {
+          "name": "Next.js",
+          "href": "https://nextjs.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+          "darkLogoSrc": "/images/tech/nextjs-dark-icon.png"
+        },
+        {
+          "name": "Tailwind CSS",
+          "href": "https://tailwindcss.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+        },
+        {
+          "id": "sass-lang",
+          "name": "Sass",
+          "href": "https://sass-lang.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Sass.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Sass.svg"
+        },
+        {
+          "name": "Drupal",
+          "href": "https://www.drupal.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+        },
+        {
+          "name": "PHP",
+          "href": "https://www.php.net",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+        },
+        {
+          "name": "Fast API",
+          "href": "https://fastapi.tiangolo.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
+        },
+        {
+          "name": "Python",
+          "href": "https://www.python.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Python.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Python.svg"
+        },
+        {
+          "name": "Supabase",
+          "href": "https://supabase.com",
+          "logoSrc": "/images/tech/supabase-icon.png",
+          "darkLogoSrc": "/images/tech/supabase-icon.png"
+        },
+        {
+          "name": "Postman",
+          "href": "https://postman.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Postman.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Postman.svg"
+        },
+        {
+          "name": "Figma",
+          "href": "https://www.figma.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+        },
+        {
+          "name": "Cloudflare",
+          "href": "https://www.cloudflare.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+        },
+        {
+          "name": "Vercel",
+          "href": "https://www.vercel.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+          "darkLogoSrc": "/images/tech/vercel-light.png"
+        }
+      ]
+    },
+    "associate_engineer": {
+      "work": [
+        "Developed and deployed a full-featured e-commerce platform for a U.S.-based client using Drupal Commerce and Gatsby.",
+        "Optimized performance across the stack, cutting page load times by 25% through improved caching, build optimization, and API tuning.",
+        "Engineered robust integrations between Gatsby and Drupal Commerce, enabling seamless data synchronization across product listings.",
+        "Led internal training sessions on React and Headless Drupal architecture, upskilling the team on modern web development practices."
+      ],
+      "tech": [
+        {
+          "name": "React",
+          "href": "https://react.dev",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/React.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/React.svg"
+        },
+        {
+          "name": "Redux",
+          "href": "https://redux.js.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Redux.svg"
+        },
+        {
+          "name": "Gatsby",
+          "href": "https://www.gatsbyjs.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "href": "https://tailwindcss.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+        },
+        {
+          "name": "Drupal",
+          "href": "https://www.drupal.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+        },
+        {
+          "name": "PHP",
+          "href": "https://www.php.net",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+        },
+        {
+          "name": "MySQL",
+          "href": "https://www.mysql.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
+        },
+        {
+          "name": "GraphQL",
+          "href": "https://graphql.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
+        },
+        {
+          "name": "Figma",
+          "href": "https://www.figma.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+        }
+      ]
+    },
+    "intern": {
+      "work": [
+        "Integrated React with Drupal CMS to enhance content workflows and elevate overall site interactivity.",
+        "Contributed patches to the Drupal Open Source community and participated in strategic development initiatives.",
+        "Developed hands-on expertise in Drupal CMS (module and theme development), Headless Drupal, and working with REST and JSON APIs."
+      ],
+      "tech": [
+        {
+          "name": "Drupal",
+          "href": "https://www.drupal.org",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+        },
+        {
+          "name": "PHP",
+          "href": "https://www.php.net",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+        },
+        {
+          "name": "React",
+          "href": "https://react.dev",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/React.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/React.svg"
+        },
+        {
+          "name": "Figma",
+          "href": "https://www.figma.com",
+          "logoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+        }
+      ]
+    }
+  },
+  "profile": {
+    "name": "Ruturaj",
+    "nameInMorseCode": ".-. ..- - ..- .-. .- .---",
+    "socials": [
+      {
+        "name": "GitHub",
+        "href": "https://github.com/RChaubey16",
+        "logoSrc": "/images/socials/github-logo.png",
+        "darkLogoSrc": "/images/socials/github-logo.png"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://www.linkedin.com/in/ruturaj-chaubey-b453b41b1",
+        "logoSrc": "/images/socials/linkedin-logo.png",
+        "darkLogoSrc": "/images/socials/linkedin-logo.png"
+      },
+      {
+        "name": "X (Twitter)",
+        "href": "https://x.com/RChaubey16",
+        "logoSrc": "/images/socials/x-logo.png",
+        "darkLogoSrc": "/images/socials/x-logo.png"
+      },
+      {
+        "name": "Drupal",
+        "href": "https://www.drupal.org/u/ruturaj-chaubey",
+        "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+        "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+      }
+    ],
+    "techStacks": [
+      {
+        "name": "TypeScript",
+        "href": "https://www.typescriptlang.org"
+      },
+      {
+        "name": "Next.js",
+        "href": "https://nextjs.org"
+      },
+      {
+        "name": "React",
+        "href": "https://react.dev"
+      },
+      {
+        "name": "Go",
+        "href": "https://go.dev"
+      },
+      {
+        "name": "Node.js",
+        "href": "https://nodejs.org"
+      },
+      {
+        "name": "Drupal",
+        "href": "https://www.drupal.org"
+      }
+    ]
+  }
+}

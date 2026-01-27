@@ -1,4 +1,5 @@
 import Profile from "@/components/Profile";
+import Experience from "@/components/Experience";
 import Technologies from "@/components/Technologies";
 
 export default function Home() {
@@ -8,13 +9,13 @@ export default function Home() {
         {/* Intro */}
         <Profile />
 
-        <Technologies />
-
         {/* About (Description + Actions) */}
 
         {/* Socials + GitHub chart */}
 
         {/* Experience */}
+        <Experience />
+        <Technologies />
 
         {/* Projects */}
 
