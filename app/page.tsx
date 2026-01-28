@@ -1,6 +1,7 @@
 import Profile from "@/components/About/Profile";
 import Experience from "@/components/Experience/Experience";
 import Technologies from "@/components/Technologies";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         {/* Contact */}
 
         {/* Footer - Quote */}
+        <Footer />
       </main>
     </div>
   );
