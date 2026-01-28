@@ -5,8 +5,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
-import TechUsed from "./TechUsed";
-import config from "../data/config.json";
+import TechUsed from "../TechUsed";
+import config from "../../data/config.json";
 
 const experience = config.experience;
 

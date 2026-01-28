@@ -5,11 +5,11 @@ import {
   Eye,
   Mail,
   MapPin,
-  Phone,
 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
-import RoleSlider from "./animation/Roles";
-import InfoIconCard from "./About/InfoIconCard";
+import RoleSlider from "../animation/Roles";
+import InfoIconCard from "./InfoIconCard";
+import SocialCard from "../SocialCard";
 
 const profile = {
   name: "Ruturaj",
@@ -80,6 +80,14 @@ export default function Profile() {
           title={time}
           linkText=""
           linkHref=""
+        />
+      </div>
+
+      <div className="mt-4">
+        <SocialCard
+          name={"LinkedIn"}
+          logoSrc={"/icons/social/LinkedIn.svg"}
+          href={"https://www.linkedin.com/in/ruturaj-chaubey/"}
         />
       </div>
     </>

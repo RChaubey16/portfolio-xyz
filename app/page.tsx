@@ -1,5 +1,5 @@
-import Profile from "@/components/Profile";
-import Experience from "@/components/Experience";
+import Profile from "@/components/About/Profile";
+import Experience from "@/components/Experience/Experience";
 import Technologies from "@/components/Technologies";
 
 export default function Home() {
