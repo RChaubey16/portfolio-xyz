@@ -89,6 +89,11 @@ export default function Profile() {
           logoSrc={"/icons/social/LinkedIn.svg"}
           href={"https://www.linkedin.com/in/ruturaj-chaubey/"}
         />
+        <SocialCard
+          name={"LinkedIn"}
+          logoSrc={"/icons/social/LinkedIn.svg"}
+          href={"https://www.linkedin.com/in/ruturaj-chaubey/"}
+        />
       </div>
     </>
   );
