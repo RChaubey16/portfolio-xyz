@@ -6,11 +6,12 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import TechUsed from "../TechUsed";
-import config from "../../data/config.json";
+import config from "../../data/newConfig.json";
 
-const experience = config.experience;
 
 export function ExperienceAccordion() {
+  const experience = config.experience;
+  
   return (
     <Accordion type="multiple" className="w-full" defaultValue={["item-1"]}>
       <AccordionItem value="item-1" className="experience-accordion">

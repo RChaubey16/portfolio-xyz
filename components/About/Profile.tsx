@@ -1,24 +1,24 @@
 import Image from "next/image";
-import {
-  BriefcaseBusiness,
-  Clock8,
-  Eye,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { BriefcaseBusiness, Clock8, Eye, Mail, MapPin } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import RoleSlider from "../animation/Roles";
 import InfoIconCard from "./InfoIconCard";
 import SocialCard from "../SocialCard";
-
-const profile = {
-  name: "Ruturaj",
-  roles: ["Software Engineer", "Full Stack Developer", "Web Developer"],
-  image: "/images/profile.jpg",
-  visits: "2.2k",
-};
+import newConfig from "@/data/newConfig.json";
 
 export default function Profile() {
+  const {
+    name,
+    roles,
+    avatarImageUrl,
+    avatarImageAltText,
+    visits,
+    currentRole,
+    email,
+    location,
+    socials,
+  } = newConfig;
+
   const now = new Date();
   const time = now.toLocaleTimeString("en-GB", {
     hour: "2-digit",
@@ -33,8 +33,8 @@ export default function Profile() {
           {/* Image */}
           <div className="relative w-25 h-25 rounded-md border border-chart-3">
             <Image
-              src={profile.image}
-              alt="Hero"
+              src={avatarImageUrl}
+              alt={avatarImageAltText}
               fill
               className="p-1 object-cover rounded-md"
             />
@@ -42,8 +42,8 @@ export default function Profile() {
 
           {/* Info */}
           <div className="mt-2 text-center">
-            <h1 className="text-2xl font-bold text-primary">{profile.name}</h1>
-            <RoleSlider roles={profile.roles} />
+            <h1 className="text-2xl font-bold text-primary">{name}</h1>
+            <RoleSlider roles={roles} />
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function Profile() {
         <div className="my-2 flex items-center gap-4">
           <ModeToggle />
           <button className="flex items-center gap-1" title="Visitor Count">
-            <Eye size={20} /> <span>{profile.visits}</span>
+            <Eye size={20} /> <span>{visits}</span>
           </button>
         </div>
       </div>
@@ -59,19 +59,19 @@ export default function Profile() {
       <div className="space-y-2">
         <InfoIconCard
           icon={<BriefcaseBusiness className="size-5" />}
-          title="Full Stack Engineer"
+          title={currentRole}
           linkText="@QED42"
           linkHref="#"
         />
         <InfoIconCard
           icon={<Mail className="size-5" />}
-          title={"ruturajchaubey16@gmail.com"}
+          title={email}
           linkText=""
-          linkHref="mailto:ruturajchaubey16@gmail.com"
+          linkHref={`mailto:${email}`}
         />
         <InfoIconCard
           icon={<MapPin className="size-5" />}
-          title="Pune, India"
+          title={location}
           linkText=""
           linkHref=""
         />
@@ -83,18 +83,18 @@ export default function Profile() {
         />
       </div>
 
-      <div className="mt-4">
-        <SocialCard
-          name={"LinkedIn"}
-          logoSrc={"/icons/social/LinkedIn.svg"}
-          href={"https://www.linkedin.com/in/ruturaj-chaubey/"}
-        />
-        <SocialCard
-          name={"LinkedIn"}
-          logoSrc={"/icons/social/LinkedIn.svg"}
-          href={"https://www.linkedin.com/in/ruturaj-chaubey/"}
-        />
-      </div>
+      {socials && (
+        <div className="mt-4 flex gap-2">
+          {socials.map((item) => (
+            <SocialCard
+              key={item.name}
+              name={item.name}
+              logoSrc={item.logoSrc}
+              href={item.href}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 }
