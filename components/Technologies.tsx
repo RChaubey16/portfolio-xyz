@@ -5,8 +5,8 @@ export default function Technologies() {
   const technologies = config.technologies;
   return (
     <section id="technologies">
-      <h2 className="section-title">Stack</h2>
-      <div className="flex flex-wrap gap-2">
+      <h2 className="section-title">Technologies</h2>
+      <div className="flex flex-wrap justify-center gap-2">
         {technologies.map((t, index) => (
           <TechCard
             key={`${t.tech}-${index}`}

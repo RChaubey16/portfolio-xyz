@@ -13,7 +13,7 @@ export default function InfoIconCard({
 }) {
   return (
     <div className="flex items-center gap-2.5">
-      <div className="p-1.5 rounded-md bg-accent">{icon}</div>
+      <div className="p-1 rounded-md bg-accent">{icon}</div>
       <p className="text-base">
         {title}{" "}
         {linkHref && (

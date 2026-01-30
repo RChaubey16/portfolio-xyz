@@ -54,30 +54,45 @@ export default function Profile() {
 
       <div className="space-y-2">
         <InfoIconCard
-          icon={<BriefcaseBusiness className="size-5" />}
+          icon={<BriefcaseBusiness className="size-4.5" />}
           title={currentRole}
           linkText="@QED42"
           linkHref="#"
         />
         <InfoIconCard
-          icon={<Mail className="size-5" />}
+          icon={<Mail className="size-4.5" />}
           title={email}
           linkText=""
           linkHref={`mailto:${email}`}
         />
         <InfoIconCard
-          icon={<MapPin className="size-5" />}
+          icon={<MapPin className="size-4.5" />}
           title={location}
           linkText=""
           linkHref=""
         />
         <InfoIconCard
-          icon={<Clock8 className="size-5" />}
+          icon={<Clock8 className="size-4.5" />}
           title={time}
           linkText=""
           linkHref=""
         />
       </div>
+
+      <ul className="mt-4">
+        <li>
+          Full Stack Developer with 3+ years of experience, known for building
+          scalable, high-performance web apps.
+        </li>
+        <li>
+          Expert in React, Next.js, Node.js, and TypeScript, with a focus on
+          building performant and accessible web applications.
+        </li>
+        <li>
+          Skilled in using modern web development tools and technologies,
+          including Git, GitHub, and Docker.
+        </li>
+      </ul>
 
       {socials && (
         <div className="mt-4 flex flex-wrap gap-2">
