@@ -1,14 +1,23 @@
-import { GitHubCalendar } from "react-github-calendar";
+"use client";
 
-const GitHubContribChart = () => {    
+import { GitHubCalendar } from "react-github-calendar";
+import { useTheme } from "next-themes";
+
+const GitHubContribChart = () => {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   return (
     <section className="w-full">
       {/* <h2 className="section-title">GitHub Contributions</h2> */}
       <div className="w-full overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.01]">
-        <GitHubCalendar username="RChaubey16" blockSize={10} />
+        <GitHubCalendar
+          username="RChaubey16"
+          blockSize={10}
+          colorScheme={isDark ? "dark" : "light"}
+        />
       </div>
     </section>
   );
 };
-    
+
 export default GitHubContribChart;
