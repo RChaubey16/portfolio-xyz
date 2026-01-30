@@ -7,7 +7,7 @@ const GitHubContribChart = () => {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
   return (
-    <section className="w-full">
+    <section className="mt-10 w-full">
       {/* <h2 className="section-title">GitHub Contributions</h2> */}
       <div className="w-full overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.01]">
         <GitHubCalendar

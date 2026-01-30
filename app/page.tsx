@@ -3,6 +3,7 @@ import Experience from "@/components/Experience/Experience";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import GitHubContribChart from "@/components/About/GitHubContribChart";
+import Quote from "@/components/Quote";
 
 export default function Home() {
   return (
@@ -10,21 +11,31 @@ export default function Home() {
       <main className="">
         {/* Intro */}
         <Profile />
-
         {/* About (Description + Actions) */}
-
-        {/* Socials + GitHub chart */}
         <GitHubContribChart />
+
+        <Quote
+          quote="Beautiful things don't ask for attention"
+          author="The Secret Life of Walter Mitty"
+        />
 
         {/* Experience */}
         <Experience />
+
+        <Quote
+          quote="It it weren't for second chances, we'd all be alone"
+          author="Gregory Alan Isakov"
+        />
+
         <Technologies />
 
         {/* Projects */}
 
         {/* Contact */}
 
-        {/* Footer - Quote */}
+        {/* Quote */}
+
+        {/* Footer */}
         <Footer />
       </main>
     </div>

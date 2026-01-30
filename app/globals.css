@@ -208,9 +208,9 @@
   body {
     @apply bg-background text-foreground;
   }
-  section {
+  /* section {
     @apply mt-12;
-  }
+  } */
 }
 
 @layer utilities {
