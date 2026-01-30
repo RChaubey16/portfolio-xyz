@@ -215,7 +215,7 @@
 
 @layer utilities {
   .section-title {
-    @apply mb-4 text-xl font-semibold;
+    @apply mb-4 text-2xl font-semibold;
   }
 
   .tech-badge {

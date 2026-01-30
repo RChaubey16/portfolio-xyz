@@ -13,7 +13,7 @@ const darkModeSvg = (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="size-4.5 text-chart-5"
+    className="size-4.5"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
@@ -27,9 +27,17 @@ const darkModeSvg = (
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
+  const playSound = () => {
+    const audio = new Audio("/audio/light-switch.mp3");
+    audio.play().catch((err) => console.error("Audio playback failed:", err));
+  };
+
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        setTheme(theme === "dark" ? "light" : "dark");
+        playSound();
+      }}
       className="rounded-md transition-colors p-2 border border-transparent hover:bg-accent hover:border-chart-4 cursor-pointer"
       aria-label="Toggle theme"
     >

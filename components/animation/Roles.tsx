@@ -23,7 +23,7 @@ export default function RoleSlider({ roles }: { roles: string[] }) {
 
   return (
     <p
-      className={`text-base text-muted-foreground ${
+      className={`text-lg text-muted-foreground ${
         exiting ? "animate-slide-out" : "animate-slide-in"
       }`}
     >

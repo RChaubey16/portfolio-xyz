@@ -5,6 +5,7 @@ import RoleSlider from "../animation/Roles";
 import InfoIconCard from "./InfoIconCard";
 import SocialCard from "../SocialCard";
 import newConfig from "@/data/newConfig.json";
+import { getIndiaTimeLabel } from "@/lib/utils";
 
 export default function Profile() {
   const {
@@ -19,12 +20,7 @@ export default function Profile() {
     socials,
   } = newConfig;
 
-  const now = new Date();
-  const time = now.toLocaleTimeString("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  });
+  const time = getIndiaTimeLabel();
 
   return (
     <>
@@ -42,7 +38,7 @@ export default function Profile() {
 
           {/* Info */}
           <div className="mt-2 text-center">
-            <h1 className="text-2xl font-bold text-primary">{name}</h1>
+            <h1 className="text-3xl font-bold text-primary">{name}</h1>
             <RoleSlider roles={roles} />
           </div>
         </div>
@@ -84,7 +80,7 @@ export default function Profile() {
       </div>
 
       {socials && (
-        <div className="mt-4 flex gap-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           {socials.map((item) => (
             <SocialCard
               key={item.name}
