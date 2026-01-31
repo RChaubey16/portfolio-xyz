@@ -252,6 +252,7 @@
 
 @layer components {
   .experience-accordion {
+    @apply border-none;
     .accordion-header {
       @apply w-full flex justify-between items-center font-sans font-semibold hover:no-underline text-left cursor-pointer;
 

@@ -49,10 +49,14 @@ export default function Profile() {
           <button className="flex items-center gap-1" title="Visitor Count">
             <Eye size={20} /> <span>{visits}</span>
           </button>
+          <div className="flex items-center gap-1">
+            <Clock8 className="size-4" />
+            <span>{time}</span>
+          </div>
         </div>
       </div>
 
-      <div className="space-y-2">
+      {/* <div className="space-y-2">
         <InfoIconCard
           icon={<BriefcaseBusiness className="size-4.5" />}
           title={currentRole}
@@ -77,25 +81,10 @@ export default function Profile() {
           linkText=""
           linkHref=""
         />
-      </div>
-
-      <ul className="mt-4">
-        <li>
-          Full Stack Developer with 3+ years of experience, known for building
-          scalable, high-performance web apps.
-        </li>
-        <li>
-          Expert in React, Next.js, Node.js, and TypeScript, with a focus on
-          building performant and accessible web applications.
-        </li>
-        <li>
-          Skilled in using modern web development tools and technologies,
-          including Git, GitHub, and Docker.
-        </li>
-      </ul>
+      </div> */}
 
       {socials && (
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-2 mb-6 flex justify-center flex-wrap gap-2">
           {socials.map((item) => (
             <SocialCard
               key={item.name}
@@ -106,6 +95,24 @@ export default function Profile() {
           ))}
         </div>
       )}
+
+      <div className="mt-4">
+        <h2 className="section-title">About</h2>
+        <ul className="mt-4 space-y-2 list-disc ml-6">
+          <li className="">
+            Full Stack Developer with 3+ years of experience, known for building
+            scalable, high-performance web apps.
+          </li>
+          <li>
+            Expert in React, Next.js, Node.js, and TypeScript, with a focus on
+            building performant and accessible web applications.
+          </li>
+          <li>
+            Skilled in using modern web development tools and technologies,
+            including Git, GitHub, and Docker.
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
