@@ -33,6 +33,11 @@
       "profileImg": ""
     }
   ],
+  "about": [
+    "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
+    "Expert in React, Next.js, Node.js, and TypeScript, with a focus on building performant and accessible web applications.",
+    "Skilled in using modern web development tools and technologies, including Git, GitHub, and Docker."
+  ],
   "experience": {
     "full_stack_engineer": {
       "work": [

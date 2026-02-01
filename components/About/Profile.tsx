@@ -24,6 +24,7 @@ export default function Profile() {
     avatarImageUrl,
     avatarImageAltText,
     visits,
+    about,
     currentRole,
     email,
     location,
@@ -134,18 +135,11 @@ export default function Profile() {
       <div className="mt-4">
         <h2 className="section-title">About</h2>
         <ul className="mt-4 space-y-2 list-disc ml-6">
-          <li className="">
-            Full Stack Developer with 3+ years of experience, known for building
-            scalable, high-performance web apps.
-          </li>
-          <li>
-            Expert in React, Next.js, Node.js, and TypeScript, with a focus on
-            building performant and accessible web applications.
-          </li>
-          <li>
-            Skilled in using modern web development tools and technologies,
-            including Git, GitHub, and Docker.
-          </li>
+          {about.map((item: string) => (
+            <li key={item} className="para text-white">
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
     </>

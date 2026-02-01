@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import GitHubContribChart from "@/components/About/GitHubContribChart";
 import Quote from "@/components/Quote";
 import Projects from "@/components/Projects/Projects";
+import Gallery from "@/components/About/Gallery";
 
 export default function Home() {
   return (
@@ -35,14 +36,14 @@ export default function Home() {
           quote="It it weren't for second chances, we'd all be alone"
           author="Gregory Alan Isakov"
         />
+        
+        <Gallery />
+
 
         <Technologies />
 
         {/* Contact */}
 
-        {/* Quote */}
-
-        {/* Footer */}
         <Footer />
       </main>
     </div>
