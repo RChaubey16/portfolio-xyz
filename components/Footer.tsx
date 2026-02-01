@@ -13,7 +13,6 @@ const Footer = () => {
           className="object-cover transition-transform duration-500 hover:scale-105"
           priority
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-card/80 to-transparent" />
       </div>
     </footer>
   );
