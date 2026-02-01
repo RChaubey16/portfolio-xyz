@@ -6,48 +6,48 @@ import GitHubContribChart from "@/components/About/GitHubContribChart";
 import Quote from "@/components/Quote";
 import Projects from "@/components/Projects/Projects";
 import Gallery from "@/components/About/Gallery";
+import Fade from "@/components/animation/Fade";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
-        {/* Intro */}
-        <Profile />
-        {/* About (Description + Actions) */}
-        <GitHubContribChart />
+    <Fade>
+      {/* Intro */}
+      <Profile />
+      {/* About (Description + Actions) */}
 
-        <Quote
-          quote="Beautiful things don't ask for attention"
-          author="The Secret Life of Walter Mitty"
-        />
+      <Quote
+        quote="If your intention is pure, even the wrong path can lead you to the right place."
+        author="Bhagavad Gita"
+      />
 
-        <Experience />
+      <Experience />
 
-        <Quote
-          quote="It it weren't for second chances, we'd all be alone"
-          author="Gregory Alan Isakov"
-        />
+      <Quote
+        quote="Beautiful things don't ask for attention."
+        author="The Secret life of Walter Mitty"
+      />
 
-        <Projects />
+      <Projects />
 
-        <Quote
-          quote="It it weren't for second chances, we'd all be alone"
-          author="Gregory Alan Isakov"
-        />
+      <Quote
+        quote="It it weren't for second chances, we'd all be alone"
+        author="Gregory Alan Isakov"
+      />
 
-        <Gallery />
+      <GitHubContribChart />
 
-        <Quote
-          quote="It it weren't for second chances, we'd all be alone"
-          author="Gregory Alan Isakov"
-        />
+      <Gallery />
 
-        <Technologies />
+      <Quote
+        quote="Sometimes, our best decisions are the ones that don't make sense at all."
+        author="Ted Mosby"
+      />
 
-        {/* Contact */}
+      <Technologies />
 
-        <Footer />
-      </main>
-    </div>
+      {/* Contact */}
+
+      <Footer />
+    </Fade>
   );
 }

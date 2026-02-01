@@ -63,7 +63,7 @@ const Gallery = async ({ useTitle = true, useButton = true }) => {
                   className="object-cover rounded-sm"
                 />
               </div>
-              <p className="mt-2 para-text text-center">{photo.alt}</p>
+              <p className="mt-2 para text-center">{photo.alt}</p>
             </div>
           ))}
         </div>
