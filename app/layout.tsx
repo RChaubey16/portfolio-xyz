@@ -76,6 +76,11 @@ export default function RootLayout({
             </aside>
           </div>
         </ThemeProvider>
+
+        <div className="mt-10 mb-20 w-full max-w-4xl px-6 mx-auto text-center">
+          {/* Design & Developed by Ruturaj Chaubey (X profile link) */}
+          Ruturaj Chaubey © {new Date().getFullYear()}. All rights reserved.
+        </div>
       </body>
     </html>
   );
