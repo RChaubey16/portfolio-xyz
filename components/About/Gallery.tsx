@@ -14,7 +14,7 @@ interface GalleryItem {
   image: ImageItem;
 }
 
-const Gallery = async ({ useButton = true }) => {
+const Gallery = async ({ useTitle = true, useButton = true }) => {
   const gallery: GalleryItem[] = await client.fetch(`
     *[_type == "photo"]{
       _id,
@@ -33,8 +33,8 @@ const Gallery = async ({ useButton = true }) => {
     })) ?? [];
 
   return (
-    <section id="gallery" className="my-20">
-      <h1 className="section-title">Gallery</h1>
+    <section id="gallery" className={`${useTitle ? "" : "my-20"}`}>
+      {useTitle && <h1 className="section-title">Gallery</h1>}
 
       {useButton ? (
         <>

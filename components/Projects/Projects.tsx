@@ -9,7 +9,7 @@ export const projects: ProjectData[] =
 const Projects = ({ useSlice = true }) => {
   const visibleProjects = useSlice ? projects.slice(0, 4) : projects;
   return (
-    <section id="projects" className="mt-20">
+    <section id="projects">
       <h1 className="section-title">Projects</h1>
       <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
         {visibleProjects.map((proj) => (

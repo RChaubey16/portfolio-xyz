@@ -9,7 +9,7 @@ const eduFont = Edu_NSW_ACT_Hand_Pre({
 const Quote = ({ quote, author }: { quote: string; author: string }) => {
   return (
     <div
-      className={`text-[12px] italic text-center my-15 text-muted-foreground ${eduFont.className}`}
+      className={`text-xs italic text-center my-20 text-muted-foreground ${eduFont.className}`}
     >
       &quot;{quote}&quot;{author && ` — ${author}`}
     </div>

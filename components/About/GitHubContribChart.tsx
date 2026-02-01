@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 const GitHubContribChart = () => {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
+
   return (
     <section className="mt-10 w-full">
       {/* <h2 className="section-title">GitHub Contributions</h2> */}

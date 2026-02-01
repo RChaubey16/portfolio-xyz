@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 import Particles from "@/components/animation/Particles";
+import Navbar from "@/components/Navbar";
 
 const figtTree = Figtree({
   variable: "--font-sans",
@@ -37,12 +38,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           <div className="min-h-screen flex">
             {/* Left sidebar */}
             <aside className="hidden lg:flex flex-1">
               <Particles
                 particleColors={["#696767"]}
-                particleCount={600}
+                particleCount={400}
                 particleSpread={5}
                 speed={0.1}
                 particleBaseSize={100}
@@ -61,7 +63,7 @@ export default function RootLayout({
             <aside className="hidden lg:flex flex-1">
               <Particles
                 particleColors={["#696767"]}
-                particleCount={600}
+                particleCount={400}
                 particleSpread={5}
                 speed={0.1}
                 particleBaseSize={100}

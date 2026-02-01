@@ -31,14 +31,18 @@ export default function Home() {
 
         {/* Projects */}
         <Projects />
-        
+
         <Quote
           quote="It it weren't for second chances, we'd all be alone"
           author="Gregory Alan Isakov"
         />
-        
+
         <Gallery />
 
+        <Quote
+          quote="It it weren't for second chances, we'd all be alone"
+          author="Gregory Alan Isakov"
+        />
 
         <Technologies />
 

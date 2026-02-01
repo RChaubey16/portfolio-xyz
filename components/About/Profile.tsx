@@ -94,7 +94,7 @@ export default function Profile() {
         />
       </div> */}
 
-      <div className="flex flex-col md:flex-row gap-3 justify-between items-center">
+      <div className="mb-6 flex flex-col md:flex-row gap-3 justify-between items-center">
         <div className="flex items-center gap-2">
           <Link href={"/contact"} target="_blank">
             <Button
