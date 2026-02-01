@@ -228,8 +228,7 @@
     duration-200
     ease-in-out
     hover:gap-2
-    hover:shadow-sm
-    /* hover:border-chart-5; */;
+    hover:shadow-sm;
   }
 
   .social-badge {
@@ -264,6 +263,37 @@
       .duration,
       .location {
         @apply font-sans text-sm font-normal text-gray-600 dark:text-manatee;
+      }
+    }
+  }
+
+  .project-card {
+    .title {
+      @apply font-sans text-xl font-semibold leading-7 text-foreground;
+    }
+    .tech-stack-label {
+      @apply font-sans text-sm font-bold text-black/50 dark:text-white/60;
+    }
+
+    .card-content {
+      .status {
+        @apply flex items-center gap-2 font-sans text-sm font-bold px-2.5 py-1 rounded-md;
+      }
+
+      .status-live {
+        @apply bg-green-300/20 text-green-600;
+
+        .circle {
+          @apply w-2 h-2 rounded-full bg-green-600;
+        }
+      }
+
+      .status-development {
+        @apply bg-yellow-300/10 text-yellow-600;
+
+        .circle {
+          @apply w-2 h-2 rounded-full bg-yellow-600;
+        }
       }
     }
   }

@@ -4,6 +4,7 @@ import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import GitHubContribChart from "@/components/About/GitHubContribChart";
 import Quote from "@/components/Quote";
+import Projects from "@/components/Projects/Projects";
 
 export default function Home() {
   return (
@@ -27,9 +28,15 @@ export default function Home() {
           author="Gregory Alan Isakov"
         />
 
-        <Technologies />
-
         {/* Projects */}
+        <Projects />
+        
+        <Quote
+          quote="It it weren't for second chances, we'd all be alone"
+          author="Gregory Alan Isakov"
+        />
+
+        <Technologies />
 
         {/* Contact */}
 
