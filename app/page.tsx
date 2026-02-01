@@ -21,7 +21,6 @@ export default function Home() {
           author="The Secret Life of Walter Mitty"
         />
 
-        {/* Experience */}
         <Experience />
 
         <Quote
@@ -29,7 +28,6 @@ export default function Home() {
           author="Gregory Alan Isakov"
         />
 
-        {/* Projects */}
         <Projects />
 
         <Quote

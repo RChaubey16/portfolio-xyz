@@ -1,16 +1,7 @@
 import Image from "next/image";
-import {
-  BriefcaseBusiness,
-  Clock8,
-  Eye,
-  FileUser,
-  Mail,
-  MapPin,
-  Send,
-} from "lucide-react";
+import { Clock8, Eye, FileUser, Send } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import RoleSlider from "../animation/Roles";
-import InfoIconCard from "./InfoIconCard";
 import SocialCard from "../SocialCard";
 import newConfig from "@/data/newConfig.json";
 import { getIndiaTimeLabel } from "@/lib/utils";
@@ -25,9 +16,6 @@ export default function Profile() {
     avatarImageAltText,
     visits,
     about,
-    currentRole,
-    email,
-    location,
     socials,
   } = newConfig;
 
@@ -66,33 +54,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-
-      {/* <div className="space-y-2">
-        <InfoIconCard
-          icon={<BriefcaseBusiness className="size-4.5" />}
-          title={currentRole}
-          linkText="@QED42"
-          linkHref="#"
-        />
-        <InfoIconCard
-          icon={<Mail className="size-4.5" />}
-          title={email}
-          linkText=""
-          linkHref={`mailto:${email}`}
-        />
-        <InfoIconCard
-          icon={<MapPin className="size-4.5" />}
-          title={location}
-          linkText=""
-          linkHref=""
-        />
-        <InfoIconCard
-          icon={<Clock8 className="size-4.5" />}
-          title={time}
-          linkText=""
-          linkHref=""
-        />
-      </div> */}
 
       <div className="mb-6 flex flex-col md:flex-row gap-3 justify-between items-center">
         <div className="flex items-center gap-2">
