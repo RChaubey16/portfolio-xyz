@@ -269,7 +269,7 @@
         }
       }
 
-      .status-development {
+      .status-building {
         @apply bg-yellow-300/10 text-yellow-600;
 
         .circle {

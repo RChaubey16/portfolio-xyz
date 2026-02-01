@@ -12,7 +12,7 @@ const GitHubContribChart = () => {
       <div className="w-full overflow-hidden">
         <GitHubCalendar
           username="RChaubey16"
-          blockSize={10}
+          blockSize={12}
           colorScheme={isDark ? "dark" : "light"}
         />
       </div>

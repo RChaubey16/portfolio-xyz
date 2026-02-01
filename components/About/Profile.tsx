@@ -55,7 +55,7 @@ export default function Profile() {
         </div>
 
         {/* Dark mode + Visitor count */}
-        <div className="my-2 flex items-center gap-4">
+        <div className="my-4 flex items-center gap-4">
           <ModeToggle />
           <button className="flex items-center gap-1" title="Visitor Count">
             <Eye size={20} /> <span>{visits}</span>

@@ -414,8 +414,8 @@
         "alt": "Text to translate app home page"
       },
       "status": {
-        "text": "Development",
-        "className": "status-development"
+        "text": "Building",
+        "className": "status-building"
       },
       "title": "Text to Speech",
       "description": "A lightweight web app that lets users translate text between multiple languages and instantly hear the results through text-to-speech (TTS) playback.",
@@ -474,8 +474,8 @@
         "alt": "Dev connector home page"
       },
       "status": {
-        "text": "Development",
-        "className": "status-development"
+        "text": "Building",
+        "className": "status-building"
       },
       "title": "DevConnector",
       "description": "A social networking platform for developers that enables devs to create profiles, share posts, and connect with other developers.",

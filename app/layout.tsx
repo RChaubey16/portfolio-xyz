@@ -3,6 +3,8 @@ import { Geist_Mono, Figtree } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
+import Particles from "@/components/animation/Particles";
+
 const figtTree = Figtree({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -37,13 +39,39 @@ export default function RootLayout({
         >
           <div className="min-h-screen flex">
             {/* Left sidebar */}
-            <aside className="hidden lg:flex flex-1 px-6">Left Sidebar</aside>
+            <aside className="hidden lg:flex flex-1">
+              <Particles
+                particleColors={["#696767"]}
+                particleCount={600}
+                particleSpread={5}
+                speed={0.1}
+                particleBaseSize={100}
+                moveParticlesOnHover
+                alphaParticles={false}
+                disableRotation={false}
+                pixelRatio={1}
+                className={""}
+              />
+            </aside>
 
             {/* Main content */}
             <main className="w-full max-w-4xl px-6 mx-auto">{children}</main>
 
             {/* Right sidebar */}
-            <aside className="hidden lg:flex flex-1 px-6">Right Sidebar</aside>
+            <aside className="hidden lg:flex flex-1">
+              <Particles
+                particleColors={["#696767"]}
+                particleCount={600}
+                particleSpread={5}
+                speed={0.1}
+                particleBaseSize={100}
+                moveParticlesOnHover
+                alphaParticles={false}
+                disableRotation={false}
+                pixelRatio={1}
+                className={""}
+              />
+            </aside>
           </div>
         </ThemeProvider>
       </body>
