@@ -203,7 +203,7 @@
     transition-[gap,box-shadow,transform]
     duration-200
     ease-in-out
-    hover:gap-2
+    md:hover:gap-2
     hover:shadow-sm;
   }
 
@@ -216,7 +216,7 @@
     transition-[gap,box-shadow,transform]
     duration-200
     ease-in-out
-    hover:gap-3
+    md:hover:gap-3
     hover:shadow-sm;
   }
 

@@ -10,24 +10,28 @@
   "socials": [
     {
       "name": "GitHub",
+      "tooltip": "GitHub",
       "logoSrc": "/icons/social/github.svg",
       "href": "https://github.com/RChaubey16",
       "profileImg": ""
     },
     {
       "name": "LinkedIn",
+      "tooltip": "LinkedIn",
       "logoSrc": "/icons/social/linkedin.svg",
       "href": "https://www.linkedin.com/in/ruturaj-chaubey-b453b41b1",
       "profileImg": ""
     },
     {
       "name": "X (Twitter)",
+      "tooltip": "X (Twitter)",
       "logoSrc": "/icons/social/x.svg",
       "href": "https://x.com/RChaubey16",
       "profileImg": ""
     },
     {
       "name": "Drupal",
+      "tooltip": "Drupal",
       "logoSrc": "/icons/tech/Drupal.svg",
       "href": "https://www.drupal.org/u/ruturaj-chaubey",
       "profileImg": ""
@@ -36,7 +40,7 @@
   "about": [
     "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
     "Expert in React, Next.js, Node.js, and TypeScript, with a focus on building performant and accessible web applications.",
-    "Skilled in using modern web development tools and technologies, including Git, GitHub, and Docker."
+    "Skilled in architecting robust applications from concept to deployment using modern development frameworks and best practices."
   ],
   "experience": {
     "full_stack_engineer": {
@@ -603,76 +607,6 @@
   ],
   "technologies": [
     {
-      "id": "typescript",
-      "tech": "TypeScript",
-      "techHref": "https://www.typescriptlang.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
-      },
-      "imageAltText": "TypeScript logo"
-    },
-    {
-      "id": "javascript",
-      "tech": "JavaScript",
-      "techHref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/JavaScript.svg"
-      },
-      "imageAltText": "JavaScript logo"
-    },
-    {
-      "id": "go",
-      "tech": "Go",
-      "techHref": "https://go.dev",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Go.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Go.svg"
-      },
-      "imageAltText": "Go logo"
-    },
-    {
-      "id": "python",
-      "tech": "Python",
-      "techHref": "https://www.python.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Python.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Python.svg"
-      },
-      "imageAltText": "Python logo"
-    },
-    {
-      "id": "php",
-      "tech": "PHP",
-      "techHref": "https://www.php.net",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
-      },
-      "imageAltText": "PHP logo"
-    },
-    {
-      "id": "fast-api",
-      "tech": "Fast API",
-      "techHref": "https://fastapi.tiangolo.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
-      },
-      "imageAltText": "Fast API logo"
-    },
-    {
-      "id": "nodejs",
-      "tech": "Node.js",
-      "techHref": "https://nodejs.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Node.js.svg"
-      },
-      "imageAltText": "Node.js logo"
-    },
-    {
       "id": "nextjs",
       "tech": "Next.js",
       "techHref": "https://nextjs.org",
@@ -693,14 +627,34 @@
       "imageAltText": "React logo"
     },
     {
-      "id": "gatsby",
-      "tech": "Gatsby",
-      "techHref": "https://www.gatsbyjs.com",
+      "id": "typescript",
+      "tech": "TypeScript",
+      "techHref": "https://www.typescriptlang.org",
       "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
+        "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
       },
-      "imageAltText": "Gatsby logo"
+      "imageAltText": "TypeScript logo"
+    },
+    {
+      "id": "nodejs",
+      "tech": "Node.js",
+      "techHref": "https://nodejs.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Node.js.svg"
+      },
+      "imageAltText": "Node.js logo"
+    },
+    {
+      "id": "nestjs",
+      "tech": "Nest.js",
+      "techHref": "https://nestjs.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+      },
+      "imageAltText": "Nest.js logo"
     },
     {
       "id": "tailwindcss",
@@ -713,16 +667,6 @@
       "imageAltText": "Tailwind CSS logo"
     },
     {
-      "id": "sass-lang",
-      "tech": "Sass",
-      "techHref": "https://sass-lang.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Sass.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Sass.svg"
-      },
-      "imageAltText": "Sass logo"
-    },
-    {
       "id": "shadcnui",
       "tech": "Shadcn UI",
       "techHref": "https://ui.shadcn.com",
@@ -733,36 +677,6 @@
       "imageAltText": "Shadcn UI logo"
     },
     {
-      "id": "redux",
-      "tech": "Redux",
-      "techHref": "https://redux.js.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Redux.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Redux.svg"
-      },
-      "imageAltText": "Redux logo"
-    },
-    {
-      "id": "graphql",
-      "tech": "GraphQL",
-      "techHref": "https://graphql.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
-      },
-      "imageAltText": "GraphQL logo"
-    },
-    {
-      "id": "mysql",
-      "tech": "MySQL",
-      "techHref": "https://www.mysql.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
-      },
-      "imageAltText": "MySQL logo"
-    },
-    {
       "id": "postgresql",
       "tech": "PostgreSQL",
       "techHref": "https://www.postgresql.org",
@@ -771,16 +685,6 @@
         "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
       },
       "imageAltText": "PostgreSQL logo"
-    },
-    {
-      "id": "mongodb",
-      "tech": "MongoDB",
-      "techHref": "https://www.mongodb.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/MongoDB.svg"
-      },
-      "imageAltText": "MongoDB logo"
     },
     {
       "id": "supabase",
@@ -803,6 +707,86 @@
       "imageAltText": "Drupal logo"
     },
     {
+      "id": "sanity",
+      "tech": "Sanity",
+      "techHref": "https://www.sanity.io",
+      "imageUrl": {
+        "light": "/icons/tech/sanity-icon.png",
+        "dark": "/icons/tech/sanity-icon.png"
+      },
+      "imageAltText": "Sanity logo"
+    },
+    {
+      "id": "fast-api",
+      "tech": "Fast API",
+      "techHref": "https://fastapi.tiangolo.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
+      },
+      "imageAltText": "Fast API logo"
+    },
+    {
+      "id": "python",
+      "tech": "Python",
+      "techHref": "https://www.python.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Python.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Python.svg"
+      },
+      "imageAltText": "Python logo"
+    },
+    {
+      "id": "go",
+      "tech": "Go",
+      "techHref": "https://go.dev",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Go.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Go.svg"
+      },
+      "imageAltText": "Go logo"
+    },
+    {
+      "id": "javascript",
+      "tech": "JavaScript",
+      "techHref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/JavaScript.svg"
+      },
+      "imageAltText": "JavaScript logo"
+    },
+    {
+      "id": "php",
+      "tech": "PHP",
+      "techHref": "https://www.php.net",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+      },
+      "imageAltText": "PHP logo"
+    },
+    {
+      "id": "mysql",
+      "tech": "MySQL",
+      "techHref": "https://www.mysql.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
+      },
+      "imageAltText": "MySQL logo"
+    },
+    {
+      "id": "mongodb",
+      "tech": "MongoDB",
+      "techHref": "https://www.mongodb.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/MongoDB.svg"
+      },
+      "imageAltText": "MongoDB logo"
+    },
+    {
       "id": "tanstack",
       "tech": "Tanstack Start",
       "techHref": "https://tanstack.com/",
@@ -813,14 +797,14 @@
       "imageAltText": "Tanstack Start logo"
     },
     {
-      "id": "sanity",
-      "tech": "Sanity",
-      "techHref": "https://www.sanity.io",
+      "id": "graphql",
+      "tech": "GraphQL",
+      "techHref": "https://graphql.org",
       "imageUrl": {
-        "light": "/icons/tech/sanity-icon.png",
-        "dark": "/icons/tech/sanity-icon.png"
+        "light": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
       },
-      "imageAltText": "Sanity logo"
+      "imageAltText": "GraphQL logo"
     },
     {
       "id": "docker",
@@ -843,26 +827,6 @@
       "imageAltText": "Git logo"
     },
     {
-      "id": "postman",
-      "tech": "Postman",
-      "techHref": "https://postman.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Postman.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Postman.svg"
-      },
-      "imageAltText": "Postman logo"
-    },
-    {
-      "id": "figma",
-      "tech": "Figma",
-      "techHref": "https://www.figma.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
-      },
-      "imageAltText": "Figma logo"
-    },
-    {
       "id": "vercel",
       "tech": "Vercel",
       "techHref": "https://www.vercel.com",
@@ -883,6 +847,26 @@
       "imageAltText": "Cloudflare logo"
     },
     {
+      "id": "figma",
+      "tech": "Figma",
+      "techHref": "https://www.figma.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+      },
+      "imageAltText": "Figma logo"
+    },
+    {
+      "id": "postman",
+      "tech": "Postman",
+      "techHref": "https://postman.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Postman.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Postman.svg"
+      },
+      "imageAltText": "Postman logo"
+    },
+    {
       "id": "claude",
       "tech": "Claude",
       "techHref": "https://claude.ai",
@@ -891,6 +875,36 @@
         "dark": "/icons/tech/claude-icon.png"
       },
       "imageAltText": "Claude logo"
+    },
+    {
+      "id": "gatsby",
+      "tech": "Gatsby",
+      "techHref": "https://www.gatsbyjs.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
+      },
+      "imageAltText": "Gatsby logo"
+    },
+    {
+      "id": "redux",
+      "tech": "Redux",
+      "techHref": "https://redux.js.org",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Redux.svg"
+      },
+      "imageAltText": "Redux logo"
+    },
+    {
+      "id": "sass-lang",
+      "tech": "Sass",
+      "techHref": "https://sass-lang.com",
+      "imageUrl": {
+        "light": "https://icon.icepanel.io/Technology/svg/Sass.svg",
+        "dark": "https://icon.icepanel.io/Technology/svg/Sass.svg"
+      },
+      "imageAltText": "Sass logo"
     }
   ],
   "footerImage": "/images/footer-cover.png"
