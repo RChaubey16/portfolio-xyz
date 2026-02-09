@@ -39,12 +39,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="min-h-screen flex">
+          <div className="flex">
             {/* Left sidebar */}
-            <aside className="hidden lg:flex flex-1">
+            <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
               <Particles
                 particleColors={["#696767"]}
-                particleCount={400}
+                particleCount={300}
                 particleSpread={5}
                 speed={0.1}
                 particleBaseSize={100}
@@ -60,10 +60,10 @@ export default function RootLayout({
             <main className="w-full max-w-4xl px-6 mx-auto">{children}</main>
 
             {/* Right sidebar */}
-            <aside className="hidden lg:flex flex-1">
+            <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
               <Particles
                 particleColors={["#696767"]}
-                particleCount={400}
+                particleCount={300}
                 particleSpread={5}
                 speed={0.1}
                 particleBaseSize={100}
