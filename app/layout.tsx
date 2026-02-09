@@ -44,7 +44,7 @@ export default function RootLayout({
             <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
               <Particles
                 particleColors={["#696767"]}
-                particleCount={300}
+                particleCount={200}
                 particleSpread={5}
                 speed={0.1}
                 particleBaseSize={100}
@@ -63,7 +63,7 @@ export default function RootLayout({
             <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
               <Particles
                 particleColors={["#696767"]}
-                particleCount={300}
+                particleCount={200}
                 particleSpread={5}
                 speed={0.1}
                 particleBaseSize={100}
