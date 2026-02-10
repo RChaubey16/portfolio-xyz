@@ -78,7 +78,7 @@ export default function RootLayout({
           <Navbar />
           <div className="flex">
             {/* Left sidebar */}
-            <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
+            {/* <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
               <Particles
                 particleColors={["#696767"]}
                 particleCount={200}
@@ -91,13 +91,13 @@ export default function RootLayout({
                 pixelRatio={1}
                 className={""}
               />
-            </aside>
+            </aside> */}
 
             {/* Main content */}
             <main className="w-full max-w-4xl px-6 mx-auto">{children}</main>
 
             {/* Right sidebar */}
-            <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
+            {/* <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
               <Particles
                 particleColors={["#696767"]}
                 particleCount={200}
@@ -110,7 +110,7 @@ export default function RootLayout({
                 pixelRatio={1}
                 className={""}
               />
-            </aside>
+            </aside> */}
           </div>
         </ThemeProvider>
 
