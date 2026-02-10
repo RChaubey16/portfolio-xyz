@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Gallery from "@/components/About/Gallery";
 import Fade from "@/components/animation/Fade";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description:
+    "A visual collection of moments, experiences, and things that inspire me.",
+};
 
 export default function GalleryPage() {
   return (

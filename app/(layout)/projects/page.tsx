@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Fade from "@/components/animation/Fade";
 import Projects from "@/components/Projects/Projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "A collection of projects I've worked on, ranging from web applications to open-source libraries and developer tools.",
+};
 
 export default function ProjectsPage() {
   return (

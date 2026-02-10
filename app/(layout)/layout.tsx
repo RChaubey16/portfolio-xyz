@@ -18,8 +18,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ruturaj Chaubey",
-  description: "Portfolio",
+  title: {
+    default: "Ruturaj Chaubey",
+    template: "%s | Ruturaj Chaubey",
+  },
+  description:
+    "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
+  keywords: [
+    "Ruturaj Chaubey",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Web Developer",
+    "Portfolio",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+  ],
+  authors: [{ name: "Ruturaj Chaubey" }],
+  creator: "Ruturaj Chaubey",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ruturajchaubey.com",
+    title: "Ruturaj Chaubey",
+    description:
+      "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
+    siteName: "Ruturaj Chaubey Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ruturaj Chaubey",
+    description:
+      "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
+    creator: "@RChaubey16",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
