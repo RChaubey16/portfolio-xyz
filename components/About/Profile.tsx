@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Clock8, Eye, FileUser, Send } from "lucide-react";
+import { Eye, FileUser, Send } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import RoleSlider from "../animation/Roles";
 import SocialCard from "../SocialCard";
 import newConfig from "@/data/newConfig.json";
-import { getIndiaTimeLabel } from "@/lib/utils";
 import VisitorCount from "./VisitorCount";
 import { Button } from "../ui/button";
 
@@ -18,7 +17,6 @@ export default async function Profile() {
     about,
     socials,
   } = newConfig;
-  const time = getIndiaTimeLabel();
 
   return (
     <>
@@ -47,10 +45,10 @@ export default async function Profile() {
           <button className="flex items-center gap-1" title="Visitor Count">
             <Eye size={20} /> <VisitorCount />
           </button>
-          <div className="flex items-center gap-1">
+          {/* <div className="flex items-center gap-1">
             <Clock8 className="size-4" />
             <span>{time}</span>
-          </div>
+          </div> */}
         </div>
       </div>
 

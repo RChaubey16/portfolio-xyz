@@ -11,12 +11,12 @@ const GitHubContribChart = () => {
     <section className="mb-20 w-full">
       <h2 className="section-title">GitHub</h2>
       <div className="w-full overflow-hidden">
-        <GitHubCalendar
-          username="RChaubey16"
-          blockSize={12}
-          colorScheme={isDark ? "dark" : "light"}
-        />
-      </div>
+          <GitHubCalendar
+            username="RChaubey16"
+            blockSize={12}
+            colorScheme={isDark ? "dark" : "light"}
+          />
+        </div>
     </section>
   );
 };
