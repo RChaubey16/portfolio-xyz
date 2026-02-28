@@ -1,6 +1,6 @@
 "use client";
 
-import { FileText, Download, ExternalLink } from "lucide-react";
+import { Download, ExternalLink, FileText } from "lucide-react";
 
 export default function ResumeViewer() {
   // Update this path to match where your PDF is stored in your Next.js project
@@ -25,14 +25,14 @@ export default function ResumeViewer() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto">
-        <div className="bg-background rounded-lg overflow-hidden">
+    <div className="bg-background min-h-screen">
+      <div className="mx-auto max-w-5xl">
+        <div className="bg-background overflow-hidden rounded-lg">
           {/* Header */}
-          <div className="mb-6 lg:mb-0 bg-background lg:p-6 text-white rounded-lg ">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="bg-background mb-6 rounded-lg text-white lg:mb-0 lg:p-6">
+            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
               <div className="flex items-center gap-3">
-                <FileText className="w-8 h-8 text-black dark:text-white" />
+                <FileText className="h-8 w-8 text-black dark:text-white" />
                 <h1 className="section-title text-foreground">Resume</h1>
               </div>
 
@@ -40,18 +40,18 @@ export default function ResumeViewer() {
               <div className="flex gap-2">
                 <button
                   onClick={handleOpenNewTab}
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-700 dark:bg-gray-800 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700 transition-colors text-sm font-medium border border-gray-600 cursor-pointer"
+                  className="flex cursor-pointer items-center gap-2 rounded border border-gray-600 bg-gray-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700"
                   title="Open in new tab"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="h-4 w-4" />
                   Open
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-sm font-medium border border-gray-300 dark:border-gray-600 cursor-pointer"
+                  className="flex cursor-pointer items-center gap-2 rounded border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
                   title="Download PDF"
                 >
-                  <Download className="w-4 h-4" />
+                  <Download className="h-4 w-4" />
                   Download
                 </button>
               </div>
@@ -60,11 +60,11 @@ export default function ResumeViewer() {
 
           {/* PDF Viewer Section */}
           <div className="lg:p-6">
-            <div className="border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden shadow-inner bg-gray-100 dark:bg-gray-900">
+            <div className="overflow-hidden rounded-lg border border-gray-300 bg-gray-100 shadow-inner dark:border-gray-700 dark:bg-gray-900">
               <embed
                 src={resumePath}
                 type="application/pdf"
-                className="w-full h-[calc(100vh-240px)] min-h-[500px] md:min-h-[1070px]"
+                className="h-[calc(100vh-240px)] min-h-[500px] w-full md:min-h-[1070px]"
               />
             </div>
           </div>

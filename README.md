@@ -42,24 +42,27 @@ A modern, high-performance portfolio website built with **Next.js 15**, **React 
 
 ### Prerequisites
 
-- **Node.js**: v18+ 
+- **Node.js**: v18+
 - **pnpm**: v9+ (recommended)
 
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/RChaubey16/portfolio-xyz.git
    cd portfolio-xyz
    ```
 
 2. **Install dependencies**:
+
    ```bash
    pnpm install
    ```
 
 3. **Set up Environment Variables**:
    Create a `.env.local` file in the root directory and add your credentials:
+
    ```env
    NEXT_PUBLIC_SANITY_PROJECT_ID=...
    NEXT_PUBLIC_SANITY_DATASET=...

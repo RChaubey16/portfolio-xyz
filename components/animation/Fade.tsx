@@ -1,7 +1,7 @@
 "use client";
 
-import { ReactNode } from "react";
 import { motion } from "motion/react";
+import { ReactNode } from "react";
 
 type FadeInOnViewProps = {
   children: ReactNode;

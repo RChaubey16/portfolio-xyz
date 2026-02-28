@@ -1,17 +1,18 @@
+import Image from "next/image";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Image from "next/image";
-import TechUsed from "../TechUsed";
-import config from "../../data/newConfig.json";
 
+import config from "../../data/newConfig.json";
+import TechUsed from "../TechUsed";
 
 export function ExperienceAccordion() {
   const experience = config.experience;
-  
+
   return (
     <Accordion type="multiple" className="w-full" defaultValue={["item-1"]}>
       <AccordionItem value="item-1" className="experience-accordion">
@@ -24,7 +25,7 @@ export function ExperienceAccordion() {
                 width={48}
                 height={48}
                 alt="QED42 Logo"
-                className="object-contain rounded-sm"
+                className="rounded-sm object-contain"
               />
               <div>
                 <h3 className="company">QED42</h3>
@@ -42,8 +43,8 @@ export function ExperienceAccordion() {
           </div>
         </AccordionTrigger>
 
-        <AccordionContent className="flex flex-col gap-4 para">
-          <ul className="list-disc list-inside">
+        <AccordionContent className="para flex flex-col gap-4">
+          <ul className="list-inside list-disc">
             {experience.full_stack_engineer.work.map((item, i) => (
               <li key={i} className="mb-5">
                 {item}
@@ -64,7 +65,7 @@ export function ExperienceAccordion() {
                 width={48}
                 height={48}
                 alt="QED42 Logo"
-                className="object-contain rounded-sm"
+                className="rounded-sm object-contain"
               />
               <div>
                 <h3 className="company">QED42</h3>
@@ -82,8 +83,8 @@ export function ExperienceAccordion() {
           </div>
         </AccordionTrigger>
 
-        <AccordionContent className="flex flex-col gap-4 para">
-          <ul className="list-disc list-inside">
+        <AccordionContent className="para flex flex-col gap-4">
+          <ul className="list-inside list-disc">
             {experience.associate_engineer.work.map((item, i) => (
               <li key={i} className="mb-5">
                 {item}
@@ -104,7 +105,7 @@ export function ExperienceAccordion() {
                 width={48}
                 height={48}
                 alt="QED42 Logo"
-                className="object-contain rounded-sm"
+                className="rounded-sm object-contain"
               />
               <div>
                 <h3 className="company">QED42</h3>
@@ -122,8 +123,8 @@ export function ExperienceAccordion() {
           </div>
         </AccordionTrigger>
 
-        <AccordionContent className="flex flex-col gap-4 para">
-          <ul className="list-disc list-inside">
+        <AccordionContent className="para flex flex-col gap-4">
+          <ul className="list-inside list-disc">
             {experience.intern.work.map((item, i) => (
               <li key={i} className="mb-5">
                 {item}

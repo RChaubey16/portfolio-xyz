@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -23,7 +23,7 @@ export default function RoleSlider({ roles }: { roles: string[] }) {
 
   return (
     <p
-      className={`text-lg text-muted-foreground ${
+      className={`text-muted-foreground text-lg ${
         exiting ? "animate-slide-out" : "animate-slide-in"
       }`}
     >

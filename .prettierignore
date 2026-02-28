@@ -1,0 +1,5 @@
+# Sanity files
+sanity/
+sanity.config.ts
+sanity.cli.ts
+app/(no-layout)/studio/[[...tool]]/page.tsx

@@ -1,11 +1,13 @@
 "use client";
 
-import { useId } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Tooltip } from "react-tooltip";
+
 import { useTheme } from "next-themes";
-import config from "../data/config.json"
+import { useId } from "react";
+import { Tooltip } from "react-tooltip";
+
+import config from "../data/config.json";
 
 const technologies = config.tech;
 

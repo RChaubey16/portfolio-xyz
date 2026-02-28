@@ -1,40 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { Eye, FileUser, Send } from "lucide-react";
+
 import { ModeToggle } from "@/components/mode-toggle";
-import RoleSlider from "../animation/Roles";
-import SocialCard from "../SocialCard";
 import newConfig from "@/data/newConfig.json";
-import VisitorCount from "./VisitorCount";
+
+import SocialCard from "../SocialCard";
+import RoleSlider from "../animation/Roles";
 import { Button } from "../ui/button";
+import VisitorCount from "./VisitorCount";
 
 export default async function Profile() {
-  const {
-    name,
-    roles,
-    avatarImageUrl,
-    avatarImageAltText,
-    about,
-    socials,
-  } = newConfig;
+  const { name, roles, avatarImageUrl, avatarImageAltText, about, socials } =
+    newConfig;
 
   return (
     <>
       <div className="mt-20 flex flex-col">
         <div className="flex items-center gap-4">
           {/* Image */}
-          <div className="relative w-25 h-25 rounded-md border border-manatee">
+          <div className="border-manatee relative h-25 w-25 rounded-md border">
             <Image
               src={avatarImageUrl}
               alt={avatarImageAltText}
               fill
-              className="p-1 object-cover rounded-md"
+              className="rounded-md object-cover p-1"
             />
           </div>
 
           {/* Info */}
           <div className="mt-2">
-            <h1 className="text-3xl font-bold text-primary">{name}</h1>
+            <h1 className="text-primary text-3xl font-bold">{name}</h1>
             <RoleSlider roles={roles} />
           </div>
         </div>
@@ -52,13 +49,13 @@ export default async function Profile() {
         </div>
       </div>
 
-      <div className="mb-6 flex flex-col md:flex-row gap-3 justify-between items-center">
+      <div className="mb-6 flex flex-col items-center justify-between gap-3 md:flex-row">
         <div className="flex items-center gap-2">
           <Link href={"/contact"} target="_blank">
             <Button
               variant="default"
               size={"default"}
-              className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
+              className="flex cursor-pointer items-center gap-2 transition-all duration-200 ease-in-out hover:gap-4"
             >
               Get In Touch
               <Send />
@@ -68,7 +65,7 @@ export default async function Profile() {
             <Button
               variant="outline"
               size={"default"}
-              className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
+              className="flex cursor-pointer items-center gap-2 transition-all duration-200 ease-in-out hover:gap-4"
             >
               My Resume
               <FileUser />
@@ -77,7 +74,7 @@ export default async function Profile() {
         </div>
 
         {socials && (
-          <div className="flex justify-center flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {socials.map((item) => (
               <SocialCard
                 key={item.name}
@@ -92,7 +89,7 @@ export default async function Profile() {
 
       <div className="mt-4">
         <h2 className="section-title">About</h2>
-        <ul className="mt-4 space-y-2 list-disc ml-6">
+        <ul className="mt-4 ml-6 list-disc space-y-2">
           {about.map((item: string) => (
             <li key={item} className="para text-white">
               {item}

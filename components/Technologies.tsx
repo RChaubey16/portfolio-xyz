@@ -1,5 +1,5 @@
-import TechCard from "./TechCard";
 import config from "../data/newConfig.json";
+import TechCard from "./TechCard";
 
 export default function Technologies() {
   const technologies = config.technologies;

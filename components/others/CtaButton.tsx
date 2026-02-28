@@ -1,6 +1,7 @@
-import React from "react";
 import Link from "next/link";
+
 import { ArrowUpRight } from "lucide-react";
+import React from "react";
 
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +19,7 @@ const CtaButton = ({
       <Button
         variant="outline"
         size={"lg"}
-        className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
+        className="flex cursor-pointer items-center gap-2 transition-all duration-200 ease-in-out hover:gap-4"
       >
         {text}
         {icon}

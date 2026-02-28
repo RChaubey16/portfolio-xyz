@@ -1,10 +1,10 @@
+import Gallery from "@/components/About/Gallery";
 import Profile from "@/components/About/Profile";
 import Experience from "@/components/Experience/Experience";
-import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
-import Quote from "@/components/Quote";
 import Projects from "@/components/Projects/Projects";
-import Gallery from "@/components/About/Gallery";
+import Quote from "@/components/Quote";
+import Technologies from "@/components/Technologies";
 import Fade from "@/components/animation/Fade";
 
 export default function Home() {

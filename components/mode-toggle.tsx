@@ -38,7 +38,7 @@ export function ModeToggle() {
         setTheme(theme === "dark" ? "light" : "dark");
         playSound();
       }}
-      className="rounded-md transition-colors p-2 border border-transparent hover:bg-accent cursor-pointer"
+      className="hover:bg-accent cursor-pointer rounded-md border border-transparent p-2 transition-colors"
       aria-label="Toggle theme"
     >
       {darkModeSvg}

@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import {
-  Renderer,
   Camera,
   Geometry,
-  Program,
   Mesh,
   OGLRenderingContext,
+  Program,
+  Renderer,
 } from "ogl";
+import { useEffect, useRef } from "react";
 
 import "./Particles.css";
 

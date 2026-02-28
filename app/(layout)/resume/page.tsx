@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import Fade from "@/components/animation/Fade";
 import ResumeViewer from "@/components/resume/ResumeViewer";
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Fade>
-      <section className="pt-20 bg-background">
+      <section className="bg-background pt-20">
         <ResumeViewer />
       </section>
     </Fade>

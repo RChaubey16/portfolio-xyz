@@ -1,7 +1,8 @@
-import { ProjectData } from "@/types/project";
-import ProjectCard from "./ProjectCard";
 import config from "@/data/newConfig.json";
+import { ProjectData } from "@/types/project";
+
 import CtaButton from "../others/CtaButton";
+import ProjectCard from "./ProjectCard";
 
 export const projects: ProjectData[] =
   config.projects as unknown as ProjectData[];
@@ -12,7 +13,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <h1 className="section-title">Projects</h1>
-      <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
         {visibleProjects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} />
         ))}

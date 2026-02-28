@@ -195,33 +195,15 @@
   }
 
   .tech-badge {
-    @apply px-3 py-1
-    flex items-center gap-1
-    bg-card
-    text-base font-medium text-muted-foreground
-    rounded-md
-    transition-[gap,box-shadow,transform]
-    duration-200
-    ease-in-out
-    md:hover:gap-2
-    hover:shadow-sm;
+    @apply bg-card text-muted-foreground flex items-center gap-1 rounded-md px-3 py-1 text-base font-medium transition-[gap,box-shadow,transform] duration-200 ease-in-out hover:shadow-sm md:hover:gap-2;
   }
 
   .social-badge {
-    @apply px-3 py-2
-    flex items-center gap-2
-    bg-card
-    text-sm font-medium text-muted-foreground
-    rounded-md
-    transition-[gap,box-shadow,transform]
-    duration-200
-    ease-in-out
-    md:hover:gap-3
-    hover:shadow-sm;
+    @apply bg-card text-muted-foreground flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-[gap,box-shadow,transform] duration-200 ease-in-out hover:shadow-sm md:hover:gap-3;
   }
 
   .para {
-    @apply font-sans text-base leading-6 text-gray-600 dark:text-manatee;
+    @apply dark:text-manatee font-sans text-base leading-6 text-gray-600;
   }
 }
 
@@ -229,7 +211,7 @@
   .experience-accordion {
     @apply border-none;
     .accordion-header {
-      @apply w-full flex justify-between items-center font-sans font-semibold hover:no-underline text-left cursor-pointer;
+      @apply flex w-full cursor-pointer items-center justify-between text-left font-sans font-semibold hover:no-underline;
 
       .company {
         @apply font-sans text-lg font-semibold text-gray-800 dark:text-white;
@@ -238,14 +220,14 @@
       .role,
       .duration,
       .location {
-        @apply font-sans text-sm font-normal text-gray-600 dark:text-manatee;
+        @apply dark:text-manatee font-sans text-sm font-normal text-gray-600;
       }
     }
   }
 
   .project-card {
     .title {
-      @apply font-sans text-xl font-semibold leading-7 text-foreground;
+      @apply text-foreground font-sans text-xl leading-7 font-semibold;
     }
     .tech-stack-label {
       @apply font-sans text-sm font-bold text-black/50 dark:text-white/60;
@@ -253,18 +235,18 @@
 
     .card-content {
       .status {
-        @apply flex items-center gap-3 font-sans text-sm font-bold px-2.5 py-1 rounded-md;
+        @apply flex items-center gap-3 rounded-md px-2.5 py-1 font-sans text-sm font-bold;
       }
 
       .status-live {
         @apply bg-green-300/20 text-green-600;
 
         .circle {
-          @apply relative w-2 h-2 rounded-full bg-green-600;
+          @apply relative h-2 w-2 rounded-full bg-green-600;
 
           &::after {
             content: "";
-            @apply absolute inset-0 rounded-full bg-inherit animate-[radiation_2s_infinite];
+            @apply absolute inset-0 animate-[radiation_2s_infinite] rounded-full bg-inherit;
           }
         }
       }
@@ -273,11 +255,11 @@
         @apply bg-yellow-300/10 text-yellow-600;
 
         .circle {
-          @apply relative w-2 h-2 rounded-full bg-yellow-600;
+          @apply relative h-2 w-2 rounded-full bg-yellow-600;
 
           &::after {
             content: "";
-            @apply absolute inset-0 rounded-full bg-inherit animate-[radiation_2s_infinite];
+            @apply absolute inset-0 animate-[radiation_2s_infinite] rounded-full bg-inherit;
           }
         }
       }

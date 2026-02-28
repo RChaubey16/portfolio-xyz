@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
-import { Geist_Mono, Figtree } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
+import { Figtree, Geist_Mono } from "next/font/google";
 
-import Particles from "@/components/animation/Particles";
+import type { Metadata } from "next";
+
 import Navbar from "@/components/Navbar";
+import Particles from "@/components/animation/Particles";
+import { ThemeProvider } from "@/components/theme-provider";
+
+import "./globals.css";
 
 const figtTree = Figtree({
   variable: "--font-sans",
@@ -94,7 +96,7 @@ export default function RootLayout({
             </aside> */}
 
             {/* Main content */}
-            <main className="w-full max-w-4xl px-6 mx-auto">{children}</main>
+            <main className="mx-auto w-full max-w-4xl px-6">{children}</main>
 
             {/* Right sidebar */}
             {/* <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
@@ -114,7 +116,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
 
-        <div className="mt-10 mb-20 w-full max-w-4xl px-6 mx-auto text-center text-muted-foreground">
+        <div className="text-muted-foreground mx-auto mt-10 mb-20 w-full max-w-4xl px-6 text-center">
           {/* Design & Developed by Ruturaj Chaubey (X profile link) */}
           Ruturaj Chaubey © {new Date().getFullYear()}. All rights reserved.
         </div>

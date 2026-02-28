@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Fade from "@/components/animation/Fade";
+
 import Projects from "@/components/Projects/Projects";
+import Fade from "@/components/animation/Fade";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <Fade>
-      <section className="py-20 bg-background">
+      <section className="bg-background py-20">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">Projects</h1>
+          <h1 className="mb-4 text-4xl font-bold">Projects</h1>
           <p className="para">
             A collection of projects I&apos;ve worked on, ranging from web
             applications to open-source libraries and developer tools.

@@ -13,13 +13,13 @@ export default function InfoIconCard({
 }) {
   return (
     <div className="flex items-center gap-2.5">
-      <div className="p-1 rounded-md bg-accent">{icon}</div>
+      <div className="bg-accent rounded-md p-1">{icon}</div>
       <p className="text-base">
         {title}{" "}
         {linkHref && (
           <Link
             href={linkHref}
-            className="hover:border-b border-muted-foreground"
+            className="border-muted-foreground hover:border-b"
           >
             {linkText}
           </Link>

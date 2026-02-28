@@ -1,13 +1,13 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export function getIndiaTimeLabel(
   date: Date = new Date(),
-  userTimeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone
+  userTimeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone,
 ): string {
   const INDIA_TZ = "Asia/Kolkata";
 
@@ -46,7 +46,7 @@ export function getIndiaTimeLabel(
       value("day"),
       value("hour"),
       value("minute"),
-      value("second")
+      value("second"),
     );
 
     return (zonedDate.getTime() - date.getTime()) / (1000 * 60 * 60);

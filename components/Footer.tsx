@@ -1,10 +1,11 @@
 import Image from "next/image";
+
 import config from "@/data/newConfig.json";
 
 const Footer = () => {
   const footerImage = config.footerImage;
   return (
-    <footer className="mt-20 mb-10 w-full overflow-hidden rounded-2xl border border-border/40 bg-card shadow-sm">
+    <footer className="border-border/40 bg-card mt-20 mb-10 w-full overflow-hidden rounded-2xl border shadow-sm">
       <div className="relative aspect-3/1 w-full">
         <Image
           src={footerImage}

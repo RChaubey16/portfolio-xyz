@@ -1,5 +1,7 @@
 import Image from "next/image";
+
 import { client } from "@/sanity/lib/client";
+
 import CtaButton from "../others/CtaButton";
 
 interface ImageItem {
@@ -38,14 +40,14 @@ const Gallery = async ({ useTitle = true, useButton = true }) => {
 
       {useButton ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {photos.slice(0, 4).map((photo, index) => (
-              <div key={index} className="relative w-full h-48">
+              <div key={index} className="relative h-48 w-full">
                 <Image
                   src={photo.url}
                   alt={photo.alt}
                   fill
-                  className="object-cover rounded-sm"
+                  className="rounded-sm object-cover"
                 />
               </div>
             ))}
@@ -55,15 +57,15 @@ const Gallery = async ({ useTitle = true, useButton = true }) => {
         <div className="grid grid-cols-1 gap-4">
           {photos.map((photo, index) => (
             <div key={index} className="mb-8">
-              <div className="relative w-full h-96">
+              <div className="relative h-96 w-full">
                 <Image
                   src={photo.url}
                   alt={photo.alt}
                   fill
-                  className="object-cover rounded-sm"
+                  className="rounded-sm object-cover"
                 />
               </div>
-              <p className="mt-2 para text-center">{photo.alt}</p>
+              <p className="para mt-2 text-center">{photo.alt}</p>
             </div>
           ))}
         </div>
