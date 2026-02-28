@@ -6,7 +6,8 @@ import CtaButton from "../others/CtaButton";
 export const projects: ProjectData[] =
   config.projects as unknown as ProjectData[];
 
-const Projects = ({ useSlice = true }) => {
+const Projects = () => {
+  const useSlice = projects.length > 4;
   const visibleProjects = useSlice ? projects.slice(0, 4) : projects;
   return (
     <section id="projects">

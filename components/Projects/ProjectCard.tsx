@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             src={image.src}
             fill
             alt={image.alt}
-            className="object-cover rounded-md"
+            className="object-cover object-top rounded-md"
           />
         </div>
 

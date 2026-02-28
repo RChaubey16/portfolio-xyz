@@ -20,8 +20,8 @@ export default async function Profile() {
 
   return (
     <>
-      <div className="mt-20 flex flex-col items-center">
-        <div className="flex flex-col items-center">
+      <div className="mt-20 flex flex-col">
+        <div className="flex items-center gap-4">
           {/* Image */}
           <div className="relative w-25 h-25 rounded-md border border-manatee">
             <Image
@@ -33,7 +33,7 @@ export default async function Profile() {
           </div>
 
           {/* Info */}
-          <div className="mt-2 text-center">
+          <div className="mt-2">
             <h1 className="text-3xl font-bold text-primary">{name}</h1>
             <RoleSlider roles={roles} />
           </div>

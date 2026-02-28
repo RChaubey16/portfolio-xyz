@@ -2,7 +2,6 @@ import Profile from "@/components/About/Profile";
 import Experience from "@/components/Experience/Experience";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
-import GitHubContribChart from "@/components/About/GitHubContribChart";
 import Quote from "@/components/Quote";
 import Projects from "@/components/Projects/Projects";
 import Gallery from "@/components/About/Gallery";
@@ -33,8 +32,6 @@ export default function Home() {
         quote="It it weren't for second chances, we'd all be alone"
         author="Gregory Alan Isakov"
       />
-
-      <GitHubContribChart />
 
       <Gallery />
 

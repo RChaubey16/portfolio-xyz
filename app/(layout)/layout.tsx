@@ -114,7 +114,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
 
-        <div className="mt-10 mb-20 w-full max-w-4xl px-6 mx-auto text-center">
+        <div className="mt-10 mb-20 w-full max-w-4xl px-6 mx-auto text-center text-muted-foreground">
           {/* Design & Developed by Ruturaj Chaubey (X profile link) */}
           Ruturaj Chaubey © {new Date().getFullYear()}. All rights reserved.
         </div>

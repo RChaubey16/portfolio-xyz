@@ -1,7 +1,7 @@
 {
   "name": "Ruturaj Chaubey",
   "roles": ["Software Engineer", "Full Stack Developer", "Web Developer"],
-  "avatarImageUrl": "/images/profile.jpg",
+  "avatarImageUrl": "/images/me.jpeg",
   "avatarImageAltText": "Ruturaj Chaubey",
   "visits": "2.2k",
   "currentRole": "Full Stack Engineer",
@@ -12,28 +12,28 @@
       "name": "GitHub",
       "tooltip": "GitHub",
       "logoSrc": "/icons/social/github.svg",
-      "href": "https://github.com/RChaubey16",
+      "href": "https://snipr.ruturaj.xyz/6tkBS0",
       "profileImg": ""
     },
     {
       "name": "LinkedIn",
       "tooltip": "LinkedIn",
       "logoSrc": "/icons/social/linkedin.svg",
-      "href": "https://www.linkedin.com/in/ruturaj-chaubey-b453b41b1",
+      "href": "https://snipr.ruturaj.xyz/6vsP8u",
       "profileImg": ""
     },
     {
       "name": "X (Twitter)",
       "tooltip": "X (Twitter)",
       "logoSrc": "/icons/social/x.svg",
-      "href": "https://x.com/RChaubey16",
+      "href": "https://snipr.ruturaj.xyz/6vsP8u",
       "profileImg": ""
     },
     {
       "name": "Drupal",
       "tooltip": "Drupal",
       "logoSrc": "/icons/tech/Drupal.svg",
-      "href": "https://www.drupal.org/u/ruturaj-chaubey",
+      "href": "https://snipr.ruturaj.xyz/IBEXPU",
       "profileImg": ""
     }
   ],
@@ -301,10 +301,110 @@
   },
   "projects": [
     {
+      "id": "snipr",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/snipr.png",
+        "alt": "Snipr URL shortener home page"
+      },
+      "status": {
+        "text": "Live",
+        "className": "status-live"
+      },
+      "title": "Snipr",
+      "description": "A fast and minimal URL shortener. Paste a long URL, get a short one — done. Features Redis caching, PostgreSQL persistence, Google OAuth, click analytics, and auto-expiring links.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "techHref": "https://nestjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "techHref": "https://www.postgresql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "redis",
+          "tech": "Redis",
+          "techHref": "https://redis.io",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Redis.svg"
+          },
+          "imageAltText": "Redis logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        },
+        {
+          "id": "docker",
+          "tech": "Docker",
+          "techHref": "https://www.docker.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+          },
+          "imageAltText": "Docker logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/snipr",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live Demo",
+          "href": "https://snipr.ruturaj.xyz",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
       "id": "react-kequence",
       "type": "tech",
       "image": {
-        "src": "/images/projects/react-keyquence.png",
+        "src": "/images/projects/react-keyquence-shot.png",
         "alt": "React keyquence npm home page"
       },
       "status": {
@@ -351,135 +451,15 @@
       ]
     },
     {
-      "id": "name-my-variable",
+      "id": "dev-connector",
       "type": "tech",
       "image": {
-        "src": "/images/projects/name-my-variable.png",
-        "alt": "Name my variable home page"
+        "src": "/images/projects/devconnector-shot.png",
+        "alt": "Dev connector home page"
       },
       "status": {
         "text": "Live",
         "className": "status-live"
-      },
-      "title": "Name My Variable",
-      "description": "A Visual Studio Code extension that helps developers write more readable code by suggesting meaningful variable and function names.",
-      "techStack": [
-        {
-          "id": "typescript",
-          "tech": "TypeScript",
-          "techHref": "https://www.typescriptlang.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
-          },
-          "imageAltText": "TypeScript logo"
-        },
-        {
-          "id": "gemini",
-          "tech": "Gemini",
-          "techHref": "https://gemini.google.com/",
-          "imageUrl": {
-            "light": "/icons/tech/gemini-icon.png",
-            "dark": "/icons/tech/gemini-icon.png"
-          },
-          "imageAltText": "Gemini logo"
-        },
-        {
-          "id": "vs-code",
-          "tech": "VS Code",
-          "techHref": "https://code.visualstudio.com/",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-%28VS-Code%29.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-%28VS-Code%29.svg"
-          },
-          "imageAltText": "VS code logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/name-my-variable",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Extension",
-          "href": "https://marketplace.visualstudio.com/items?itemName=RuturajChaubey.name-my-variable",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
-      "id": "tts",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/text-to-translate.png",
-        "alt": "Text to translate app home page"
-      },
-      "status": {
-        "text": "Building",
-        "className": "status-building"
-      },
-      "title": "Text to Speech",
-      "description": "A lightweight web app that lets users translate text between multiple languages and instantly hear the results through text-to-speech (TTS) playback.",
-      "techStack": [
-        {
-          "id": "javascript",
-          "tech": "JavaScript",
-          "techHref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/JavaScript.svg"
-          },
-          "imageAltText": "JavaScript logo"
-        },
-        {
-          "id": "google-cloud",
-          "tech": "Google Cloud",
-          "techHref": "https://console.cloud.google.com/",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Google-Cloud.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Google-Cloud.svg"
-          },
-          "imageAltText": "Google cloud logo"
-        },
-        {
-          "id": "vercel",
-          "tech": "Vercel",
-          "techHref": "https://www.vercel.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
-            "dark": "/icons/tech/vercel-light.png"
-          },
-          "imageAltText": "Vercel logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/tts-translate-app",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Demo",
-          "href": "https://tts-translate-app-orcin.vercel.app/",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
-      "id": "dev-connector",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/devconnector.png",
-        "alt": "Dev connector home page"
-      },
-      "status": {
-        "text": "Building",
-        "className": "status-building"
       },
       "title": "DevConnector",
       "description": "A social networking platform for developers that enables devs to create profiles, share posts, and connect with other developers.",
@@ -561,46 +541,6 @@
           "href": "https://github.com/RChaubey16/DevConnector",
           "variant": "outline",
           "icon": "GithubIcon"
-        }
-      ]
-    },
-    {
-      "id": "dev-toolkit",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/dev-toolkit.png",
-        "alt": "Dev toolkit npm package home page"
-      },
-      "status": {
-        "text": "Live",
-        "className": "status-live"
-      },
-      "title": "Dev Toolkit",
-      "description": "A compact library offering a set of handy utility functions, designed to simplify common development tasks and improve code efficiency.",
-      "techStack": [
-        {
-          "id": "typescript",
-          "tech": "TypeScript",
-          "techHref": "https://www.typescriptlang.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
-          },
-          "imageAltText": "TypeScript logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/dev-utils-toolkit",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Package",
-          "href": "https://www.npmjs.com/package/dev-utils-toolkit",
-          "variant": "default",
-          "icon": "Globe"
         }
       ]
     }
