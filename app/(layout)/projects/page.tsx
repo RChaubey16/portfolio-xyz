@@ -19,7 +19,7 @@ export default function ProjectsPage() {
             applications to open-source libraries and developer tools.
           </p>
         </div>
-        <Projects useSlice={false} />
+        <Projects />
       </section>
     </Fade>
   );
