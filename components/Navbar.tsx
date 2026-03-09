@@ -16,8 +16,8 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="pointer-events-none fixed top-2 right-0 left-0 z-50 mx-auto max-w-2xl">
-      <div className="bg-background/80 border-border pointer-events-auto flex items-center justify-between gap-1 px-4 py-1 backdrop-blur-md transition-all md:px-0">
+    <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50 mx-auto max-w-2xl">
+      <div className="bg-background/80 border-border pointer-events-auto flex items-center justify-between gap-1 px-4 py-2 backdrop-blur-md transition-all md:px-0">
         <div className="flex items-center gap-1">
           {links.map(({ href, label }) => (
             <Link
