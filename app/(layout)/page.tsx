@@ -1,3 +1,4 @@
+import Experience from "@/components/Experience/Experience";
 import Footer from "@/components/Footer";
 import TextCard from "@/components/TextCard";
 import FadeUp from "@/components/animation/FadeUp";
@@ -11,6 +12,10 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.1}>
+        <Experience />
+      </FadeUp>
+
+      <FadeUp delay={0.2}>
         <section className="mt-12 grid grid-cols-1 gap-3">
           <h2 className="text-2xl font-bold">Personal</h2>
           <TextCard

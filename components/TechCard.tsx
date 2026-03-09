@@ -23,14 +23,17 @@ const TechCard = ({ tech, techHref, imageUrl, imageAltText }: TechItem) => {
 
   return (
     <Link key={tech} href={techHref} target="_blank">
-      <Badge variant="outline" className="tech-badge">
+      <Badge
+        variant="outline"
+        className="bg-accent/80 border-accent/50 hover:bg-accent rounded-sm border-2 border-dashed p-2"
+      >
         <Image
           src={isDark ? imageUrl.dark : imageUrl.light}
           alt={imageAltText}
           width={20}
           height={20}
         />
-        <span>{tech}</span>
+        <span className="ml-1.5 text-sm">{tech}</span>
       </Badge>
     </Link>
   );
