@@ -1,22 +1,20 @@
-import { Figtree, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist_Mono } from "next/font/google";
 
 import type { Metadata } from "next";
 
 import Navbar from "@/components/Navbar";
-import Particles from "@/components/animation/Particles";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
-const figtTree = Figtree({
-  variable: "--font-sans",
+const fontSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-mono",
+const fontMono = Geist_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -68,58 +66,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${figtTree.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <div className="flex">
-            {/* Left sidebar */}
-            {/* <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
-              <Particles
-                particleColors={["#696767"]}
-                particleCount={200}
-                particleSpread={5}
-                speed={0.1}
-                particleBaseSize={100}
-                moveParticlesOnHover
-                alphaParticles={false}
-                disableRotation={false}
-                pixelRatio={1}
-                className={""}
-              />
-            </aside> */}
-
-            {/* Main content */}
-            <main className="mx-auto w-full max-w-4xl px-6">{children}</main>
-
-            {/* Right sidebar */}
-            {/* <aside className="hidden lg:flex flex-1 sticky top-0 h-screen">
-              <Particles
-                particleColors={["#696767"]}
-                particleCount={200}
-                particleSpread={5}
-                speed={0.1}
-                particleBaseSize={100}
-                moveParticlesOnHover
-                alphaParticles={false}
-                disableRotation={false}
-                pixelRatio={1}
-                className={""}
-              />
-            </aside> */}
-          </div>
+          {/* Main content */}
+          <main className="mx-auto px-4 md:px-0 min-h-screen w-full max-w-2xl border border-red-500">
+            <Navbar />
+            {children}
+          </main>
         </ThemeProvider>
-
-        <div className="text-muted-foreground mx-auto mt-10 mb-20 w-full max-w-4xl px-6 text-center">
-          {/* Design & Developed by Ruturaj Chaubey (X profile link) */}
-          Ruturaj Chaubey © {new Date().getFullYear()}. All rights reserved.
-        </div>
       </body>
     </html>
   );

@@ -6,22 +6,22 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  --card: #ffffff;
+  --card: #fdfdfd;
   --card-foreground: #0a0a0a;
   --popover: #ffffff;
   --popover-foreground: #0a0a0a;
   --primary: #171717;
   --primary-foreground: #fafafa;
-  --secondary: #f5f5f5;
-  --secondary-foreground: #171717;
-  --muted: #f5f5f5;
+  --secondary: #d4d4d4;
+  --secondary-foreground: #0a0a0a;
+  --muted: #eeeeee;
   --muted-foreground: #737373;
-  --accent: #f5f5f5;
+  --accent: #eeeeee;
   --accent-foreground: #171717;
   --destructive: #e7000b;
   --destructive-foreground: #ffffff;
-  --border: #e5e5e5;
-  --input: #e5e5e5;
+  --border: #eeeeee;
+  --input: #f5f5f5;
   --ring: #a1a1a1;
   --chart-1: #91c5ff;
   --chart-2: #3a81f6;
@@ -36,10 +36,10 @@
   --sidebar-accent-foreground: #171717;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #a1a1a1;
-  --font-sans: Figtree, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: Noto Serif Georgian, ui-serif, serif;
+  --font-sans: DM Sans, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: Geist Mono, ui-monospace, monospace;
-  --radius: 0.625rem;
+  --radius: 1rem;
   --shadow-x: 0;
   --shadow-y: 1px;
   --shadow-blur: 3px;
@@ -63,11 +63,11 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #171717;
   --foreground: #fafafa;
-  --card: #171717;
+  --card: #0e0e0e;
   --card-foreground: #fafafa;
-  --popover: #262626;
+  --popover: #171717;
   --popover-foreground: #fafafa;
   --primary: #e5e5e5;
   --primary-foreground: #171717;
@@ -79,15 +79,15 @@
   --accent-foreground: #fafafa;
   --destructive: #ff6467;
   --destructive-foreground: #fafafa;
-  --border: #282828;
-  --input: #343434;
+  --border: #262626;
+  --input: #262626;
   --ring: #737373;
   --chart-1: #91c5ff;
   --chart-2: #3a81f6;
   --chart-3: #2563ef;
   --chart-4: #1a4eda;
   --chart-5: #1f3fad;
-  --sidebar: #171717;
+  --sidebar: #262626;
   --sidebar-foreground: #fafafa;
   --sidebar-primary: #1447e6;
   --sidebar-primary-foreground: #fafafa;
@@ -95,10 +95,10 @@
   --sidebar-accent-foreground: #fafafa;
   --sidebar-border: #282828;
   --sidebar-ring: #525252;
-  --font-sans: Figtree, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: Noto Serif Georgian, ui-serif, serif;
+  --font-sans: DM Sans, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: Geist Mono, ui-monospace, monospace;
-  --radius: 0.625rem;
+  --radius: 1rem;
   --shadow-x: 0;
   --shadow-y: 1px;
   --shadow-blur: 3px;
@@ -170,11 +170,6 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
-
-  /* Custom Styles */
-  --color-manatee: #909092;
-  --animate-slide-in: slide-in 0.5s ease-out forwards;
-  --animate-slide-out: slide-out 0.5s ease-in forwards;
 }
 
 @layer base {
@@ -183,123 +178,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-  /* section {
-    @apply mt-12;
-  } */
-}
-
-@layer utilities {
-  .section-title {
-    @apply mb-4 text-2xl font-semibold;
-  }
-
-  .tech-badge {
-    @apply bg-card text-muted-foreground flex items-center gap-1 rounded-md px-3 py-1 text-base font-medium transition-[gap,box-shadow,transform] duration-200 ease-in-out hover:shadow-sm md:hover:gap-2;
-  }
-
-  .social-badge {
-    @apply bg-card text-muted-foreground flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-[gap,box-shadow,transform] duration-200 ease-in-out hover:shadow-sm md:hover:gap-3;
-  }
-
-  .para {
-    @apply dark:text-manatee font-sans text-base leading-6 text-gray-600;
-  }
-}
-
-@layer components {
-  .experience-accordion {
-    @apply border-none;
-    .accordion-header {
-      @apply flex w-full cursor-pointer items-center justify-between text-left font-sans font-semibold hover:no-underline;
-
-      .company {
-        @apply font-sans text-lg font-semibold text-gray-800 dark:text-white;
-      }
-
-      .role,
-      .duration,
-      .location {
-        @apply dark:text-manatee font-sans text-sm font-normal text-gray-600;
-      }
-    }
-  }
-
-  .project-card {
-    .title {
-      @apply text-foreground font-sans text-xl leading-7 font-semibold;
-    }
-    .tech-stack-label {
-      @apply font-sans text-sm font-bold text-black/50 dark:text-white/60;
-    }
-
-    .card-content {
-      .status {
-        @apply flex items-center gap-3 rounded-md px-2.5 py-1 font-sans text-sm font-bold;
-      }
-
-      .status-live {
-        @apply bg-green-300/20 text-green-600;
-
-        .circle {
-          @apply relative h-2 w-2 rounded-full bg-green-600;
-
-          &::after {
-            content: "";
-            @apply absolute inset-0 animate-[radiation_2s_infinite] rounded-full bg-inherit;
-          }
-        }
-      }
-
-      .status-building {
-        @apply bg-yellow-300/10 text-yellow-600;
-
-        .circle {
-          @apply relative h-2 w-2 rounded-full bg-yellow-600;
-
-          &::after {
-            content: "";
-            @apply absolute inset-0 animate-[radiation_2s_infinite] rounded-full bg-inherit;
-          }
-        }
-      }
-    }
-  }
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-out {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-}
-
-@keyframes radiation {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  70% {
-    transform: scale(3);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(3);
-    opacity: 0;
   }
 }

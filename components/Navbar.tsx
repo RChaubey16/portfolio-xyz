@@ -3,31 +3,39 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Home } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 
-import { Button } from "@/components/ui/button";
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/work", label: "Work" },
+  { href: "/projects", label: "Projects" },
+  { href: "/resume", label: "Resume" },
+];
 
 const Navbar = () => {
   const pathname = usePathname();
 
-  // Only show the navbar if we are not on the home page
-  if (pathname === "/") {
-    return null;
-  }
-
   return (
-    <nav className="pointer-events-none fixed top-6 right-0 left-0 z-50 flex justify-center">
-      <div className="bg-background/80 border-border animate-slide-in pointer-events-auto rounded-full border shadow-lg backdrop-blur-md transition-all">
-        <Link href="/">
-          <Button
-            variant="link"
-            size="icon"
-            className="cursor-pointer"
-            title="Home"
-          >
-            <Home className="h-5 w-5" />
-          </Button>
-        </Link>
+    <nav className="pointer-events-none fixed top-2 right-0 left-0 z-50 mx-auto max-w-2xl">
+      <div className="bg-background/80 border-border pointer-events-auto flex items-center justify-between gap-1 px-4 py-1 backdrop-blur-md transition-all md:px-0">
+        <div className="flex items-center gap-1">
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
+                pathname === href
+                  ? "bg-accent text-accent-foreground"
+                  : "hover:bg-accent/50"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+        <div className="flex items-center">
+          <ModeToggle />
+        </div>
       </div>
     </nav>
   );
