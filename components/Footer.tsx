@@ -5,16 +5,21 @@ import config from "@/data/newConfig.json";
 const Footer = () => {
   const footerImage = config.footerImage;
   return (
-    <footer className="border-border/40 bg-card mt-20 mb-10 w-full overflow-hidden rounded-2xl border shadow-sm">
-      <div className="relative aspect-3/1 w-full">
-        <Image
-          src={footerImage}
-          alt="Profile Cover"
-          fill
-          className="object-cover transition-transform duration-500 hover:scale-105"
-          priority
-        />
+    <footer className="mt-20 mb-10 w-full">
+      <div className="border-border/40 bg-card w-full overflow-hidden rounded-2xl border shadow-sm">
+        <div className="relative aspect-3/1 w-full">
+          <Image
+            src={footerImage}
+            alt="Profile Cover"
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+            priority
+          />
+        </div>
       </div>
+      <p className="text-muted-foreground mt-4 text-center text-sm">
+        &copy; 2026 Ruturaj Chaubey. All rights reserved.
+      </p>
     </footer>
   );
 };

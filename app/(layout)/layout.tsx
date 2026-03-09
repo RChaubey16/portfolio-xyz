@@ -74,7 +74,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Main content */}
-          <main className="mx-auto px-4 md:px-0 min-h-screen w-full max-w-2xl border border-red-500">
+          <main className="mx-auto px-4 md:px-0 min-h-screen w-full max-w-2xl">
             <Navbar />
             {children}
           </main>
