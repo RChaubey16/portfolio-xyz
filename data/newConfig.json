@@ -544,6 +544,35 @@
           "icon": "GithubIcon"
         }
       ]
+    },
+    {
+      "id": "portfolio",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/snipr.png",
+        "alt": "Portfolio website home page"
+      },
+      "status": {
+        "text": "Live",
+        "className": "status-live"
+      },
+      "title": "Portfolio",
+      "description": "My personal portfolio website built with Next.js, Tailwind CSS, and Motion. Features dark mode, smooth animations, and a clean minimal design.",
+      "techStack": [],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/portfolio-xyz",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live Demo",
+          "href": "https://ruturaj.xyz",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
     }
   ],
   "technologies": [

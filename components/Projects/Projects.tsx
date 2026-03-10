@@ -11,8 +11,8 @@ const Projects = () => {
   const useSlice = projects.length > 4;
   const visibleProjects = useSlice ? projects.slice(0, 4) : projects;
   return (
-    <section id="projects">
-      <h1 className="section-title">Projects</h1>
+    <section id="projects" className="mt-12">
+      <h1 className="text-2xl font-bold">Projects</h1>
       <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
         {visibleProjects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} />
