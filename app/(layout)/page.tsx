@@ -1,5 +1,7 @@
+import { FiFilm } from "react-icons/fi";
+import { GrTechnology } from "react-icons/gr";
+
 import Experience from "@/components/Experience/Experience";
-import Footer from "@/components/Footer";
 import TextCard from "@/components/TextCard";
 import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/introduction/Intro";
@@ -21,23 +23,23 @@ export default function Home() {
           <TextCard
             title="Movies"
             description="Films and shows that have inspired me"
+            icon={<FiFilm className="h-5 w-5" />}
           />
-          <TextCard title="Gears" description="Tech and gadgets that I use" />
+          <TextCard
+            title="Gears"
+            description="Tech and gadgets that I use"
+            icon={<GrTechnology className="h-5 w-5" />}
+          />
         </section>
       </FadeUp>
 
-      <FadeUp delay={0.3}>
-        <Footer />
-      </FadeUp>
-      {/* <Experience />
+      {/*
 
       <Projects />
 
       <Gallery />
 
-      <Technologies />
-
-      <Footer /> */}
+      <Technologies /> */}
     </>
   );
 }

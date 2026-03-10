@@ -5,7 +5,7 @@ import config from "@/data/newConfig.json";
 const Footer = () => {
   const footerImage = config.footerImage;
   return (
-    <footer className="mt-20 mb-10 w-full">
+    <footer className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
       <div className="border-border/40 bg-card w-full overflow-hidden rounded-2xl border shadow-sm">
         <div className="relative aspect-3/1 w-full">
           <Image

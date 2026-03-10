@@ -10,11 +10,18 @@ import {
 import config from "../../data/newConfig.json";
 import TechUsed from "../TechUsed";
 
-export function ExperienceAccordion() {
+export function ExperienceAccordion({ accordionState = "closed" }) {
   const experience = config.experience;
 
+  const accordionDefaultValue =
+    accordionState === "open" ? ["item-1", "item-2", "item-3"] : [];
+
   return (
-    <Accordion type="multiple" className="w-full" defaultValue={[]}>
+    <Accordion
+      type="multiple"
+      className="w-full"
+      defaultValue={accordionDefaultValue}
+    >
       <AccordionItem value="item-1" className="border-b-0">
         <AccordionTrigger className="hover:cursor-pointer hover:no-underline">
           <div className="accordion-header flex w-full items-center justify-between">

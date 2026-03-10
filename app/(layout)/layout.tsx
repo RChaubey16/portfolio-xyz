@@ -2,6 +2,8 @@ import { DM_Sans, Geist_Mono } from "next/font/google";
 
 import type { Metadata } from "next";
 
+import Footer from "@/components/Footer";
+import FooterFadeUp from "@/components/FooterFadeUp";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -74,10 +76,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Main content */}
-          <main className="mx-auto px-4 md:px-0 min-h-screen w-full max-w-2xl">
+          <main className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
             <Navbar />
             {children}
           </main>
+          <FooterFadeUp>
+            <Footer />
+          </FooterFadeUp>
         </ThemeProvider>
       </body>
     </html>
