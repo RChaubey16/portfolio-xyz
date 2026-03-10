@@ -7,17 +7,29 @@ import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { FaDrupal, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
+import configData from "../../data/newConfig.json"
+
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+const socialIcons = {
+  LinkedIn: <FaLinkedinIn className="h-5 w-5" />,
+  GitHub: <FaGithub className="h-5 w-5" />,
+  Twitter: <FaXTwitter className="h-5 w-5" />,
+  Drupal: <FaDrupal className="h-5 w-5" />,
+} as const;
+
+type SocialName = keyof typeof socialIcons;
+
 const Intro = () => {
+  const { name, avatarImageUrl, avatarImageAltText, email, description, socials } = configData;
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("ruturajchaubey16@gmail.com");
+    navigator.clipboard.writeText(email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -26,14 +38,14 @@ const Intro = () => {
     <section className="mt-20 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <Image
-          src="/images/me.jpeg"
-          alt="Ruturaj"
+          src={avatarImageUrl}
+          alt={avatarImageAltText}
           width={80}
           height={80}
           className="h-24 w-24 rounded-full object-cover"
         />
         <div>
-          <h1 className="text-2xl font-bold">Ruturaj</h1>
+          <h1 className="text-2xl font-bold">{name}</h1>
           <p className="text-muted-foreground flex items-center gap-1">
             Engineer &bull; Email
             <button
@@ -52,66 +64,27 @@ const Intro = () => {
       </div>
       <div>
         <p className="text-muted-foreground">
-          Love to build cool stuff, content creator & polymath.
+          {description}
         </p>
       </div>
       <div className="text-muted-foreground flex items-center gap-3">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="hover:text-foreground transition-colors"
-            >
-              <FaLinkedinIn className="h-5 w-5" />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>LinkedIn</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="hover:text-foreground transition-colors"
-            >
-              <FaXTwitter className="h-5 w-5" />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>X (Twitter)</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="hover:text-foreground transition-colors"
-            >
-              <FaGithub className="h-5 w-5" />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>GitHub</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="https://drupal.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Drupal"
-              className="hover:text-foreground transition-colors"
-            >
-              <FaDrupal className="h-5 w-5" />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>Drupal</TooltipContent>
-        </Tooltip>
+
+        {socials.map((social) => (
+          <Tooltip key={social.name}>
+            <TooltipTrigger asChild>
+              <Link
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.tooltip}
+                className="hover:text-foreground transition-colors"
+              >
+                {socialIcons[social.name as SocialName]}
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>{social.tooltip}</TooltipContent>
+          </Tooltip>
+        ))}
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 {
   "name": "Ruturaj Chaubey",
+  "description": " Love to build cool stuff, content creator & polymath.",
   "roles": ["Software Engineer", "Full Stack Developer", "Web Developer"],
   "avatarImageUrl": "/images/me.jpeg",
   "avatarImageAltText": "Ruturaj Chaubey",
@@ -23,7 +24,7 @@
       "profileImg": ""
     },
     {
-      "name": "X (Twitter)",
+      "name": "Twitter",
       "tooltip": "X (Twitter)",
       "logoSrc": "/icons/social/x.svg",
       "href": "https://snipr.ruturaj.xyz/6vsP8u",

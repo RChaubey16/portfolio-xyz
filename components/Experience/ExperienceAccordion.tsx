@@ -30,7 +30,7 @@ export function ExperienceAccordion() {
               <div>
                 <h3 className="flex items-center text-lg font-bold">
                   QED42
-                  <span className="ml-3 rounded-sm bg-green-500/30 px-1.5 py-1 text-sm font-medium text-green-700">
+                  <span className="ml-3 rounded-sm bg-green-500/30 px-1.5 py-1 text-sm font-medium text-green-700 dark:text-green-400">
                     <span className="h-2 w-2 bg-green-500" /> Working
                   </span>
                 </h3>
