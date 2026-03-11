@@ -37,8 +37,12 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
               <div>
                 <h3 className="flex items-center text-lg font-bold">
                   QED42
-                  <span className="ml-3 rounded-sm bg-green-500/30 px-1.5 py-1 text-sm font-medium text-green-700 dark:text-green-400">
-                    <span className="h-2 w-2 bg-green-500" /> Working
+                  <span className="ml-3 inline-flex items-center gap-1.5 rounded-full bg-green-500/15 px-2.5 py-0.5 text-sm font-medium text-green-700 dark:text-green-400">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                    </span>
+                    Working
                   </span>
                 </h3>
                 <p className="text-base">Engineer - Full Stack</p>

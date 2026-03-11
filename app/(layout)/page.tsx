@@ -37,10 +37,6 @@ export default function Home() {
           />
         </section>
       </FadeUp>
-
-      {/* <Gallery />
-
-      <Technologies /> */}
     </>
   );
 }
