@@ -19,7 +19,7 @@ const CtaButton = ({
       <Button
         variant="outline"
         size={"lg"}
-        className="flex cursor-pointer items-center border-ring gap-2 transition-all duration-200 ease-in-out hover:gap-4"
+        className="border-ring flex cursor-pointer items-center gap-2 transition-all duration-200 ease-in-out hover:gap-4"
       >
         {text}
         {icon}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import type { ReactNode } from "react";
 import { GoArrowRight } from "react-icons/go";
 
@@ -10,7 +11,13 @@ interface TextCardProps {
   target?: string;
 }
 
-const TextCard = ({ title, description, href = "#", icon, target = "" }: TextCardProps) => {
+const TextCard = ({
+  title,
+  description,
+  href = "#",
+  icon,
+  target = "",
+}: TextCardProps) => {
   return (
     <Link href={href} target={target}>
       <div className="border-ring/50 dark:bg-muted/40 dark:hover:bg-muted/70 hover:bg-muted/70 group flex w-full items-center justify-between rounded-md border p-3.5">

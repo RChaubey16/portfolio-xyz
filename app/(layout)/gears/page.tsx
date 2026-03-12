@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+
+import type { Metadata } from "next";
 import { GoArrowUpRight } from "react-icons/go";
 
 import FadeUp from "@/components/animation/FadeUp";

@@ -463,7 +463,7 @@
         "alt": "React keyquence npm home page"
       },
       "status": {
-      "text": "All Systems Running",
+        "text": "All Systems Running",
         "className": "status-live"
       },
       "title": "React Keyquence",

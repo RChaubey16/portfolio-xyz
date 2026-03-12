@@ -7,13 +7,13 @@ import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { FaDrupal, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
-import configData from "../../data/newConfig.json"
-
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
+import configData from "../../data/newConfig.json";
 
 const socialIcons = {
   LinkedIn: <FaLinkedinIn className="h-5 w-5" />,
@@ -25,7 +25,14 @@ const socialIcons = {
 type SocialName = keyof typeof socialIcons;
 
 const Intro = () => {
-  const { name, avatarImageUrl, avatarImageAltText, email, description, socials } = configData;
+  const {
+    name,
+    avatarImageUrl,
+    avatarImageAltText,
+    email,
+    description,
+    socials,
+  } = configData;
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
@@ -63,12 +70,9 @@ const Intro = () => {
         </div>
       </div>
       <div>
-        <p className="text-muted-foreground">
-          {description}
-        </p>
+        <p className="text-muted-foreground">{description}</p>
       </div>
       <div className="text-muted-foreground flex items-center gap-3">
-
         {socials.map((social) => (
           <Tooltip key={social.name}>
             <TooltipTrigger asChild>
