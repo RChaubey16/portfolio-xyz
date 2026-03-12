@@ -877,5 +877,24 @@
       "imageAltText": "Sass logo"
     }
   ],
+  "movies": [
+    {
+      "name": "The Lord of the Rings Trilogy",
+      "link": "https://www.imdb.com/list/ls069544383"
+    },
+    {
+      "name": "Interstellar",
+      "link": "https://www.imdb.com/title/tt0816692"
+    },
+
+    {
+      "name": "The Dark Knight",
+      "link": "https://www.imdb.com/title/tt0468569"
+    },
+    {
+      "name": "About Time",
+      "link": "https://www.imdb.com/title/tt2194499"
+    }
+  ],
   "footerImage": "/images/footer-cover.png"
 }

@@ -7,11 +7,12 @@ interface TextCardProps {
   description: string;
   href?: string;
   icon?: ReactNode;
+  target?: string;
 }
 
-const TextCard = ({ title, description, href = "#", icon }: TextCardProps) => {
+const TextCard = ({ title, description, href = "#", icon, target = "" }: TextCardProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} target={target}>
       <div className="border-ring/50 dark:bg-muted/40 dark:hover:bg-muted/70 hover:bg-muted/70 group flex w-full items-center justify-between rounded-md border p-3.5">
         <div className="flex items-center gap-3">
           {icon && (

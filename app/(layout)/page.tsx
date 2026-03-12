@@ -29,6 +29,7 @@ export default function Home() {
             title="Movies"
             description="Films and shows that have inspired me"
             icon={<FiFilm className="h-5 w-5" />}
+            href="/movies"
           />
           <TextCard
             title="Gears"
