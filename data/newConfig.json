@@ -896,5 +896,49 @@
       "link": "https://www.imdb.com/title/tt2194499"
     }
   ],
+  "gears": [
+    {
+      "name": "MacBook Air M2",
+      "description": "Primary development machine",
+      "link": "https://www.apple.com/macbook-air",
+      "category": "computer"
+    },
+    {
+      "name": "Lenovo Thinkpad E14",
+      "description": "Secondary development machine",
+      "link": "https://www.lenovo.com/Products/Notebooks/ThinkPad-E14/p/22BZ200001",
+      "category": "computer"
+    },
+    {
+      "name": "Sony WH-1000XM5",
+      "description": "Noise-cancelling headphones for deep focus",
+      "link": "https://www.sony.com/en/headphones/wh-1000xm5",
+      "category": "audio"
+    },
+    {
+      "name": "Keychron K2 V2",
+      "description": "Mechanical keyboard with Gateron Brown switches",
+      "link": "https://www.keychron.com/products/keychron-k2",
+      "category": "peripherals"
+    },
+    {
+      "name": "LG 27UL850-W 4K Monitor",
+      "description": "27\" 4K USB-C monitor for coding",
+      "link": "https://www.lg.com/monitors",
+      "category": "monitor"
+    },
+    {
+      "name": "Logitech MX Master 3S",
+      "description": "Ergonomic wireless mouse",
+      "link": "https://www.logitech.com/en-us/products/mice/mx-master-3s.html",
+      "category": "peripherals"
+    },
+    {
+      "name": "Antigravity",
+      "description": "Primary code editor",
+      "link": "https://antigravity.google",
+      "category": "software"
+    }
+  ],
   "footerImage": "/images/footer-cover.png"
 }

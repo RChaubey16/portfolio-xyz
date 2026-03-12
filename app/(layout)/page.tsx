@@ -35,6 +35,7 @@ export default function Home() {
             title="Gears"
             description="Tech and gadgets that I use"
             icon={<GrTechnology className="h-5 w-5" />}
+            href="/gears"
           />
         </section>
       </FadeUp>
