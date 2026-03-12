@@ -73,20 +73,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       )}
 
       {/* Links */}
-      <CardFooter className="flex items-center gap-2 px-4 pt-3 pb-4">
-        {liveLink && (
-          <Link href={liveLink.href} target="_blank">
-            <Button variant="default" size="sm" className="cursor-pointer">
-              <Globe className="mr-1.5 h-4 w-4" />
-              Live
+      <CardFooter className="mt-6 ml-auto flex items-center gap-2 px-4 pt-3 pb-4">
+        {codeLink && (
+          <Link href={codeLink.href} target="_blank">
+            <Button variant="ghost" size="sm" className="cursor-pointer">
+              <GithubIcon className="mr-1 h-4 w-4" />
+              Code
             </Button>
           </Link>
         )}
-        {codeLink && (
-          <Link href={codeLink.href} target="_blank">
-            <Button variant="outline" size="sm" className="cursor-pointer">
-              <GithubIcon className="mr-1.5 h-4 w-4" />
-              Code
+        {liveLink && (
+          <Link href={liveLink.href} target="_blank">
+            <Button variant="default" size="sm" className="cursor-pointer">
+              <Globe className="mr-1 h-4 w-4" />
+              Live
             </Button>
           </Link>
         )}

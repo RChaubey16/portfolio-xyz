@@ -7,8 +7,8 @@ import ProjectCard from "./ProjectCard";
 export const projects: ProjectData[] =
   config.projects as unknown as ProjectData[];
 
-const Projects = () => {
-  const useSlice = projects.length > 4;
+const Projects = ({ slice = true }) => {
+  const useSlice = slice && projects.length > 4;
   const visibleProjects = useSlice ? projects.slice(0, 4) : projects;
   return (
     <section id="projects" className="mt-12">

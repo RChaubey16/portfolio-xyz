@@ -17,7 +17,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <p className="text-muted-foreground mt-4 text-center text-sm">
+      <p className="my-20 text-muted-foreground text-center text-sm">
         &copy; 2026 Ruturaj Chaubey. All rights reserved.
       </p>
     </footer>

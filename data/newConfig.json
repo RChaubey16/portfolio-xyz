@@ -302,6 +302,60 @@
   },
   "projects": [
     {
+      "id": "orbit",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/under-construction.png",
+        "alt": "Orbit component library"
+      },
+      "status": {
+        "text": "In Development",
+        "className": "status-dev"
+      },
+      "title": "Orbit",
+      "description": "A modern component library built for speed and flexibility. Designed with clean APIs, smooth animations, and a developer-first approach.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/orbit",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        }
+      ]
+    },
+    {
       "id": "snipr",
       "type": "tech",
       "image": {
@@ -309,7 +363,7 @@
         "alt": "Snipr URL shortener home page"
       },
       "status": {
-        "text": "Live",
+        "text": "All Systems Running",
         "className": "status-live"
       },
       "title": "Snipr",
@@ -409,7 +463,7 @@
         "alt": "React keyquence npm home page"
       },
       "status": {
-        "text": "Live",
+      "text": "All Systems Running",
         "className": "status-live"
       },
       "title": "React Keyquence",
@@ -452,6 +506,66 @@
       ]
     },
     {
+      "id": "what-the-hex",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/what-the-hex.png",
+        "alt": "What the hex color lookup tool"
+      },
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
+      },
+      "title": "What the Hex",
+      "description": "A fast, minimal color lookup tool for developers and designers. Paste a hex code, get the color name, preview, and ready-to-use CSS/SCSS variables — all in one place.",
+      "techStack": [
+        {
+          "id": "react",
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "techHref": "https://www.typescriptlang.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/what-the-hex",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live Demo",
+          "href": "https://what-the-hex.ruturaj.xyz",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
       "id": "dev-connector",
       "type": "tech",
       "image": {
@@ -459,7 +573,7 @@
         "alt": "Dev connector home page"
       },
       "status": {
-        "text": "Live",
+        "text": "All Systems Running",
         "className": "status-live"
       },
       "title": "DevConnector",
@@ -542,35 +656,6 @@
           "href": "https://github.com/RChaubey16/DevConnector",
           "variant": "outline",
           "icon": "GithubIcon"
-        }
-      ]
-    },
-    {
-      "id": "portfolio",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/snipr.png",
-        "alt": "Portfolio website home page"
-      },
-      "status": {
-        "text": "Live",
-        "className": "status-live"
-      },
-      "title": "Portfolio",
-      "description": "My personal portfolio website built with Next.js, Tailwind CSS, and Motion. Features dark mode, smooth animations, and a clean minimal design.",
-      "techStack": [],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/portfolio-xyz",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live Demo",
-          "href": "https://ruturaj.xyz",
-          "variant": "default",
-          "icon": "Globe"
         }
       ]
     }

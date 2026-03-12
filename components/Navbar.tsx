@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50 mx-auto max-w-2xl">
-      <div className="bg-background/80 border-border pointer-events-auto flex items-center justify-between gap-1 px-4 py-2 backdrop-blur-md transition-all md:px-0">
+      <div className="bg-background/80 pointer-events-auto relative flex items-center justify-between gap-1 px-4 py-2 backdrop-blur-md transition-all md:px-0">
         <div className="flex items-center gap-1">
           {links.map(({ href, label }) => (
             <Link
@@ -33,9 +33,11 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div className="flex items-center">
-          <ModeToggle />
-        </div>
+
+        <ModeToggle />
+
+        {/* blurred bottom edge */}
+        <div className="to-background/80 pointer-events-none absolute bottom-0 left-0 h-6 w-full bg-gradient-to-b from-transparent blur-md" />
       </div>
     </nav>
   );

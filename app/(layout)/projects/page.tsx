@@ -23,7 +23,7 @@ export default function ProjectsPage() {
       </FadeUp>
 
       <FadeUp delay={0.1}>
-        <Projects />
+        <Projects slice={false} />
       </FadeUp>
     </section>
   );
