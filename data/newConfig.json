@@ -352,6 +352,12 @@
           "href": "https://github.com/RChaubey16/orbit",
           "variant": "outline",
           "icon": "GithubIcon"
+        },
+        {
+          "label": "Live",
+          "href": "https://orbit.ruturaj.xyz/",
+          "variant": "default",
+          "icon": "ExternalLinkIcon"
         }
       ]
     },
