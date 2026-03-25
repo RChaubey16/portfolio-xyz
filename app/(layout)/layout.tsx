@@ -77,7 +77,7 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col">
             {/* Main content */}
-            <main className="mx-auto mb-10 w-full max-w-2xl grow px-4 md:px-0">
+            <main className="mx-auto mb-16 w-full max-w-2xl grow px-4 md:px-0">
               <Navbar />
               {children}
             </main>

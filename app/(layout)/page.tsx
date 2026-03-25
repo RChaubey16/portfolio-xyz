@@ -15,15 +15,19 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.1}>
-        <Experience />
+        <div className="mt-16">
+          <Experience />
+        </div>
       </FadeUp>
 
       <FadeUp delay={0.2}>
-        <Projects />
+        <div className="mt-16">
+          <Projects />
+        </div>
       </FadeUp>
 
       <FadeUp delay={0.3}>
-        <section className="mt-12">
+        <section className="mt-16">
           <h2 className="text-2xl font-bold">Personal</h2>
           <div className="mt-3 grid grid-cols-2 gap-3">
             <TextCard

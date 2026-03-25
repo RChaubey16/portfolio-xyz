@@ -5,7 +5,7 @@ export default function Experience({
   accordionState = "closed",
 }) {
   return (
-    <section id="experience" className="my-12">
+    <section id="experience">
       {showHeading && <h1 className="text-2xl font-bold">Experience</h1>}
       <ExperienceAccordion accordionState={accordionState} />
     </section>
