@@ -43,23 +43,23 @@ const Intro = () => {
 
   return (
     <section className="mt-20 flex flex-col gap-5">
-      {/* Top row: identity left, avatar right */}
-      <div className="flex items-start justify-between gap-6">
-        <div className="flex flex-col gap-1.5 pt-1">
-          <h1 className="text-3xl font-bold tracking-tight">{name}</h1>
+      {/* Top row: avatar left, identity right */}
+      <div className="flex items-center gap-4">
+        <Image
+          src={avatarImageUrl}
+          alt={avatarImageAltText}
+          width={80}
+          height={80}
+          className="h-24 w-24 rounded-full object-cover"
+        />
+        <div>
+          <h1 className="text-2xl font-bold">{name}</h1>
           <p className="text-muted-foreground text-sm">
             Full Stack Engineer{" "}
             <span className="mx-1 opacity-40">·</span>
             QED42
           </p>
         </div>
-        <Image
-          src={avatarImageUrl}
-          alt={avatarImageAltText}
-          width={72}
-          height={72}
-          className="ring-border shrink-0 rounded-full object-cover ring-2"
-        />
       </div>
 
       {/* Bio */}
