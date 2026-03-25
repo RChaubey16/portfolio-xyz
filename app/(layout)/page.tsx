@@ -23,20 +23,22 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.3}>
-        <section className="mt-12 grid grid-cols-1 gap-3">
+        <section className="mt-12">
           <h2 className="text-2xl font-bold">Personal</h2>
-          <TextCard
-            title="Movies"
-            description="Films and shows that have inspired me"
-            icon={<FiFilm className="h-5 w-5" />}
-            href="/movies"
-          />
-          <TextCard
-            title="Gears"
-            description="Tech and gadgets that I use"
-            icon={<GrTechnology className="h-5 w-5" />}
-            href="/gears"
-          />
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            <TextCard
+              title="Gears"
+              description="Hardware and software I use daily"
+              icon={<GrTechnology className="h-5 w-5" />}
+              href="/gears"
+            />
+            <TextCard
+              title="Movies & TV"
+              description="Films and shows that inspire me"
+              icon={<FiFilm className="h-5 w-5" />}
+              href="/movies"
+            />
+          </div>
         </section>
       </FadeUp>
     </>

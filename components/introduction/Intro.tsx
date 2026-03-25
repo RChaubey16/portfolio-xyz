@@ -16,10 +16,10 @@ import {
 import configData from "../../data/newConfig.json";
 
 const socialIcons = {
-  LinkedIn: <FaLinkedinIn className="h-5 w-5" />,
-  GitHub: <FaGithub className="h-5 w-5" />,
-  Twitter: <FaXTwitter className="h-5 w-5" />,
-  Drupal: <FaDrupal className="h-5 w-5" />,
+  LinkedIn: <FaLinkedinIn className="h-4 w-4" />,
+  GitHub: <FaGithub className="h-4 w-4" />,
+  Twitter: <FaXTwitter className="h-4 w-4" />,
+  Drupal: <FaDrupal className="h-4 w-4" />,
 } as const;
 
 type SocialName = keyof typeof socialIcons;
@@ -42,53 +42,64 @@ const Intro = () => {
   };
 
   return (
-    <section className="mt-20 flex flex-col gap-4">
-      <div className="flex items-center gap-4">
+    <section className="mt-20 flex flex-col gap-5">
+      {/* Top row: identity left, avatar right */}
+      <div className="flex items-start justify-between gap-6">
+        <div className="flex flex-col gap-1.5 pt-1">
+          <h1 className="text-3xl font-bold tracking-tight">{name}</h1>
+          <p className="text-muted-foreground text-sm">
+            Full Stack Engineer{" "}
+            <span className="mx-1 opacity-40">·</span>
+            QED42
+          </p>
+        </div>
         <Image
           src={avatarImageUrl}
           alt={avatarImageAltText}
-          width={80}
-          height={80}
-          className="h-24 w-24 rounded-full object-cover"
+          width={72}
+          height={72}
+          className="ring-border shrink-0 rounded-full object-cover ring-2"
         />
-        <div>
-          <h1 className="text-2xl font-bold">{name}</h1>
-          <p className="text-muted-foreground flex items-center gap-1">
-            Engineer &bull; Email
-            <button
-              onClick={copyEmail}
-              className="text-muted-foreground hover:text-foreground ml-0.5 cursor-pointer transition-colors"
-              aria-label="Copy email"
-            >
-              {copied ? (
-                <Check className="h-3.5 w-3.5" />
-              ) : (
-                <Copy className="h-3.5 w-3.5" />
-              )}
-            </button>
-          </p>
+      </div>
+
+      {/* Bio */}
+      <p className="text-muted-foreground leading-relaxed">{description}</p>
+
+      {/* Actions row */}
+      <div className="flex items-center gap-3">
+        <button
+          onClick={copyEmail}
+          className="text-muted-foreground hover:text-foreground border-border hover:bg-muted/50 flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm transition-colors"
+          aria-label="Copy email"
+        >
+          {copied ? (
+            <Check className="h-3.5 w-3.5 text-green-500" />
+          ) : (
+            <Copy className="h-3.5 w-3.5" />
+          )}
+          {copied ? "Copied!" : email}
+        </button>
+
+        <div className="bg-border h-4 w-px" />
+
+        <div className="text-muted-foreground flex items-center gap-3">
+          {socials.map((social) => (
+            <Tooltip key={social.name}>
+              <TooltipTrigger asChild>
+                <Link
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.tooltip}
+                  className="hover:text-foreground transition-colors"
+                >
+                  {socialIcons[social.name as SocialName]}
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>{social.tooltip}</TooltipContent>
+            </Tooltip>
+          ))}
         </div>
-      </div>
-      <div>
-        <p className="text-muted-foreground">{description}</p>
-      </div>
-      <div className="text-muted-foreground flex items-center gap-3">
-        {socials.map((social) => (
-          <Tooltip key={social.name}>
-            <TooltipTrigger asChild>
-              <Link
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.tooltip}
-                className="hover:text-foreground transition-colors"
-              >
-                {socialIcons[social.name as SocialName]}
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>{social.tooltip}</TooltipContent>
-          </Tooltip>
-        ))}
       </div>
     </section>
   );
