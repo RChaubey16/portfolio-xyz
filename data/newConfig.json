@@ -970,6 +970,11 @@
   ],
   "movies": [
     {
+      "name": "The Lord of the Rings Trilogy",
+      "link": "https://www.google.com/search?q=The+Lord+of+the+Rings+Trilogy",
+      "image": "https://i.pinimg.com/736x/6e/2c/cd/6e2ccd0316a3a72e38f2ee0711331582.jpg"
+    },
+    {
       "name": "Interstellar",
       "link": "https://www.google.com/search?q=Interstellar+movie",
       "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
@@ -977,164 +982,154 @@
     {
       "name": "Inception",
       "link": "https://www.google.com/search?q=Inception+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/b0/ae/a4/b0aea49646879a043ad9f6ec3002e99f.jpg"
     },
     {
       "name": "Tenet",
       "link": "https://www.google.com/search?q=Tenet+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/7e/76/4d/7e764df7635361b6ba94799a3547b6e1.jpg"
     },
     {
       "name": "Oppenheimer",
       "link": "https://www.google.com/search?q=Oppenheimer+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/06/c8/70/06c87059cd71c7b46d8d5e25d8aab08b.jpg"
     },
     {
       "name": "Dunkirk",
       "link": "https://www.google.com/search?q=Dunkirk+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/00/85/c5/0085c5fd13dfb88affacf94850419e5e.jpg"
     },
     {
       "name": "The Dark Knight",
       "link": "https://www.google.com/search?q=The+Dark+Knight+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/55/32/f3/5532f3932ea8d07ce83d745ce7c902cc.jpg"
     },
     {
       "name": "Blade Runner 2049",
       "link": "https://www.google.com/search?q=Blade+Runner+2049+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
-    },
-    {
-      "name": "The Lord of the Rings Trilogy",
-      "link": "https://www.google.com/search?q=The+Lord+of+the+Rings+Trilogy",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/61/87/3e/61873ecfcef410b389d4629e87165001.jpg"
     },
     {
       "name": "The Hobbit Trilogy",
       "link": "https://www.google.com/search?q=The+Hobbit+Trilogy",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/67/24/0d/67240d3c1b98855b749e0a88de2475d5.jpg"
     },
     {
       "name": "Dune",
       "link": "https://www.google.com/search?q=Dune+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/ed/33/3b/ed333b5fdcc6535f28277e1c43ff808c.jpg"
     },
     {
       "name": "The Wolf of Wall Street",
       "link": "https://www.google.com/search?q=The+Wolf+of+Wall+Street+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/e4/f7/36/e4f736f717cf4c7737f698c2d8ff117d.jpg"
     },
     {
       "name": "The Big Short",
       "link": "https://www.google.com/search?q=The+Big+Short+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/87/2c/18/872c1894333f54d8b9331759af0fff7c.jpg"
     },
     {
       "name": "The Secret Life of Walter Mitty",
       "link": "https://www.google.com/search?q=The+Secret+Life+of+Walter+Mitty+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/89/7a/6a/897a6afc3197a04cb0fd10501010bcbb.jpg"
     },
     {
       "name": "Into the Wild",
       "link": "https://www.google.com/search?q=Into+the+Wild+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/02/22/59/022259c5b4d01c28ec16c24f0df60630.jpg"
     },
     {
       "name": "La La Land",
       "link": "https://www.google.com/search?q=La+La+Land+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/b9/f8/23/b9f823d090d87982d232af65585e90dc.jpg"
     },
     {
       "name": "About Time",
       "link": "https://www.google.com/search?q=About+Time+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/81/38/85/8138854606a0f155c299b34fd4ea661f.jpg"
     },
     {
       "name": "The Amazing Spider-Man 2",
       "link": "https://www.google.com/search?q=The+Amazing+Spider-Man+2+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/a3/31/1b/a3311b2dd8d50d2bac220cda073e7a97.jpg"
     },
     {
       "name": "F1",
       "link": "https://www.google.com/search?q=F1+movie+2025",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/62/de/93/62de93a1f5c05e5df63501eb069f2b68.jpg"
     },
     {
       "name": "One Battle After Another",
       "link": "https://www.google.com/search?q=One+Battle+After+Another+movie",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/fb/a4/2e/fba42e4c06a1d48a6413e9e4e64829ea.jpg"
     }
   ],
   "tvSeries": [
     {
       "name": "Breaking Bad",
       "link": "https://www.google.com/search?q=Breaking+Bad+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/8a/92/16/8a9216d301c8ff9f7a5f7624b9202339.jpg"
     },
     {
       "name": "Peaky Blinders",
       "link": "https://www.google.com/search?q=Peaky+Blinders+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/70/84/56/708456ca0b2beb8930c84598918e448d.jpg"
     },
     {
       "name": "Chernobyl",
       "link": "https://www.google.com/search?q=Chernobyl+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/7d/56/da/7d56da70893be8179a3da8c7729498c0.jpg"
     },
     {
       "name": "The Queen's Gambit",
       "link": "https://www.google.com/search?q=The+Queen%27s+Gambit+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/e7/5c/af/e75caf1e3ba200afc7d2854bc1b1d8b1.jpg"
     },
     {
       "name": "The Last of Us",
       "link": "https://www.google.com/search?q=The+Last+of+Us+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/9f/a0/d2/9fa0d216e7329f669cf15f33fcaa7223.jpg"
     },
     {
       "name": "The Last Dance",
       "link": "https://www.google.com/search?q=The+Last+Dance+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/c3/76/2b/c3762b3b7f9dd4cfc25ec8ec236b5002.jpg"
     },
     {
       "name": "Drive to Survive",
       "link": "https://www.google.com/search?q=Drive+to+Survive+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
-    },
-    {
-      "name": "The Rings of Power",
-      "link": "https://www.google.com/search?q=The+Rings+of+Power+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/52/53/3d/52533dfdfec3718040ad727834e8637d.jpg"
     },
     {
       "name": "Normal People",
       "link": "https://www.google.com/search?q=Normal+People+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/14/33/b0/1433b059d08890dc1e64065a6b34d9aa.jpg"
     },
     {
       "name": "Friends",
       "link": "https://www.google.com/search?q=Friends+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/736x/91/05/dd/9105dd82294edb89b65568defa44af9d.jpg"
     },
     {
       "name": "How I Met Your Mother",
       "link": "https://www.google.com/search?q=How+I+Met+Your+Mother+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/e6/09/34/e6093422564ff35932aa72a2e66f631d.jpg"
     },
     {
       "name": "The Big Bang Theory",
       "link": "https://www.google.com/search?q=The+Big+Bang+Theory+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/c3/10/36/c31036d4852b80722934a83d18602987.jpg"
     },
     {
       "name": "Modern Family",
       "link": "https://www.google.com/search?q=Modern+Family+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/25/50/08/255008f8ac6d0433e72facb00378f5f1.jpg"
     },
     {
       "name": "The Ranch",
       "link": "https://www.google.com/search?q=The+Ranch+TV+series",
-      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+      "image": "https://i.pinimg.com/1200x/af/29/77/af2977e76fd502e5c4c3a0e7ef30b707.jpg"
     }
   ],
   "gears": [
