@@ -42,8 +42,7 @@ const Intro = () => {
   };
 
   return (
-    <section className="mt-20 flex flex-col gap-5">
-      {/* Top row: avatar left, identity right */}
+    <section className="mt-20 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <Image
           src={avatarImageUrl}
@@ -54,18 +53,12 @@ const Intro = () => {
         />
         <div>
           <h1 className="text-2xl font-bold">{name}</h1>
-          <p className="text-muted-foreground text-sm">
-            Full Stack Engineer{" "}
-            <span className="mx-1 opacity-40">·</span>
-            QED42
-          </p>
+          <p className="text-muted-foreground">Engineer &bull; QED42</p>
         </div>
       </div>
 
-      {/* Bio */}
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      <p className="text-muted-foreground">{description}</p>
 
-      {/* Actions row */}
       <div className="flex items-center gap-3">
         <button
           onClick={copyEmail}
