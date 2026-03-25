@@ -970,64 +970,250 @@
   ],
   "movies": [
     {
-      "name": "The Lord of the Rings Trilogy",
-      "link": "https://www.imdb.com/list/ls069544383"
+      "name": "Interstellar",
+      "link": "https://www.google.com/search?q=Interstellar+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
     },
     {
-      "name": "Interstellar",
-      "link": "https://www.imdb.com/title/tt0816692"
+      "name": "Inception",
+      "link": "https://www.google.com/search?q=Inception+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
     },
-
+    {
+      "name": "Tenet",
+      "link": "https://www.google.com/search?q=Tenet+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Oppenheimer",
+      "link": "https://www.google.com/search?q=Oppenheimer+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Dunkirk",
+      "link": "https://www.google.com/search?q=Dunkirk+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
     {
       "name": "The Dark Knight",
-      "link": "https://www.imdb.com/title/tt0468569"
+      "link": "https://www.google.com/search?q=The+Dark+Knight+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Blade Runner 2049",
+      "link": "https://www.google.com/search?q=Blade+Runner+2049+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Lord of the Rings Trilogy",
+      "link": "https://www.google.com/search?q=The+Lord+of+the+Rings+Trilogy",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Hobbit Trilogy",
+      "link": "https://www.google.com/search?q=The+Hobbit+Trilogy",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Dune",
+      "link": "https://www.google.com/search?q=Dune+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Wolf of Wall Street",
+      "link": "https://www.google.com/search?q=The+Wolf+of+Wall+Street+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Big Short",
+      "link": "https://www.google.com/search?q=The+Big+Short+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Secret Life of Walter Mitty",
+      "link": "https://www.google.com/search?q=The+Secret+Life+of+Walter+Mitty+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Into the Wild",
+      "link": "https://www.google.com/search?q=Into+the+Wild+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "La La Land",
+      "link": "https://www.google.com/search?q=La+La+Land+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
     },
     {
       "name": "About Time",
-      "link": "https://www.imdb.com/title/tt2194499"
+      "link": "https://www.google.com/search?q=About+Time+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Amazing Spider-Man 2",
+      "link": "https://www.google.com/search?q=The+Amazing+Spider-Man+2+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "F1",
+      "link": "https://www.google.com/search?q=F1+movie+2025",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "One Battle After Another",
+      "link": "https://www.google.com/search?q=One+Battle+After+Another+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    }
+  ],
+  "tvSeries": [
+    {
+      "name": "Breaking Bad",
+      "link": "https://www.google.com/search?q=Breaking+Bad+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Peaky Blinders",
+      "link": "https://www.google.com/search?q=Peaky+Blinders+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Chernobyl",
+      "link": "https://www.google.com/search?q=Chernobyl+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Queen's Gambit",
+      "link": "https://www.google.com/search?q=The+Queen%27s+Gambit+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Last of Us",
+      "link": "https://www.google.com/search?q=The+Last+of+Us+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Last Dance",
+      "link": "https://www.google.com/search?q=The+Last+Dance+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Drive to Survive",
+      "link": "https://www.google.com/search?q=Drive+to+Survive+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Rings of Power",
+      "link": "https://www.google.com/search?q=The+Rings+of+Power+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Normal People",
+      "link": "https://www.google.com/search?q=Normal+People+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Friends",
+      "link": "https://www.google.com/search?q=Friends+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "How I Met Your Mother",
+      "link": "https://www.google.com/search?q=How+I+Met+Your+Mother+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Big Bang Theory",
+      "link": "https://www.google.com/search?q=The+Big+Bang+Theory+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Modern Family",
+      "link": "https://www.google.com/search?q=Modern+Family+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "The Ranch",
+      "link": "https://www.google.com/search?q=The+Ranch+TV+series",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
     }
   ],
   "gears": [
     {
       "name": "MacBook Air M2",
       "description": "Primary development machine",
-      "link": "https://www.apple.com/macbook-air",
-      "category": "computer"
+      "link": "https://www.amazon.com/s?k=MacBook+Air+M2",
+      "category": "hardware"
     },
     {
-      "name": "Lenovo Thinkpad E14",
-      "description": "Secondary development machine",
-      "link": "https://www.lenovo.com/Products/Notebooks/ThinkPad-E14/p/22BZ200001",
-      "category": "computer"
+      "name": "Lenovo ThinkPad E14",
+      "description": "Secondary laptop",
+      "link": "https://www.amazon.com/s?k=Lenovo+ThinkPad+E14",
+      "category": "hardware"
     },
     {
-      "name": "Sony WH-1000XM5",
-      "description": "Noise-cancelling headphones for deep focus",
-      "link": "https://www.sony.com/en/headphones/wh-1000xm5",
-      "category": "audio"
+      "name": "LG Ultrawide 34WN780",
+      "description": "34\" ultrawide monitor",
+      "link": "https://www.amazon.com/s?k=LG+34WN780+Ultrawide+Monitor",
+      "category": "hardware"
     },
     {
-      "name": "Keychron K2 V2",
-      "description": "Mechanical keyboard with Gateron Brown switches",
-      "link": "https://www.keychron.com/products/keychron-k2",
-      "category": "peripherals"
-    },
-    {
-      "name": "LG 27UL850-W 4K Monitor",
-      "description": "27\" 4K USB-C monitor for coding",
-      "link": "https://www.lg.com/monitors",
-      "category": "monitor"
+      "name": "Logitech K380 Keyboard",
+      "description": "Compact multi-device wireless keyboard",
+      "link": "https://www.amazon.com/s?k=Logitech+K380+Keyboard",
+      "category": "hardware"
     },
     {
       "name": "Logitech MX Master 3S",
       "description": "Ergonomic wireless mouse",
-      "link": "https://www.logitech.com/en-us/products/mice/mx-master-3s.html",
-      "category": "peripherals"
+      "link": "https://www.amazon.com/s?k=Logitech+MX+Master+3S",
+      "category": "hardware"
     },
     {
-      "name": "Antigravity",
+      "name": "iPhone 13",
+      "description": "Daily driver smartphone",
+      "link": "https://www.amazon.com/s?k=iPhone+13",
+      "category": "hardware"
+    },
+    {
+      "name": "Sony WH-CH520",
+      "description": "Wireless Bluetooth headphones",
+      "link": "https://www.amazon.com/s?k=Sony+WH-CH520",
+      "category": "hardware"
+    },
+    {
+      "name": "Oh My Zsh",
+      "description": "Terminal framework and shell customization",
+      "link": "https://ohmyz.sh",
+      "category": "software"
+    },
+    {
+      "name": "Antigravity IDE",
       "description": "Primary code editor",
       "link": "https://antigravity.google",
+      "category": "software"
+    },
+    {
+      "name": "Claude Code",
+      "description": "AI coding assistant",
+      "link": "https://claude.ai/code",
+      "category": "software"
+    },
+    {
+      "name": "Chrome & Brave",
+      "description": "Web browsers",
+      "link": "https://brave.com",
+      "category": "software"
+    },
+    {
+      "name": "Obsidian",
+      "description": "Note-taking and knowledge management",
+      "link": "https://obsidian.md",
+      "category": "software"
+    },
+    {
+      "name": "Spotify",
+      "description": "Music and podcasts",
+      "link": "https://spotify.com",
       "category": "software"
     }
   ],

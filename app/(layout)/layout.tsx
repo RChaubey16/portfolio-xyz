@@ -75,14 +75,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Main content */}
-          <main className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
-            <Navbar />
-            {children}
-          </main>
-          <FooterFadeUp>
-            <Footer />
-          </FooterFadeUp>
+          <div className="flex min-h-screen flex-col">
+            {/* Main content */}
+            <main className="mx-auto mb-10 w-full max-w-2xl grow px-4 md:px-0">
+              <Navbar />
+              {children}
+            </main>
+            <FooterFadeUp>
+              <Footer />
+            </FooterFadeUp>
+          </div>
         </ThemeProvider>
       </body>
     </html>
