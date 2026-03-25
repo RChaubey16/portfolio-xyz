@@ -53,7 +53,7 @@ const Intro = () => {
         />
         <div>
           <h1 className="text-2xl font-bold">{name}</h1>
-          <p className="text-muted-foreground">Engineer &bull; QED42</p>
+          <p className="text-muted-foreground">Human Engineer &bull; Need More Coffee</p>
         </div>
       </div>
 
