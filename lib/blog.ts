@@ -48,6 +48,26 @@ function extractHeadings(content: string): Heading[] {
   return headings
 }
 
+function buildMeta(
+  slug: string,
+  data: matter.GrayMatterFile<string>['data'],
+  content: string,
+): PostMeta {
+  if (!data.title || !data.date || !data.description) {
+    throw new Error(
+      `Post "${slug}" is missing required frontmatter fields (title, date, description)`,
+    )
+  }
+  return {
+    slug,
+    title: data.title as string,
+    date: data.date as string,
+    description: data.description as string,
+    tags: (data.tags as string[]) ?? [],
+    readingTime: readingTime(content).text,
+  }
+}
+
 export function getAllPosts(): PostMeta[] {
   const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdx'))
 
@@ -56,35 +76,23 @@ export function getAllPosts(): PostMeta[] {
       const slug = filename.replace(/\.mdx$/, '')
       const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
       const { data, content } = matter(raw)
-      const stats = readingTime(content)
-
-      return {
-        slug,
-        title: data.title as string,
-        date: data.date as string,
-        description: data.description as string,
-        tags: data.tags as string[],
-        readingTime: stats.text,
-      }
+      return buildMeta(slug, data, content)
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
 export function getPost(slug: string): Post {
   const filepath = path.join(BLOG_DIR, `${slug}.mdx`)
+
+  if (!fs.existsSync(filepath)) {
+    throw new Error(`Post not found: ${slug}`)
+  }
+
   const raw = fs.readFileSync(filepath, 'utf-8')
   const { data, content } = matter(raw)
-  const stats = readingTime(content)
 
   return {
-    meta: {
-      slug,
-      title: data.title as string,
-      date: data.date as string,
-      description: data.description as string,
-      tags: data.tags as string[],
-      readingTime: stats.text,
-    },
+    meta: buildMeta(slug, data, content),
     content,
     headings: extractHeadings(content),
   }
