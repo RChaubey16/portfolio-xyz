@@ -45,3 +45,6 @@ portfolio-points.txt
 
 # superpowers brainstorm sessions
 .superpowers/
+
+# git worktrees
+.worktrees/
