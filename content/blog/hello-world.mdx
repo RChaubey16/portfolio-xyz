@@ -1,0 +1,37 @@
+---
+title: "Hello World"
+date: "2026-04-06"
+description: "The first post on this blog — what to expect and why I'm writing."
+tags: ["Meta"]
+---
+
+Welcome to my blog. I'll be writing about things I build and learn — mostly frontend, backend, and the occasional rabbit hole.
+
+## Why write?
+
+Writing forces clarity. If I can't explain something simply, I don't understand it well enough.
+
+### Who is this for?
+
+Mostly future me. But if you find it useful, even better.
+
+## What to expect
+
+- **Technical deep-dives** — Next.js, Go, TypeScript, and whatever else I'm working with
+- **Build logs** — honest write-ups of projects as I ship them
+- **Short notes** — quick observations that don't need a full post
+
+## A code example
+
+Here's a TypeScript function to slugify a string:
+
+```ts
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
+```
+
+That's it for now.
