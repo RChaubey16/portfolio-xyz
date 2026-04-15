@@ -320,8 +320,8 @@
           "tech": "NestJS",
           "techHref": "https://nestjs.com",
           "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/NestJS.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/NestJS.svg"
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
           },
           "imageAltText": "NestJS logo"
         },
