@@ -305,7 +305,7 @@
       "id": "atlas",
       "type": "tech",
       "image": {
-        "src": "/images/projects/under-construction.png",
+        "src": "/images/projects/atlas-shot.png",
         "alt": "Microservices backend"
       },
       "status": {
