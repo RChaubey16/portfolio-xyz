@@ -1,0 +1,319 @@
+---
+title: "Microservices with NestJS — A Practical Introduction"
+date: "2026-04-15"
+description: "A conversational walkthrough of what microservices are, when they make sense, and how to build one from scratch using NestJS."
+tags: ["NestJS", "Microservices", "Backend", "TypeScript"]
+---
+
+If you've spent any time around backend developers, you've probably heard the word "microservices" thrown around like confetti. But what does it actually mean? And more importantly — how do you build one without over-engineering everything?
+
+Let's break it down. No jargon walls, I promise.
+
+## So, what are microservices?
+
+Think of a traditional app as a single big box. Your authentication, your orders, your notifications, your payment logic — all living together in one codebase, deployed as one unit. That's a **monolith**.
+
+A **microservice architecture** takes that big box and splits it into smaller, independent boxes. Each box does one thing and does it well. They talk to each other over the network — usually through HTTP, message queues, or gRPC.
+
+Here's a rough picture:
+
+- **Auth Service** — handles login, signup, tokens
+- **Orders Service** — manages orders, cart logic
+- **Notification Service** — sends emails, push notifications
+- **Payment Service** — processes payments
+
+Each of these can be deployed, scaled, and updated independently. That's the big selling point.
+
+## When should you actually use them?
+
+Honestly? Not always. If you're building a side project or an MVP, a monolith is almost always the better choice. Microservices add real complexity — networking, service discovery, distributed debugging, eventual consistency... it's a lot.
+
+But microservices start to make sense when:
+
+- Your team is growing, and different teams own different features
+- Parts of your app need to scale independently (e.g., notifications spike but orders don't)
+- You want to deploy one service without redeploying the entire app
+- You're okay with the operational overhead
+
+The rule of thumb? **Start with a monolith. Extract microservices when the pain of the monolith becomes real.**
+
+## Why NestJS?
+
+NestJS is a Node.js framework that was practically built for this kind of thing. It gives you a structured, opinionated way to build server-side applications using TypeScript. And it has first-class support for microservices baked right in.
+
+Out of the box, NestJS supports multiple transport layers:
+
+- **TCP** (default)
+- **Redis**
+- **NATS**
+- **RabbitMQ**
+- **Kafka**
+- **gRPC**
+
+You don't have to wire up all this plumbing yourself. NestJS abstracts it behind a clean, decorator-based API.
+
+## Let's build something
+
+We'll create two services:
+
+1. **API Gateway** — the entry point that clients talk to
+2. **Users Service** — a microservice that handles user-related logic
+
+The gateway will forward requests to the users service over **TCP**. Simple, but it shows the pattern clearly.
+
+### Step 1: Set up the projects
+
+First, install the NestJS CLI if you haven't:
+
+```bash
+npm i -g @nestjs/cli
+```
+
+Now create both projects:
+
+```bash
+nest new api-gateway
+nest new users-service
+```
+
+Install the microservices package in both:
+
+```bash
+cd api-gateway && npm i @nestjs/microservices
+cd ../users-service && npm i @nestjs/microservices
+```
+
+### Step 2: Build the Users Service
+
+This is the microservice. Instead of listening for HTTP requests, it'll listen for **message patterns** over TCP.
+
+Open `users-service/src/main.ts` and swap the default HTTP bootstrap for a microservice:
+
+```ts
+import { NestFactory } from '@nestjs/core'
+import { Transport, MicroserviceOptions } from '@nestjs/microservices'
+import { AppModule } from './app.module'
+
+async function bootstrap() {
+  const app = await NestFactory.createMicroservice<MicroserviceOptions>(
+    AppModule,
+    {
+      transport: Transport.TCP,
+      options: {
+        host: '127.0.0.1',
+        port: 3001,
+      },
+    },
+  )
+  await app.listen()
+  console.log('Users service is listening on port 3001')
+}
+bootstrap()
+```
+
+Now update `app.controller.ts` to handle a message pattern instead of an HTTP route:
+
+```ts
+import { Controller } from '@nestjs/common'
+import { MessagePattern } from '@nestjs/microservices'
+
+@Controller()
+export class AppController {
+  @MessagePattern({ cmd: 'get_user' })
+  getUser(data: { userId: number }) {
+    // In a real app, you'd query a database here
+    const users = [
+      { id: 1, name: 'Alice', email: 'alice@example.com' },
+      { id: 2, name: 'Bob', email: 'bob@example.com' },
+      { id: 3, name: 'Charlie', email: 'charlie@example.com' },
+    ]
+
+    return users.find((u) => u.id === data.userId) || null
+  }
+}
+```
+
+Notice `@MessagePattern({ cmd: 'get_user' })`. This is the "address" other services will use to call this handler. No HTTP verbs, no route paths — just a pattern.
+
+### Step 3: Build the API Gateway
+
+The gateway is a regular HTTP app. But instead of doing all the work itself, it forwards requests to the users service.
+
+In `api-gateway/src/app.module.ts`, register a client for the users service:
+
+```ts
+import { Module } from '@nestjs/common'
+import { ClientsModule, Transport } from '@nestjs/microservices'
+import { AppController } from './app.controller'
+
+@Module({
+  imports: [
+    ClientsModule.register([
+      {
+        name: 'USERS_SERVICE',
+        transport: Transport.TCP,
+        options: {
+          host: '127.0.0.1',
+          port: 3001,
+        },
+      },
+    ]),
+  ],
+  controllers: [AppController],
+})
+export class AppModule {}
+```
+
+Now in `app.controller.ts`, inject the client and use it:
+
+```ts
+import { Controller, Get, Param, Inject } from '@nestjs/common'
+import { ClientProxy } from '@nestjs/microservices'
+import { firstValueFrom } from 'rxjs'
+
+@Controller('users')
+export class AppController {
+  constructor(
+    @Inject('USERS_SERVICE') private readonly usersClient: ClientProxy,
+  ) {}
+
+  @Get(':id')
+  async getUser(@Param('id') id: string) {
+    const user = await firstValueFrom(
+      this.usersClient.send({ cmd: 'get_user' }, { userId: parseInt(id) }),
+    )
+
+    if (!user) {
+      return { error: 'User not found' }
+    }
+
+    return user
+  }
+}
+```
+
+A few things to note here:
+
+- `this.usersClient.send(...)` sends a message to the users service and waits for a response
+- `.send()` returns an Observable, so we use `firstValueFrom` to convert it to a Promise
+- The first argument is the **pattern** — it must match what the users service listens for
+- The second argument is the **payload** — the data you're sending
+
+### Step 4: Run it
+
+Open two terminal tabs:
+
+```bash
+# Tab 1
+cd users-service && npm run start:dev
+
+# Tab 2
+cd api-gateway && npm run start:dev
+```
+
+Now hit `http://localhost:3000/users/1` and you should get:
+
+```json
+{
+  "id": 1,
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+```
+
+That request went: **Client → API Gateway (HTTP) → Users Service (TCP) → Response back up**.
+
+That's the microservices pattern in action.
+
+## Events vs Messages
+
+What we used above is the **request-response** pattern — you send a message and expect a reply. But sometimes you just want to fire and forget. That's where **events** come in.
+
+```ts
+// In the gateway — emit an event, no response expected
+this.usersClient.emit('user_logged_in', { userId: 1, timestamp: Date.now() })
+```
+
+```ts
+// In the users service — listen for the event
+@EventPattern('user_logged_in')
+handleUserLoggedIn(data: { userId: number; timestamp: number }) {
+  console.log(`User ${data.userId} logged in at ${data.timestamp}`)
+  // Update last login, send analytics, whatever
+}
+```
+
+Use `@MessagePattern` when you need a response. Use `@EventPattern` when you don't.
+
+## Swapping transport layers
+
+Here's where NestJS really shines. Say you want to switch from TCP to **Redis** — you only need to change the config:
+
+```ts
+// In the microservice
+const app = await NestFactory.createMicroservice<MicroserviceOptions>(
+  AppModule,
+  {
+    transport: Transport.REDIS,
+    options: {
+      host: 'localhost',
+      port: 6379,
+    },
+  },
+)
+```
+
+```ts
+// In the gateway's ClientsModule
+ClientsModule.register([
+  {
+    name: 'USERS_SERVICE',
+    transport: Transport.REDIS,
+    options: {
+      host: 'localhost',
+      port: 6379,
+    },
+  },
+])
+```
+
+Your controllers stay the same. Your message patterns stay the same. Only the transport changes. That's a really clean abstraction.
+
+## Things to think about in production
+
+Building a working demo is one thing. Running microservices in production is another game entirely. Here are some things you'll need to plan for:
+
+### Service discovery
+
+How do services find each other? Hardcoding `127.0.0.1:3001` works locally, but in production you'll want something like Consul, Kubernetes DNS, or environment-based config.
+
+### Health checks
+
+If a service goes down, how do you know? NestJS has a `@nestjs/terminus` package for health checks — wire it up.
+
+### Error handling
+
+Network calls fail. Services crash. You need retries, timeouts, and circuit breakers. Libraries like `opossum` can help with circuit breaker patterns.
+
+### Logging and tracing
+
+When a request flows through three services and something breaks, you need distributed tracing. Look into OpenTelemetry or Jaeger.
+
+### Data ownership
+
+Each service should own its data. Don't have two services reading from the same database table — that defeats the purpose. If the orders service needs user data, it should ask the users service for it.
+
+## Wrapping up
+
+Microservices aren't magic. They're a trade-off — you get independence and scalability, but you pay for it with complexity. NestJS makes the "building" part significantly easier with its transport abstraction and decorator-based patterns.
+
+If you're just starting out, here's my suggestion:
+
+1. Build a monolith first
+2. Identify the boundaries in your domain
+3. Extract one service at a time
+4. Use NestJS's built-in microservice support to keep things clean
+
+Don't split everything into 20 services on day one. That's a recipe for pain.
+
+Start small. Ship something. Iterate.
