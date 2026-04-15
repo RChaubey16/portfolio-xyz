@@ -302,6 +302,76 @@
   },
   "projects": [
     {
+      "id": "atlas",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/under-construction.png",
+        "alt": "Microservices backend"
+      },
+      "status": {
+        "text": "In Development",
+        "className": "status-dev"
+      },
+      "title": "Atlas",
+      "description": "A production-style microservices backend built with NestJS. Demonstrates clean service boundaries, an API Gateway pattern, JWT authentication, and a shared contracts library — all running in Docker.",
+      "techStack": [
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "techHref": "https://nestjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/NestJS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/NestJS.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "rabbitmq",
+          "tech": "RabbitMQ",
+          "techHref": "https://www.rabbitmq.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg"
+          },
+          "imageAltText": "RabbitMQ logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "techHref": "https://www.postgresql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "docker",
+          "tech": "Docker",
+          "techHref": "https://www.docker.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+          },
+          "imageAltText": "Docker logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/atlas",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live",
+          "href": "https://atlas.ruturaj.xyz/docs",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
       "id": "orbit",
       "type": "tech",
       "image": {
