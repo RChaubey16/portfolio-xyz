@@ -13,28 +13,28 @@
       "name": "GitHub",
       "tooltip": "GitHub",
       "logoSrc": "/icons/social/github.svg",
-      "href": "https://snipr.ruturaj.xyz/6tkBS0",
+      "href": "https://atlas.ruturaj.xyz/s/github",
       "profileImg": ""
     },
     {
       "name": "LinkedIn",
       "tooltip": "LinkedIn",
       "logoSrc": "/icons/social/linkedin.svg",
-      "href": "https://snipr.ruturaj.xyz/6vsP8u",
+      "href": "https://atlas.ruturaj.xyz/s/linkedin",
       "profileImg": ""
     },
     {
       "name": "Twitter",
       "tooltip": "X (Twitter)",
       "logoSrc": "/icons/social/x.svg",
-      "href": "https://snipr.ruturaj.xyz/6vsP8u",
+      "href": "https://atlas.ruturaj.xyz/s/x-twitter",
       "profileImg": ""
     },
     {
       "name": "Drupal",
       "tooltip": "Drupal",
       "logoSrc": "/icons/tech/Drupal.svg",
-      "href": "https://snipr.ruturaj.xyz/IBEXPU",
+      "href": "https://atlas.ruturaj.xyz/s/drupal",
       "profileImg": ""
     }
   ],
