@@ -302,6 +302,96 @@
   },
   "projects": [
     {
+      "id": "Links",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/links-shot.png",
+        "alt": "Links URL shortener home page"
+      },
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
+      },
+      "title": "Links",
+      "description": "A fast and minimal URL shortener. Paste a long URL, get a short one — done. Features PostgreSQL persistence, Google OAuth, click analytics, and auto-expiring links.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "techHref": "https://nestjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "techHref": "https://www.postgresql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        },
+        {
+          "id": "docker",
+          "tech": "Docker",
+          "techHref": "https://www.docker.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+          },
+          "imageAltText": "Docker logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/links",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live Demo",
+          "href": "https://links.ruturaj.xyz",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
       "id": "atlas",
       "type": "tech",
       "image": {
@@ -432,106 +522,6 @@
       ]
     },
     {
-      "id": "snipr",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/snipr.png",
-        "alt": "Snipr URL shortener home page"
-      },
-      "status": {
-        "text": "All Systems Running",
-        "className": "status-live"
-      },
-      "title": "Snipr",
-      "description": "A fast and minimal URL shortener. Paste a long URL, get a short one — done. Features Redis caching, PostgreSQL persistence, Google OAuth, click analytics, and auto-expiring links.",
-      "techStack": [
-        {
-          "id": "nextjs",
-          "tech": "Next.js",
-          "techHref": "https://nextjs.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-            "dark": "/icons/tech/nextjs-dark-icon.png"
-          },
-          "imageAltText": "Next.js logo"
-        },
-        {
-          "id": "react",
-          "tech": "React",
-          "techHref": "https://react.dev",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
-          },
-          "imageAltText": "React logo"
-        },
-        {
-          "id": "nestjs",
-          "tech": "NestJS",
-          "techHref": "https://nestjs.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
-          },
-          "imageAltText": "NestJS logo"
-        },
-        {
-          "id": "postgresql",
-          "tech": "PostgreSQL",
-          "techHref": "https://www.postgresql.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
-          },
-          "imageAltText": "PostgreSQL logo"
-        },
-        {
-          "id": "redis",
-          "tech": "Redis",
-          "techHref": "https://redis.io",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Redis.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Redis.svg"
-          },
-          "imageAltText": "Redis logo"
-        },
-        {
-          "id": "tailwindcss",
-          "tech": "Tailwind CSS",
-          "techHref": "https://tailwindcss.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
-          },
-          "imageAltText": "Tailwind CSS logo"
-        },
-        {
-          "id": "docker",
-          "tech": "Docker",
-          "techHref": "https://www.docker.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
-          },
-          "imageAltText": "Docker logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/snipr",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live Demo",
-          "href": "https://snipr.ruturaj.xyz",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
       "id": "react-kequence",
       "type": "tech",
       "image": {
@@ -585,7 +575,7 @@
       "id": "what-the-hex",
       "type": "tech",
       "image": {
-        "src": "/images/projects/what-the-hex.png",
+        "src": "/images/projects/what-the-hex-shot.png",
         "alt": "What the hex color lookup tool"
       },
       "status": {
