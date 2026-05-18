@@ -302,17 +302,17 @@
   },
   "projects": [
     {
-      "id": "Links",
+      "id": "Blink",
       "type": "tech",
       "image": {
-        "src": "/images/projects/links-shot.png",
-        "alt": "Links URL shortener home page"
+        "src": "/images/projects/blink-shot.png",
+        "alt": "Blink URL shortener home page"
       },
       "status": {
         "text": "All Systems Running",
         "className": "status-live"
       },
-      "title": "Links",
+      "title": "Blink",
       "description": "A fast and minimal URL shortener. Paste a long URL, get a short one — done. Features PostgreSQL persistence, Google OAuth, click analytics, and auto-expiring links.",
       "techStack": [
         {
@@ -379,13 +379,13 @@
       "links": [
         {
           "label": "GitHub",
-          "href": "https://github.com/RChaubey16/links",
+          "href": "https://github.com/RChaubey16/blink",
           "variant": "outline",
           "icon": "GithubIcon"
         },
         {
           "label": "Live Demo",
-          "href": "https://links.ruturaj.xyz",
+          "href": "https://blink.ruturaj.xyz",
           "variant": "default",
           "icon": "Globe"
         }
