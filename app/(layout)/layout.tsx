@@ -47,6 +47,7 @@ export const metadata: Metadata = {
     description:
       "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
     siteName: "Ruturaj Chaubey Portfolio",
+    images: [{ url: "/images/banner.png" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
     description:
       "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
     creator: "@RChaubey16",
+    images: ["/images/banner.png"],
   },
   robots: {
     index: true,
