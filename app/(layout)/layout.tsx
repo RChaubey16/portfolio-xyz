@@ -20,6 +20,7 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ruturaj.xyz"),
   title: {
     default: "Ruturaj Chaubey",
     template: "%s | Ruturaj Chaubey",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ruturajchaubey.com",
+    url: "https://ruturaj.xyz",
     title: "Ruturaj Chaubey",
     description:
       "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
