@@ -8,6 +8,7 @@ const WORK_DIR = path.join(process.cwd(), 'content/work')
 
 export type CaseStudyMeta = {
   slug: string
+  order: number
   title: string
   client: string
   organisation: string
@@ -65,6 +66,7 @@ function buildMeta(
   }
   return {
     slug,
+    order: (data.order as number) ?? 999,
     title: data.title as string,
     client: (data.client as string) ?? 'Confidential',
     organisation: (data.organisation as string) ?? '',
@@ -90,7 +92,7 @@ export function getAllCaseStudies(): CaseStudyMeta[] {
       const { data, content } = matter(raw)
       return buildMeta(slug, data, content)
     })
-    .sort((a, b) => a.title.localeCompare(b.title))
+    .sort((a, b) => a.order - b.order)
 }
 
 export function getCaseStudy(slug: string): CaseStudy {

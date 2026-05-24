@@ -57,26 +57,33 @@ const Intro = () => {
         </div>
       </div>
 
-      <p className="text-muted-foreground">
-        {description.split("QED42").map((part, i, arr) =>
-          i < arr.length - 1 ? (
-            <>
-              {part}
-              <Link
-                key={i}
-                href="https://www.qed42.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground underline underline-offset-2 hover:no-underline"
-              >
-                QED42
-              </Link>
-            </>
-          ) : (
-            part
-          ),
-        )}
-      </p>
+      <ul className="text-muted-foreground flex flex-col gap-2.5">
+        {description.map((item, index) => (
+          <li key={index} className="flex gap-2 text-sm">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-current opacity-40" />
+            <span>
+              {item.split("QED42").map((part, i, arr) =>
+                i < arr.length - 1 ? (
+                  <>
+                    {part}
+                    <Link
+                      key={i}
+                      href="https://www.qed42.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground underline underline-offset-2 hover:no-underline"
+                    >
+                      QED42
+                    </Link>
+                  </>
+                ) : (
+                  part
+                ),
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
 
       <div className="flex items-center gap-3">
         <button

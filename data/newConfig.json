@@ -1,6 +1,10 @@
 {
   "name": "Ruturaj Chaubey",
-  "description": "Full Stack Engineer with 3+ years of experience building high-performance, decoupled web platforms. At QED42, he architects headless Drupal and Next.js solutions for enterprise clients including UNICEF and US-based organisations. Beyond client work, he's an active Drupal community speaker and open source contributor based in Pune, India.",
+  "description": [
+    "Full Stack Engineer with 3+ years of experience building high-performance, decoupled web platforms.",
+    "At QED42, he architects headless Drupal and Next.js solutions for enterprise clients including UNICEF and US-based organisations.",
+    "Beyond client work, he's an active Drupal community speaker and open source contributor based in Pune, India."
+  ],
   "roles": ["Software Engineer", "Full Stack Developer", "Web Developer"],
   "avatarImageUrl": "/images/me.jpeg",
   "avatarImageAltText": "Ruturaj Chaubey",
