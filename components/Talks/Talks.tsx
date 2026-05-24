@@ -41,7 +41,7 @@ const Talks = () => {
                   {talk.title}
                 </p>
                 <p className="text-muted-foreground mt-0.5 text-sm">
-                  {talk.event}
+                  <span className="text-foreground font-semibold">{talk.event}</span>
                 </p>
                 {talk.description && (
                   <p className="text-muted-foreground mt-0.5 text-sm">

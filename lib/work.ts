@@ -19,6 +19,7 @@ export type CaseStudyMeta = {
   nda: boolean
   outcome: string
   readingTime: string
+  hidden: boolean
 }
 
 export type Heading = {
@@ -77,6 +78,7 @@ function buildMeta(
     nda: (data.nda as boolean) ?? false,
     outcome: (data.outcome as string) ?? '',
     readingTime: readingTime(content).text,
+    hidden: (data.hidden as boolean) ?? false,
   }
 }
 
@@ -92,6 +94,7 @@ export function getAllCaseStudies(): CaseStudyMeta[] {
       const { data, content } = matter(raw)
       return buildMeta(slug, data, content)
     })
+    .filter((cs) => !cs.hidden)
     .sort((a, b) => a.order - b.order)
 }
 
