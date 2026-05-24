@@ -57,7 +57,26 @@ const Intro = () => {
         </div>
       </div>
 
-      <p className="text-muted-foreground">{description}</p>
+      <p className="text-muted-foreground">
+        {description.split("QED42").map((part, i, arr) =>
+          i < arr.length - 1 ? (
+            <>
+              {part}
+              <Link
+                key={i}
+                href="https://www.qed42.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline underline-offset-2 hover:no-underline"
+              >
+                QED42
+              </Link>
+            </>
+          ) : (
+            part
+          ),
+        )}
+      </p>
 
       <div className="flex items-center gap-3">
         <button

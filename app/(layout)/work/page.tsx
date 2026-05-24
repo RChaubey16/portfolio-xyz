@@ -1,30 +1,37 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
 
-import Experience from "@/components/Experience/Experience";
-import FadeUp from "@/components/animation/FadeUp";
+import FadeUp from '@/components/animation/FadeUp'
+import { WorkCard } from '@/components/Work/WorkCard'
+import { getAllCaseStudies } from '@/lib/work'
 
 export const metadata: Metadata = {
-  title: "Work",
-  description:
-    "A collection of projects I've worked on, ranging from web applications to open-source libraries and developer tools.",
-};
+  title: 'Work',
+  description: 'In-depth case studies of projects I have built and shipped.',
+}
 
 export default function WorkPage() {
-  return (
-    <section className="bg-background py-20">
-      <FadeUp>
-        <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold">Work</h1>
-          <p className="para">
-            A collection of projects I&apos;ve worked on, ranging from web
-            applications to open-source libraries and developer tools.
-          </p>
-        </div>
-      </FadeUp>
+  const studies = getAllCaseStudies()
 
-      <FadeUp delay={0.1}>
-        <Experience showHeading={false} accordionState={"open"} />
-      </FadeUp>
-    </section>
-  );
+  return (
+    <FadeUp>
+      <section className="mt-16">
+        <h1 className="text-2xl font-bold">Work</h1>
+        <p className="text-muted-foreground mt-1 text-sm">
+          In-depth case studies of projects I have built and shipped.
+        </p>
+
+        <div className="mt-8 flex flex-col gap-4">
+          {studies.length === 0 ? (
+            <p className="text-muted-foreground text-sm">
+              No case studies yet.
+            </p>
+          ) : (
+            studies.map((study) => (
+              <WorkCard key={study.slug} study={study} />
+            ))
+          )}
+        </div>
+      </section>
+    </FadeUp>
+  )
 }

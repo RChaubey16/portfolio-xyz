@@ -5,6 +5,8 @@ import { GrTechnology } from "react-icons/gr";
 
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
+import Talks from "@/components/Talks/Talks";
+import RecentWork from "@/components/Work/RecentWork";
 import TextCard from "@/components/TextCard";
 import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/introduction/Intro";
@@ -27,11 +29,23 @@ export default function Home() {
 
       <FadeUp delay={0.2}>
         <div className="mt-16">
-          <Projects />
+          <RecentWork />
         </div>
       </FadeUp>
 
       <FadeUp delay={0.3}>
+        <div className="mt-16">
+          <Projects />
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.4}>
+        <div className="mt-16">
+          <Talks />
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.6}>
         <section className="mt-16">
           <div className="flex items-baseline justify-between">
             <h2 className="text-2xl font-bold">Writing</h2>
@@ -69,7 +83,7 @@ export default function Home() {
         </section>
       </FadeUp>
 
-      <FadeUp delay={0.4}>
+      <FadeUp delay={0.7}>
         <section className="mt-16">
           <h2 className="text-2xl font-bold">Personal</h2>
           <div className="mt-3 grid grid-cols-2 gap-3">

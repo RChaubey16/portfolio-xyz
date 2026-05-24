@@ -1,6 +1,6 @@
 {
   "name": "Ruturaj Chaubey",
-  "description": "Full stack engineer with a bias for clean design and fast code.",
+  "description": "Full Stack Engineer with 3+ years of experience building high-performance, decoupled web platforms. At QED42, he architects headless Drupal and Next.js solutions for enterprise clients including UNICEF and US-based organisations. Beyond client work, he's an active Drupal community speaker and open source contributor based in Pune, India.",
   "roles": ["Software Engineer", "Full Stack Developer", "Web Developer"],
   "avatarImageUrl": "/images/me.jpeg",
   "avatarImageAltText": "Ruturaj Chaubey",
@@ -300,6 +300,48 @@
       ]
     }
   },
+  "talks": [
+    {
+      "id": "talk-5",
+      "title": "Inside Drupal CMS 2.0: Visual Building, AI, and Site Templates",
+      "event": "Drupal Pune Meetup",
+      "date": "2026-02-21",
+      "description": "Drupal CMS 2.0 introduces visual building, built-in AI, and ready-to-use site templates. A live walkthrough showing what these features mean for developers, content teams, and digital organizations.",
+      "link": "https://www.drupal.org/community/events/drupal-pune-meetup-february-21-2026-2026-06-21"
+    },
+    {
+      "id": "talk-3",
+      "title": "Everything AI in Drupal: Past, Present, and What's Next",
+      "event": "DrupalCamp Pune 2025",
+      "date": "2025-09-13",
+      "description": "A look at how AI has evolved within the Drupal ecosystem — from early integrations to the Drupal AI module. Covers where the project stands today and what the community can expect next.",
+      "link": "https://www.drupal.org/community/events/drupalcamp-pune-2025-2025-09-13"
+    },
+    {
+      "id": "talk-4",
+      "title": "From Static to Dynamic: Next.js Rendering Patterns with Drupal CMS",
+      "event": "DrupalCamp Pune 2025",
+      "date": "2025-09-13",
+      "description": "The Next.js App Router offers SSR, SSG, and ISR — but which fits which content type? Explores how to pair each rendering strategy with Drupal's content model when building a headless site.",
+      "link": "https://www.drupal.org/community/events/drupalcamp-pune-2025-2025-09-13"
+    },
+    {
+      "id": "talk-2",
+      "title": "All about Drupal CMS",
+      "event": "Pune Drupal CMS Launch Party",
+      "date": "2025-01-15",
+      "description": "A first look at Drupal CMS 1.0, built on Drupal core. Covers what it is, who it's for, and how it simplifies site building for editors and developers.",
+      "link": "https://www.drupal.org/community/events/pune-drupal-cms-launch-party-2025-01-15"
+    },
+    {
+      "id": "talk-1",
+      "title": "Transforming Experiences: A Guide to Transform API and Decoupled Layout Builder in Drupal",
+      "event": "Drupal Pune Meetup",
+      "date": "2023-12-16",
+      "description": "The Transform API bridges Drupal's content and frontend frameworks in headless architectures. Explores how it delivers structured JSON and handles responsive images for better performance on decoupled sites.",
+      "link": "https://www.drupal.org/community/events/drupal-pune-december23-meetup-2023-12-16"
+    }
+  ],
   "projects": [
     {
       "id": "Blink",

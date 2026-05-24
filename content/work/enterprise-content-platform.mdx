@@ -1,0 +1,123 @@
+---
+title: "Enterprise Content Platform"
+client: "Confidential"
+organisation: "QED42"
+role: "Full Stack Engineer"
+duration: "May 2023 – Present"
+summary: "Architected and built a headless Drupal platform serving millions of monthly visitors for a global media organisation, with a Next.js frontend and a decoupled editorial workflow."
+tags: ["Drupal", "Next.js", "TypeScript", "GraphQL", "Transform API", "JSON:API"]
+nda: true
+outcome: "40% improvement in page load performance and 60% reduction in editorial time-to-publish"
+---
+
+## Overview
+
+A global media organisation with an extensive content library needed to modernise its digital presence. The existing monolithic Drupal site was slow to update, difficult to extend to new channels (mobile apps, third-party aggregators), and putting strain on the editorial team. The goal was to decouple the frontend entirely while keeping Drupal's editorial workflows intact.
+
+The result was a headless Drupal 10 backend paired with a Next.js App Router frontend — delivering content to web, mobile, and partner APIs from a single source of truth.
+
+## The Problem
+
+The platform had three interconnected challenges:
+
+- **Performance**: Server-rendered pages with heavy Drupal theming were averaging 4–6 seconds Time to First Byte on high-traffic articles, causing significant drop-off.
+- **Editorial bottleneck**: Publishing a new page required developer involvement. Non-technical editors couldn't manage layouts or components without filing a ticket.
+- **Multi-channel delivery**: Content needed to reach not just the website but mobile apps and syndication partners, each expecting structured JSON in different shapes.
+
+## My Role
+
+I joined the project as a Full Stack Engineer responsible for the frontend architecture and the Drupal API layer. My primary areas of ownership were:
+
+- Designing and implementing the Transform API integration for structured content delivery
+- Building the Next.js App Router frontend, including rendering strategy decisions (SSG, ISR, SSR per content type)
+- Implementing the decoupled Layout Builder integration so editors could compose pages visually without engineering support
+- Setting up the CI/CD pipeline for preview deployments tied to Drupal's content moderation workflow
+
+## Approach
+
+### Decoupling the content layer
+
+Rather than exposing Drupal's raw JSON:API responses directly to the frontend, we introduced the **Transform API** as a normalisation layer. This meant the frontend consumed a predictable, flattened JSON structure regardless of how content types evolved in Drupal.
+
+This also allowed us to handle responsive image variants centrally — the Transform API resolved image styles and returned URLs for each breakpoint, so the Next.js frontend never had to know about Drupal's image module internals.
+
+### Rendering strategy
+
+Not all content is equal in terms of freshness requirements. We mapped content types to rendering strategies:
+
+| Content type | Strategy | Rationale |
+|---|---|---|
+| Articles | ISR (60s revalidation) | Frequent but not real-time |
+| Homepage | SSR | Personalisation requirements |
+| Static pages | SSG | Build-time, no revalidation needed |
+| Search | CSR | Fully dynamic, user-driven |
+
+### Decoupled Layout Builder
+
+The Layout Builder integration was the most complex piece. Drupal's Layout Builder stores layout data as structured config. We wrote a recursive React renderer that traversed the section/component tree returned by the API and mapped each Drupal block type to a corresponding React component.
+
+Editors could now compose pages in Drupal's Layout Builder UI and see live previews via a Next.js preview mode endpoint, with no frontend deployments required.
+
+## Key Deliverables
+
+- **Transform API integration** — normalised content delivery layer with image resizing, field aliasing, and metatag support
+- **Next.js App Router frontend** — full site implementation with per-content-type rendering strategies
+- **Decoupled Layout Builder renderer** — recursive React component tree driven entirely by Drupal config
+- **Preview mode** — draft content previews for editors before publishing
+- **Incremental Static Regeneration pipeline** — on-demand ISR triggered by Drupal's publish webhook
+- **Component library** — shared UI components (cards, hero, rich text, media embeds) used across content types
+
+## Technical Highlights
+
+### On-demand ISR with Drupal webhooks
+
+When an editor publishes content in Drupal, a webhook fires to a Next.js API route that calls `revalidatePath` for the affected pages. This replaced a 15-minute polling interval with near-instant cache invalidation.
+
+```ts
+// app/api/revalidate/route.ts
+export async function POST(req: Request) {
+  const { secret, path } = await req.json()
+
+  if (secret !== process.env.REVALIDATION_SECRET) {
+    return Response.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  revalidatePath(path)
+  return Response.json({ revalidated: true, path })
+}
+```
+
+### Transform API response shape
+
+The Transform API normalised deeply nested Drupal JSON:API responses into a flat, typed structure the frontend could consume predictably.
+
+```ts
+type TransformedNode = {
+  id: string
+  type: string
+  title: string
+  body: string
+  image: {
+    src: string
+    alt: string
+    srcset: Record<string, string> // e.g. { mobile: '...', desktop: '...' }
+  }
+  metatags: Record<string, string>
+  layout?: LayoutSection[]
+}
+```
+
+## Results & Impact
+
+- **40% reduction in page load time** — moving from server-rendered Drupal themes to statically generated Next.js pages with ISR
+- **60% reduction in time-to-publish** — editors can now create and compose pages without engineering involvement
+- **Multi-channel ready** — the Transform API layer is reused by the mobile app team and syndication partners, eliminating duplicate data-fetching logic
+- **Zero-downtime deploys** — ISR ensures content updates propagate without full rebuilds, keeping the site live during high-traffic periods
+
+## Lessons Learned
+
+**Invest in the contract layer early.** The Transform API created a stable contract between Drupal and the frontend. Every time a content type changed in Drupal, the frontend stayed untouched. Without it, every Drupal change would have rippled into the Next.js codebase.
+
+**ISR is not a cache — it is a consistency model.** Early on we treated ISR like a CDN cache to be purged on demand. The mental model shift to thinking about it as a consistency guarantee (pages are at most N seconds stale, or refreshed on publish) led to much cleaner architecture decisions.
+
+**Drupal's Layout Builder is powerful but needs guardrails.** Giving editors full layout flexibility is great until they create layouts the design system wasn't built for. We introduced a component allow-list per content type, which significantly reduced QA time.
