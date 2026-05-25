@@ -348,6 +348,90 @@
   ],
   "projects": [
     {
+      "id": "knowbase",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/links-shot.png",
+        "alt": "Knowbase multi-tenant knowledge base platform"
+      },
+      "status": {
+        "text": "In Development",
+        "className": "status-dev"
+      },
+      "title": "Knowbase",
+      "description": "A multi-tenant knowledge base SaaS that lets teams ingest documents in multiple formats and retrieve them through full-text search and an AI-powered RAG pipeline grounded strictly in workspace content.",
+      "techStack": [
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "techHref": "https://nestjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "techHref": "https://www.typescriptlang.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "techHref": "https://www.postgresql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "supabase",
+          "tech": "Supabase",
+          "techHref": "https://supabase.com",
+          "imageUrl": {
+            "light": "/icons/tech/supabase.svg",
+            "dark": "/icons/tech/supabase.svg"
+          },
+          "imageAltText": "Supabase logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/knowbase",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        }
+      ]
+    },
+    {
       "id": "Blink",
       "type": "tech",
       "image": {
