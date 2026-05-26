@@ -4,6 +4,7 @@ import { FiFilm } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
 
 import Experience from "@/components/Experience/Experience";
+import Photos from "@/components/Photos/Photos";
 import Projects from "@/components/Projects/Projects";
 import Talks from "@/components/Talks/Talks";
 import RecentWork from "@/components/Work/RecentWork";
@@ -84,6 +85,12 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.7}>
+        <div className="mt-16">
+          <Photos />
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.8}>
         <section className="mt-16">
           <h2 className="text-2xl font-bold">Personal</h2>
           <div className="mt-3 grid grid-cols-2 gap-3">

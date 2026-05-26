@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import config from "@/data/newConfig.json";
 
+import CtaButton from "../others/CtaButton";
+
 interface Talk {
   id: string;
   title: string;
@@ -13,12 +15,14 @@ interface Talk {
 
 const talks: Talk[] = (config as unknown as { talks: Talk[] }).talks;
 
-const Talks = () => {
+const Talks = ({ slice = true }: { slice?: boolean }) => {
+  const useSlice = slice && talks.length > 3;
+  const visibleTalks = useSlice ? talks.slice(0, 3) : talks;
   return (
     <section id="talks">
       <h2 className="text-2xl font-bold">Talks</h2>
       <div className="mt-4 flex flex-col gap-4">
-        {talks.map((talk) => {
+        {visibleTalks.map((talk) => {
           const formattedDate = new Date(talk.date).toLocaleDateString(
             "en-US",
             {
@@ -66,6 +70,12 @@ const Talks = () => {
           );
         })}
       </div>
+
+      {useSlice && (
+        <div className="mt-8 flex justify-center">
+          <CtaButton text="More Talks" href="/talks" />
+        </div>
+      )}
     </section>
   );
 };

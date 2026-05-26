@@ -5,48 +5,59 @@ description: "How I designed the authentication layer and multi-tenant data mode
 tags: ["Knowbase", "NestJS", "PostgreSQL", "Auth"]
 ---
 
-Every project has a phase where you're not building features — you're building the ground the features will stand on. For Knowbase, that was the first few weeks: getting auth right, designing the tenancy model, and making sure the database schema wouldn't need a painful rewrite the moment real users showed up.
+Before you can build features, you need something solid to build on.
 
-## What Knowbase is
+For Knowbase, that meant getting three things right from the start: authentication, multi-tenancy, and the database schema. Get these wrong early, and you're rewriting them later when it hurts.
 
-Knowbase is a multi-tenant knowledge base SaaS. Users create **Organisations**, inside which they create **Workspaces**, inside which they store and search **Documents**. The mental model is deliberately close to Notion or Confluence — a company is an org, a team is a workspace, their content is documents.
+## What is Knowbase?
 
-The stack I landed on:
+Knowbase is a multi-tenant knowledge base SaaS. Think Notion or Confluence, but simpler.
 
-- **API:** NestJS v11 + Drizzle ORM + PostgreSQL (hosted on Supabase)
+The mental model is straightforward:
+
+- A **company** creates an **Organisation**
+- A **team** inside that company creates a **Workspace**
+- That team stores and searches **Documents** inside their workspace
+
+The stack:
+
+- **API:** NestJS + Drizzle ORM + PostgreSQL (hosted on Supabase)
 - **App:** Next.js 16, React 19, Tailwind v4, shadcn/ui
 
-## Designing the tenancy model
+## How tenancy works
 
-The hardest decision upfront wasn't technical — it was how granular to make the roles. I settled on two separate membership layers:
+The trickiest design decision was roles. I went with two separate membership layers:
 
-1. **Organisation membership** — `owner | admin | member`
-2. **Workspace membership** — `owner | admin | editor | viewer`
+1. **Organisation membership** — `owner`, `admin`, or `member`
+2. **Workspace membership** — `owner`, `admin`, `editor`, or `viewer`
 
-The key insight: a workspace member doesn't link directly to a user. It links to an `organisation_members` row. This means you can't be in a workspace without being in the org first, which makes access checks a lot cleaner.
+Here's the key part: a workspace member doesn't link directly to a user. It links to an `organisation_members` row.
 
 ```ts
-// organisation_members → workspace_members (not users → workspace_members)
 workspaceMembers: {
   workspaceId: uuid,
-  organisationMemberId: uuid,  // FK to organisation_members.id
+  organisationMemberId: uuid, // FK to organisation_members
   role: workspaceRole,
 }
 ```
 
-This indirection pays off constantly. When you revoke someone from an org, they lose workspace access automatically.
+Why does this matter? If you remove someone from an org, they lose access to all its workspaces automatically. No extra cleanup needed.
 
-## Google OAuth + JWT cookies
+## Auth: Google OAuth + JWT cookies
 
-I went with Google OAuth only — no email/password. The flow is:
+I went with Google OAuth only — no email/password. Less to maintain, and most users already have a Google account.
 
-1. `GET /auth/google` redirects to Google
-2. Callback creates or finds the user, then issues two tokens as `httpOnly` cookies:
-   - **Access token** — 15 minute lifetime, JWT
-   - **Refresh token** — 7 day lifetime, bcrypt-hashed in the DB
+The login flow is simple:
+
+1. User hits `GET /auth/google` → gets redirected to Google
+2. Google sends them back → the app creates or finds their account
+3. Two cookies are set: an **access token** (lasts 15 minutes) and a **refresh token** (lasts 7 days)
+
+Both cookies are `httpOnly`, so JavaScript can't touch them.
+
+The refresh token is never stored as plain text:
 
 ```ts
-// Refresh token is never stored in plaintext
 const hash = await bcrypt.hash(refreshToken, 10);
 await db
   .update(users)
@@ -54,17 +65,19 @@ await db
   .where(eq(users.id, userId));
 ```
 
-Storing only the hash means a leaked DB dump can't be used to forge sessions. Rotation happens on every refresh — old token is invalidated the moment a new one is issued.
+Even if someone got a copy of the database, they couldn't use those tokens. Every time a token is refreshed, the old one is invalidated and a new one is issued.
 
-## The org slug problem
+## Org slugs vs workspace slugs
 
-Org slugs are user-picked and globally unique — they appear in URLs like `/organisation/acme-corp`. Workspace slugs are auto-generated: `kebab-name-{8-char-uuid}`, so there's no collision risk and users never have to think about them.
+Org slugs are user-picked and must be globally unique. They show up in URLs like `/organisation/acme-corp`.
 
-I almost made workspace slugs user-picked too, but the UX overhead wasn't worth it. Users care about workspace names, not URLs.
+Workspace slugs are auto-generated: `workspace-name-a1b2c3d4`. Users never have to think about them, and there's no risk of collisions.
+
+I briefly considered letting users pick workspace slugs too. I'm glad I didn't — it adds friction without much benefit.
 
 ## The 3-org limit
 
-One early product decision: cap owned orgs at 3 per user. It's enforced at the service layer before insert:
+Each user can own a maximum of 3 organisations. It's a simple check before any new org is created:
 
 ```ts
 const owned = await db
@@ -78,10 +91,10 @@ if (owned.length >= 3) {
 }
 ```
 
-A simple guard, but it shapes the product. Knowbase isn't a personal tool — it's meant for teams. Three orgs is plenty for someone managing multiple companies; if you need more, that's a pricing conversation.
+Three orgs is plenty for most people. Knowbase is meant for teams, not personal use. If you need more than three, that's a pricing conversation.
 
-## What came next
+## What's next
 
-With auth and tenancy in place, the boring-but-essential foundation was done. No real user-facing features yet — just a working login, a way to create orgs and workspaces, and a schema I was reasonably confident in.
+With auth and tenancy sorted, the foundation was done. No flashy features yet — just a working login, org and workspace creation, and a schema I felt good about.
 
-The next phase was about making Knowbase actually useful: documents.
+Part 2 is where things get interesting: documents, search, and making Knowbase actually useful.
