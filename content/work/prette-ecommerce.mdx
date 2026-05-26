@@ -1,0 +1,124 @@
+---
+order: 2
+title: "Prette — Ecommerce Marketplace for Sewists"
+client: "Patternry / Prette"
+organisation: "QED42"
+role: "Full Stack Engineer"
+duration: "July 2022 – May 2023"
+summary: "Built the full-stack integration layer for Prette, a Drupal Commerce-powered marketplace for sewists, connecting a Gatsby JS frontend to a headless Drupal backend via GraphQL — covering authentication, cart, wishlist, product pages, orders, and address management."
+tags: ["Drupal", "Gatsby JS", "React", "TypeScript", "GraphQL", "Drupal Commerce"]
+nda: true
+outcome: "Delivered a fully integrated ecommerce storefront for a niche marketplace, enabling sewists to discover and purchase materials for their projects"
+---
+
+## Overview
+
+Prette is a marketplace designed for sewists — people who make their own clothes. The platform makes it easy for them to find and purchase everything needed to create the garments they imagine, from fabrics and patterns to notions and accessories.
+
+The project was built on a decoupled architecture: a **Drupal Commerce** backend serving as the content, product catalogue, and commerce engine, paired with a **Gatsby JS** frontend consuming content and commerce data via GraphQL. My role as Full Stack Engineer covered the full breadth of the Drupal–Gatsby integration: building the API connections, implementing commerce features, developing custom Drupal modules, and ensuring a seamless experience from product discovery through checkout and order management.
+
+## The Problem
+
+Building a commerce frontend on top of Drupal Commerce in a decoupled setup is non-trivial. Drupal Commerce's native tools — cart management, authentication, wishlists, address books, orders — are built for server-rendered Drupal themes. Exposing them cleanly to a Gatsby JS frontend required:
+
+- **Custom API surface**: Drupal Commerce doesn't expose all commerce operations through JSON:API or GraphQL by default. Cart mutations, wishlist operations, and address management needed custom API endpoints.
+- **Decoupled authentication**: Standard Drupal session authentication doesn't work in a decoupled context. A token-based authentication flow had to be implemented and integrated into the Gatsby frontend.
+- **Static + dynamic content**: Gatsby's static generation model works well for product catalogues, but cart, wishlist, and account pages are inherently dynamic. The architecture had to accommodate both.
+- **Drupal View integrations**: Several listing and filtering experiences on the frontend were powered by Drupal Views — exposing these as GraphQL-consumable endpoints required configuration and custom module work.
+
+## My Role
+
+As Full Stack Engineer, I was responsible for the full integration layer between Drupal Commerce and the Gatsby frontend:
+
+- Drupal API integrations with UI components
+- Decoupled Drupal Authentication
+- Custom module development
+- Wishlist and Cart Integration
+- Drupal View integrations
+- Order pages integration
+- Address-book integration
+- Header Menu integration
+- Custom paragraph types
+- Product Detail Page and Store Page integration in Gatsby via GraphQL
+- Static Site Generation (SSG) and Server-Side Rendering (SSR) implementation
+- Custom tokens in Drupal backend
+- Reusable templates for Drupal content types
+- Google Analytics implementation
+- Contributed patches on drupal.org for extended functionality
+
+## Approach
+
+### Decoupled Authentication
+
+Standard Drupal session-based authentication doesn't translate to a Gatsby frontend. I implemented a token-based authentication flow using Drupal's Simple OAuth module, issuing access and refresh tokens to the Gatsby frontend. This allowed user-specific commerce operations — cart, wishlist, orders, account management — to work reliably in the decoupled context.
+
+The authentication layer was integrated into the Gatsby frontend so that protected routes and user-specific API calls handled token attachment and refresh transparently.
+
+### Cart and Wishlist Integration
+
+Drupal Commerce's cart management is designed for server-rendered Drupal pages. Exposing it to the Gatsby frontend required building a custom API layer in Drupal that accepted cart mutation requests (add, update, remove) from the frontend and returned structured responses the React components could consume.
+
+Wishlist functionality followed a similar pattern — custom Drupal module code to expose wishlist read and write operations as REST endpoints, with corresponding React components on the Gatsby side.
+
+### Product Detail Page and Store Page via GraphQL
+
+The Product Detail Page and Store Page were integrated into the Gatsby frontend using GraphQL. The Gatsby GraphQL data layer was configured to pull product and catalogue data from Drupal at build time for static generation, while dynamic data (stock, pricing, user-specific state) was fetched client-side.
+
+This approach meant product pages loaded instantly from the CDN for anonymous users, while authenticated users saw personalised state layered on top.
+
+### Rendering Strategy
+
+| Page type | Strategy | Rationale |
+|---|---|---|
+| Product catalogue / Store page | SSG | Catalogue data is stable; pre-render at build time for performance |
+| Product Detail Page | SSG | Individual product pages pre-rendered at build |
+| Cart / Wishlist | CSR | User-specific, dynamic; must reflect live state |
+| Order history / Account | SSR | Authenticated, user-specific content |
+
+### Drupal View Integrations
+
+Several listing and filtering experiences — category pages, search results, curated collections — were powered by Drupal Views exposed as REST endpoints. I configured Views to expose the correct fields and filters, then built the Gatsby-side data fetching and UI components to consume them.
+
+### Custom Module Development
+
+Several commerce and content requirements weren't met by Drupal's contributed modules out of the box. I built custom Drupal modules to:
+
+- Expose cart, wishlist, and address-book operations as structured REST endpoints
+- Implement custom tokens for use in transactional emails and content
+- Extend existing module functionality where patches on drupal.org weren't yet merged
+
+I also contributed patches upstream to drupal.org where I identified bugs or missing functionality in contributed modules the project depended on.
+
+### Custom Paragraph Types and Reusable Templates
+
+The content editorial experience relied on Drupal's Paragraph types for structured, reusable content blocks. I created custom paragraph types to support the design requirements and built corresponding Gatsby templates that rendered content generated by these Drupal content types — ensuring editors could build pages without developer involvement for routine content updates.
+
+### Header Menu Integration
+
+The site navigation was managed in Drupal and consumed by the Gatsby frontend via GraphQL. This allowed the editorial team to update navigation without frontend deployments, while the Gatsby build system kept the static site in sync on each rebuild.
+
+### Google Analytics
+
+Integrated Google Analytics tracking across the Gatsby frontend, covering page views, ecommerce events (product views, add-to-cart, purchases), and user interactions — giving the Prette team visibility into the customer journey through the storefront.
+
+## Key Deliverables
+
+- **Decoupled authentication** — token-based auth flow connecting Gatsby frontend to Drupal backend, enabling user-specific commerce operations
+- **Cart and wishlist** — full add/update/remove cart management and wishlist functionality surfaced in the Gatsby UI via custom Drupal API endpoints
+- **Product Detail Page and Store Page** — statically generated product and catalogue pages with client-side dynamic state for authenticated users
+- **Order pages** — integrated order history and order detail views for authenticated users
+- **Address book** — user address management integrated into the account section
+- **Drupal View integrations** — listing and filtering experiences driven by Drupal Views and consumed via GraphQL
+- **Header Menu** — CMS-managed navigation consumed by Gatsby, editable without frontend deploys
+- **Custom paragraph types and templates** — reusable Drupal content structures with matching Gatsby render templates
+- **Custom Drupal modules** — bespoke backend modules for commerce API endpoints, custom tokens, and extended functionality
+- **Google Analytics** — ecommerce and behavioural tracking across the storefront
+- **Drupal.org contributions** — patches submitted upstream for bugs and missing functionality in contributed modules
+
+## Lessons Learned
+
+**Decoupled Drupal Commerce needs a deliberate API contract.** Drupal Commerce is designed around server-rendered pages. Exposing its operations — cart mutations, wishlist management, address books — to a decoupled frontend requires building an explicit, intentional API surface. Leaning on whatever JSON:API happens to expose leads to brittle integrations; a custom API layer built around the frontend's actual needs is more robust.
+
+**SSG and dynamic commerce can coexist.** Combining static generation for product catalogue pages with client-side rendering for user-specific state (cart, wishlist, account) gives the best of both: fast, cacheable product pages and accurate, live commerce state. The key is being explicit about which data belongs to which rendering mode from the start.
+
+**Contributed module gaps are opportunities.** Several times during the project, a contributed module was missing a feature or had a bug that blocked progress. Contributing patches upstream — rather than maintaining local forks — kept the codebase clean and gave something back to the Drupal community.

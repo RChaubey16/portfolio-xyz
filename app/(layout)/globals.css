@@ -173,6 +173,11 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
+@theme {
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.5rem;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
