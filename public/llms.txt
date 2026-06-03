@@ -1,0 +1,53 @@
+# Ruturaj Chaubey
+
+> Full Stack Engineer with 3+ years of experience building scalable, high-performance web applications. Based in Pune, India.
+
+Ruturaj Chaubey is a Full Stack Engineer at QED42, where he architects headless Drupal and Next.js solutions for enterprise clients including UNICEF and US-based organisations. He is an active Drupal community speaker and open source contributor.
+
+- Email: ruturajchaubey16@gmail.com
+- Location: Pune, India
+- GitHub: https://github.com/RChaubey16
+- LinkedIn: https://linkedin.com/in/ruturajchaubey
+
+## Skills & Technologies
+
+Languages: TypeScript, JavaScript, Go, Python, PHP
+Frontend: React, Next.js, Tailwind CSS
+Backend: Node.js, NestJS, FastAPI, Drupal (headless/decoupled)
+Databases & Infra: PostgreSQL, Supabase, Docker
+CMS: Drupal, Sanity
+
+## Experience
+
+- Full Stack Engineer at QED42 — Architected headless Drupal + Next.js platforms for enterprise clients; led front-end for a UNICEF-affiliated product; mentored interns; delivered internal sessions on decoupled Drupal starter kits.
+- Associate Engineer at QED42 — Built and maintained decoupled web applications; contributed to open source Drupal modules.
+- Intern at QED42 — Learned Drupal development fundamentals and contributed to client projects.
+
+## Projects
+
+- [Knowbase](https://ruturajchaubey.com/projects) — Multi-tenant knowledge base SaaS where teams store and search documents using AI.
+- [Atlas](https://ruturajchaubey.com/projects) — Production-style microservices backend built with NestJS demonstrating scalable architecture patterns.
+- [Blink](https://ruturajchaubey.com/projects) — Fast, minimal URL shortener.
+- [React Keyquence](https://ruturajchaubey.com/projects) — Lightweight React library for keyboard sequence detection.
+- [What the Hex](https://ruturajchaubey.com/projects) — Fast color lookup tool for developers and designers.
+- [DevConnector](https://ruturajchaubey.com/projects) — Social networking platform for developers.
+
+## Talks
+
+- Inside Drupal CMS 2.0: Visual Building, AI, and Site Templates
+- Everything AI in Drupal: Past, Present, and What's Next
+- From Static to Dynamic: Next.js Rendering Patterns with Drupal CMS
+- All about Drupal CMS
+- Transforming Experiences: A Guide to Transform API and Decoupled Layout Builder in Drupal
+
+## Site Sections
+
+- [Home](https://ruturajchaubey.com/) — Introduction, experience, projects, talks, writing, and photos.
+- [Work](https://ruturajchaubey.com/work) — In-depth case studies of selected client and personal projects.
+- [Projects](https://ruturajchaubey.com/projects) — Full list of personal and open source projects.
+- [Blog](https://ruturajchaubey.com/blog) — Writing on software engineering, web development, and Drupal.
+- [Talks](https://ruturajchaubey.com/talks) — Conference and community talks.
+- [Photos](https://ruturajchaubey.com/photos) — A visual collection of moments.
+- [Gears](https://ruturajchaubey.com/gears) — Hardware and software used daily.
+- [Movies & TV](https://ruturajchaubey.com/movies) — Films and shows that inspire him.
+- [Resume](https://ruturajchaubey.com/resume) — Full resume.
