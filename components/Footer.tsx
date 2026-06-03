@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import config from "@/data/newConfig.json";
 
@@ -17,9 +18,15 @@ const Footer = () => {
           />
         </div>
       </div>
-      <p className="text-muted-foreground my-20 text-center text-sm">
-        &copy; 2026 Ruturaj Chaubey. All rights reserved.
-      </p>
+      <div className="text-muted-foreground my-20 flex flex-col items-center gap-1 text-sm">
+        <p>&copy; 2026 Ruturaj Chaubey. All rights reserved.</p>
+        <Link
+          href="/llms.txt"
+          className="hover:text-foreground transition-colors"
+        >
+          llms.txt
+        </Link>
+      </div>
     </footer>
   );
 };

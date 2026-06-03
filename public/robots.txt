@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /studio/
+
+# LLM-friendly content summary
+# llms.txt: https://ruturajchaubey.com/llms.txt
