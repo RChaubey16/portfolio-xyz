@@ -8,8 +8,7 @@ const BASE_URL = 'https://ruturajchaubey.com'
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, priority: 1 },
-    { url: `${BASE_URL}/about`, priority: 0.9 },
-    { url: `${BASE_URL}/work`, priority: 0.9 },
+{ url: `${BASE_URL}/work`, priority: 0.9 },
     { url: `${BASE_URL}/projects`, priority: 0.8 },
     { url: `${BASE_URL}/blog`, priority: 0.8 },
     { url: `${BASE_URL}/talks`, priority: 0.7 },
