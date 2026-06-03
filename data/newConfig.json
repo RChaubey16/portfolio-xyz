@@ -351,7 +351,7 @@
       "id": "knowbase",
       "type": "tech",
       "image": {
-        "src": "/images/projects/links-shot.png",
+        "src": "/images/projects/knowbase.png",
         "alt": "Knowbase multi-tenant knowledge base platform"
       },
       "status": {
@@ -359,7 +359,7 @@
         "className": "status-dev"
       },
       "title": "Knowbase",
-      "description": "A multi-tenant knowledge base SaaS that lets teams ingest documents in multiple formats and retrieve them through full-text search and an AI-powered RAG pipeline grounded strictly in workspace content.",
+      "description": "A multi-tenant knowledge base SaaS where teams store and search documents across shared workspaces. Supports PostgreSQL full-text search and a RAG AI mode powered by Jina AI embeddings and Google Gemini.",
       "techStack": [
         {
           "id": "nestjs",
@@ -420,6 +420,26 @@
             "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
           },
           "imageAltText": "Tailwind CSS logo"
+        },
+        {
+          "id": "redis",
+          "tech": "Redis",
+          "techHref": "https://redis.io",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Redis.svg"
+          },
+          "imageAltText": "Redis logo"
+        },
+{
+          "id": "google-gemini",
+          "tech": "Google Gemini",
+          "techHref": "https://deepmind.google/technologies/gemini",
+          "imageUrl": {
+            "light": "/icons/tech/gemini-icon.png",
+            "dark": "/icons/tech/gemini-icon.png"
+          },
+          "imageAltText": "Google Gemini logo"
         }
       ],
       "links": [
@@ -428,6 +448,82 @@
           "href": "https://github.com/RChaubey16/knowbase",
           "variant": "outline",
           "icon": "GithubIcon"
+        },
+        {
+          "label": "Live",
+          "href": "https://knowbase.ruturaj.xyz/",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
+      "id": "atlas",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/atlas.png",
+        "alt": "Microservices backend"
+      },
+      "status": {
+        "text": "In Development",
+        "className": "status-dev"
+      },
+      "title": "Atlas",
+      "description": "A production-style microservices backend built with NestJS. Demonstrates clean service boundaries, an API Gateway pattern, JWT authentication, and a shared contracts library — all running in Docker.",
+      "techStack": [
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "techHref": "https://nestjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "rabbitmq",
+          "tech": "RabbitMQ",
+          "techHref": "https://www.rabbitmq.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg"
+          },
+          "imageAltText": "RabbitMQ logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "techHref": "https://www.postgresql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "docker",
+          "tech": "Docker",
+          "techHref": "https://www.docker.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+          },
+          "imageAltText": "Docker logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/atlas",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live",
+          "href": "https://atlas.ruturaj.xyz/docs",
+          "variant": "default",
+          "icon": "Globe"
         }
       ]
     },
@@ -435,7 +531,7 @@
       "id": "Blink",
       "type": "tech",
       "image": {
-        "src": "/images/projects/links-shot.png",
+        "src": "/images/projects/blink.png",
         "alt": "Blink URL shortener home page"
       },
       "status": {
@@ -522,140 +618,10 @@
       ]
     },
     {
-      "id": "atlas",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/atlas-shot.png",
-        "alt": "Microservices backend"
-      },
-      "status": {
-        "text": "In Development",
-        "className": "status-dev"
-      },
-      "title": "Atlas",
-      "description": "A production-style microservices backend built with NestJS. Demonstrates clean service boundaries, an API Gateway pattern, JWT authentication, and a shared contracts library — all running in Docker.",
-      "techStack": [
-        {
-          "id": "nestjs",
-          "tech": "NestJS",
-          "techHref": "https://nestjs.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
-          },
-          "imageAltText": "NestJS logo"
-        },
-        {
-          "id": "rabbitmq",
-          "tech": "RabbitMQ",
-          "techHref": "https://www.rabbitmq.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg"
-          },
-          "imageAltText": "RabbitMQ logo"
-        },
-        {
-          "id": "postgresql",
-          "tech": "PostgreSQL",
-          "techHref": "https://www.postgresql.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
-          },
-          "imageAltText": "PostgreSQL logo"
-        },
-        {
-          "id": "docker",
-          "tech": "Docker",
-          "techHref": "https://www.docker.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
-          },
-          "imageAltText": "Docker logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/atlas",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live",
-          "href": "https://atlas.ruturaj.xyz/docs",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
-      "id": "orbit",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/under-construction.png",
-        "alt": "Orbit component library"
-      },
-      "status": {
-        "text": "In Development",
-        "className": "status-dev"
-      },
-      "title": "Orbit",
-      "description": "A modern component library built for speed and flexibility. Designed with clean APIs, smooth animations, and a developer-first approach.",
-      "techStack": [
-        {
-          "id": "nextjs",
-          "tech": "Next.js",
-          "techHref": "https://nextjs.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-            "dark": "/icons/tech/nextjs-dark-icon.png"
-          },
-          "imageAltText": "Next.js logo"
-        },
-        {
-          "id": "react",
-          "tech": "React",
-          "techHref": "https://react.dev",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
-          },
-          "imageAltText": "React logo"
-        },
-        {
-          "id": "tailwindcss",
-          "tech": "Tailwind CSS",
-          "techHref": "https://tailwindcss.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
-          },
-          "imageAltText": "Tailwind CSS logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/orbit",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live",
-          "href": "https://orbit.ruturaj.xyz/",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
       "id": "react-kequence",
       "type": "tech",
       "image": {
-        "src": "/images/projects/react-keyquence-shot.png",
+        "src": "/images/projects/react-keyquence.png",
         "alt": "React keyquence npm home page"
       },
       "status": {
@@ -705,7 +671,7 @@
       "id": "what-the-hex",
       "type": "tech",
       "image": {
-        "src": "/images/projects/what-the-hex-shot.png",
+        "src": "/images/projects/what-the-hex.png",
         "alt": "What the hex color lookup tool"
       },
       "status": {
@@ -765,7 +731,7 @@
       "id": "dev-connector",
       "type": "tech",
       "image": {
-        "src": "/images/projects/devconnector-shot.png",
+        "src": "/images/projects/dev-connector.png",
         "alt": "Dev connector home page"
       },
       "status": {
