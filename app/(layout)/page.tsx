@@ -4,7 +4,7 @@ import { FiFilm } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
 
 import Experience from "@/components/Experience/Experience";
-import Photos from "@/components/Photos/Photos";
+import Photos from "@/components/About/Photos";
 import Projects from "@/components/Projects/Projects";
 import Talks from "@/components/Talks/Talks";
 import RecentWork from "@/components/Work/RecentWork";

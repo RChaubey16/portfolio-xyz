@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
@@ -64,10 +65,9 @@ const Intro = () => {
             <span>
               {item.split("QED42").map((part, i, arr) =>
                 i < arr.length - 1 ? (
-                  <>
+                  <Fragment key={i}>
                     {part}
                     <Link
-                      key={i}
                       href="https://www.qed42.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const Intro = () => {
                     >
                       QED42
                     </Link>
-                  </>
+                  </Fragment>
                 ) : (
                   part
                 ),

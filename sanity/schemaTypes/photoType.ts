@@ -12,24 +12,28 @@ export const photoType = defineType({
             type: 'string',
         }),
         defineField({
-            name: 'mainImage',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-            fields: [
-                defineField({
-                    name: 'alt',
-                    type: 'string',
-                    title: 'Alternative text',
-                })
-            ]
+            name: 'images',
+            title: 'Photos',
+            type: 'array',
+            of: [
+                {
+                    type: 'image',
+                    options: { hotspot: true },
+                    fields: [
+                        defineField({
+                            name: 'alt',
+                            type: 'string',
+                            title: 'Caption',
+                        }),
+                    ],
+                },
+            ],
         }),
     ],
     preview: {
         select: {
             title: 'title',
-            media: 'mainImage',
+            media: 'images.0',
         },
         prepare(selection) {
             return { ...selection }

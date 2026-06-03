@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import Gallery from "@/components/About/Gallery";
+import Photos from "@/components/About/Photos";
 import Fade from "@/components/animation/Fade";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function GalleryPage() {
             me.
           </p>
         </div>
-        <Gallery useTitle={false} useButton={false} />
+        <Photos slice={false} />
       </section>
     </Fade>
   );

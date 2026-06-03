@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import Photos from "@/components/Photos/Photos";
+import Photos from "@/components/About/Photos";
 import FadeUp from "@/components/animation/FadeUp";
 
 export const metadata: Metadata = {
