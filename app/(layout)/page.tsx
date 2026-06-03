@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 
 import { FiFilm } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
@@ -12,6 +13,19 @@ import TextCard from "@/components/TextCard";
 import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/introduction/Intro";
 import { getAllPosts } from "@/lib/blog";
+
+function PhotosSkeleton() {
+  return (
+    <section id="photos">
+      <div className="bg-muted h-7 w-24 animate-pulse rounded-md" />
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <div key={i} className="bg-muted h-40 w-full animate-pulse rounded-sm" />
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
@@ -86,7 +100,9 @@ export default function Home() {
 
       <FadeUp delay={0.7}>
         <div className="mt-16">
-          <Photos />
+          <Suspense fallback={<PhotosSkeleton />}>
+            <Photos />
+          </Suspense>
         </div>
       </FadeUp>
 

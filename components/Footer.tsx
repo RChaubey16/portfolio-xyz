@@ -20,12 +20,15 @@ const Footer = () => {
       </div>
       <div className="text-muted-foreground my-20 flex flex-col items-center gap-1 text-sm">
         <p>&copy; 2026 Ruturaj Chaubey. All rights reserved.</p>
-        <Link
-          href="/llms.txt"
-          className="hover:text-foreground transition-colors"
-        >
-          llms.txt
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/llms.txt" className="hover:text-foreground transition-colors">
+            llms.txt
+          </Link>
+          <span aria-hidden="true">·</span>
+          <Link href="/feed.xml" className="hover:text-foreground transition-colors">
+            RSS
+          </Link>
+        </div>
       </div>
     </footer>
   );
