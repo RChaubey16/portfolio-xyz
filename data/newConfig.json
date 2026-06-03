@@ -17,28 +17,28 @@
       "name": "GitHub",
       "tooltip": "GitHub",
       "logoSrc": "/icons/social/github.svg",
-      "href": "https://atlas.ruturaj.xyz/s/github",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-github",
       "profileImg": ""
     },
     {
       "name": "LinkedIn",
       "tooltip": "LinkedIn",
       "logoSrc": "/icons/social/linkedin.svg",
-      "href": "https://atlas.ruturaj.xyz/s/linkedin",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-linkedin",
       "profileImg": ""
     },
     {
       "name": "Twitter",
       "tooltip": "X (Twitter)",
       "logoSrc": "/icons/social/x.svg",
-      "href": "https://atlas.ruturaj.xyz/s/x-twitter",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-x",
       "profileImg": ""
     },
     {
       "name": "Drupal",
       "tooltip": "Drupal",
       "logoSrc": "/icons/tech/Drupal.svg",
-      "href": "https://atlas.ruturaj.xyz/s/drupal",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-drupal",
       "profileImg": ""
     }
   ],
@@ -355,8 +355,8 @@
         "alt": "Knowbase multi-tenant knowledge base platform"
       },
       "status": {
-        "text": "In Development",
-        "className": "status-dev"
+        "text": "All Systems Running",
+        "className": "status-live"
       },
       "title": "Knowbase",
       "description": "A multi-tenant knowledge base SaaS where teams store and search documents across shared workspaces. Supports PostgreSQL full-text search and a RAG AI mode powered by Jina AI embeddings and Google Gemini.",
@@ -465,8 +465,8 @@
         "alt": "Microservices backend"
       },
       "status": {
-        "text": "In Development",
-        "className": "status-dev"
+        "text": "All Systems Running",
+        "className": "status-live"
       },
       "title": "Atlas",
       "description": "A production-style microservices backend built with NestJS. Demonstrates clean service boundaries, an API Gateway pattern, JWT authentication, and a shared contracts library — all running in Docker.",
