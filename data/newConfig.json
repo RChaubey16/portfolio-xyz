@@ -431,7 +431,7 @@
           },
           "imageAltText": "Redis logo"
         },
-{
+        {
           "id": "google-gemini",
           "tech": "Google Gemini",
           "techHref": "https://deepmind.google/technologies/gemini",
@@ -452,6 +452,76 @@
         {
           "label": "Live",
           "href": "https://knowbase.ruturaj.xyz/",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
+      "id": "Orbit",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/orbit.png",
+        "alt": "Orbit component library home page"
+      },
+      "status": {
+        "text": "In Development",
+        "className": "status-wip"
+      },
+      "title": "Orbit",
+      "description": "An open-source React component library focused on interaction and physical feel. Components are copy-paste ready or installable via shadcn.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "techHref": "https://www.typescriptlang.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.sv"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/orbit",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live Demo",
+          "href": "https://orbit.ruturaj.xyz",
           "variant": "default",
           "icon": "Globe"
         }
