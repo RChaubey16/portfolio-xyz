@@ -64,6 +64,34 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ruturaj Chaubey",
+  url: "https://ruturaj.xyz",
+  email: "ruturajchaubey16@gmail.com",
+  jobTitle: "Full Stack Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "QED42",
+    url: "https://www.qed42.com",
+  },
+  sameAs: [
+    "https://github.com/RChaubey16",
+    "https://linkedin.com/in/ruturajchaubey",
+    "https://x.com/RChaubey16",
+  ],
+  knowsAbout: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Drupal",
+    "Full Stack Development",
+    "Web Development",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,6 +99,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"

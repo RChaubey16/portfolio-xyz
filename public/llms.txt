@@ -25,24 +25,24 @@ CMS: Drupal, Sanity
 
 ## Work
 
-- [Global EdTech Discovery Platform](https://ruturajchaubey.com/work/edtech-discovery-platform) — Led the complete frontend build of a UNICEF-backed global EdTech discovery platform. Headless Drupal CMS paired with a Next.js frontend designed to surface expert-curated digital learning tools for educators, policymakers, and governments worldwide. Role: Lead Frontend Engineer at QED42.
-- [Knowbase — Multi-Tenant Knowledge Base SaaS](https://ruturajchaubey.com/work/knowbase) — Designed and built a multi-tenant knowledge base platform combining PostgreSQL full-text search with a fully async RAG pipeline (Jina AI + pgvector + Gemini) to let teams store, search, and query documents through keyword and AI-powered interfaces. Role: Solo Full Stack Engineer.
-- [Prette — Ecommerce Marketplace for Sewists](https://ruturajchaubey.com/work/prette-ecommerce) — Built the full-stack integration layer for a Drupal Commerce-powered marketplace, connecting a Gatsby JS frontend to a headless Drupal backend via GraphQL — covering authentication, cart, wishlist, product pages, orders, and address management. Role: Full Stack Engineer at QED42.
+- [Global EdTech Discovery Platform](https://ruturaj.xyz/work/edtech-discovery-platform) — Led the complete frontend build of a UNICEF-backed global EdTech discovery platform. Headless Drupal CMS paired with a Next.js frontend designed to surface expert-curated digital learning tools for educators, policymakers, and governments worldwide. Role: Lead Frontend Engineer at QED42.
+- [Knowbase — Multi-Tenant Knowledge Base SaaS](https://ruturaj.xyz/work/knowbase) — Designed and built a multi-tenant knowledge base platform combining PostgreSQL full-text search with a fully async RAG pipeline (Jina AI + pgvector + Gemini) to let teams store, search, and query documents through keyword and AI-powered interfaces. Role: Solo Full Stack Engineer.
+- [Prette — Ecommerce Marketplace for Sewists](https://ruturaj.xyz/work/prette-ecommerce) — Built the full-stack integration layer for a Drupal Commerce-powered marketplace, connecting a Gatsby JS frontend to a headless Drupal backend via GraphQL — covering authentication, cart, wishlist, product pages, orders, and address management. Role: Full Stack Engineer at QED42.
 
 ## Projects
 
-- [Knowbase](https://ruturajchaubey.com/projects) — Multi-tenant knowledge base SaaS where teams store and search documents using AI.
-- [Atlas](https://ruturajchaubey.com/projects) — Production-style microservices backend built with NestJS demonstrating scalable architecture patterns.
-- [Blink](https://ruturajchaubey.com/projects) — Fast, minimal URL shortener.
-- [React Keyquence](https://ruturajchaubey.com/projects) — Lightweight React library for keyboard sequence detection.
-- [What the Hex](https://ruturajchaubey.com/projects) — Fast color lookup tool for developers and designers.
-- [DevConnector](https://ruturajchaubey.com/projects) — Social networking platform for developers.
+- [Knowbase](https://ruturaj.xyz/projects) — Multi-tenant knowledge base SaaS where teams store and search documents using AI.
+- [Atlas](https://ruturaj.xyz/projects) — Production-style microservices backend built with NestJS demonstrating scalable architecture patterns.
+- [Blink](https://ruturaj.xyz/projects) — Fast, minimal URL shortener.
+- [React Keyquence](https://ruturaj.xyz/projects) — Lightweight React library for keyboard sequence detection.
+- [What the Hex](https://ruturaj.xyz/projects) — Fast color lookup tool for developers and designers.
+- [DevConnector](https://ruturaj.xyz/projects) — Social networking platform for developers.
 
 ## Blog
 
-- [Building Knowbase, Part 1: Auth, Orgs, and the Multi-Tenant Foundation](https://ruturajchaubey.com/blog/building-knowbase-part-1) — How I designed the authentication layer and multi-tenant data model that everything else in Knowbase sits on top of.
-- [Microservices with NestJS — A Practical Introduction](https://ruturajchaubey.com/blog/microservices-with-nestjs) — A walkthrough of what microservices are, when they make sense, and how to build one from scratch using NestJS.
-- [Hello World](https://ruturajchaubey.com/blog/hello-world) — The first post on this blog — what to expect and why I'm writing.
+- [Building Knowbase, Part 1: Auth, Orgs, and the Multi-Tenant Foundation](https://ruturaj.xyz/blog/building-knowbase-part-1) — How I designed the authentication layer and multi-tenant data model that everything else in Knowbase sits on top of.
+- [Microservices with NestJS — A Practical Introduction](https://ruturaj.xyz/blog/microservices-with-nestjs) — A walkthrough of what microservices are, when they make sense, and how to build one from scratch using NestJS.
+- [Hello World](https://ruturaj.xyz/blog/hello-world) — The first post on this blog — what to expect and why I'm writing.
 
 ## Talks
 
@@ -54,12 +54,12 @@ CMS: Drupal, Sanity
 
 ## Site Sections
 
-- [Home](https://ruturajchaubey.com/) — Introduction, experience, projects, talks, writing, and photos.
-- [Work](https://ruturajchaubey.com/work) — In-depth case studies of selected client and personal projects.
-- [Projects](https://ruturajchaubey.com/projects) — Full list of personal and open source projects.
-- [Blog](https://ruturajchaubey.com/blog) — Writing on software engineering, web development, and Drupal.
-- [Talks](https://ruturajchaubey.com/talks) — Conference and community talks.
-- [Photos](https://ruturajchaubey.com/photos) — A visual collection of moments.
-- [Gears](https://ruturajchaubey.com/gears) — Hardware and software used daily.
-- [Movies & TV](https://ruturajchaubey.com/movies) — Films and shows that inspire him.
-- [Resume](https://ruturajchaubey.com/resume) — Full resume.
+- [Home](https://ruturaj.xyz/) — Introduction, experience, projects, talks, writing, and photos.
+- [Work](https://ruturaj.xyz/work) — In-depth case studies of selected client and personal projects.
+- [Projects](https://ruturaj.xyz/projects) — Full list of personal and open source projects.
+- [Blog](https://ruturaj.xyz/blog) — Writing on software engineering, web development, and Drupal.
+- [Talks](https://ruturaj.xyz/talks) — Conference and community talks.
+- [Photos](https://ruturaj.xyz/photos) — A visual collection of moments.
+- [Gears](https://ruturaj.xyz/gears) — Hardware and software used daily.
+- [Movies & TV](https://ruturaj.xyz/movies) — Films and shows that inspire him.
+- [Resume](https://ruturaj.xyz/resume) — Full resume.
