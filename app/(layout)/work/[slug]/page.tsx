@@ -8,7 +8,7 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
-import { MermaidDiagram } from '@/components/MermaidDiagram'
+import { MermaidDiagramDynamic } from '@/components/MermaidDiagramDynamic'
 import { TOC } from '@/components/Blog/TOC'
 import { getAllCaseStudies, getCaseStudy } from '@/lib/work'
 import { remarkMermaid } from '@/lib/remark-mermaid'
@@ -138,7 +138,7 @@ export default async function CaseStudyPage({
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         <MDXRemote
           source={content}
-          components={{ Mermaid: MermaidDiagram }}
+          components={{ Mermaid: MermaidDiagramDynamic }}
           options={
             {
               mdxOptions: {

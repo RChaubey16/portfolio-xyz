@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 import type { PostMeta } from '@/lib/blog'
 
@@ -15,10 +15,14 @@ function formatDate(dateStr: string): string {
 export function BlogList({ posts }: { posts: PostMeta[] }) {
   const [activeTag, setActiveTag] = useState<string | null>(null)
 
-  const allTags = Array.from(new Set(posts.flatMap((p) => p.tags))).sort()
-  const filtered = activeTag
-    ? posts.filter((p) => p.tags.includes(activeTag))
-    : posts
+  const allTags = useMemo(
+    () => Array.from(new Set(posts.flatMap((p) => p.tags))).sort(),
+    [posts],
+  )
+  const filtered = useMemo(
+    () => (activeTag ? posts.filter((p) => p.tags.includes(activeTag)) : posts),
+    [posts, activeTag],
+  )
 
   return (
     <div>

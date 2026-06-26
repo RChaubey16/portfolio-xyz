@@ -32,11 +32,11 @@ export function WorkCard({ study }: { study: CaseStudyMeta }) {
             {study.summary}
           </p>
 
-          {study.outcome && (
+          {study.outcome ? (
             <p className="text-foreground mt-3 text-sm font-medium">
               ↗ {study.outcome}
             </p>
-          )}
+          ) : null}
         </div>
       </div>
 

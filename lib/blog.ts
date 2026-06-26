@@ -6,6 +6,9 @@ import readingTime from 'reading-time'
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
+const SLUG_NON_ALPHANUM_RE = /[^a-z0-9]+/g
+const SLUG_TRIM_DASHES_RE = /(^-|-$)/g
+
 export type PostMeta = {
   slug: string
   title: string
@@ -28,10 +31,7 @@ export type Post = {
 }
 
 function slugifyHeading(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
+  return text.toLowerCase().replace(SLUG_NON_ALPHANUM_RE, '-').replace(SLUG_TRIM_DASHES_RE, '')
 }
 
 function extractHeadings(content: string): Heading[] {
