@@ -8,7 +8,6 @@
   "roles": ["Software Engineer", "Full Stack Developer", "Web Developer"],
   "avatarImageUrl": "/images/me.jpeg",
   "avatarImageAltText": "Ruturaj Chaubey",
-  "visits": "2.2k",
   "currentRole": "Full Stack Engineer",
   "email": "ruturajchaubey16@gmail.com",
   "location": "Pune, India",
@@ -794,100 +793,6 @@
           "href": "https://what-the-hex.ruturaj.xyz",
           "variant": "default",
           "icon": "Globe"
-        }
-      ]
-    },
-    {
-      "id": "dev-connector",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/dev-connector.png",
-        "alt": "Dev connector home page"
-      },
-      "status": {
-        "text": "All Systems Running",
-        "className": "status-live"
-      },
-      "title": "DevConnector",
-      "description": "A social networking platform for developers that enables devs to create profiles, share posts, and connect with other developers.",
-      "techStack": [
-        {
-          "id": "javascript",
-          "tech": "JavaScript",
-          "techHref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/JavaScript.svg"
-          },
-          "imageAltText": "JavaScript logo"
-        },
-        {
-          "id": "nodejs",
-          "tech": "Node.js",
-          "techHref": "https://nodejs.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Node.js.svg"
-          },
-          "imageAltText": "Node.js logo"
-        },
-        {
-          "id": "react",
-          "tech": "React",
-          "techHref": "https://react.dev",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
-          },
-          "imageAltText": "React logo"
-        },
-        {
-          "id": "redux",
-          "tech": "Redux",
-          "techHref": "https://redux.js.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Redux.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Redux.svg"
-          },
-          "imageAltText": "Redux logo"
-        },
-        {
-          "id": "tailwindcss",
-          "tech": "Tailwind CSS",
-          "techHref": "https://tailwindcss.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
-          },
-          "imageAltText": "Tailwind CSS logo"
-        },
-        {
-          "id": "mongodb",
-          "tech": "MongoDB",
-          "techHref": "https://www.mongodb.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/MongoDB.svg"
-          },
-          "imageAltText": "MongoDB logo"
-        },
-        {
-          "id": "postman",
-          "tech": "Postman",
-          "techHref": "https://postman.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Postman.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Postman.svg"
-          },
-          "imageAltText": "Postman logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/DevConnector",
-          "variant": "outline",
-          "icon": "GithubIcon"
         }
       ]
     }
