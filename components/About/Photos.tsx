@@ -1,8 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { client } from "@/sanity/lib/client";
-
-import CtaButton from "../others/CtaButton";
 
 interface Photo {
   key: string;
@@ -34,14 +33,26 @@ const Photos = async ({ slice = true }: { slice?: boolean }) => {
 
   return (
     <section id="photos">
-      {slice && <h2 className="text-2xl font-bold">Photos</h2>}
+      {slice && (
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-2xl font-bold">Photos</h2>
+          {photos.length > 4 && (
+            <Link
+              href="/photos"
+              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+            >
+              View all →
+            </Link>
+          )}
+        </div>
+      )}
 
       {slice ? (
         <div className="mt-4 grid grid-cols-2 gap-3">
           {visiblePhotos.map((photo) => (
             <div
               key={photo.key}
-              className="relative h-40 w-full overflow-hidden rounded-sm"
+              className="relative aspect-[4/3] w-full overflow-hidden rounded-sm"
             >
               <Image
                 src={photo.url}
@@ -77,11 +88,6 @@ const Photos = async ({ slice = true }: { slice?: boolean }) => {
         </div>
       )}
 
-      {slice && photos.length > 4 && (
-        <div className="mt-8 flex justify-center">
-          <CtaButton text="More Photos" href="/photos" />
-        </div>
-      )}
     </section>
   );
 };

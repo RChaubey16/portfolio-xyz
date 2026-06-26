@@ -35,7 +35,7 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.1}>
-        <div className="mt-16">
+        <div className="mt-10">
           <Experience />
         </div>
       </FadeUp>

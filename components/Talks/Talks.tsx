@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import config from "@/data/newConfig.json";
 
-import CtaButton from "../others/CtaButton";
-
 interface Talk {
   id: string;
   title: string;
@@ -20,7 +18,17 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
   const visibleTalks = useSlice ? talks.slice(0, 3) : talks;
   return (
     <section id="talks">
-      <h2 className="text-2xl font-bold">Talks</h2>
+      <div className="flex items-baseline justify-between">
+        <h2 className="text-2xl font-bold">Talks</h2>
+        {useSlice && (
+          <Link
+            href="/talks"
+            className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+          >
+            View all →
+          </Link>
+        )}
+      </div>
       <div className="mt-4 flex flex-col gap-4">
         {visibleTalks.map((talk) => {
           const formattedDate = new Date(talk.date).toLocaleDateString(
@@ -71,11 +79,6 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
         })}
       </div>
 
-      {useSlice && (
-        <div className="mt-8 flex justify-center">
-          <CtaButton text="More Talks" href="/talks" />
-        </div>
-      )}
     </section>
   );
 };

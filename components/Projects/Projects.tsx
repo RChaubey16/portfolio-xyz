@@ -1,7 +1,8 @@
+import Link from "next/link";
+
 import config from "@/data/newConfig.json";
 import { ProjectData } from "@/types/project";
 
-import CtaButton from "../others/CtaButton";
 import ProjectCard from "./ProjectCard";
 
 export const projects: ProjectData[] =
@@ -12,18 +13,22 @@ const Projects = ({ slice = true }) => {
   const visibleProjects = useSlice ? projects.slice(0, 4) : projects;
   return (
     <section id="projects">
-      {useSlice && <h1 className="text-2xl font-bold">Projects</h1>}
-      <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {useSlice && (
+        <div className="flex items-baseline justify-between">
+          <h1 className="text-2xl font-bold">Projects</h1>
+          <Link
+            href="/projects"
+            className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+          >
+            View all →
+          </Link>
+        </div>
+      )}
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
         {visibleProjects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} />
         ))}
       </div>
-
-      {useSlice && (
-        <div className="mt-8 flex justify-center">
-          <CtaButton text="More Projects" href="/projects" />
-        </div>
-      )}
     </section>
   );
 };
