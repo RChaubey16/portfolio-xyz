@@ -8,6 +8,7 @@ import Experience from "@/components/Experience/Experience";
 import Photos from "@/components/About/Photos";
 import Projects from "@/components/Projects/Projects";
 import Talks from "@/components/Talks/Talks";
+import LatestOrbit from "@/components/Orbit/LatestOrbit";
 import RecentWork from "@/components/Work/RecentWork";
 import TextCard from "@/components/TextCard";
 import FadeUp from "@/components/animation/FadeUp";
@@ -47,6 +48,12 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.3}>
+        <div className="mt-16">
+          <LatestOrbit />
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.35}>
         <div className="mt-16">
           <RecentWork />
         </div>
