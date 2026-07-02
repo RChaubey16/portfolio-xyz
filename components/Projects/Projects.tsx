@@ -24,7 +24,7 @@ const Projects = ({ slice = true }) => {
           </Link>
         </div>
       )}
-      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-4">
         {visibleProjects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} />
         ))}
