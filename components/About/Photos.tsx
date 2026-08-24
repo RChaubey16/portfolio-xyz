@@ -35,13 +35,16 @@ const Photos = async ({ slice = true }: { slice?: boolean }) => {
     <section id="photos">
       {slice && (
         <div className="flex items-baseline justify-between">
-          <h2 className="text-2xl font-bold">Photos</h2>
+          <div>
+            <p className="eyebrow">{"// photos"}</p>
+            <h2 className="section-title mt-1">Photos</h2>
+          </div>
           {photos.length > 4 && (
             <Link
               href="/photos"
-              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+              className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
             >
-              View all →
+              view all →
             </Link>
           )}
         </div>

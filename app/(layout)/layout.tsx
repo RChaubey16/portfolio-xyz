@@ -1,4 +1,4 @@
-import { DM_Sans, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist_Mono, Newsreader } from "next/font/google";
 
 import type { Metadata } from "next";
 
@@ -17,6 +17,11 @@ const fontSans = DM_Sans({
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+const fontSerif = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -105,7 +110,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
+      <body
+        className={`${fontSans.variable} ${fontMono.variable} ${fontSerif.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

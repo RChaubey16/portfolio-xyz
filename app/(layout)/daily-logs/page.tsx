@@ -30,9 +30,11 @@ function DailyLogEntryCard({ entry }: { entry: DailyLogEntry }) {
 
   return (
     <div className="relative">
-      <div className="absolute -left-[39px] top-2 h-3 w-3 rounded-full bg-foreground" />
+      <div className="bg-pine absolute -left-[39px] top-2 h-2.5 w-2.5 rounded-full" />
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <span className="text-muted-foreground text-sm">{formattedDate}</span>
+        <span className="text-muted-foreground font-mono text-sm">
+          {formattedDate}
+        </span>
         <span className="text-muted-foreground text-sm">·</span>
         <span className="font-medium">{entry.title}</span>
         <div className="flex flex-wrap gap-1">
@@ -57,7 +59,7 @@ function DailyLogEntryCard({ entry }: { entry: DailyLogEntry }) {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
+                  className="hover:text-pine transition-colors"
                 >
                   {item.text}
                   <span className="ml-1 text-xs opacity-60">↗</span>
@@ -80,7 +82,8 @@ export default function DailyLogsPage() {
     <section className="bg-background py-20">
       <FadeUp>
         <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold">Daily Logs</h1>
+          <p className="eyebrow">{"// daily-logs"}</p>
+          <h1 className="page-title mt-1 mb-4">Daily Logs</h1>
           <p className="para">
             A running log of things I&apos;ve built, shipped, and learned.
           </p>
@@ -88,7 +91,7 @@ export default function DailyLogsPage() {
       </FadeUp>
 
       <FadeUp delay={0.1}>
-        <div className="relative ml-4 mt-8 space-y-10 border-l-2 border-border pl-8">
+        <div className="border-border relative mt-8 ml-4 space-y-10 border-l-2 pl-8">
           {entries.map((entry) => (
             <DailyLogEntryCard key={entry.slug} entry={entry} />
           ))}

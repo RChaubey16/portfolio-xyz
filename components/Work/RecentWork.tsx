@@ -11,12 +11,15 @@ const RecentWork = () => {
   return (
     <section id="work">
       <div className="flex items-baseline justify-between">
-        <h2 className="text-2xl font-bold">Case Studies</h2>
+        <div>
+          <p className="eyebrow">{"// work"}</p>
+          <h2 className="section-title mt-1">Case Studies</h2>
+        </div>
         <Link
           href="/work"
-          className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+          className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
         >
-          View all →
+          view all →
         </Link>
       </div>
       <div className="mt-4 flex flex-col gap-4">

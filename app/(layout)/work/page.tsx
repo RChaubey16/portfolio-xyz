@@ -15,8 +15,9 @@ export default function WorkPage() {
   return (
     <FadeUp>
       <section className="mt-16">
-        <h1 className="text-2xl font-bold">Work</h1>
-        <p className="text-muted-foreground mt-1 text-sm">
+        <p className="eyebrow">{"// work"}</p>
+        <h1 className="page-title mt-1">Work</h1>
+        <p className="para">
           In-depth case studies of projects I have built and shipped.
         </p>
 

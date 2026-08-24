@@ -13,7 +13,8 @@ export default function PhotosPage() {
     <section className="bg-background py-20">
       <FadeUp>
         <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold">Photos</h1>
+          <p className="eyebrow">{"// photos"}</p>
+          <h1 className="page-title mt-1 mb-4">Photos</h1>
           <p className="para">A collection of moments I&apos;ve captured along the way.</p>
         </div>
       </FadeUp>

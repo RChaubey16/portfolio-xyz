@@ -14,16 +14,13 @@ export default function Home() {
   return (
     <FadeUp>
       <section className="bg-background pt-20">
-        <h1 className="text-2xl font-bold">Movies & TV</h1>
-        <p className="text-muted-foreground mt-1 text-sm">
-          Some of my all-time favorites.
-        </p>
+        <p className="eyebrow">{"// movies & tv"}</p>
+        <h1 className="page-title mt-1">Movies & TV</h1>
+        <p className="para">Some of my all-time favorites.</p>
 
         <div className="mt-8 space-y-8">
           <div>
-            <h2 className="text-foreground mb-3 text-sm font-semibold uppercase tracking-wider">
-              Movies
-            </h2>
+            <h2 className="eyebrow mb-3">{"// movies"}</h2>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {config.movies.map((movie) => (
                 <MediaCard
@@ -37,9 +34,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-foreground mb-3 text-sm font-semibold uppercase tracking-wider">
-              TV Series
-            </h2>
+            <h2 className="eyebrow mb-3">{"// tv series"}</h2>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {config.tvSeries.map((show) => (
                 <MediaCard

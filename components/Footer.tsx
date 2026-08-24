@@ -20,7 +20,7 @@ const Footer = () => {
   const socials = config.socials;
   return (
     <footer className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
-      <div className="border-border/40 bg-card w-full overflow-hidden rounded-2xl border shadow-sm">
+      <div className="border-border bg-card w-full overflow-hidden rounded-md border">
         <div className="relative aspect-3/1 w-full">
           <Image
             src={footerImage}
@@ -31,8 +31,8 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="text-muted-foreground my-20 flex flex-col items-center gap-4 text-sm">
-        <p>&copy; 2026 Ruturaj Chaubey. All rights reserved.</p>
+      <div className="border-border text-muted-foreground mt-16 flex flex-col items-center gap-4 border-t pt-8 pb-4 font-mono text-xs">
+        <p>© 2026 ruturaj — built with next.js, told what to do by claude</p>
         <div className="flex items-center gap-4">
           {socials.map((social) => (
             <Tooltip key={social.name}>
@@ -42,7 +42,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.tooltip}
-                  className="hover:text-foreground transition-colors"
+                  className="hover:text-pine transition-colors"
                 >
                   {socialIcons[social.name as SocialName]}
                 </Link>

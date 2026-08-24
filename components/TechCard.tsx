@@ -25,7 +25,7 @@ const TechCard = ({ tech, techHref, imageUrl, imageAltText }: TechItem) => {
     <Link key={tech} href={techHref} target="_blank">
       <Badge
         variant="outline"
-        className="bg-accent/80 border-accent/50 hover:bg-accent rounded-sm border-2 border-dashed p-2"
+        className="bg-card border-border hover:border-pine/50 hover:bg-accent rounded-sm border p-2 transition-colors"
       >
         <Image
           src={isDark ? imageUrl.dark : imageUrl.light}

@@ -20,13 +20,16 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
     <section id="talks">
       {slice && (
         <div className="flex items-baseline justify-between">
-          <h2 className="text-2xl font-bold">Talks</h2>
+          <div>
+            <p className="eyebrow">{"// talks"}</p>
+            <h2 className="section-title mt-1">Talks</h2>
+          </div>
           {useSlice && (
             <Link
               href="/talks"
-              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+              className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
             >
-              View all →
+              view all →
             </Link>
           )}
         </div>

@@ -8,6 +8,7 @@ import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { FaDrupal, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
+import TerminalStatus from "@/components/animation/TerminalStatus";
 import {
   Tooltip,
   TooltipContent,
@@ -53,7 +54,9 @@ const Intro = () => {
           className="h-24 w-24 rounded-full object-cover"
         />
         <div>
-          <h1 className="text-2xl font-bold">{name}</h1>
+          <h1 className="font-serif text-3xl font-medium tracking-tight">
+            {name}
+          </h1>
           <p className="text-muted-foreground">I tell Claude what to do</p>
         </div>
       </div>
@@ -88,7 +91,7 @@ const Intro = () => {
       <div className="flex items-center gap-3">
         <button
           onClick={copyEmail}
-          className="text-muted-foreground hover:text-foreground border-border hover:bg-muted/50 flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm transition-colors"
+          className="text-muted-foreground hover:text-pine border-border hover:bg-accent flex items-center gap-2 rounded-md border px-3.5 py-1.5 font-mono text-sm transition-colors"
           aria-label="Copy email"
         >
           {copied ? (
@@ -110,7 +113,7 @@ const Intro = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.tooltip}
-                  className="hover:text-foreground transition-colors"
+                  className="hover:text-pine transition-colors"
                 >
                   {socialIcons[social.name as SocialName]}
                 </Link>
@@ -120,6 +123,8 @@ const Intro = () => {
           ))}
         </div>
       </div>
+
+      <TerminalStatus />
     </section>
   );
 };

@@ -8,7 +8,7 @@ export function WorkCard({ study }: { study: CaseStudyMeta }) {
   return (
     <Link
       href={`/work/${study.slug}`}
-      className="border-border hover:border-foreground/30 group block rounded-xl border p-5 transition-colors"
+      className="border-border hover:border-pine/50 group block rounded-md border p-5 transition-colors"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
@@ -17,9 +17,9 @@ export function WorkCard({ study }: { study: CaseStudyMeta }) {
               {study.title}
             </h3>
             {study.nda && (
-              <span className="text-muted-foreground inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs">
+              <span className="text-muted-foreground border-border inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 font-mono text-xs">
                 <Lock className="h-3 w-3" />
-                Confidential
+                confidential
               </span>
             )}
           </div>
@@ -44,7 +44,7 @@ export function WorkCard({ study }: { study: CaseStudyMeta }) {
         {study.tags.map((tag) => (
           <span
             key={tag}
-            className="bg-accent text-accent-foreground rounded-full px-2.5 py-0.5 text-xs"
+            className="border-border text-muted-foreground rounded-sm border px-2 py-0.5 font-mono text-xs"
           >
             {tag}
           </span>
