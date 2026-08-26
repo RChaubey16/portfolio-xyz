@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const STATUSES = [
-  "tells Claude what to do",
+  "I tell Claude what to do",
   "full-stack engineer @ QED42",
   "based in Pune, India",
 ];

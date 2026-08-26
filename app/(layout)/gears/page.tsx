@@ -12,11 +12,7 @@ export const metadata: Metadata = {
     "The tools, hardware, and software that Ruturaj Chaubey uses daily.",
 };
 
-function GearList({
-  items,
-}: {
-  items: (typeof config.gears)[number][];
-}) {
+function GearList({ items }: { items: (typeof config.gears)[number][] }) {
   return (
     <ul className="space-y-3">
       {items.map((gear) => (

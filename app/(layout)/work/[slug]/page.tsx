@@ -1,52 +1,52 @@
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { Lock } from 'lucide-react'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypePrettyCode from 'rehype-pretty-code'
-import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
-import { MDXRemote } from 'next-mdx-remote/rsc'
+import { Lock } from "lucide-react";
+import type { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 
-import { MermaidDiagramDynamic } from '@/components/MermaidDiagramDynamic'
-import { TOC } from '@/components/Blog/TOC'
-import { getAllCaseStudies, getCaseStudy } from '@/lib/work'
-import { remarkMermaid } from '@/lib/remark-mermaid'
-import type { Metadata } from 'next'
+import { TOC } from "@/components/Blog/TOC";
+import { MermaidDiagramDynamic } from "@/components/MermaidDiagramDynamic";
+import { remarkMermaid } from "@/lib/remark-mermaid";
+import { getAllCaseStudies, getCaseStudy } from "@/lib/work";
 
 export async function generateStaticParams() {
-  return getAllCaseStudies().map((s) => ({ slug: s.slug }))
+  return getAllCaseStudies().map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug } = await params;
   try {
-    const { meta } = getCaseStudy(slug)
-    return { title: meta.title, description: meta.summary }
+    const { meta } = getCaseStudy(slug);
+    return { title: meta.title, description: meta.summary };
   } catch {
-    return {}
+    return {};
   }
 }
 
 export default async function CaseStudyPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params
+  const { slug } = await params;
 
-  let study
+  let study;
   try {
-    study = getCaseStudy(slug)
+    study = getCaseStudy(slug);
   } catch {
-    notFound()
+    notFound();
   }
 
-  const { meta, content, headings } = study
+  const { meta, content, headings } = study;
 
   return (
     <article className="mt-16">
@@ -60,7 +60,7 @@ export default async function CaseStudyPage({
       {/* Header */}
       <div className="mt-8">
         <div className="flex flex-wrap items-center gap-2">
-          <h1 className="text-3xl font-bold leading-tight">{meta.title}</h1>
+          <h1 className="text-3xl leading-tight font-bold">{meta.title}</h1>
           {meta.nda && (
             <span className="text-muted-foreground inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs">
               <Lock className="h-3 w-3" />
@@ -72,25 +72,25 @@ export default async function CaseStudyPage({
         {/* Meta grid */}
         <div className="border-border mt-6 grid grid-cols-2 gap-x-8 gap-y-3 rounded-xl border p-5 text-sm sm:grid-cols-4">
           <div>
-            <p className="text-muted-foreground text-xs uppercase tracking-wide">
+            <p className="text-muted-foreground text-xs tracking-wide uppercase">
               Organisation
             </p>
-            <p className="mt-0.5 font-medium">{meta.organisation || '—'}</p>
+            <p className="mt-0.5 font-medium">{meta.organisation || "—"}</p>
           </div>
           <div>
-            <p className="text-muted-foreground text-xs uppercase tracking-wide">
+            <p className="text-muted-foreground text-xs tracking-wide uppercase">
               Role
             </p>
-            <p className="mt-0.5 font-medium">{meta.role || '—'}</p>
+            <p className="mt-0.5 font-medium">{meta.role || "—"}</p>
           </div>
           <div>
-            <p className="text-muted-foreground text-xs uppercase tracking-wide">
+            <p className="text-muted-foreground text-xs tracking-wide uppercase">
               Duration
             </p>
-            <p className="mt-0.5 font-medium">{meta.duration || '—'}</p>
+            <p className="mt-0.5 font-medium">{meta.duration || "—"}</p>
           </div>
           <div>
-            <p className="text-muted-foreground text-xs uppercase tracking-wide">
+            <p className="text-muted-foreground text-xs tracking-wide uppercase">
               Client
             </p>
             <p className="mt-0.5 font-medium">{meta.client}</p>
@@ -110,8 +110,9 @@ export default async function CaseStudyPage({
             <Lock className="text-muted-foreground mt-0.5 h-4 w-4 shrink-0" />
             <p className="text-muted-foreground text-sm">
               Certain project details — including the client name, specific
-              metrics, and proprietary implementation details — have been omitted
-              or anonymised in accordance with a non-disclosure agreement.
+              metrics, and proprietary implementation details — have been
+              omitted or anonymised in accordance with a non-disclosure
+              agreement.
             </p>
           </div>
         )}
@@ -145,13 +146,13 @@ export default async function CaseStudyPage({
                 remarkPlugins: [remarkGfm, remarkMermaid],
                 rehypePlugins: [
                   rehypeSlug,
-                  [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+                  [rehypeAutolinkHeadings, { behavior: "wrap" }],
                   [
                     rehypePrettyCode,
                     {
                       themes: {
-                        light: 'github-light',
-                        dark: 'github-dark',
+                        light: "github-light",
+                        dark: "github-dark",
                       },
                     },
                   ],
@@ -162,5 +163,5 @@ export default async function CaseStudyPage({
         />
       </div>
     </article>
-  )
+  );
 }

@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { Suspense } from "react";
 
+import { Suspense } from "react";
 import { FiFilm } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
 
-import Experience from "@/components/Experience/Experience";
 import Photos from "@/components/About/Photos";
+import Experience from "@/components/Experience/Experience";
 // import Projects from "@/components/Projects/Projects";
 import Talks from "@/components/Talks/Talks";
+import TextCard from "@/components/TextCard";
 // import LatestOrbit from "@/components/Orbit/LatestOrbit";
 import RecentWork from "@/components/Work/RecentWork";
-import TextCard from "@/components/TextCard";
 import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/introduction/Intro";
 import { getAllPosts } from "@/lib/blog";
@@ -20,7 +20,10 @@ const photosSkeleton = (
     <div className="bg-muted h-7 w-24 animate-pulse rounded-md" />
     <div className="mt-4 grid grid-cols-2 gap-3">
       {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="bg-muted h-40 w-full animate-pulse rounded-sm" />
+        <div
+          key={i}
+          className="bg-muted h-40 w-full animate-pulse rounded-sm"
+        />
       ))}
     </div>
   </section>
@@ -93,7 +96,7 @@ export default function Home() {
                   })}
                 </span>
                 <div className="border-border group-hover:border-pine border-l pl-4 transition-colors">
-                  <p className="font-medium leading-snug group-hover:underline">
+                  <p className="leading-snug font-medium group-hover:underline">
                     {post.title}
                   </p>
                   <p className="text-muted-foreground mt-0.5 text-sm">

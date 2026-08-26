@@ -3,7 +3,11 @@ import Link from "next/link";
 
 import { FaDrupal, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import config from "@/data/newConfig.json";
 
 const socialIcons = {
@@ -52,11 +56,17 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <Link href="/llms.txt" className="hover:text-foreground transition-colors">
+          <Link
+            href="/llms.txt"
+            className="hover:text-foreground transition-colors"
+          >
             llms.txt
           </Link>
           <span aria-hidden="true">·</span>
-          <Link href="/feed.xml" className="hover:text-foreground transition-colors">
+          <Link
+            href="/feed.xml"
+            className="hover:text-foreground transition-colors"
+          >
             RSS
           </Link>
         </div>

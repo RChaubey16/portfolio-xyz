@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
-import FadeUp from '@/components/animation/FadeUp'
-import { BlogList } from '@/components/Blog/BlogList'
-import { getAllPosts } from '@/lib/blog'
+import { BlogList } from "@/components/Blog/BlogList";
+import FadeUp from "@/components/animation/FadeUp";
+import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Writing about things I build and learn.',
-}
+  title: "Blog",
+  description: "Writing about things I build and learn.",
+};
 
 export default function BlogPage() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
 
   return (
     <FadeUp>
@@ -24,5 +24,5 @@ export default function BlogPage() {
         </div>
       </section>
     </FadeUp>
-  )
+  );
 }

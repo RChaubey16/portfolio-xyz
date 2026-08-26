@@ -1,12 +1,12 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { WorkCard } from '@/components/Work/WorkCard'
-import { getAllCaseStudies } from '@/lib/work'
+import { WorkCard } from "@/components/Work/WorkCard";
+import { getAllCaseStudies } from "@/lib/work";
 
 const RecentWork = () => {
-  const studies = getAllCaseStudies().slice(0, 2)
+  const studies = getAllCaseStudies().slice(0, 2);
 
-  if (studies.length === 0) return null
+  if (studies.length === 0) return null;
 
   return (
     <section id="work">
@@ -28,7 +28,7 @@ const RecentWork = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default RecentWork
+export default RecentWork;

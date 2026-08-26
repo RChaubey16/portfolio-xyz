@@ -50,15 +50,17 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
                 {formattedDate}
               </span>
               <div
-                className={`border-border border-l pl-4 transition-colors${talk.link ? " group-hover:border-foreground" : ""}`}
+                className={`border-border border-l pl-4 transition-colors${talk.link ? "group-hover:border-foreground" : ""}`}
               >
                 <p
-                  className={`font-medium leading-snug${talk.link ? " group-hover:underline" : ""}`}
+                  className={`font-medium leading-snug${talk.link ? "group-hover:underline" : ""}`}
                 >
                   {talk.title}
                 </p>
                 <p className="text-muted-foreground mt-0.5 text-sm">
-                  <span className="text-foreground font-semibold">{talk.event}</span>
+                  <span className="text-foreground font-semibold">
+                    {talk.event}
+                  </span>
                 </p>
                 {talk.description && (
                   <p className="text-muted-foreground mt-0.5 text-sm">
@@ -83,7 +85,6 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
           );
         })}
       </div>
-
     </section>
   );
 };

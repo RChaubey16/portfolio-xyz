@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { Lock } from 'lucide-react'
+import { Lock } from "lucide-react";
 
-import type { CaseStudyMeta } from '@/lib/work'
+import type { CaseStudyMeta } from "@/lib/work";
 
 export function WorkCard({ study }: { study: CaseStudyMeta }) {
   return (
@@ -13,7 +13,7 @@ export function WorkCard({ study }: { study: CaseStudyMeta }) {
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold leading-snug group-hover:underline">
+            <h3 className="leading-snug font-semibold group-hover:underline">
               {study.title}
             </h3>
             {study.nda && (
@@ -51,5 +51,5 @@ export function WorkCard({ study }: { study: CaseStudyMeta }) {
         ))}
       </div>
     </Link>
-  )
+  );
 }

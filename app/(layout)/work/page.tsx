@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
-import FadeUp from '@/components/animation/FadeUp'
-import { WorkCard } from '@/components/Work/WorkCard'
-import { getAllCaseStudies } from '@/lib/work'
+import { WorkCard } from "@/components/Work/WorkCard";
+import FadeUp from "@/components/animation/FadeUp";
+import { getAllCaseStudies } from "@/lib/work";
 
 export const metadata: Metadata = {
-  title: 'Work',
-  description: 'In-depth case studies of projects I have built and shipped.',
-}
+  title: "Work",
+  description: "In-depth case studies of projects I have built and shipped.",
+};
 
 export default function WorkPage() {
-  const studies = getAllCaseStudies()
+  const studies = getAllCaseStudies();
 
   return (
     <FadeUp>
@@ -27,12 +27,10 @@ export default function WorkPage() {
               No case studies yet.
             </p>
           ) : (
-            studies.map((study) => (
-              <WorkCard key={study.slug} study={study} />
-            ))
+            studies.map((study) => <WorkCard key={study.slug} study={study} />)
           )}
         </div>
       </section>
     </FadeUp>
-  )
+  );
 }

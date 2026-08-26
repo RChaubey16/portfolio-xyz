@@ -1,54 +1,53 @@
-'use client'
+"use client";
 
-import { useEffect, useRef, useState } from 'react'
-
-import { Maximize2, X } from 'lucide-react'
+import { Maximize2, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 export function MermaidDiagram({ chart }: { chart: string }) {
-  const idRef = useRef(`m${Math.random().toString(36).slice(2, 8)}`)
-  const [svg, setSvg] = useState<string | null>(null)
-  const [open, setOpen] = useState(false)
+  const idRef = useRef(`m${Math.random().toString(36).slice(2, 8)}`);
+  const [svg, setSvg] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    let active = true
+    let active = true;
 
-    ;(async () => {
-      const { default: mermaid } = await import('mermaid')
-      if (!active) return
+    (async () => {
+      const { default: mermaid } = await import("mermaid");
+      if (!active) return;
 
-      const isDark = document.documentElement.classList.contains('dark')
+      const isDark = document.documentElement.classList.contains("dark");
       mermaid.initialize({
         startOnLoad: false,
-        theme: isDark ? 'dark' : 'neutral',
-        fontFamily: 'inherit',
-      })
+        theme: isDark ? "dark" : "neutral",
+        fontFamily: "inherit",
+      });
 
       try {
-        const result = await mermaid.render(idRef.current, chart)
-        if (active) setSvg(result.svg)
+        const result = await mermaid.render(idRef.current, chart);
+        if (active) setSvg(result.svg);
       } catch (err) {
-        console.error('[Mermaid]', err)
+        console.error("[Mermaid]", err);
       }
-    })()
+    })();
 
     return () => {
-      active = false
-    }
-  }, [chart])
+      active = false;
+    };
+  }, [chart]);
 
   // Lock body scroll and handle Escape when modal is open
   useEffect(() => {
-    if (!open) return
+    if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
-  }, [open])
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <>
@@ -68,7 +67,7 @@ export function MermaidDiagram({ chart }: { chart: string }) {
         )}
 
         {svg && (
-          <div className="bg-background/80 absolute right-2 top-2 rounded p-1 opacity-0 transition-opacity group-hover:opacity-100">
+          <div className="bg-background/80 absolute top-2 right-2 rounded p-1 opacity-0 transition-opacity group-hover:opacity-100">
             <Maximize2 className="text-muted-foreground h-4 w-4" />
           </div>
         )}
@@ -85,7 +84,7 @@ export function MermaidDiagram({ chart }: { chart: string }) {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="text-muted-foreground hover:bg-accent absolute right-3 top-3 rounded-full p-1.5 transition-colors"
+              className="text-muted-foreground hover:bg-accent absolute top-3 right-3 rounded-full p-1.5 transition-colors"
               onClick={() => setOpen(false)}
               aria-label="Close diagram"
             >
@@ -100,5 +99,5 @@ export function MermaidDiagram({ chart }: { chart: string }) {
         </div>
       )}
     </>
-  )
+  );
 }

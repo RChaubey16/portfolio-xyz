@@ -38,13 +38,15 @@ const ExploreCTA = () => {
             className="group flex items-center justify-between py-4"
           >
             <div>
-              <p className="font-semibold group-hover:underline">{item.title}</p>
+              <p className="font-semibold group-hover:underline">
+                {item.title}
+              </p>
               <p className="text-muted-foreground mt-0.5 text-sm">
                 {item.description}
               </p>
             </div>
             <div className="ml-4 flex shrink-0 items-center gap-3">
-              <span className="text-muted-foreground tabular-nums text-sm">
+              <span className="text-muted-foreground text-sm tabular-nums">
                 {item.count}
               </span>
               <span className="text-muted-foreground group-hover:text-foreground text-sm transition-colors">

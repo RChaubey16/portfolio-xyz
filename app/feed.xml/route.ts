@@ -1,9 +1,9 @@
-import { getAllPosts } from '@/lib/blog'
+import { getAllPosts } from "@/lib/blog";
 
-const BASE_URL = 'https://ruturajchaubey.com'
+const BASE_URL = "https://ruturajchaubey.com";
 
 export async function GET() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
 
   const items = posts
     .map(
@@ -14,10 +14,10 @@ export async function GET() {
       <guid>${BASE_URL}/blog/${post.slug}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
       <description><![CDATA[${post.description}]]></description>
-      ${post.tags.map((t) => `<category>${t}</category>`).join('\n      ')}
+      ${post.tags.map((t) => `<category>${t}</category>`).join("\n      ")}
     </item>`,
     )
-    .join('')
+    .join("");
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -29,12 +29,12 @@ export async function GET() {
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     ${items}
   </channel>
-</rss>`
+</rss>`;
 
   return new Response(rss, {
     headers: {
-      'Content-Type': 'application/rss+xml; charset=utf-8',
-      'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+      "Content-Type": "application/rss+xml; charset=utf-8",
+      "Cache-Control": "s-maxage=3600, stale-while-revalidate",
     },
-  })
+  });
 }

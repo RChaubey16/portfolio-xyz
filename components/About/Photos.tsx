@@ -26,7 +26,7 @@ const Photos = async ({ slice = true }: { slice?: boolean }) => {
       key: img._key,
       url: img.url,
       alt: img.alt,
-    }))
+    })),
   );
 
   const visiblePhotos = slice ? photos.slice(0, 4) : photos;
@@ -90,7 +90,6 @@ const Photos = async ({ slice = true }: { slice?: boolean }) => {
           ))}
         </div>
       )}
-
     </section>
   );
 };
