@@ -7,9 +7,13 @@ export default function PhotosLoading() {
       </div>
       <div className="flex flex-col gap-10">
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className="bg-muted w-full animate-pulse rounded-sm" style={{ aspectRatio: '3/2' }} />
+          <div
+            key={i}
+            className="bg-muted w-full animate-pulse rounded-sm"
+            style={{ aspectRatio: "3/2" }}
+          />
         ))}
       </div>
     </section>
-  )
+  );
 }

@@ -1,62 +1,65 @@
-import fs from 'fs'
-import path from 'path'
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
+import { cache } from "react";
+import readingTime from "reading-time";
 
-import matter from 'gray-matter'
-import readingTime from 'reading-time'
+const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
-const BLOG_DIR = path.join(process.cwd(), 'content/blog')
-
-const SLUG_NON_ALPHANUM_RE = /[^a-z0-9]+/g
-const SLUG_TRIM_DASHES_RE = /(^-|-$)/g
+const SLUG_NON_ALPHANUM_RE = /[^a-z0-9]+/g;
+const SLUG_TRIM_DASHES_RE = /(^-|-$)/g;
+const HEADING_RE = /^(#{2,3})\s+(.+)$/gm;
 
 export type PostMeta = {
-  slug: string
-  title: string
-  date: string
-  description: string
-  tags: string[]
-  readingTime: string
-}
+  slug: string;
+  title: string;
+  date: string;
+  description: string;
+  tags: string[];
+  readingTime: string;
+};
 
 export type Heading = {
-  id: string
-  text: string
-  level: 2 | 3
-}
+  id: string;
+  text: string;
+  level: 2 | 3;
+};
 
 export type Post = {
-  meta: PostMeta
-  content: string
-  headings: Heading[]
-}
+  meta: PostMeta;
+  content: string;
+  headings: Heading[];
+};
 
 function slugifyHeading(text: string): string {
-  return text.toLowerCase().replace(SLUG_NON_ALPHANUM_RE, '-').replace(SLUG_TRIM_DASHES_RE, '')
+  return text
+    .toLowerCase()
+    .replace(SLUG_NON_ALPHANUM_RE, "-")
+    .replace(SLUG_TRIM_DASHES_RE, "");
 }
 
 function extractHeadings(content: string): Heading[] {
-  const headingRegex = /^(#{2,3})\s+(.+)$/gm
-  const headings: Heading[] = []
-  let match: RegExpExecArray | null
+  const headings: Heading[] = [];
+  let match: RegExpExecArray | null;
 
-  while ((match = headingRegex.exec(content)) !== null) {
-    const level = match[1].length as 2 | 3
-    const text = match[2].trim()
-    headings.push({ id: slugifyHeading(text), text, level })
+  while ((match = HEADING_RE.exec(content)) !== null) {
+    const level = match[1].length as 2 | 3;
+    const text = match[2].trim();
+    headings.push({ id: slugifyHeading(text), text, level });
   }
 
-  return headings
+  return headings;
 }
 
 function buildMeta(
   slug: string,
-  data: matter.GrayMatterFile<string>['data'],
+  data: matter.GrayMatterFile<string>["data"],
   content: string,
 ): PostMeta {
   if (!data.title || !data.date || !data.description) {
     throw new Error(
       `Post "${slug}" is missing required frontmatter fields (title, date, description)`,
-    )
+    );
   }
   return {
     slug,
@@ -65,35 +68,35 @@ function buildMeta(
     description: data.description as string,
     tags: (data.tags as string[]) ?? [],
     readingTime: readingTime(content).text,
-  }
+  };
 }
 
-export function getAllPosts(): PostMeta[] {
-  const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdx'))
+export const getAllPosts = cache((): PostMeta[] => {
+  const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".mdx"));
 
   return files
     .map((filename) => {
-      const slug = filename.replace(/\.mdx$/, '')
-      const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
-      const { data, content } = matter(raw)
-      return buildMeta(slug, data, content)
+      const slug = filename.replace(/\.mdx$/, "");
+      const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf-8");
+      const { data, content } = matter(raw);
+      return buildMeta(slug, data, content);
     })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-}
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+});
 
-export function getPost(slug: string): Post {
-  const filepath = path.join(BLOG_DIR, `${slug}.mdx`)
+export const getPost = cache((slug: string): Post => {
+  const filepath = path.join(BLOG_DIR, `${slug}.mdx`);
 
   if (!fs.existsSync(filepath)) {
-    throw new Error(`Post not found: ${slug}`)
+    throw new Error(`Post not found: ${slug}`);
   }
 
-  const raw = fs.readFileSync(filepath, 'utf-8')
-  const { data, content } = matter(raw)
+  const raw = fs.readFileSync(filepath, "utf-8");
+  const { data, content } = matter(raw);
 
   return {
     meta: buildMeta(slug, data, content),
     content,
     headings: extractHeadings(content),
-  }
-}
+  };
+});

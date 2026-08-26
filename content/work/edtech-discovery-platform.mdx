@@ -89,24 +89,24 @@ Rather than exposing Drupal's raw JSON:API responses directly to Next.js, we bui
 
 ```ts
 type EdTechTool = {
-  id: string
-  title: string
-  summary: string
+  id: string;
+  title: string;
+  summary: string;
   evaluationScores: {
-    learningImpact: number
-    scalability: number
-    inclusivity: number
-    dataSecurity: number
-  }
-  tags: string[]
-  languages: string[]
-  offlineCapable: boolean
-  targetAgeGroups: string[]
+    learningImpact: number;
+    scalability: number;
+    inclusivity: number;
+    dataSecurity: number;
+  };
+  tags: string[];
+  languages: string[];
+  offlineCapable: boolean;
+  targetAgeGroups: string[];
   image: {
-    src: string
-    alt: string
-  }
-}
+    src: string;
+    alt: string;
+  };
+};
 ```
 
 ### Drupal theme for editorial interfaces
@@ -117,12 +117,12 @@ Not every view needed to be decoupled. Certain admin and editorial interfaces �
 
 The entire site is statically generated at build time. Every page — tool catalogue, individual tool detail, and static content — is SSG-rendered and deployed as a static build. Content updates in Drupal trigger a new build and deployment, keeping the public site in sync with the editorial team's approved changes.
 
-| Page type | Strategy | Rationale |
-|---|---|---|
-| Tool catalogue | SSG | Built at deploy time, consistent global performance |
-| Tool detail | SSG | 500+ tool pages pre-rendered at build |
-| Static / about pages | SSG | Infrequent changes, ideal for static generation |
-| Search & filters | CSR | Fully dynamic, user-driven queries |
+| Page type            | Strategy | Rationale                                           |
+| -------------------- | -------- | --------------------------------------------------- |
+| Tool catalogue       | SSG      | Built at deploy time, consistent global performance |
+| Tool detail          | SSG      | 500+ tool pages pre-rendered at build               |
+| Static / about pages | SSG      | Infrequent changes, ideal for static generation     |
+| Search & filters     | CSR      | Fully dynamic, user-driven queries                  |
 
 ## Key Deliverables
 

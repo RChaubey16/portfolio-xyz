@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useCallback } from "react";
+import { useCallback, useRef } from "react";
 
 interface Rocket {
   x: number;
@@ -48,9 +48,15 @@ function makeRocket(w: number, h: number): Rocket {
 function burst(rocket: Rocket, out: Particle[]) {
   // Flash bloom at explosion point
   out.push({
-    x: rocket.x, y: rocket.y,
-    vx: 0, vy: 0,
-    hue: rocket.hue, alpha: 0.5, size: 55, decay: 0.09, glitter: false,
+    x: rocket.x,
+    y: rocket.y,
+    vx: 0,
+    vy: 0,
+    hue: rocket.hue,
+    alpha: 0.5,
+    size: 55,
+    decay: 0.09,
+    glitter: false,
   });
 
   const n = 65 + Math.floor(Math.random() * 35);
@@ -59,7 +65,8 @@ function burst(rocket: Rocket, out: Particle[]) {
     const speed = 1.8 + Math.random() * 5.5;
     const glitter = Math.random() < 0.3;
     out.push({
-      x: rocket.x, y: rocket.y,
+      x: rocket.x,
+      y: rocket.y,
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed,
       hue: rocket.hue + (Math.random() - 0.5) * 40,
@@ -205,7 +212,8 @@ export function FireworksButton({
   const fire = useCallback(() => {
     if (!canvasRef.current) {
       const c = document.createElement("canvas");
-      c.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:9999;";
+      c.style.cssText =
+        "position:fixed;inset:0;pointer-events:none;z-index:9999;";
       document.body.appendChild(c);
       canvasRef.current = c;
     }
@@ -216,20 +224,23 @@ export function FireworksButton({
     canvasRef.current.height = h;
 
     for (let i = 0; i < count; i++) {
-      setTimeout(() => {
-        rockets.current.push(makeRocket(w, h));
-        if (!running.current) {
-          running.current = true;
-          rafRef.current = requestAnimationFrame(animate);
-        }
-      }, i * 220 + Math.random() * 130);
+      setTimeout(
+        () => {
+          rockets.current.push(makeRocket(w, h));
+          if (!running.current) {
+            running.current = true;
+            rafRef.current = requestAnimationFrame(animate);
+          }
+        },
+        i * 220 + Math.random() * 130,
+      );
     }
   }, [count, animate]);
 
   return (
     <button
       onClick={fire}
-      className={`relative select-none rounded-2xl bg-zinc-900 px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-zinc-800 active:scale-95 ${className}`}
+      className={`relative rounded-2xl bg-zinc-900 px-8 py-4 text-sm font-medium text-white transition-colors select-none hover:bg-zinc-800 active:scale-95 ${className}`}
       {...props}
     >
       {children}

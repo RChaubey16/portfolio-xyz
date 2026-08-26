@@ -20,13 +20,16 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
     <section id="talks">
       {slice && (
         <div className="flex items-baseline justify-between">
-          <h2 className="text-2xl font-bold">Talks</h2>
+          <div>
+            <p className="eyebrow">{"// talks"}</p>
+            <h2 className="section-title mt-1">Talks</h2>
+          </div>
           {useSlice && (
             <Link
               href="/talks"
-              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+              className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
             >
-              View all →
+              view all →
             </Link>
           )}
         </div>
@@ -47,15 +50,17 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
                 {formattedDate}
               </span>
               <div
-                className={`border-border border-l pl-4 transition-colors${talk.link ? " group-hover:border-foreground" : ""}`}
+                className={`border-border border-l pl-4 transition-colors${talk.link ? "group-hover:border-foreground" : ""}`}
               >
                 <p
-                  className={`font-medium leading-snug${talk.link ? " group-hover:underline" : ""}`}
+                  className={`font-medium leading-snug${talk.link ? "group-hover:underline" : ""}`}
                 >
                   {talk.title}
                 </p>
                 <p className="text-muted-foreground mt-0.5 text-sm">
-                  <span className="text-foreground font-semibold">{talk.event}</span>
+                  <span className="text-foreground font-semibold">
+                    {talk.event}
+                  </span>
                 </p>
                 {talk.description && (
                   <p className="text-muted-foreground mt-0.5 text-sm">
@@ -80,7 +85,6 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
           );
         })}
       </div>
-
     </section>
   );
 };

@@ -90,9 +90,10 @@ This is the microservice. Instead of listening for HTTP requests, it'll listen f
 Open `users-service/src/main.ts` and swap the default HTTP bootstrap for a microservice:
 
 ```ts
-import { NestFactory } from '@nestjs/core'
-import { Transport, MicroserviceOptions } from '@nestjs/microservices'
-import { AppModule } from './app.module'
+import { NestFactory } from "@nestjs/core";
+import { MicroserviceOptions, Transport } from "@nestjs/microservices";
+
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
@@ -100,35 +101,35 @@ async function bootstrap() {
     {
       transport: Transport.TCP,
       options: {
-        host: '127.0.0.1',
+        host: "127.0.0.1",
         port: 3001,
       },
     },
-  )
-  await app.listen()
-  console.log('Users service is listening on port 3001')
+  );
+  await app.listen();
+  console.log("Users service is listening on port 3001");
 }
-bootstrap()
+bootstrap();
 ```
 
 Now update `app.controller.ts` to handle a message pattern instead of an HTTP route:
 
 ```ts
-import { Controller } from '@nestjs/common'
-import { MessagePattern } from '@nestjs/microservices'
+import { Controller } from "@nestjs/common";
+import { MessagePattern } from "@nestjs/microservices";
 
 @Controller()
 export class AppController {
-  @MessagePattern({ cmd: 'get_user' })
+  @MessagePattern({ cmd: "get_user" })
   getUser(data: { userId: number }) {
     // In a real app, you'd query a database here
     const users = [
-      { id: 1, name: 'Alice', email: 'alice@example.com' },
-      { id: 2, name: 'Bob', email: 'bob@example.com' },
-      { id: 3, name: 'Charlie', email: 'charlie@example.com' },
-    ]
+      { id: 1, name: "Alice", email: "alice@example.com" },
+      { id: 2, name: "Bob", email: "bob@example.com" },
+      { id: 3, name: "Charlie", email: "charlie@example.com" },
+    ];
 
-    return users.find((u) => u.id === data.userId) || null
+    return users.find((u) => u.id === data.userId) || null;
   }
 }
 ```
@@ -142,18 +143,19 @@ The gateway is a regular HTTP app. But instead of doing all the work itself, it 
 In `api-gateway/src/app.module.ts`, register a client for the users service:
 
 ```ts
-import { Module } from '@nestjs/common'
-import { ClientsModule, Transport } from '@nestjs/microservices'
-import { AppController } from './app.controller'
+import { Module } from "@nestjs/common";
+import { ClientsModule, Transport } from "@nestjs/microservices";
+
+import { AppController } from "./app.controller";
 
 @Module({
   imports: [
     ClientsModule.register([
       {
-        name: 'USERS_SERVICE',
+        name: "USERS_SERVICE",
         transport: Transport.TCP,
         options: {
-          host: '127.0.0.1',
+          host: "127.0.0.1",
           port: 3001,
         },
       },
@@ -167,27 +169,27 @@ export class AppModule {}
 Now in `app.controller.ts`, inject the client and use it:
 
 ```ts
-import { Controller, Get, Param, Inject } from '@nestjs/common'
-import { ClientProxy } from '@nestjs/microservices'
-import { firstValueFrom } from 'rxjs'
+import { Controller, Get, Inject, Param } from "@nestjs/common";
+import { ClientProxy } from "@nestjs/microservices";
+import { firstValueFrom } from "rxjs";
 
-@Controller('users')
+@Controller("users")
 export class AppController {
   constructor(
-    @Inject('USERS_SERVICE') private readonly usersClient: ClientProxy,
+    @Inject("USERS_SERVICE") private readonly usersClient: ClientProxy,
   ) {}
 
-  @Get(':id')
-  async getUser(@Param('id') id: string) {
+  @Get(":id")
+  async getUser(@Param("id") id: string) {
     const user = await firstValueFrom(
-      this.usersClient.send({ cmd: 'get_user' }, { userId: parseInt(id) }),
-    )
+      this.usersClient.send({ cmd: "get_user" }, { userId: parseInt(id) }),
+    );
 
     if (!user) {
-      return { error: 'User not found' }
+      return { error: "User not found" };
     }
 
-    return user
+    return user;
   }
 }
 ```
@@ -231,7 +233,7 @@ What we used above is the **request-response** pattern — you send a message an
 
 ```ts
 // In the gateway — emit an event, no response expected
-this.usersClient.emit('user_logged_in', { userId: 1, timestamp: Date.now() })
+this.usersClient.emit("user_logged_in", { userId: 1, timestamp: Date.now() });
 ```
 
 ```ts
@@ -256,25 +258,25 @@ const app = await NestFactory.createMicroservice<MicroserviceOptions>(
   {
     transport: Transport.REDIS,
     options: {
-      host: 'localhost',
+      host: "localhost",
       port: 6379,
     },
   },
-)
+);
 ```
 
 ```ts
 // In the gateway's ClientsModule
 ClientsModule.register([
   {
-    name: 'USERS_SERVICE',
+    name: "USERS_SERVICE",
     transport: Transport.REDIS,
     options: {
-      host: 'localhost',
+      host: "localhost",
       port: 6379,
     },
   },
-])
+]);
 ```
 
 Your controllers stay the same. Your message patterns stay the same. Only the transport changes. That's a really clean abstraction.

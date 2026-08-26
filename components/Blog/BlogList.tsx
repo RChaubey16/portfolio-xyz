@@ -1,28 +1,29 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useMemo, useState } from 'react'
+import Link from "next/link";
 
-import type { PostMeta } from '@/lib/blog'
+import { useMemo, useState } from "react";
+
+import type { PostMeta } from "@/lib/blog";
 
 function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    month: 'short',
-    year: 'numeric',
-  })
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
 }
 
 export function BlogList({ posts }: { posts: PostMeta[] }) {
-  const [activeTag, setActiveTag] = useState<string | null>(null)
+  const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const allTags = useMemo(
     () => Array.from(new Set(posts.flatMap((p) => p.tags))).sort(),
     [posts],
-  )
+  );
   const filtered = useMemo(
     () => (activeTag ? posts.filter((p) => p.tags.includes(activeTag)) : posts),
     [posts, activeTag],
-  )
+  );
 
   return (
     <div>
@@ -32,8 +33,8 @@ export function BlogList({ posts }: { posts: PostMeta[] }) {
           onClick={() => setActiveTag(null)}
           className={`rounded-full px-3 py-1 text-sm transition-colors ${
             !activeTag
-              ? 'bg-accent text-accent-foreground'
-              : 'hover:bg-accent/50'
+              ? "bg-accent text-accent-foreground"
+              : "hover:bg-accent/50"
           }`}
         >
           All
@@ -44,8 +45,8 @@ export function BlogList({ posts }: { posts: PostMeta[] }) {
             onClick={() => setActiveTag(activeTag === tag ? null : tag)}
             className={`rounded-full px-3 py-1 text-sm transition-colors ${
               activeTag === tag
-                ? 'bg-accent text-accent-foreground'
-                : 'hover:bg-accent/50'
+                ? "bg-accent text-accent-foreground"
+                : "hover:bg-accent/50"
             }`}
           >
             {tag}
@@ -70,7 +71,7 @@ export function BlogList({ posts }: { posts: PostMeta[] }) {
                 {formatDate(post.date)}
               </span>
               <div className="border-border group-hover:border-foreground border-l pl-4 transition-colors">
-                <h3 className="font-semibold leading-snug group-hover:underline">
+                <h3 className="leading-snug font-semibold group-hover:underline">
                   {post.title}
                 </h3>
                 <p className="text-muted-foreground mt-1 text-sm">
@@ -95,5 +96,5 @@ export function BlogList({ posts }: { posts: PostMeta[] }) {
         </div>
       )}
     </div>
-  )
+  );
 }

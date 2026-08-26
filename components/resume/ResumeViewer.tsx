@@ -63,7 +63,7 @@ export default function ResumeViewer() {
 
           {/* PDF Viewer Section */}
           <div className="lg:p-6">
-            <div className="overflow-hidden rounded-lg border border-gray-300 bg-gray-100 shadow-inner dark:border-gray-700 dark:bg-gray-900">
+            <div className="border-border bg-muted overflow-hidden rounded-md border">
               <embed
                 src={resumePath}
                 type="application/pdf"

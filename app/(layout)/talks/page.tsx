@@ -14,7 +14,8 @@ export default function TalksPage() {
     <section className="bg-background py-20">
       <FadeUp>
         <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold">Talks</h1>
+          <p className="eyebrow">{"// talks"}</p>
+          <h1 className="page-title mt-1 mb-4">Talks</h1>
           <p className="para">
             A collection of talks and presentations I&apos;ve given at
             conferences and community events.

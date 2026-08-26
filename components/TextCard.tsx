@@ -20,10 +20,10 @@ const TextCard = ({
 }: TextCardProps) => {
   return (
     <Link href={href} target={target}>
-      <div className="border-ring/50 dark:bg-muted/40 dark:hover:bg-muted/70 hover:bg-muted/70 group flex w-full items-center justify-between rounded-md border p-3.5">
+      <div className="border-border hover:border-pine/50 hover:bg-accent/40 group flex w-full items-center justify-between rounded-md border p-3.5 transition-colors">
         <div className="flex items-center gap-3">
           {icon && (
-            <div className="bg-muted dark:bg-secondary flex shrink-0 items-center justify-center rounded-md p-2">
+            <div className="bg-muted flex shrink-0 items-center justify-center rounded-md p-2">
               {icon}
             </div>
           )}
@@ -32,7 +32,7 @@ const TextCard = ({
             <p className="text-muted-foreground text-sm">{description}</p>
           </div>
         </div>
-        <GoArrowRight className="text-muted-foreground h-4 w-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+        <GoArrowRight className="text-pine h-4 w-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
       </div>
     </Link>
   );

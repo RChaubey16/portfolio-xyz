@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { Suspense } from "react";
 
+import { Suspense } from "react";
 import { FiFilm } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
 
-import Experience from "@/components/Experience/Experience";
 import Photos from "@/components/About/Photos";
-import Projects from "@/components/Projects/Projects";
+import Experience from "@/components/Experience/Experience";
+// import Projects from "@/components/Projects/Projects";
 import Talks from "@/components/Talks/Talks";
-import LatestOrbit from "@/components/Orbit/LatestOrbit";
-import RecentWork from "@/components/Work/RecentWork";
 import TextCard from "@/components/TextCard";
+// import LatestOrbit from "@/components/Orbit/LatestOrbit";
+import RecentWork from "@/components/Work/RecentWork";
 import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/introduction/Intro";
 import { getAllPosts } from "@/lib/blog";
@@ -20,7 +20,10 @@ const photosSkeleton = (
     <div className="bg-muted h-7 w-24 animate-pulse rounded-md" />
     <div className="mt-4 grid grid-cols-2 gap-3">
       {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="bg-muted h-40 w-full animate-pulse rounded-sm" />
+        <div
+          key={i}
+          className="bg-muted h-40 w-full animate-pulse rounded-sm"
+        />
       ))}
     </div>
   </section>
@@ -41,39 +44,42 @@ export default function Home() {
         </div>
       </FadeUp>
 
-      <FadeUp delay={0.2}>
+      {/* <FadeUp delay={0.2}>
         <div className="mt-16">
           <Projects />
         </div>
-      </FadeUp>
+      </FadeUp> */}
 
-      <FadeUp delay={0.3}>
+      {/* <FadeUp delay={0.3}>
         <div className="mt-16">
           <LatestOrbit />
         </div>
-      </FadeUp>
+      </FadeUp> */}
 
       <FadeUp delay={0.35}>
-        <div className="mt-16">
+        <div className="border-border mt-16 border-t pt-10">
           <RecentWork />
         </div>
       </FadeUp>
 
       <FadeUp delay={0.4}>
-        <div className="mt-16">
+        <div className="border-border mt-16 border-t pt-10">
           <Talks />
         </div>
       </FadeUp>
 
       <FadeUp delay={0.6}>
-        <section className="mt-16">
+        <section className="border-border mt-16 border-t pt-10">
           <div className="flex items-baseline justify-between">
-            <h2 className="text-2xl font-bold">Writing</h2>
+            <div>
+              <p className="eyebrow">{"// writing"}</p>
+              <h2 className="section-title mt-1">Writing</h2>
+            </div>
             <Link
               href="/blog"
-              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+              className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
             >
-              View all →
+              view all →
             </Link>
           </div>
           <div className="mt-4 flex flex-col gap-4">
@@ -89,8 +95,8 @@ export default function Home() {
                     year: "numeric",
                   })}
                 </span>
-                <div className="border-border group-hover:border-foreground border-l pl-4 transition-colors">
-                  <p className="font-medium leading-snug group-hover:underline">
+                <div className="border-border group-hover:border-pine border-l pl-4 transition-colors">
+                  <p className="leading-snug font-medium group-hover:underline">
                     {post.title}
                   </p>
                   <p className="text-muted-foreground mt-0.5 text-sm">
@@ -104,7 +110,7 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.7}>
-        <div className="mt-16">
+        <div className="border-border mt-16 border-t pt-10">
           <Suspense fallback={photosSkeleton}>
             <Photos />
           </Suspense>
@@ -112,9 +118,10 @@ export default function Home() {
       </FadeUp>
 
       <FadeUp delay={0.8}>
-        <section className="mt-16">
-          <h2 className="text-2xl font-bold">Personal</h2>
-          <div className="mt-3 grid grid-cols-2 gap-3">
+        <section className="border-border mt-16 border-t pt-10">
+          <p className="eyebrow">{"// personal"}</p>
+          <h2 className="section-title mt-1">Personal</h2>
+          <div className="mt-4 grid grid-cols-2 gap-3">
             <TextCard
               title="Gears"
               description="Hardware and software I use daily"

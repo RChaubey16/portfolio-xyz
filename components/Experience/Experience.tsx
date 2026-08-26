@@ -6,7 +6,12 @@ export default function Experience({
 }) {
   return (
     <section id="experience">
-      {showHeading && <h1 className="text-2xl font-bold">Experience</h1>}
+      {showHeading && (
+        <>
+          <p className="eyebrow">{"// experience"}</p>
+          <h1 className="section-title mt-1">Experience</h1>
+        </>
+      )}
       <ExperienceAccordion accordionState={accordionState} />
     </section>
   );

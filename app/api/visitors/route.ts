@@ -1,9 +1,8 @@
 import { NextRequest } from "next/server";
 
-import { getSupabaseClient } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase";
 
 export async function GET(req: NextRequest) {
-  const supabase = getSupabaseClient();
   const { searchParams } = new URL(req.url);
   const shouldIncrement = searchParams.get("inc") === "true";
 

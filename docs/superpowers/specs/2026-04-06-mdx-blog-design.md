@@ -55,17 +55,17 @@ All fields are required. `date` is ISO 8601 (`YYYY-MM-DD`). `tags` is a non-empt
 
 ## Dependencies
 
-| Package | Purpose |
-|---|---|
-| `next-mdx-remote` | Renders MDX in React Server Components (`next-mdx-remote/rsc`) |
-| `gray-matter` | Parses YAML frontmatter from `.mdx` files |
-| `reading-time` | Computes "X min read" estimate |
-| `rehype-pretty-code` | Syntax highlighting via Shiki |
-| `shiki` | Syntax highlighter used by `rehype-pretty-code` |
-| `rehype-slug` | Adds `id` attributes to headings |
-| `rehype-autolink-headings` | Makes headings into clickable anchor links |
-| `remark-gfm` | GitHub Flavored Markdown (tables, task lists, strikethrough) |
-| `@tailwindcss/typography` | Prose styles for MDX content |
+| Package                    | Purpose                                                        |
+| -------------------------- | -------------------------------------------------------------- |
+| `next-mdx-remote`          | Renders MDX in React Server Components (`next-mdx-remote/rsc`) |
+| `gray-matter`              | Parses YAML frontmatter from `.mdx` files                      |
+| `reading-time`             | Computes "X min read" estimate                                 |
+| `rehype-pretty-code`       | Syntax highlighting via Shiki                                  |
+| `shiki`                    | Syntax highlighter used by `rehype-pretty-code`                |
+| `rehype-slug`              | Adds `id` attributes to headings                               |
+| `rehype-autolink-headings` | Makes headings into clickable anchor links                     |
+| `remark-gfm`               | GitHub Flavored Markdown (tables, task lists, strikethrough)   |
+| `@tailwindcss/typography`  | Prose styles for MDX content                                   |
 
 All installed as production dependencies. `@tailwindcss/typography` is a dev dependency (Tailwind plugin).
 
@@ -74,6 +74,7 @@ All installed as production dependencies. `@tailwindcss/typography` is a dev dep
 ## Data Layer — `lib/blog.ts`
 
 ### `getAllPosts(): PostMeta[]`
+
 - Reads all `.mdx` files from `content/blog/` using Node `fs`
 - Parses frontmatter with `gray-matter`
 - Computes `readingTime` with `reading-time`
@@ -81,6 +82,7 @@ All installed as production dependencies. `@tailwindcss/typography` is a dev dep
 - Returns array sorted by `date` descending
 
 ### `getPost(slug: string): { meta: PostMeta; content: string; headings: Heading[] }`
+
 - Reads the single matching `.mdx` file
 - Parses frontmatter and raw content
 - Extracts headings (`## h2`, `### h3`) from raw source via regex → `{ id, text, level }[]`
@@ -90,19 +92,19 @@ All installed as production dependencies. `@tailwindcss/typography` is a dev dep
 
 ```ts
 type PostMeta = {
-  slug: string
-  title: string
-  date: string        // ISO 8601
-  description: string
-  tags: string[]
-  readingTime: string // e.g. "5 min read"
-}
+  slug: string;
+  title: string;
+  date: string; // ISO 8601
+  description: string;
+  tags: string[];
+  readingTime: string; // e.g. "5 min read"
+};
 
 type Heading = {
-  id: string
-  text: string
-  level: 2 | 3
-}
+  id: string;
+  text: string;
+  level: 2 | 3;
+};
 ```
 
 ---
@@ -117,13 +119,16 @@ const options = {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
-      [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-      [rehypePrettyCode, {
-        themes: { light: 'github-light', dark: 'github-dark' },
-      }],
+      [rehypeAutolinkHeadings, { behavior: "wrap" }],
+      [
+        rehypePrettyCode,
+        {
+          themes: { light: "github-light", dark: "github-dark" },
+        },
+      ],
     ],
   },
-}
+};
 ```
 
 Code blocks respect `next-themes` dark/light mode via dual-theme Shiki config.
@@ -135,6 +140,7 @@ Code blocks respect `next-themes` dark/light mode via dual-theme Shiki config.
 **Server component.** Calls `getAllPosts()` at build time.
 
 Layout:
+
 ```
 Blog
 Writing about things I build and learn.
@@ -172,12 +178,14 @@ Layout (top to bottom, within `max-w-2xl`):
 7. `PostNav` component (← older · newer →)
 
 ### TOC Component
+
 - `"use client"` — receives `headings` array as prop
 - Uses `IntersectionObserver` to track active heading and highlight it
 - Collapsible: toggle button on mobile; always expanded on `md+`
 - Anchor links use the `id`s added by `rehype-slug`
 
 ### PostNav Component
+
 - Server component — receives `prev` and `next` PostMeta (or null)
 - Derived in the page by finding the current post's index in `getAllPosts()`
 

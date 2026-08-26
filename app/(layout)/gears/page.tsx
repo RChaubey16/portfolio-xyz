@@ -12,11 +12,7 @@ export const metadata: Metadata = {
     "The tools, hardware, and software that Ruturaj Chaubey uses daily.",
 };
 
-function GearList({
-  items,
-}: {
-  items: (typeof config.gears)[number][];
-}) {
+function GearList({ items }: { items: (typeof config.gears)[number][] }) {
   return (
     <ul className="space-y-3">
       {items.map((gear) => (
@@ -24,7 +20,7 @@ function GearList({
           <Link
             href={gear.link}
             target="_blank"
-            className="text-muted-foreground hover:text-foreground group flex items-center justify-between text-sm transition-colors"
+            className="text-muted-foreground hover:text-pine group flex items-center justify-between text-sm transition-colors"
           >
             <span>
               <span className="text-foreground font-medium">{gear.name}</span>
@@ -47,23 +43,18 @@ export default function GearsPage() {
   return (
     <FadeUp>
       <section className="bg-background pt-20">
-        <h1 className="text-2xl font-bold">Gears</h1>
-        <p className="text-muted-foreground mt-1 text-sm">
-          The tools and hardware I use daily.
-        </p>
+        <p className="eyebrow">{"// gears"}</p>
+        <h1 className="page-title mt-1">Gears</h1>
+        <p className="para">The tools and hardware I use daily.</p>
 
         <div className="mt-8 space-y-8">
           <div>
-            <h2 className="text-foreground mb-3 text-sm font-semibold uppercase tracking-wider">
-              Hardware
-            </h2>
+            <h2 className="eyebrow mb-3">{"// hardware"}</h2>
             <GearList items={hardware} />
           </div>
 
           <div>
-            <h2 className="text-foreground mb-3 text-sm font-semibold uppercase tracking-wider">
-              Software
-            </h2>
+            <h2 className="eyebrow mb-3">{"// software"}</h2>
             <GearList items={software} />
           </div>
         </div>

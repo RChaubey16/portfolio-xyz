@@ -6,7 +6,8 @@ organisation: "QED42"
 role: "Full Stack Engineer"
 duration: "July 2022 – May 2023"
 summary: "Built the full-stack integration layer for Prette, a Drupal Commerce-powered marketplace for sewists, connecting a Gatsby JS frontend to a headless Drupal backend via GraphQL — covering authentication, cart, wishlist, product pages, orders, and address management."
-tags: ["Drupal", "Gatsby JS", "React", "TypeScript", "GraphQL", "Drupal Commerce"]
+tags:
+  ["Drupal", "Gatsby JS", "React", "TypeScript", "GraphQL", "Drupal Commerce"]
 nda: true
 outcome: "Delivered a fully integrated ecommerce storefront for a niche marketplace, enabling sewists to discover and purchase materials for their projects"
 ---
@@ -68,12 +69,12 @@ This approach meant product pages loaded instantly from the CDN for anonymous us
 
 ### Rendering Strategy
 
-| Page type | Strategy | Rationale |
-|---|---|---|
-| Product catalogue / Store page | SSG | Catalogue data is stable; pre-render at build time for performance |
-| Product Detail Page | SSG | Individual product pages pre-rendered at build |
-| Cart / Wishlist | CSR | User-specific, dynamic; must reflect live state |
-| Order history / Account | SSR | Authenticated, user-specific content |
+| Page type                      | Strategy | Rationale                                                          |
+| ------------------------------ | -------- | ------------------------------------------------------------------ |
+| Product catalogue / Store page | SSG      | Catalogue data is stable; pre-render at build time for performance |
+| Product Detail Page            | SSG      | Individual product pages pre-rendered at build                     |
+| Cart / Wishlist                | CSR      | User-specific, dynamic; must reflect live state                    |
+| Order history / Account        | SSR      | Authenticated, user-specific content                               |
 
 ### Drupal View Integrations
 
