@@ -9,7 +9,13 @@ interface Photo {
   alt: string;
 }
 
-const Photos = async ({ slice = true }: { slice?: boolean }) => {
+const Photos = async ({
+  slice = true,
+  showHeading = true,
+}: {
+  slice?: boolean;
+  showHeading?: boolean;
+}) => {
   const docs: { images: { _key: string; url: string; alt: string }[] }[] =
     await client.fetch(`
       *[_type == "photo"] | order(_createdAt desc) {
@@ -33,7 +39,7 @@ const Photos = async ({ slice = true }: { slice?: boolean }) => {
 
   return (
     <section id="photos">
-      {slice && (
+      {slice && showHeading && (
         <div className="flex items-baseline justify-between">
           <div>
             <p className="eyebrow">{"// photos"}</p>
