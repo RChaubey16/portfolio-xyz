@@ -1296,9 +1296,15 @@
       "category": "hardware"
     },
     {
-      "name": "iPhone 13",
+      "name": "iPhone 17 Pro",
       "description": "Daily driver smartphone",
-      "link": "https://www.amazon.com/s?k=iPhone+13",
+      "link": "https://www.amazon.com/s?k=iPhone+17+Pro",
+      "category": "hardware"
+    },
+    {
+      "name": "Apple Wired EarPods",
+      "description": "Backup wired earphones",
+      "link": "https://www.amazon.com/s?k=Apple+Wired+EarPods",
       "category": "hardware"
     },
     {

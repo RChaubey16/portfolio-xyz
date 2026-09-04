@@ -1,4 +1,4 @@
-import { DM_Sans, Geist_Mono, Newsreader } from "next/font/google";
+import { DM_Sans, Geist_Mono, Source_Serif_4 } from "next/font/google";
 
 import type { Metadata } from "next";
 
@@ -19,7 +19,7 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 });
 
-const fontSerif = Newsreader({
+const fontSerif = Source_Serif_4({
   subsets: ["latin"],
   variable: "--font-serif",
 });
