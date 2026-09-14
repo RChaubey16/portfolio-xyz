@@ -31,7 +31,7 @@ const Footer = () => {
     return null;
   }
 
-  const showImage = pathname !== "/v2";
+  const showImage = pathname !== "/v2" && !pathname.startsWith("/ui-lab");
 
   return (
     <footer className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">

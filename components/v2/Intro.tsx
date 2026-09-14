@@ -6,7 +6,7 @@ import configData from "@/data/newConfig.json";
 
 const linkedWords: Record<string, string> = {
   Currently: "/work",
-  UI: "/projects",
+  UI: "/ui-lab",
   backend: "/projects",
 };
 

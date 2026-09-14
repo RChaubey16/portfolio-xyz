@@ -228,6 +228,39 @@
   }
 }
 
+@keyframes signal-bar {
+  0%,
+  100% {
+    height: 5px;
+  }
+  50% {
+    height: 16px;
+  }
+}
+
+.signal-bar {
+  height: 5px;
+  animation-name: signal-bar;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-bar {
+    animation: none;
+    height: 11px;
+  }
+}
+
+.lab-grid {
+  background-image: radial-gradient(
+    circle,
+    rgb(0 0 0 / 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+}
+
 /* Prose (blog posts) — wire typography plugin to site CSS variables */
 .prose {
   --tw-prose-body: var(--foreground);
