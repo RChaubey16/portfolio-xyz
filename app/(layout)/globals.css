@@ -38,7 +38,7 @@
   --sidebar-accent-foreground: #171717;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #a1a1a1;
-  --font-sans: DM Sans, ui-sans-serif, sans-serif, system-ui;
+  --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
   --font-serif:
     "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: Geist Mono, ui-monospace, monospace;
@@ -99,7 +99,7 @@
   --sidebar-accent-foreground: #fafafa;
   --sidebar-border: #282828;
   --sidebar-ring: #525252;
-  --font-sans: DM Sans, ui-sans-serif, sans-serif, system-ui;
+  --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
   --font-serif:
     "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: Geist Mono, ui-monospace, monospace;

@@ -18,13 +18,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   if (pathname === "/v2") {
-    return (
-      <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50 mx-auto max-w-2xl">
-        <div className="bg-background/90 pointer-events-auto relative flex items-center justify-end px-4 py-3 backdrop-blur-md transition-all md:px-0">
-          <ModeToggle />
-        </div>
-      </nav>
-    );
+    return null;
   }
 
   return (

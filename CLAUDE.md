@@ -70,7 +70,7 @@ types/
 
 - Tailwind CSS v4 — utility-first, no CSS modules
 - Use `cn()` from `lib/utils.ts` for conditional class merging (clsx + tailwind-merge)
-- Fonts: `DM_Sans` (sans) and `Geist_Mono` (mono), exposed as CSS variables `--font-sans` / `--font-mono`
+- Fonts: `Inter` (sans) and `Geist_Mono` (mono), exposed as CSS variables `--font-sans` / `--font-mono`
 - Dark mode via `next-themes` with `ThemeProvider` (attribute: `class`)
 
 ### Content / Data

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import FadeUp from "@/components/animation/FadeUp";
-import Intro from "@/components/introduction/Intro";
-import DummyTabs from "@/components/v2/DummyTabs";
+import Intro from "@/components/v2/Intro";
 
 export const metadata: Metadata = {
   title: "V2",
@@ -11,14 +10,8 @@ export const metadata: Metadata = {
 
 export default function V2() {
   return (
-    <>
-      <FadeUp>
-        <Intro />
-      </FadeUp>
-
-      <FadeUp delay={0.1}>
-        <DummyTabs />
-      </FadeUp>
-    </>
+    <FadeUp>
+      <Intro />
+    </FadeUp>
   );
 }
