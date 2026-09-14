@@ -17,7 +17,7 @@ const links = [
 const Navbar = () => {
   const pathname = usePathname();
 
-  if (pathname === "/v2") {
+  if (pathname === "/v2" || pathname === "/work") {
     return null;
   }
 

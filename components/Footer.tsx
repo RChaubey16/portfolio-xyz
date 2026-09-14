@@ -26,6 +26,11 @@ const Footer = () => {
   const footerImage = config.footerImage;
   const socials = config.socials;
   const pathname = usePathname();
+
+  if (pathname === "/work") {
+    return null;
+  }
+
   const showImage = pathname !== "/v2";
 
   return (

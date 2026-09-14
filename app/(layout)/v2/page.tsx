@@ -10,8 +10,10 @@ export const metadata: Metadata = {
 
 export default function V2() {
   return (
-    <FadeUp>
-      <Intro />
-    </FadeUp>
+    <div className="flex min-h-[70vh] flex-col justify-center">
+      <FadeUp>
+        <Intro />
+      </FadeUp>
+    </div>
   );
 }
