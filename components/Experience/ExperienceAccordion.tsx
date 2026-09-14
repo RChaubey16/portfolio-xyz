@@ -14,7 +14,11 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
   const experience = config.experience;
 
   const accordionDefaultValue =
-    accordionState === "open" ? ["item-1", "item-2", "item-3"] : [];
+    accordionState === "open"
+      ? ["item-1", "item-2", "item-3"]
+      : accordionState === "first"
+        ? ["item-1"]
+        : [];
 
   return (
     <Accordion

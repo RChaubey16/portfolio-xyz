@@ -1,4 +1,4 @@
-import { DM_Sans, Geist_Mono, Newsreader } from "next/font/google";
+import { Geist_Mono, Inter, Source_Serif_4 } from "next/font/google";
 
 import type { Metadata } from "next";
 
@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
-const fontSans = DM_Sans({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -19,7 +19,7 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 });
 
-const fontSerif = Newsreader({
+const fontSerif = Source_Serif_4({
   subsets: ["latin"],
   variable: "--font-serif",
 });
@@ -121,7 +121,7 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col">
             {/* Main content */}
-            <main className="mx-auto mb-16 w-full max-w-2xl grow px-4 md:px-0">
+            <main className="mx-auto mb-16 w-full max-w-xl px-4 md:px-0">
               <Navbar />
               {children}
             </main>

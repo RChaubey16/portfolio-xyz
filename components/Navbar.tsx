@@ -17,6 +17,14 @@ const links = [
 const Navbar = () => {
   const pathname = usePathname();
 
+  if (
+    pathname === "/v2" ||
+    pathname === "/work" ||
+    pathname.startsWith("/ui-lab")
+  ) {
+    return null;
+  }
+
   return (
     <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50 mx-auto max-w-2xl">
       <div className="bg-background/90 border-border pointer-events-auto relative flex items-center justify-between gap-1 border-b px-4 py-3 backdrop-blur-md transition-all md:px-0">

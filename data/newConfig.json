@@ -1,14 +1,13 @@
 {
   "name": "Ruturaj Chaubey",
   "description": [
-    "Full Stack Engineer with 3+ years of experience building high-performance, decoupled web platforms.",
-    "At QED42, he architects headless Drupal and Next.js solutions for enterprise clients including UNICEF and US-based organisations.",
-    "Beyond client work, he's an active Drupal community speaker and open source contributor based in Pune, India."
+    "I'm Ruturaj, a full-stack developer based in Pune, India. I like working across the whole stack, connecting a solid backend to a fast, clean frontend because the best experiences come from getting both sides right, not just one."
   ],
   "roles": ["Software Engineer", "Full Stack Developer", "Web Developer"],
   "avatarImageUrl": "/images/me.jpeg",
   "avatarImageAltText": "Ruturaj Chaubey",
   "currentRole": "Full Stack Engineer",
+  "currentFocus": "Currently a full stack engineer at QED42, building headless Drupal and Next.js platforms. I also tinker with UI and backend experiments in my spare time.",
   "email": "ruturajchaubey16@gmail.com",
   "location": "Pune, India",
   "website": "https://ruturaj.xyz",
@@ -1296,9 +1295,15 @@
       "category": "hardware"
     },
     {
-      "name": "iPhone 13",
+      "name": "iPhone 17 Pro",
       "description": "Daily driver smartphone",
-      "link": "https://www.amazon.com/s?k=iPhone+13",
+      "link": "https://www.amazon.com/s?k=iPhone+17+Pro",
+      "category": "hardware"
+    },
+    {
+      "name": "Apple Wired EarPods",
+      "description": "Backup wired earphones",
+      "link": "https://www.amazon.com/s?k=Apple+Wired+EarPods",
       "category": "hardware"
     },
     {
