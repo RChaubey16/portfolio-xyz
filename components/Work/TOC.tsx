@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import type { Heading } from "@/lib/blog";
+import type { Heading } from "@/lib/work";
 
 export function TOC({ headings }: { headings: Heading[] }) {
   const [activeId, setActiveId] = useState<string>("");

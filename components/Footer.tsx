@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -23,7 +22,6 @@ const socialIcons = {
 type SocialName = keyof typeof socialIcons;
 
 const Footer = () => {
-  const footerImage = config.footerImage;
   const socials = config.socials;
   const pathname = usePathname();
 
@@ -31,26 +29,9 @@ const Footer = () => {
     return null;
   }
 
-  const showImage = pathname !== "/v2" && !pathname.startsWith("/ui-lab");
-
   return (
     <footer className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
-      {showImage && (
-        <div className="border-border bg-card w-full overflow-hidden rounded-md border">
-          <div className="relative aspect-3/1 w-full">
-            <Image
-              src={footerImage}
-              alt="Profile Cover"
-              fill
-              className="object-cover transition-transform duration-500 hover:scale-105"
-              priority
-            />
-          </div>
-        </div>
-      )}
-      <div
-        className={`border-border text-muted-foreground flex flex-col items-center gap-4 border-t pt-8 pb-4 font-mono text-xs ${showImage ? "mt-16" : ""}`}
-      >
+      <div className="border-border text-muted-foreground flex flex-col items-center gap-4 border-t pt-8 pb-4 font-mono text-xs">
         <p>© 2026 ruturaj — built with next.js, told what to do by claude</p>
         <div className="flex items-center gap-4">
           {socials.map((social) => (

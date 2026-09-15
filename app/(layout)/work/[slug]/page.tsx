@@ -9,7 +9,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
-import { TOC } from "@/components/Blog/TOC";
+import { TOC } from "@/components/Work/TOC";
 import { MermaidDiagramDynamic } from "@/components/MermaidDiagramDynamic";
 import { remarkMermaid } from "@/lib/remark-mermaid";
 import { getAllCaseStudies, getCaseStudy } from "@/lib/work";
@@ -135,7 +135,7 @@ export default async function CaseStudyPage({
 
       <TOC headings={headings} />
 
-      <div className="prose prose-neutral dark:prose-invert max-w-none">
+      <div className="prose prose-neutral max-w-none">
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         <MDXRemote
           source={content}

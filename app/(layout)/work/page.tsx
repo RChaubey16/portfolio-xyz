@@ -55,7 +55,7 @@ export default function WorkPage() {
     <FadeUp>
       <section className="mt-20 flex flex-col gap-10">
         <Link
-          href="/v2"
+          href="/"
           className="flex w-fit items-center gap-1.5 text-sm text-gray-500 underline underline-offset-2 transition-colors hover:text-black"
         >
           <GoArrowLeft className="h-4 w-4" />

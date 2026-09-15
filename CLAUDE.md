@@ -18,51 +18,44 @@ Package manager: **pnpm** (do not use npm or yarn).
 
 ```
 app/
-  (layout)/         # Pages with Navbar + Footer (main site)
-    page.tsx        # Home
-    About/
-    Experience/
-    gallery/
-    gears/
-    movies/
-    projects/
-    resume/
+  (layout)/         # Pages sharing the root layout (Footer only, no navbar)
+    page.tsx        # Home — Intro
     work/
-  (no-layout)/      # Pages without Navbar/Footer
+      page.tsx      # Companies + Projects list
+      [slug]/       # Case studies (MDX, from content/work)
+    globals.css     # Global styles (Tailwind base, light theme only)
+  (no-layout)/      # Pages without the site chrome
     studio/         # Sanity Studio
   api/              # API routes
-  globals.css       # Global styles (Tailwind base)
+  sitemap.ts
 
 components/
-  ui/               # Shadcn UI primitives (accordion, badge, button, card, tooltip)
-  animation/        # Reusable animation wrappers (Fade, FadeUp, Particles, Roles)
-  Navbar.tsx
+  ui/               # Shadcn UI primitives (badge, tooltip)
+  animation/        # Reusable animation wrappers (FadeUp)
+  Intro.tsx         # Home intro section
+  CompanyBadge.tsx
   Footer.tsx
   FooterFadeUp.tsx
-  TechCard.tsx / TechIcon.tsx / Technologies.tsx / TechUsed.tsx
-  MediaCard.tsx / SocialCard.tsx / TextCard.tsx
-  SidebarIcons.tsx
-  mode-toggle.tsx
-  theme-provider.tsx
+  Work/WorkItem.tsx
+  Work/TOC.tsx      # Table of contents for work case-study pages
+  MermaidDiagram(Dynamic).tsx
 
 data/
-  config.json       # All static site content: nav, tech list, experience, profile/socials
-  newConfig.json    # (draft/staging config)
-  supabase.ts       # Supabase client
-  utils.ts          # Data utilities
+  newConfig.json    # All static site content: profile, socials, experience, projects, tech, movies, gears
 
 lib/
-  utils.ts          # cn(), getIndiaTimeLabel(), formatNumber()
+  utils.ts          # cn()
+  work.ts           # Reads MDX case studies from content/work
+  remark-mermaid.ts
 
 sanity/
   schemaTypes/      # Sanity content schemas (currently: photoType)
   lib/              # Sanity client, image builder, live preview
   sanity.config.ts
   sanity.cli.ts
-
-types/
-  project.ts        # TypeScript types for Sanity-sourced project data
 ```
+
+The site is intentionally minimal: **Home** (intro) and **Work** (companies, projects, and MDX case studies) are the only routes. There is no navbar and no dark theme.
 
 ## Key Conventions
 
@@ -71,36 +64,29 @@ types/
 - Tailwind CSS v4 — utility-first, no CSS modules
 - Use `cn()` from `lib/utils.ts` for conditional class merging (clsx + tailwind-merge)
 - Fonts: `Inter` (sans) and `Geist_Mono` (mono), exposed as CSS variables `--font-sans` / `--font-mono`
-- Dark mode via `next-themes` with `ThemeProvider` (attribute: `class`)
+- **Light theme only** — there is no dark mode, no theme toggle, and no `next-themes` dependency. Don't reintroduce `dark:` variants or a `.dark` class.
 
 ### Content / Data
 
-- Static content (nav links, tech stack, experience entries, profile) lives in `data/config.json` — edit there, not hardcoded in components
-- Dynamic content (projects, photos) fetched from **Sanity CMS** via `@sanity/client`
-- Images from Sanity use `@sanity/image-url`; allowed remote image hostnames are whitelisted in `next.config.ts`
+- All static content (profile, socials, experience, projects, tech list, movies, gears) lives in `data/newConfig.json` — edit there, not hardcoded in components
+- Work case studies are MDX files in `content/work/`, read via `lib/work.ts`
+- Sanity Studio (`/studio`) remains available for CMS content, but no page currently renders Sanity-sourced content
 
 ### Routing
 
-- Route groups `(layout)` and `(no-layout)` control whether the global Navbar/Footer wrap applies
+- Route groups `(layout)` and `(no-layout)` control whether the shared Footer wrap applies
 - Sanity Studio is at `/studio` (no-layout group)
-- Max content width: `max-w-2xl` centered with `px-4 md:px-0`
+- Max content width: `max-w-2xl` / `max-w-xl` centered with `px-4 md:px-0`
 
 ### Animations
 
-- **Motion** (Framer Motion v12) for general animations
-- **GSAP** for complex/scroll-based animations
-- Reusable wrappers: `components/animation/Fade.tsx`, `FadeUp.tsx`, `Particles.tsx`, `Roles.tsx`
+- **Motion** (Framer Motion v12) for animations
+- Reusable wrapper: `components/animation/FadeUp.tsx`
 
 ### UI Components
 
 - Shadcn UI primitives in `components/ui/` — extend/edit these, don't replace
 - `react-icons` for icons alongside `lucide-react`
-
-### External Integrations
-
-- **Supabase** — client in `data/supabase.ts`
-- **GitHub Calendar** — `react-github-calendar`
-- **Sanity** — CMS for projects/photos; Studio embedded at `/studio`
 
 ## Deployment
 

@@ -4,8 +4,6 @@ import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
 import FooterFadeUp from "@/components/FooterFadeUp";
-import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
@@ -103,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"
@@ -113,23 +111,15 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontMono.variable} ${fontSerif.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex min-h-screen flex-col">
-            {/* Main content */}
-            <main className="mx-auto mb-16 w-full max-w-xl px-4 md:px-0">
-              <Navbar />
-              {children}
-            </main>
-            <FooterFadeUp>
-              <Footer />
-            </FooterFadeUp>
-          </div>
-        </ThemeProvider>
+        <div className="flex min-h-screen flex-col">
+          {/* Main content */}
+          <main className="mx-auto mb-16 w-full max-w-xl px-4 md:px-0">
+            {children}
+          </main>
+          <FooterFadeUp>
+            <Footer />
+          </FooterFadeUp>
+        </div>
       </body>
     </html>
   );
