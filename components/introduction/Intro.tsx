@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FaDrupal, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 import TerminalStatus from "@/components/animation/TerminalStatus";
-import MetaInfo from "@/components/introduction/MetaInfo";
+import { ModeToggle } from "@/components/mode-toggle";
 import {
   Tooltip,
   TooltipContent,
@@ -28,7 +28,7 @@ const Intro = () => {
   const { name, avatarImageUrl, avatarImageAltText, socials } = configData;
 
   return (
-    <section className="mt-20 flex flex-col gap-4">
+    <section className="mt-10 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <Image
           src={avatarImageUrl}
@@ -44,8 +44,6 @@ const Intro = () => {
           <TerminalStatus />
         </div>
       </div>
-
-      <MetaInfo />
 
       <div className="border-border/60 flex items-center gap-3 border-t pt-4">
         <div className="text-muted-foreground flex items-center gap-2">
@@ -65,6 +63,7 @@ const Intro = () => {
               <TooltipContent>{social.tooltip}</TooltipContent>
             </Tooltip>
           ))}
+          <ModeToggle className="bg-muted border-border hover:border-pine/50 hover:text-pine hover:bg-accent flex h-9 w-9 shrink-0 items-center justify-center rounded-md border" />
         </div>
       </div>
     </section>

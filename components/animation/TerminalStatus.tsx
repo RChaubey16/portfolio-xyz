@@ -3,11 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-const STATUSES = [
-  "I tell Claude what to do",
-  "full-stack engineer @ QED42",
-  "based in Pune, India",
-];
+const STATUSES = ["full-stack engineer @ QED42", "based in Pune, India"];
 
 const TerminalStatus = () => {
   const [index, setIndex] = useState(0);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import BackLink from "@/components/BackLink";
 import { BlogList } from "@/components/Blog/BlogList";
 import FadeUp from "@/components/animation/FadeUp";
 import { getAllPosts } from "@/lib/blog";
@@ -15,7 +16,8 @@ export default function BlogPage() {
   return (
     <FadeUp>
       <section className="mt-16">
-        <h2 className="text-2xl font-bold">Blog</h2>
+        <BackLink href="/" label="Back home" />
+        <h2 className="mt-6 text-2xl font-bold">Blog</h2>
         <p className="text-muted-foreground mt-1 text-sm">
           Writing about things I build and learn.
         </p>

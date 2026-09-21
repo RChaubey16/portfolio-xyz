@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import BackLink from "@/components/BackLink";
 import Projects from "@/components/Projects/Projects";
 import FadeUp from "@/components/animation/FadeUp";
 
@@ -13,7 +14,8 @@ export default function ProjectsPage() {
   return (
     <section className="bg-background py-20">
       <FadeUp>
-        <div className="mb-12">
+        <BackLink href="/" label="Back home" />
+        <div className="mt-6 mb-12">
           <h1 className="mb-4 text-4xl font-bold">Projects</h1>
           <p className="para">
             A collection of projects I&apos;ve worked on, ranging from web

@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { GoArrowUpRight } from "react-icons/go";
 
+import BackLink from "@/components/BackLink";
 import FadeUp from "@/components/animation/FadeUp";
 import config from "@/data/newConfig.json";
 
@@ -43,7 +44,8 @@ export default function GearsPage() {
   return (
     <FadeUp>
       <section className="bg-background pt-20">
-        <p className="eyebrow">{"// gears"}</p>
+        <BackLink href="/" label="Back home" />
+        <p className="eyebrow mt-6">{"// gears"}</p>
         <h1 className="page-title mt-1">Gears</h1>
         <p className="para">The tools and hardware I use daily.</p>
 

@@ -179,8 +179,8 @@
 }
 
 @theme {
-  --text-sm: 1rem;
-  --text-sm--line-height: 1.5rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
 }
 
 @layer base {
@@ -197,7 +197,7 @@
     @apply text-pine font-mono text-xs font-medium tracking-wide;
   }
   .section-title {
-    @apply text-foreground font-serif text-2xl font-medium tracking-tight;
+    @apply text-foreground font-serif text-xl font-medium tracking-tight;
   }
   .page-title {
     @apply text-foreground font-serif text-3xl font-medium tracking-tight;

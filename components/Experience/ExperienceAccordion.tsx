@@ -35,7 +35,7 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
                 className="rounded-sm object-contain"
               />
               <div>
-                <h3 className="flex items-center text-lg font-bold">
+                <h3 className="flex items-center text-sm font-bold">
                   QED42
                   <span className="ml-3 inline-flex items-center gap-1.5 rounded-full bg-green-500/15 px-2.5 py-0.5 text-sm font-medium text-green-700 dark:text-green-400">
                     <span className="relative flex h-2 w-2">
@@ -45,7 +45,7 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
                     Working
                   </span>
                 </h3>
-                <p className="text-base">Engineer - Full Stack</p>
+                <p className="text-sm">Engineer - Full Stack</p>
               </div>
             </div>
 
@@ -60,12 +60,12 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 border-t pt-4">
-          <h3 className="text-xl font-bold">Technologies & Tools</h3>
+          <h3 className="text-sm font-bold">Technologies & Tools</h3>
           <TechUsed tech={experience.full_stack_engineer.tech} />
 
           <ul className="list-inside list-disc">
             {experience.full_stack_engineer.work.map((item, i) => (
-              <li key={i} className="text-muted-foreground mb-4 text-base">
+              <li key={i} className="text-muted-foreground mb-4 text-sm">
                 {item}
               </li>
             ))}
@@ -86,8 +86,8 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
                 className="rounded-sm object-contain"
               />
               <div>
-                <h3 className="text-lg font-bold">QED42</h3>
-                <p className="text-base">Associate Engineer - Full Stack</p>
+                <h3 className="text-sm font-bold">QED42</h3>
+                <p className="text-sm">Associate Engineer - Full Stack</p>
               </div>
             </div>
 
@@ -102,12 +102,12 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 border-t pt-4">
-          <h3 className="text-xl font-bold">Technologies & Tools</h3>
+          <h3 className="text-sm font-bold">Technologies & Tools</h3>
           <TechUsed tech={experience.associate_engineer.tech} />
 
           <ul className="list-inside list-disc">
             {experience.associate_engineer.work.map((item, i) => (
-              <li key={i} className="text-muted-foreground mb-4 text-base">
+              <li key={i} className="text-muted-foreground mb-4 text-sm">
                 {item}
               </li>
             ))}
@@ -128,8 +128,8 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
                 className="rounded-sm object-contain"
               />
               <div>
-                <h3 className="text-lg font-bold">QED42</h3>
-                <p className="text-base">Intern</p>
+                <h3 className="text-sm font-bold">QED42</h3>
+                <p className="text-sm">Intern</p>
               </div>
             </div>
 
@@ -144,12 +144,12 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 border-t pt-4">
-          <h3 className="text-xl font-bold">Technologies & Tools</h3>
+          <h3 className="text-sm font-bold">Technologies & Tools</h3>
           <TechUsed tech={experience.intern.tech} />
 
           <ul className="list-inside list-disc">
             {experience.intern.work.map((item, i) => (
-              <li key={i} className="text-muted-foreground mb-4 text-base">
+              <li key={i} className="text-muted-foreground mb-4 text-sm">
                 {item}
               </li>
             ))}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import BackLink from "@/components/BackLink";
 import MediaCard from "@/components/MediaCard";
 import FadeUp from "@/components/animation/FadeUp";
 import config from "@/data/newConfig.json";
@@ -14,7 +15,8 @@ export default function Home() {
   return (
     <FadeUp>
       <section className="bg-background pt-20">
-        <p className="eyebrow">{"// movies & tv"}</p>
+        <BackLink href="/" label="Back home" />
+        <p className="eyebrow mt-6">{"// movies & tv"}</p>
         <h1 className="page-title mt-1">Movies & TV</h1>
         <p className="para">Some of my all-time favorites.</p>
 

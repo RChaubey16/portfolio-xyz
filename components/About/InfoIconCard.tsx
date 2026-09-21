@@ -14,7 +14,7 @@ export default function InfoIconCard({
   return (
     <div className="flex items-center gap-2.5">
       <div className="bg-accent rounded-md p-1">{icon}</div>
-      <p className="text-base">
+      <p className="text-sm">
         {title}{" "}
         {linkHref && (
           <Link

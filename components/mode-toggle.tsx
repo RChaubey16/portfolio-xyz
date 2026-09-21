@@ -2,6 +2,8 @@
 
 import { useTheme } from "next-themes";
 
+import { cn } from "@/lib/utils";
+
 const darkModeSvg = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +26,7 @@ const darkModeSvg = (
   </svg>
 );
 
-export function ModeToggle() {
+export function ModeToggle({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
 
   const playSound = () => {
@@ -38,7 +40,10 @@ export function ModeToggle() {
         setTheme(theme === "dark" ? "light" : "dark");
         playSound();
       }}
-      className="hover:bg-accent cursor-pointer rounded-md border border-transparent p-2 transition-colors"
+      className={cn(
+        "hover:bg-accent cursor-pointer rounded-md border border-transparent p-2 transition-colors",
+        className,
+      )}
       aria-label="Toggle theme"
     >
       {darkModeSvg}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import Photos from "@/components/About/Photos";
+import BackLink from "@/components/BackLink";
 import FadeUp from "@/components/animation/FadeUp";
 
 export const metadata: Metadata = {
@@ -12,7 +13,8 @@ export default function PhotosPage() {
   return (
     <section className="bg-background py-20">
       <FadeUp>
-        <div className="mb-12">
+        <BackLink href="/" label="Back home" />
+        <div className="mt-6 mb-12">
           <p className="eyebrow">{"// photos"}</p>
           <h1 className="page-title mt-1 mb-4">Photos</h1>
           <p className="para">

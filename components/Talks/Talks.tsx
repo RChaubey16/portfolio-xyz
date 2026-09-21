@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Badge } from "@/components/ui/badge";
 import config from "@/data/newConfig.json";
 
 interface Talk {
@@ -44,44 +45,36 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
             },
           );
 
-          const inner = (
-            <div className="grid grid-cols-[80px_1fr] gap-4">
+          return (
+            <div key={talk.id} className="grid grid-cols-[80px_1fr] gap-4">
               <span className="text-muted-foreground pt-0.5 text-sm tabular-nums">
                 {formattedDate}
               </span>
-              <div
-                className={`border-border border-l pl-4 transition-colors${talk.link ? "group-hover:border-foreground" : ""}`}
-              >
-                <p
-                  className={`font-medium leading-snug${talk.link ? "group-hover:underline" : ""}`}
-                >
-                  {talk.title}
-                </p>
-                <p className="text-muted-foreground mt-0.5 text-sm">
-                  <span className="text-foreground font-semibold">
-                    {talk.event}
-                  </span>
-                </p>
+              <div className="border-border border-l pl-4">
+                {talk.link ? (
+                  <Link
+                    href={talk.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground text-sm leading-snug font-semibold hover:underline"
+                  >
+                    {talk.title}
+                  </Link>
+                ) : (
+                  <p className="text-foreground text-sm leading-snug font-semibold">
+                    {talk.title}
+                  </p>
+                )}
                 {talk.description && (
                   <p className="text-muted-foreground mt-0.5 text-sm">
                     {talk.description}
                   </p>
                 )}
+                <Badge variant="outline" className="mt-1.5">
+                  {talk.event}
+                </Badge>
               </div>
             </div>
-          );
-
-          return talk.link ? (
-            <Link
-              key={talk.id}
-              href={talk.link}
-              target="_blank"
-              className="group"
-            >
-              {inner}
-            </Link>
-          ) : (
-            <div key={talk.id}>{inner}</div>
           );
         })}
       </div>

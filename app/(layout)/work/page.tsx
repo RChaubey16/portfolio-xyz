@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import BackLink from "@/components/BackLink";
 import { WorkCard } from "@/components/Work/WorkCard";
 import FadeUp from "@/components/animation/FadeUp";
 import { getAllCaseStudies } from "@/lib/work";
@@ -15,7 +16,8 @@ export default function WorkPage() {
   return (
     <FadeUp>
       <section className="mt-16">
-        <p className="eyebrow">{"// work"}</p>
+        <BackLink href="/" label="Back home" />
+        <p className="eyebrow mt-6">{"// work"}</p>
         <h1 className="page-title mt-1">Work</h1>
         <p className="para">
           In-depth case studies of projects I have built and shipped.
