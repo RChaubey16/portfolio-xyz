@@ -56,16 +56,14 @@ export default function WorkPage() {
       <section className="mt-20 flex flex-col gap-10">
         <Link
           href="/"
-          className="flex w-fit items-center gap-1.5 text-sm text-gray-500 underline underline-offset-2 transition-colors hover:text-black"
+          className="text-muted-foreground hover:text-rust flex w-fit items-center gap-1.5 font-mono text-xs tracking-widest uppercase transition-colors"
         >
-          <GoArrowLeft className="h-4 w-4" />
-          home
+          <GoArrowLeft className="h-3.5 w-3.5" />
+          Home
         </Link>
 
         <div>
-          <h2 className="mb-2 text-xs font-medium tracking-wide text-gray-400 uppercase">
-            Companies
-          </h2>
+          <h2 className="eyebrow mb-2">Companies</h2>
           <div className="flex flex-col">
             {companies.map((company, index) => (
               <WorkItem key={`${company.name}-${index}`} {...company} />
@@ -74,9 +72,7 @@ export default function WorkPage() {
         </div>
 
         <div>
-          <h2 className="mb-2 text-xs font-medium tracking-wide text-gray-400 uppercase">
-            Projects
-          </h2>
+          <h2 className="eyebrow mb-2">Projects</h2>
           <div className="flex flex-col">
             {projects.map((project) => (
               <WorkItem key={project.name} {...project} />

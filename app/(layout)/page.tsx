@@ -1,5 +1,5 @@
-import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/Intro";
+import FadeUp from "@/components/animation/FadeUp";
 
 export default function Home() {
   return (

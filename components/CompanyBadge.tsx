@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Badge } from "@/components/ui/badge";
-
 type CompanyBadgeProps = {
   name: string;
   href: string;
@@ -15,21 +13,16 @@ const CompanyBadge = ({ name, href, logoSrc }: CompanyBadgeProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="align-middle"
+      className="text-foreground decoration-rust/40 hover:decoration-rust mx-0.5 inline-flex items-center gap-1 underline underline-offset-4 transition-colors"
     >
-      <Badge
-        variant="outline"
-        className="bg-gray-100 border-border hover:border-pine/50 hover:bg-accent rounded-full border transition-colors"
-      >
-        <Image
-          src={logoSrc}
-          alt={`${name} logo`}
-          width={20}
-          height={20}
-          className="rounded-sm"
-        />
-        <span className="ml-1 text-sm">{name}</span>
-      </Badge>
+      <Image
+        src={logoSrc}
+        alt={`${name} logo`}
+        width={16}
+        height={16}
+        className="inline-block h-4 w-4 rounded-full object-cover align-[-3px]"
+      />
+      {name}
     </Link>
   );
 };

@@ -30,10 +30,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
-      <div className="border-border text-muted-foreground flex flex-col items-center gap-4 border-t pt-8 pb-4 font-mono text-xs">
-        <p>© 2026 ruturaj — built with next.js, told what to do by claude</p>
-        <div className="flex items-center gap-4">
+    <footer className="mx-auto mb-10 w-full max-w-xl px-4 md:px-0">
+      <div className="border-border text-muted-foreground flex flex-col items-center gap-4 border-t pt-6 pb-4 font-mono text-xs">
+        <div className="flex items-center gap-5">
           {socials.map((social) => (
             <Tooltip key={social.name}>
               <TooltipTrigger asChild>
@@ -42,7 +41,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.tooltip}
-                  className="hover:text-pine transition-colors"
+                  className="hover:text-rust transition-colors"
                 >
                   {socialIcons[social.name as SocialName]}
                 </Link>
@@ -51,21 +50,7 @@ const Footer = () => {
             </Tooltip>
           ))}
         </div>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/llms.txt"
-            className="hover:text-foreground transition-colors"
-          >
-            llms.txt
-          </Link>
-          <span aria-hidden="true">·</span>
-          <Link
-            href="/feed.xml"
-            className="hover:text-foreground transition-colors"
-          >
-            RSS
-          </Link>
-        </div>
+        <p>© 2026 Ruturaj Chaubey</p>
       </div>
     </footer>
   );

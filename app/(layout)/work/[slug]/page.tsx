@@ -9,8 +9,8 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
-import { TOC } from "@/components/Work/TOC";
 import { MermaidDiagramDynamic } from "@/components/MermaidDiagramDynamic";
+import { TOC } from "@/components/Work/TOC";
 import { remarkMermaid } from "@/lib/remark-mermaid";
 import { getAllCaseStudies, getCaseStudy } from "@/lib/work";
 
