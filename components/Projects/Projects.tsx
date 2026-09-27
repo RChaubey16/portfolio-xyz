@@ -11,7 +11,7 @@ export const projects: ProjectData[] =
   config.projects as unknown as ProjectData[];
 
 // Only these projects are shown; others stay in config but are hidden
-const FEATURED_PROJECT_IDS = ["what-the-hex"];
+const FEATURED_PROJECT_IDS = ["neuron", "what-the-hex"];
 
 const featuredProjects = projects.filter((proj) =>
   FEATURED_PROJECT_IDS.includes(proj.id),

@@ -458,236 +458,6 @@
       ]
     },
     {
-      "id": "Orbit",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/orbit.png",
-        "alt": "Orbit component library home page"
-      },
-      "status": {
-        "text": "In Development",
-        "className": "status-wip"
-      },
-      "title": "Orbit",
-      "description": "An open-source React component library focused on interaction and physical feel. Components are copy-paste ready or installable via shadcn.",
-      "techStack": [
-        {
-          "id": "nextjs",
-          "tech": "Next.js",
-          "techHref": "https://nextjs.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-            "dark": "/icons/tech/nextjs-dark-icon.png"
-          },
-          "imageAltText": "Next.js logo"
-        },
-        {
-          "id": "react",
-          "tech": "React",
-          "techHref": "https://react.dev",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
-          },
-          "imageAltText": "React logo"
-        },
-        {
-          "id": "typescript",
-          "tech": "TypeScript",
-          "techHref": "https://www.typescriptlang.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.sv"
-          },
-          "imageAltText": "TypeScript logo"
-        },
-        {
-          "id": "tailwindcss",
-          "tech": "Tailwind CSS",
-          "techHref": "https://tailwindcss.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
-          },
-          "imageAltText": "Tailwind CSS logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/orbit",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live Demo",
-          "href": "https://orbit.ruturaj.xyz",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
-      "id": "atlas",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/atlas.png",
-        "alt": "Microservices backend"
-      },
-      "status": {
-        "text": "All Systems Running",
-        "className": "status-live"
-      },
-      "title": "Atlas",
-      "description": "A production-style microservices backend built with NestJS. Demonstrates clean service boundaries, an API Gateway pattern, JWT authentication, and a shared contracts library — all running in Docker.",
-      "techStack": [
-        {
-          "id": "nestjs",
-          "tech": "NestJS",
-          "techHref": "https://nestjs.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
-          },
-          "imageAltText": "NestJS logo"
-        },
-        {
-          "id": "rabbitmq",
-          "tech": "RabbitMQ",
-          "techHref": "https://www.rabbitmq.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg"
-          },
-          "imageAltText": "RabbitMQ logo"
-        },
-        {
-          "id": "postgresql",
-          "tech": "PostgreSQL",
-          "techHref": "https://www.postgresql.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
-          },
-          "imageAltText": "PostgreSQL logo"
-        },
-        {
-          "id": "docker",
-          "tech": "Docker",
-          "techHref": "https://www.docker.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
-          },
-          "imageAltText": "Docker logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/atlas",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live",
-          "href": "https://atlas.ruturaj.xyz/docs",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
-      "id": "Blink",
-      "type": "tech",
-      "image": {
-        "src": "/images/projects/blink.png",
-        "alt": "Blink URL shortener home page"
-      },
-      "status": {
-        "text": "All Systems Running",
-        "className": "status-live"
-      },
-      "title": "Blink",
-      "description": "A fast and minimal URL shortener. Paste a long URL, get a short one — done. Features PostgreSQL persistence, Google OAuth, click analytics, and auto-expiring links.",
-      "techStack": [
-        {
-          "id": "nextjs",
-          "tech": "Next.js",
-          "techHref": "https://nextjs.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-            "dark": "/icons/tech/nextjs-dark-icon.png"
-          },
-          "imageAltText": "Next.js logo"
-        },
-        {
-          "id": "react",
-          "tech": "React",
-          "techHref": "https://react.dev",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
-          },
-          "imageAltText": "React logo"
-        },
-        {
-          "id": "nestjs",
-          "tech": "NestJS",
-          "techHref": "https://nestjs.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
-          },
-          "imageAltText": "NestJS logo"
-        },
-        {
-          "id": "postgresql",
-          "tech": "PostgreSQL",
-          "techHref": "https://www.postgresql.org",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
-          },
-          "imageAltText": "PostgreSQL logo"
-        },
-        {
-          "id": "tailwindcss",
-          "tech": "Tailwind CSS",
-          "techHref": "https://tailwindcss.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
-          },
-          "imageAltText": "Tailwind CSS logo"
-        },
-        {
-          "id": "docker",
-          "tech": "Docker",
-          "techHref": "https://www.docker.com",
-          "imageUrl": {
-            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
-            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
-          },
-          "imageAltText": "Docker logo"
-        }
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/RChaubey16/blink",
-          "variant": "outline",
-          "icon": "GithubIcon"
-        },
-        {
-          "label": "Live Demo",
-          "href": "https://blink.ruturaj.xyz",
-          "variant": "default",
-          "icon": "Globe"
-        }
-      ]
-    },
-    {
       "id": "react-kequence",
       "type": "tech",
       "image": {
@@ -732,6 +502,136 @@
         {
           "label": "Package",
           "href": "https://www.npmjs.com/package/react-keyquence",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
+      "id": "neuron",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/neuron.png",
+        "alt": "Neuron shared backend services platform dashboard"
+      },
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
+      },
+      "title": "Neuron",
+      "description": "A shared backend platform that exposes reusable services — a URL shortener and queued email notifications with templates — behind a single API key. Includes a dashboard with Google sign-in for managing keys, using services directly, and tracking per-key usage analytics.",
+      "techStack": [
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "techHref": "https://nestjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "techHref": "https://www.typescriptlang.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "techHref": "https://www.postgresql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "prisma",
+          "tech": "Prisma",
+          "techHref": "https://www.prisma.io",
+          "imageUrl": {
+            "light": "/icons/tech/prisma.svg",
+            "dark": "/icons/tech/prisma-white.svg"
+          },
+          "imageAltText": "Prisma logo"
+        },
+        {
+          "id": "supabase",
+          "tech": "Supabase",
+          "techHref": "https://supabase.com",
+          "imageUrl": {
+            "light": "/icons/tech/supabase.svg",
+            "dark": "/icons/tech/supabase.svg"
+          },
+          "imageAltText": "Supabase logo"
+        },
+        {
+          "id": "redis",
+          "tech": "Redis",
+          "techHref": "https://redis.io",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Redis.svg"
+          },
+          "imageAltText": "Redis logo"
+        },
+        {
+          "id": "resend",
+          "tech": "Resend",
+          "techHref": "https://resend.com",
+          "imageUrl": {
+            "light": "/icons/tech/resend.svg",
+            "dark": "/icons/tech/resend-white.svg"
+          },
+          "imageAltText": "Resend logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        },
+        {
+          "id": "docker",
+          "tech": "Docker",
+          "techHref": "https://www.docker.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+          },
+          "imageAltText": "Docker logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/neuron",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live",
+          "href": "https://neuron.ruturaj.xyz/",
           "variant": "default",
           "icon": "Globe"
         }
