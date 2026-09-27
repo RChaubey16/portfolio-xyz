@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ChevronRight } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import config from "@/data/newConfig.json";
 
@@ -28,9 +30,10 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
           {useSlice && (
             <Link
               href="/talks"
-              className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
+              className="text-muted-foreground hover:text-pine inline-flex items-center gap-0.5 font-mono text-xs transition-colors"
             >
-              view all →
+              view all
+              <ChevronRight className="h-3.5 w-3.5" />
             </Link>
           )}
         </div>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ChevronRight } from "lucide-react";
+
 import { WorkCard } from "@/components/Work/WorkCard";
 import { getAllCaseStudies } from "@/lib/work";
 
@@ -17,9 +19,10 @@ const RecentWork = () => {
         </div>
         <Link
           href="/work"
-          className="text-muted-foreground hover:text-pine font-mono text-xs transition-colors"
+          className="text-muted-foreground hover:text-pine inline-flex items-center gap-0.5 font-mono text-xs transition-colors"
         >
-          view all →
+          view all
+          <ChevronRight className="h-3.5 w-3.5" />
         </Link>
       </div>
       <div className="mt-4 flex flex-col gap-4">

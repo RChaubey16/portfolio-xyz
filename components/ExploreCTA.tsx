@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ChevronRight } from "lucide-react";
+
 import config from "@/data/newConfig.json";
 import { getAllPosts } from "@/lib/blog";
 
@@ -49,8 +51,9 @@ const ExploreCTA = () => {
               <span className="text-muted-foreground text-sm tabular-nums">
                 {item.count}
               </span>
-              <span className="text-muted-foreground group-hover:text-foreground text-sm transition-colors">
-                View all →
+              <span className="text-muted-foreground group-hover:text-foreground inline-flex items-center gap-0.5 text-sm transition-colors">
+                View all
+                <ChevronRight className="h-4 w-4" />
               </span>
             </div>
           </Link>

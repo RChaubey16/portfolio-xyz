@@ -2,7 +2,7 @@ import { FiFilm } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
 
 import Experience from "@/components/Experience/Experience";
-// import Projects from "@/components/Projects/Projects";
+import Projects from "@/components/Projects/Projects";
 import Talks from "@/components/Talks/Talks";
 import TextCard from "@/components/TextCard";
 // import LatestOrbit from "@/components/Orbit/LatestOrbit";
@@ -22,11 +22,11 @@ export default function Home() {
         </div>
       </FadeUp>
 
-      {/* <FadeUp delay={0.2}>
-        <div className="mt-16">
+      <FadeUp delay={0.2}>
+        <div className="border-border mt-10 border-t pt-10">
           <Projects />
         </div>
-      </FadeUp> */}
+      </FadeUp>
 
       {/* <FadeUp delay={0.3}>
         <div className="mt-16">
