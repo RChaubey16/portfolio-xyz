@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/SectionHeading";
+
 import { ExperienceAccordion } from "./ExperienceAccordion";
 
 export default function Experience({
@@ -6,12 +8,7 @@ export default function Experience({
 }) {
   return (
     <section id="experience">
-      {showHeading && (
-        <>
-          <p className="eyebrow">{"// experience"}</p>
-          <h1 className="section-title mt-1">Experience</h1>
-        </>
-      )}
+      {showHeading && <SectionHeading title="Experience" />}
       <ExperienceAccordion accordionState={accordionState} />
     </section>
   );

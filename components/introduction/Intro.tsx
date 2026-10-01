@@ -16,55 +16,60 @@ import {
 import configData from "../../data/newConfig.json";
 
 const socialIcons = {
-  LinkedIn: <FaLinkedinIn className="h-4.5 w-4.5" />,
-  GitHub: <FaGithub className="h-4.5 w-4.5" />,
-  Twitter: <FaXTwitter className="h-4.5 w-4.5" />,
-  Drupal: <FaDrupal className="h-4.5 w-4.5" />,
+  LinkedIn: <FaLinkedinIn className="size-4" />,
+  GitHub: <FaGithub className="size-4" />,
+  Twitter: <FaXTwitter className="size-4" />,
+  Drupal: <FaDrupal className="size-4" />,
 } as const;
 
 type SocialName = keyof typeof socialIcons;
 
 const Intro = () => {
-  const { name, avatarImageUrl, avatarImageAltText, socials } = configData;
+  const { name, avatarImageUrl, avatarImageAltText, socials, description } =
+    configData;
 
   return (
-    <section className="mt-10 flex flex-col gap-4">
+    <section className="flex flex-col gap-6">
       <div className="flex items-center gap-4">
         <Image
           src={avatarImageUrl}
           alt={avatarImageAltText}
-          width={80}
-          height={80}
-          className="h-24 w-24 rounded-full object-cover"
+          width={128}
+          height={128}
+          priority
+          className="ring-border ring-offset-background size-16 rounded-full object-cover ring-1 ring-offset-2"
         />
-        <div>
-          <h1 className="font-serif text-3xl font-medium tracking-tight">
-            {name}
-          </h1>
+        <div className="min-w-0">
+          <h1 className="text-xl font-semibold tracking-tight">{name}</h1>
           <TerminalStatus />
         </div>
       </div>
 
-      <div className="border-border/60 flex items-center gap-3 border-t pt-4">
-        <div className="text-muted-foreground flex items-center gap-2">
-          {socials.map((social) => (
-            <Tooltip key={social.name}>
-              <TooltipTrigger asChild>
-                <Link
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.tooltip}
-                  className="bg-muted border-border hover:border-pine/50 hover:text-pine hover:bg-accent flex h-9 w-9 shrink-0 items-center justify-center rounded-md border transition-colors"
-                >
-                  {socialIcons[social.name as SocialName]}
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>{social.tooltip}</TooltipContent>
-            </Tooltip>
-          ))}
-          <ModeToggle className="bg-muted border-border hover:border-pine/50 hover:text-pine hover:bg-accent flex h-9 w-9 shrink-0 items-center justify-center rounded-md border" />
-        </div>
+      <div className="text-muted-foreground space-y-3 text-[15px] leading-relaxed text-pretty">
+        {description.map((line) => (
+          <p key={line}>{line}</p>
+        ))}
+      </div>
+
+      <div className="-ml-2 flex items-center gap-0.5">
+        {socials.map((social) => (
+          <Tooltip key={social.name}>
+            <TooltipTrigger asChild>
+              <Link
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.tooltip}
+                className="text-muted-foreground hover:bg-accent hover:text-foreground inline-flex size-9 items-center justify-center rounded-md transition-[color,background-color,transform] active:scale-95"
+              >
+                {socialIcons[social.name as SocialName]}
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent sideOffset={4}>{social.tooltip}</TooltipContent>
+          </Tooltip>
+        ))}
+        <span className="bg-border mx-1.5 h-4 w-px" aria-hidden="true" />
+        <ModeToggle />
       </div>
     </section>
   );

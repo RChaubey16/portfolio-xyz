@@ -31,18 +31,8 @@ CMS: Drupal, Sanity
 
 ## Projects
 
-- [Knowbase](https://ruturaj.xyz/projects) — Multi-tenant knowledge base SaaS where teams store and search documents using AI.
-- [Atlas](https://ruturaj.xyz/projects) — Production-style microservices backend built with NestJS demonstrating scalable architecture patterns.
-- [Blink](https://ruturaj.xyz/projects) — Fast, minimal URL shortener.
-- [React Keyquence](https://ruturaj.xyz/projects) — Lightweight React library for keyboard sequence detection.
-- [What the Hex](https://ruturaj.xyz/projects) — Fast color lookup tool for developers and designers.
-- [DevConnector](https://ruturaj.xyz/projects) — Social networking platform for developers.
-
-## Blog
-
-- [Building Knowbase, Part 1: Auth, Orgs, and the Multi-Tenant Foundation](https://ruturaj.xyz/blog/building-knowbase-part-1) — How I designed the authentication layer and multi-tenant data model that everything else in Knowbase sits on top of.
-- [Microservices with NestJS — A Practical Introduction](https://ruturaj.xyz/blog/microservices-with-nestjs) — A walkthrough of what microservices are, when they make sense, and how to build one from scratch using NestJS.
-- [Hello World](https://ruturaj.xyz/blog/hello-world) — The first post on this blog — what to expect and why I'm writing.
+- [Neuron](https://neuron.ruturaj.xyz/) — Shared backend platform exposing reusable services (URL shortener, queued templated email notifications) behind a single API key, with a dashboard for key management and per-key usage analytics. Source: https://github.com/RChaubey16/neuron
+- [What the Hex](https://what-the-hex.ruturaj.xyz) — Fast, minimal color lookup tool for developers and designers: paste a hex code, get the color name, preview, and ready-to-use CSS/SCSS variables. Source: https://github.com/RChaubey16/what-the-hex
 
 ## Talks
 
@@ -54,12 +44,10 @@ CMS: Drupal, Sanity
 
 ## Site Sections
 
-- [Home](https://ruturaj.xyz/) — Introduction, experience, projects, talks, writing, and photos.
+- [Home](https://ruturaj.xyz/) — Introduction, experience, featured projects, talks, and personal pages.
 - [Work](https://ruturaj.xyz/work) — In-depth case studies of selected client and personal projects.
 - [Projects](https://ruturaj.xyz/projects) — Full list of personal and open source projects.
-- [Blog](https://ruturaj.xyz/blog) — Writing on software engineering, web development, and Drupal.
 - [Talks](https://ruturaj.xyz/talks) — Conference and community talks.
-- [Photos](https://ruturaj.xyz/photos) — A visual collection of moments.
 - [Gears](https://ruturaj.xyz/gears) — Hardware and software used daily.
 - [Movies & TV](https://ruturaj.xyz/movies) — Films and shows that inspire him.
 - [Resume](https://ruturaj.xyz/resume) — Full resume.
