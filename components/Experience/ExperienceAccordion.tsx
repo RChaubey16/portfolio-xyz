@@ -10,152 +10,95 @@ import {
 import config from "../../data/newConfig.json";
 import TechUsed from "../TechUsed";
 
-export function ExperienceAccordion({ accordionState = "closed" }) {
-  const experience = config.experience;
+type ExperienceKey = keyof typeof config.experience;
 
+const ROLES: {
+  key: ExperienceKey;
+  company: string;
+  title: string;
+  duration: string;
+  current?: boolean;
+}[] = [
+  {
+    key: "full_stack_engineer",
+    company: "QED42",
+    title: "Engineer - Full Stack",
+    duration: "May 2023 – Present",
+    current: true,
+  },
+  {
+    key: "associate_engineer",
+    company: "QED42",
+    title: "Associate Engineer - Full Stack",
+    duration: "May 2022 – Apr 2023",
+  },
+  {
+    key: "intern",
+    company: "QED42",
+    title: "Intern",
+    duration: "Aug 2021 – Apr 2022",
+  },
+];
+
+export function ExperienceAccordion({ accordionState = "closed" }) {
   const accordionDefaultValue =
-    accordionState === "open" ? ["item-1", "item-2", "item-3"] : [];
+    accordionState === "open" ? ROLES.map((r) => r.key) : [];
 
   return (
     <Accordion
       type="multiple"
-      className="w-full"
+      className="-mx-3 mt-3 w-[calc(100%+1.5rem)]"
       defaultValue={accordionDefaultValue}
     >
-      <AccordionItem value="item-1" className="border-b-0">
-        <AccordionTrigger className="hover:cursor-pointer hover:no-underline">
-          <div className="accordion-header flex w-full items-center justify-between">
-            {/* Left */}
-            <div className="flex items-center gap-4">
-              <Image
-                src="/images/qed42.jpeg"
-                width={52}
-                height={52}
-                alt="QED42 Logo"
-                className="rounded-sm object-contain"
-              />
-              <div>
-                <h3 className="flex items-center text-sm font-bold">
-                  QED42
-                  <span className="ml-3 inline-flex items-center gap-1.5 rounded-full bg-green-500/15 px-2.5 py-0.5 text-sm font-medium text-green-700 dark:text-green-400">
-                    <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-                    </span>
-                    Working
-                  </span>
-                </h3>
-                <p className="text-sm">Engineer - Full Stack</p>
+      {ROLES.map((role) => {
+        const { tech, work } = config.experience[role.key];
+        return (
+          <AccordionItem key={role.key} value={role.key} className="border-b-0">
+            <AccordionTrigger className="hover:bg-accent/60 items-center rounded-lg px-3 py-3 hover:cursor-pointer">
+              <div className="flex w-full items-center justify-between gap-4">
+                <div className="flex min-w-0 items-center gap-3">
+                  <Image
+                    src="/images/qed42.jpeg"
+                    width={40}
+                    height={40}
+                    alt={`${role.company} logo`}
+                    className="ring-border size-10 shrink-0 rounded-md object-contain ring-1"
+                  />
+                  <div className="min-w-0">
+                    <h3 className="flex items-center gap-2 text-sm font-medium">
+                      {role.company}
+                      {role.current && (
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/15 px-2 py-0.5 text-xs font-medium text-green-700 dark:text-green-400">
+                          <span className="relative flex size-1.5">
+                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-500 opacity-75" />
+                            <span className="relative inline-flex size-1.5 rounded-full bg-green-500" />
+                          </span>
+                          Working
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-muted-foreground truncate text-sm">
+                      {role.title}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground shrink-0 text-right text-[13px] tabular-nums sm:text-sm">
+                  {role.duration}
+                </p>
               </div>
-            </div>
+            </AccordionTrigger>
 
-            {/* Right */}
-            <div className="flex items-center gap-4">
-              <div className="text-muted-foreground text-right">
-                <p className="duration">May 2023 – Present</p>
-                <p className="location">Pune, India</p>
-              </div>
-            </div>
-          </div>
-        </AccordionTrigger>
-
-        <AccordionContent className="flex flex-col gap-4 border-t pt-4">
-          <h3 className="text-sm font-bold">Technologies & Tools</h3>
-          <TechUsed tech={experience.full_stack_engineer.tech} />
-
-          <ul className="list-inside list-disc">
-            {experience.full_stack_engineer.work.map((item, i) => (
-              <li key={i} className="text-muted-foreground mb-4 text-sm">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </AccordionContent>
-      </AccordionItem>
-
-      <AccordionItem value="item-2" className="border-b-0">
-        <AccordionTrigger className="hover:cursor-pointer hover:no-underline">
-          <div className="accordion-header flex w-full items-center justify-between">
-            {/* Left */}
-            <div className="flex items-center gap-4">
-              <Image
-                src="/images/qed42.jpeg"
-                width={52}
-                height={52}
-                alt="QED42 Logo"
-                className="rounded-sm object-contain"
-              />
-              <div>
-                <h3 className="text-sm font-bold">QED42</h3>
-                <p className="text-sm">Associate Engineer - Full Stack</p>
-              </div>
-            </div>
-
-            {/* Right */}
-            <div className="flex items-center gap-4">
-              <div className="text-muted-foreground text-right">
-                <p className="duration">May 2022 – April 2023</p>
-                <p className="location">Pune, India</p>
-              </div>
-            </div>
-          </div>
-        </AccordionTrigger>
-
-        <AccordionContent className="flex flex-col gap-4 border-t pt-4">
-          <h3 className="text-sm font-bold">Technologies & Tools</h3>
-          <TechUsed tech={experience.associate_engineer.tech} />
-
-          <ul className="list-inside list-disc">
-            {experience.associate_engineer.work.map((item, i) => (
-              <li key={i} className="text-muted-foreground mb-4 text-sm">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </AccordionContent>
-      </AccordionItem>
-
-      <AccordionItem value="item-3" className="border-b-0">
-        <AccordionTrigger className="hover:cursor-pointer hover:no-underline">
-          <div className="accordion-header flex w-full items-center justify-between">
-            {/* Left */}
-            <div className="flex items-center gap-4">
-              <Image
-                src="/images/qed42.jpeg"
-                width={52}
-                height={52}
-                alt="QED42 Logo"
-                className="rounded-sm object-contain"
-              />
-              <div>
-                <h3 className="text-sm font-bold">QED42</h3>
-                <p className="text-sm">Intern</p>
-              </div>
-            </div>
-
-            {/* Right */}
-            <div className="flex items-center gap-4">
-              <div className="text-muted-foreground text-right">
-                <p className="duration">August 2021 – April 2022</p>
-                <p className="location">Pune, India</p>
-              </div>
-            </div>
-          </div>
-        </AccordionTrigger>
-
-        <AccordionContent className="flex flex-col gap-4 border-t pt-4">
-          <h3 className="text-sm font-bold">Technologies & Tools</h3>
-          <TechUsed tech={experience.intern.tech} />
-
-          <ul className="list-inside list-disc">
-            {experience.intern.work.map((item, i) => (
-              <li key={i} className="text-muted-foreground mb-4 text-sm">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </AccordionContent>
-      </AccordionItem>
+            <AccordionContent className="flex flex-col gap-4 px-3 pt-3 pb-5">
+              <TechUsed tech={tech} />
+              <ul className="text-muted-foreground marker:text-border list-disc space-y-2 pl-4 text-sm leading-relaxed">
+                {work.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        );
+      })}
     </Accordion>
   );
 }

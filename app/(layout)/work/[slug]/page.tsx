@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Lock } from "lucide-react";
@@ -9,8 +8,10 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
+import BackLink from "@/components/BackLink";
 import { TOC } from "@/components/Blog/TOC";
 import { MermaidDiagramDynamic } from "@/components/MermaidDiagramDynamic";
+import { Badge } from "@/components/ui/badge";
 import { remarkMermaid } from "@/lib/remark-mermaid";
 import { getAllCaseStudies, getCaseStudy } from "@/lib/work";
 
@@ -49,66 +50,44 @@ export default async function CaseStudyPage({
   const { meta, content, headings } = study;
 
   return (
-    <article className="mt-16">
-      <Link
-        href="/work"
-        className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
-      >
-        ← Back to work
-      </Link>
+    <article>
+      <BackLink href="/work" label="Work" />
 
-      {/* Header */}
-      <div className="mt-8">
+      <header className="mt-8">
         <div className="flex flex-wrap items-center gap-2">
-          <h1 className="text-3xl leading-tight font-bold">{meta.title}</h1>
+          <h1 className="page-title text-3xl leading-tight">{meta.title}</h1>
           {meta.nda && (
-            <span className="text-muted-foreground inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs">
-              <Lock className="h-3 w-3" />
+            <Badge variant="outline" className="text-muted-foreground">
+              <Lock />
               Confidential
-            </span>
+            </Badge>
           )}
         </div>
 
-        {/* Meta grid */}
-        <div className="border-border mt-6 grid grid-cols-2 gap-x-8 gap-y-3 rounded-xl border p-5 text-sm sm:grid-cols-4">
-          <div>
-            <p className="text-muted-foreground text-xs tracking-wide uppercase">
-              Organisation
-            </p>
-            <p className="mt-0.5 font-medium">{meta.organisation || "—"}</p>
-          </div>
-          <div>
-            <p className="text-muted-foreground text-xs tracking-wide uppercase">
-              Role
-            </p>
-            <p className="mt-0.5 font-medium">{meta.role || "—"}</p>
-          </div>
-          <div>
-            <p className="text-muted-foreground text-xs tracking-wide uppercase">
-              Duration
-            </p>
-            <p className="mt-0.5 font-medium">{meta.duration || "—"}</p>
-          </div>
-          <div>
-            <p className="text-muted-foreground text-xs tracking-wide uppercase">
-              Client
-            </p>
-            <p className="mt-0.5 font-medium">{meta.client}</p>
-          </div>
-        </div>
+        <dl className="mt-6 grid grid-cols-2 gap-x-8 gap-y-4 rounded-xl border p-5 text-sm sm:grid-cols-4">
+          {[
+            ["Organisation", meta.organisation],
+            ["Role", meta.role],
+            ["Duration", meta.duration],
+            ["Client", meta.client],
+          ].map(([label, value]) => (
+            <div key={label}>
+              <dt className="text-muted-foreground text-[13px]">{label}</dt>
+              <dd className="mt-1 font-medium">{value || "—"}</dd>
+            </div>
+          ))}
+        </dl>
 
-        {/* Outcome callout */}
         {meta.outcome && (
-          <div className="bg-accent/40 mt-4 rounded-xl px-5 py-4">
-            <p className="text-sm font-medium">↗ {meta.outcome}</p>
-          </div>
+          <p className="bg-muted mt-3 rounded-xl px-5 py-4 text-sm font-medium">
+            {meta.outcome}
+          </p>
         )}
 
-        {/* NDA notice */}
         {meta.nda && (
-          <div className="border-border bg-muted/30 mt-4 flex items-start gap-2.5 rounded-xl border px-5 py-4">
-            <Lock className="text-muted-foreground mt-0.5 h-4 w-4 shrink-0" />
-            <p className="text-muted-foreground text-sm">
+          <div className="text-muted-foreground mt-3 flex items-start gap-2.5 rounded-xl border px-5 py-4 text-sm">
+            <Lock className="mt-0.5 size-4 shrink-0" />
+            <p>
               Certain project details — including the client name, specific
               metrics, and proprietary implementation details — have been
               omitted or anonymised in accordance with a non-disclosure
@@ -117,21 +96,17 @@ export default async function CaseStudyPage({
           </div>
         )}
 
-        {/* Tags */}
-        <div className="mt-5 flex flex-wrap gap-1.5">
+        <div className="mt-5 flex flex-wrap items-center gap-1.5">
           {meta.tags.map((tag) => (
-            <span
-              key={tag}
-              className="bg-accent text-accent-foreground rounded-full px-2.5 py-0.5 text-xs"
-            >
+            <Badge key={tag} variant="secondary" className="font-normal">
               {tag}
-            </span>
+            </Badge>
           ))}
-          <span className="text-muted-foreground ml-auto text-xs">
+          <span className="text-muted-foreground ml-auto text-[13px]">
             {meta.readingTime}
           </span>
         </div>
-      </div>
+      </header>
 
       <TOC headings={headings} />
 

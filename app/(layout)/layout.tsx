@@ -1,26 +1,22 @@
-import { DM_Sans, Geist_Mono, Newsreader } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 
 import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
 import FooterFadeUp from "@/components/FooterFadeUp";
+import { MotionProvider } from "@/components/motion-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
-const fontSans = DM_Sans({
+const fontSans = Geist({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-geist-sans",
 });
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-mono",
-});
-
-const fontSerif = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -109,24 +105,23 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${fontSans.variable} ${fontMono.variable} ${fontSerif.variable} antialiased`}
-      >
+      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
-            {/* Main content */}
-            <main className="mx-auto mb-16 w-full max-w-2xl grow px-4 md:px-0">
-              {children}
-            </main>
-            <FooterFadeUp>
-              <Footer />
-            </FooterFadeUp>
-          </div>
+          <MotionProvider>
+            <div className="flex min-h-screen flex-col">
+              <main className="mx-auto mb-24 w-full max-w-2xl grow px-4 pt-10 md:px-0 md:pt-16">
+                {children}
+              </main>
+              <FooterFadeUp>
+                <Footer />
+              </FooterFadeUp>
+            </div>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -5,8 +5,6 @@ import Link from "next/link";
 
 import { useTheme } from "next-themes";
 
-import { Badge } from "@/components/ui/badge";
-
 type TechItem = {
   tech: string;
   techHref: string;
@@ -22,19 +20,19 @@ const TechCard = ({ tech, techHref, imageUrl, imageAltText }: TechItem) => {
   const isDark = resolvedTheme === "dark";
 
   return (
-    <Link key={tech} href={techHref} target="_blank">
-      <Badge
-        variant="outline"
-        className="bg-card border-border hover:border-pine/50 hover:bg-accent rounded-sm border p-2 transition-colors"
-      >
-        <Image
-          src={isDark ? imageUrl.dark : imageUrl.light}
-          alt={imageAltText}
-          width={20}
-          height={20}
-        />
-        <span className="ml-1.5 text-sm">{tech}</span>
-      </Badge>
+    <Link
+      href={techHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border-border text-foreground hover:bg-accent inline-flex items-center gap-1.5 rounded-md border px-2 py-1 text-xs font-medium transition-colors"
+    >
+      <Image
+        src={isDark ? imageUrl.dark : imageUrl.light}
+        alt={imageAltText}
+        width={14}
+        height={14}
+      />
+      {tech}
     </Link>
   );
 };

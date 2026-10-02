@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import BackLink from "@/components/BackLink";
 import MediaCard from "@/components/MediaCard";
+import PageHeader from "@/components/PageHeader";
 import FadeUp from "@/components/animation/FadeUp";
 import config from "@/data/newConfig.json";
 
@@ -13,43 +13,43 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <FadeUp>
-      <section className="bg-background pt-20">
-        <BackLink href="/" label="Back home" />
-        <p className="eyebrow mt-6">{"// movies & tv"}</p>
-        <h1 className="page-title mt-1">Movies & TV</h1>
-        <p className="para">Some of my all-time favorites.</p>
+    <>
+      <FadeUp>
+        <PageHeader
+          title="Movies & TV"
+          description="Some of my all-time favorites."
+        />
+      </FadeUp>
 
-        <div className="mt-8 space-y-8">
-          <div>
-            <h2 className="eyebrow mb-3">{"// movies"}</h2>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {config.movies.map((movie) => (
-                <MediaCard
-                  key={movie.name}
-                  title={movie.name}
-                  href={movie.link}
-                  image={movie.image}
-                />
-              ))}
-            </div>
+      <FadeUp delay={0.08} className="mt-10 space-y-10">
+        <section>
+          <h2 className="eyebrow mb-3">Movies</h2>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {config.movies.map((movie) => (
+              <MediaCard
+                key={movie.name}
+                title={movie.name}
+                href={movie.link}
+                image={movie.image}
+              />
+            ))}
           </div>
+        </section>
 
-          <div>
-            <h2 className="eyebrow mb-3">{"// tv series"}</h2>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {config.tvSeries.map((show) => (
-                <MediaCard
-                  key={show.name}
-                  title={show.name}
-                  href={show.link}
-                  image={show.image}
-                />
-              ))}
-            </div>
+        <section>
+          <h2 className="eyebrow mb-3">TV Series</h2>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {config.tvSeries.map((show) => (
+              <MediaCard
+                key={show.name}
+                title={show.name}
+                href={show.link}
+                image={show.image}
+              />
+            ))}
           </div>
-        </div>
-      </section>
-    </FadeUp>
+        </section>
+      </FadeUp>
+    </>
   );
 }

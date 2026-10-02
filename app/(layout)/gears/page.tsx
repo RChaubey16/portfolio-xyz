@@ -1,9 +1,9 @@
 import Link from "next/link";
 
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
-import { GoArrowUpRight } from "react-icons/go";
 
-import BackLink from "@/components/BackLink";
+import PageHeader from "@/components/PageHeader";
 import FadeUp from "@/components/animation/FadeUp";
 import config from "@/data/newConfig.json";
 
@@ -15,21 +15,25 @@ export const metadata: Metadata = {
 
 function GearList({ items }: { items: (typeof config.gears)[number][] }) {
   return (
-    <ul className="space-y-3">
+    <ul className="-mx-3 flex flex-col">
       {items.map((gear) => (
         <li key={gear.name}>
           <Link
             href={gear.link}
             target="_blank"
-            className="text-muted-foreground hover:text-pine group flex items-center justify-between text-sm transition-colors"
+            rel="noopener noreferrer"
+            className="hover:bg-accent/60 group flex items-center justify-between gap-4 rounded-lg px-3 py-2.5 text-sm transition-colors"
           >
-            <span>
-              <span className="text-foreground font-medium">{gear.name}</span>
+            <span className="min-w-0">
+              <span className="font-medium">{gear.name}</span>
               {gear.description && (
-                <span className="ml-2">&mdash; {gear.description}</span>
+                <span className="text-muted-foreground">
+                  {" "}
+                  — {gear.description}
+                </span>
               )}
             </span>
-            <GoArrowUpRight className="h-4 w-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+            <ArrowUpRight className="text-muted-foreground size-3.5 shrink-0 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
           </Link>
         </li>
       ))}
@@ -42,25 +46,24 @@ export default function GearsPage() {
   const software = config.gears.filter((g) => g.category === "software");
 
   return (
-    <FadeUp>
-      <section className="bg-background pt-20">
-        <BackLink href="/" label="Back home" />
-        <p className="eyebrow mt-6">{"// gears"}</p>
-        <h1 className="page-title mt-1">Gears</h1>
-        <p className="para">The tools and hardware I use daily.</p>
+    <>
+      <FadeUp>
+        <PageHeader
+          title="Gears"
+          description="The tools and hardware I use daily."
+        />
+      </FadeUp>
 
-        <div className="mt-8 space-y-8">
-          <div>
-            <h2 className="eyebrow mb-3">{"// hardware"}</h2>
-            <GearList items={hardware} />
-          </div>
-
-          <div>
-            <h2 className="eyebrow mb-3">{"// software"}</h2>
-            <GearList items={software} />
-          </div>
-        </div>
-      </section>
-    </FadeUp>
+      <FadeUp delay={0.08} className="mt-10 space-y-10">
+        <section>
+          <h2 className="eyebrow mb-2">Hardware</h2>
+          <GearList items={hardware} />
+        </section>
+        <section>
+          <h2 className="eyebrow mb-2">Software</h2>
+          <GearList items={software} />
+        </section>
+      </FadeUp>
+    </>
   );
 }

@@ -10,7 +10,7 @@ const FooterFadeUp = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <FadeUp key={pathname} delay={0.3}>
+    <FadeUp key={pathname} delay={0.2}>
       {children}
     </FadeUp>
   );

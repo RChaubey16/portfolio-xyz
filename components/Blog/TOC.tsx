@@ -1,8 +1,10 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import type { Heading } from "@/lib/blog";
+import { cn } from "@/lib/utils";
 
 export function TOC({ headings }: { headings: Heading[] }) {
   const [activeId, setActiveId] = useState<string>("");
@@ -33,32 +35,38 @@ export function TOC({ headings }: { headings: Heading[] }) {
   if (headings.length === 0) return null;
 
   return (
-    <div className="border-border my-6 rounded-lg border p-4">
+    <div className="bg-card my-8 rounded-xl border p-4">
       <button
+        type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between text-sm font-semibold tracking-wide uppercase"
+        className="text-muted-foreground hover:text-foreground flex w-full cursor-pointer items-center justify-between text-xs font-medium transition-colors"
         aria-expanded={open}
       >
         On this page
-        <span className="text-muted-foreground text-base leading-none">
-          {open ? "−" : "+"}
-        </span>
+        <ChevronDown
+          className={cn(
+            "size-4 transition-transform duration-200",
+            open && "rotate-180",
+          )}
+        />
       </button>
 
       {open && (
         <nav
-          className="mt-3 flex flex-col gap-1.5"
+          className="mt-3 flex flex-col border-l"
           aria-label="Table of contents"
         >
           {headings.map(({ id, text, level }) => (
             <a
               key={id}
               href={`#${id}`}
-              className={`text-sm transition-colors ${level === 3 ? "pl-4" : ""} ${
+              className={cn(
+                "-ml-px border-l py-1 text-sm transition-colors",
+                level === 3 ? "pl-6" : "pl-3",
                 activeId === id
-                  ? "text-foreground font-medium"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+                  ? "border-foreground text-foreground font-medium"
+                  : "text-muted-foreground hover:text-foreground border-transparent",
+              )}
             >
               {text}
             </a>

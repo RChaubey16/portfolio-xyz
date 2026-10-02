@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import BackLink from "@/components/BackLink";
+import PageHeader from "@/components/PageHeader";
 import { WorkCard } from "@/components/Work/WorkCard";
 import FadeUp from "@/components/animation/FadeUp";
 import { getAllCaseStudies } from "@/lib/work";
@@ -14,25 +14,20 @@ export default function WorkPage() {
   const studies = getAllCaseStudies();
 
   return (
-    <FadeUp>
-      <section className="mt-16">
-        <BackLink href="/" label="Back home" />
-        <p className="eyebrow mt-6">{"// work"}</p>
-        <h1 className="page-title mt-1">Work</h1>
-        <p className="para">
-          In-depth case studies of projects I have built and shipped.
-        </p>
-
-        <div className="mt-8 flex flex-col gap-4">
-          {studies.length === 0 ? (
-            <p className="text-muted-foreground text-sm">
-              No case studies yet.
-            </p>
-          ) : (
-            studies.map((study) => <WorkCard key={study.slug} study={study} />)
-          )}
-        </div>
-      </section>
-    </FadeUp>
+    <>
+      <FadeUp>
+        <PageHeader
+          title="Work"
+          description="In-depth case studies of projects I have built and shipped."
+        />
+      </FadeUp>
+      <FadeUp delay={0.08} className="mt-10 flex flex-col gap-3">
+        {studies.length === 0 ? (
+          <p className="text-muted-foreground text-sm">No case studies yet.</p>
+        ) : (
+          studies.map((study) => <WorkCard key={study.slug} study={study} />)
+        )}
+      </FadeUp>
+    </>
   );
 }
