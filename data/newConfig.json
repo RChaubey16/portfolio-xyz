@@ -638,6 +638,116 @@
       ]
     },
     {
+      "id": "roast-my-drupal",
+      "type": "tech",
+      "image": {
+        "src": "/images/projects/roast-my-drupal.png",
+        "alt": "Roast My Drupal app showing a streamed roast and a contribution stats card"
+      },
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
+      },
+      "title": "Roast My Drupal",
+      "description": "Paste a drupal.org username or profile URL and get roasted by an LLM using only your public Drupal activity: bio, badges, maintained projects (with release and issue health), and contribution stats. Pick a comedic persona like Chandler Bing or Gordon Ramsay. A single Next.js API route scrapes, parses, caches, and streams the roast from Gemini, with a live stats card alongside.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "techHref": "https://www.typescriptlang.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "vercel-ai-sdk",
+          "tech": "Vercel AI SDK",
+          "techHref": "https://sdk.vercel.ai",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+            "dark": "/icons/tech/vercel-light.png"
+          },
+          "imageAltText": "Vercel logo"
+        },
+        {
+          "id": "gemini",
+          "tech": "Gemini",
+          "techHref": "https://ai.google.dev",
+          "imageUrl": {
+            "light": "/icons/tech/gemini-icon.png",
+            "dark": "/icons/tech/gemini-icon.png"
+          },
+          "imageAltText": "Google Gemini logo"
+        },
+        {
+          "id": "cheerio",
+          "tech": "Cheerio",
+          "techHref": "https://cheerio.js.org",
+          "imageUrl": {
+            "light": "/icons/tech/cheerio.svg",
+            "dark": "/icons/tech/cheerio.svg"
+          },
+          "imageAltText": "Cheerio logo"
+        },
+        {
+          "id": "vercel-kv",
+          "tech": "Vercel KV",
+          "techHref": "https://vercel.com/docs/storage",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+            "dark": "/icons/tech/vercel-light.png"
+          },
+          "imageAltText": "Vercel KV logo"
+        },
+        {
+          "id": "vitest",
+          "tech": "Vitest",
+          "techHref": "https://vitest.dev",
+          "imageUrl": {
+            "light": "/icons/tech/vitest.svg",
+            "dark": "/icons/tech/vitest.svg"
+          },
+          "imageAltText": "Vitest logo"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/RChaubey16/roast-my-drupal",
+          "variant": "outline",
+          "icon": "GithubIcon"
+        },
+        {
+          "label": "Live",
+          "href": "https://roast-my-drupal.vercel.app/",
+          "variant": "default",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
       "id": "what-the-hex",
       "type": "tech",
       "image": {
