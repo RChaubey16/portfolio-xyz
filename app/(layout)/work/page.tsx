@@ -7,7 +7,9 @@ import { getAllCaseStudies } from "@/lib/work";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "In-depth case studies of projects I have built and shipped.",
+  description:
+    "In-depth case studies of client and personal projects Ruturaj Chaubey has built and shipped.",
+  alternates: { canonical: "/work" },
 };
 
 export default function WorkPage() {

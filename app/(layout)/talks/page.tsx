@@ -7,7 +7,8 @@ import FadeUp from "@/components/animation/FadeUp";
 export const metadata: Metadata = {
   title: "Talks",
   description:
-    "A collection of talks and presentations I've given at conferences and community events.",
+    "Talks and presentations by Ruturaj Chaubey at Drupal conferences and community events.",
+  alternates: { canonical: "/talks" },
 };
 
 export default function TalksPage() {

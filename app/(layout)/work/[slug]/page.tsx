@@ -27,7 +27,11 @@ export async function generateMetadata({
   const { slug } = await params;
   try {
     const { meta } = getCaseStudy(slug);
-    return { title: meta.title, description: meta.summary };
+    return {
+      title: meta.title,
+      description: meta.summary,
+      alternates: { canonical: `/work/${slug}` },
+    };
   } catch {
     return {};
   }

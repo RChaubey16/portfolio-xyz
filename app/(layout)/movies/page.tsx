@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Movies",
   description:
     "A collection of movies and TV series that Ruturaj Chaubey loves and recommends.",
+  alternates: { canonical: "/movies" },
 };
 
 export default function Home() {

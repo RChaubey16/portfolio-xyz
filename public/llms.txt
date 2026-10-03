@@ -25,29 +25,30 @@ CMS: Drupal, Sanity
 
 ## Work
 
-- [Global EdTech Discovery Platform](https://ruturaj.xyz/work/edtech-discovery-platform) — Led the complete frontend build of a UNICEF-backed global EdTech discovery platform. Headless Drupal CMS paired with a Next.js frontend designed to surface expert-curated digital learning tools for educators, policymakers, and governments worldwide. Role: Lead Frontend Engineer at QED42.
-- [Knowbase — Multi-Tenant Knowledge Base SaaS](https://ruturaj.xyz/work/knowbase) — Designed and built a multi-tenant knowledge base platform combining PostgreSQL full-text search with a fully async RAG pipeline (Jina AI + pgvector + Gemini) to let teams store, search, and query documents through keyword and AI-powered interfaces. Role: Solo Full Stack Engineer.
-- [Prette — Ecommerce Marketplace for Sewists](https://ruturaj.xyz/work/prette-ecommerce) — Built the full-stack integration layer for a Drupal Commerce-powered marketplace, connecting a Gatsby JS frontend to a headless Drupal backend via GraphQL — covering authentication, cart, wishlist, product pages, orders, and address management. Role: Full Stack Engineer at QED42.
+- [Global EdTech Discovery Platform](https://www.ruturaj.xyz/work/edtech-discovery-platform) — Led the complete frontend build of a UNICEF-backed global EdTech discovery platform. Headless Drupal CMS paired with a Next.js frontend designed to surface expert-curated digital learning tools for educators, policymakers, and governments worldwide. Role: Lead Frontend Engineer at QED42.
+- [Prette — Ecommerce Marketplace for Sewists](https://www.ruturaj.xyz/work/prette-ecommerce) — Built the full-stack integration layer for a Drupal Commerce-powered marketplace, connecting a Gatsby JS frontend to a headless Drupal backend via GraphQL — covering authentication, cart, wishlist, product pages, orders, and address management. Role: Full Stack Engineer at QED42.
+- [Knowbase — Multi-Tenant Knowledge Base SaaS](https://www.ruturaj.xyz/work/knowbase) — Designed and built a multi-tenant knowledge base platform combining PostgreSQL full-text search with a fully async RAG pipeline (Jina AI + pgvector + Gemini) to let teams store, search, and query documents through keyword and AI-powered interfaces. Role: Solo Full Stack Engineer.
 
 ## Projects
 
 - [Neuron](https://neuron.ruturaj.xyz/) — Shared backend platform exposing reusable services (URL shortener, queued templated email notifications) behind a single API key, with a dashboard for key management and per-key usage analytics. Source: https://github.com/RChaubey16/neuron
+- [Roast My Drupal](https://roast-my-drupal.vercel.app/) — Paste a drupal.org username or profile URL and get roasted by an LLM using only public Drupal activity (bio, badges, maintained projects with release and issue health, contribution stats), in a comedic persona of your choice. A single Next.js API route scrapes, parses, caches, and streams the roast from Gemini alongside a live stats card. Source: https://github.com/RChaubey16/roast-my-drupal
 - [What the Hex](https://what-the-hex.ruturaj.xyz) — Fast, minimal color lookup tool for developers and designers: paste a hex code, get the color name, preview, and ready-to-use CSS/SCSS variables. Source: https://github.com/RChaubey16/what-the-hex
 
 ## Talks
 
-- Inside Drupal CMS 2.0: Visual Building, AI, and Site Templates
-- Everything AI in Drupal: Past, Present, and What's Next
-- From Static to Dynamic: Next.js Rendering Patterns with Drupal CMS
-- All about Drupal CMS
-- Transforming Experiences: A Guide to Transform API and Decoupled Layout Builder in Drupal
+- Inside Drupal CMS 2.0: Visual Building, AI, and Site Templates — Drupal Pune Meetup, Feb 2026
+- Everything AI in Drupal: Past, Present, and What's Next — DrupalCamp Pune 2025, Sep 2025
+- From Static to Dynamic: Next.js Rendering Patterns with Drupal CMS — DrupalCamp Pune 2025, Sep 2025
+- All about Drupal CMS — Pune Drupal CMS Launch Party, Jan 2025
+- Transforming Experiences: A Guide to Transform API and Decoupled Layout Builder in Drupal — Drupal Pune Meetup, Dec 2023
 
 ## Site Sections
 
-- [Home](https://ruturaj.xyz/) — Introduction, experience, featured projects, talks, and personal pages.
-- [Work](https://ruturaj.xyz/work) — In-depth case studies of selected client and personal projects.
-- [Projects](https://ruturaj.xyz/projects) — Full list of personal and open source projects.
-- [Talks](https://ruturaj.xyz/talks) — Conference and community talks.
-- [Gears](https://ruturaj.xyz/gears) — Hardware and software used daily.
-- [Movies & TV](https://ruturaj.xyz/movies) — Films and shows that inspire him.
-- [Resume](https://ruturaj.xyz/resume) — Full resume.
+- [Home](https://www.ruturaj.xyz/) — Introduction, experience, featured projects, case studies, talks, and personal pages.
+- [Work](https://www.ruturaj.xyz/work) — In-depth case studies of selected client and personal projects.
+- [Projects](https://www.ruturaj.xyz/projects) — Full list of personal and open source projects.
+- [Talks](https://www.ruturaj.xyz/talks) — Conference and community talks.
+- [Gears](https://www.ruturaj.xyz/gears) — Hardware and software used daily.
+- [Movies & TV](https://www.ruturaj.xyz/movies) — Films and shows that inspire him.
+- [Resume](https://www.ruturaj.xyz/resume) — Full resume.

@@ -37,7 +37,7 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
             <>
               <span
                 aria-hidden="true"
-                className="bg-border ring-background group-hover:bg-foreground absolute top-1.5 -left-[4.5px] size-2 rounded-full ring-4 transition-[background-color,scale] duration-200 group-hover:scale-125"
+                className="bg-border ring-background group-hover:bg-link absolute top-1.5 -left-[4.5px] size-2 rounded-full ring-4 transition-[background-color,scale] duration-200 group-hover:scale-125"
               />
               <p className="text-muted-foreground text-[13px]">
                 {talk.event} ·{" "}
@@ -45,10 +45,10 @@ const Talks = ({ slice = true }: { slice?: boolean }) => {
                   {formattedDate}
                 </time>
               </p>
-              <h3 className="mt-1 text-sm leading-snug font-medium text-balance">
+              <h3 className="group-hover:text-link mt-1 text-sm leading-snug font-medium text-balance transition-colors duration-200">
                 {talk.title}
                 {talk.link && (
-                  <ArrowUpRight className="text-muted-foreground group-hover:text-foreground ml-1 inline size-3.5 align-[-2px] transition-[color,translate] duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="text-muted-foreground group-hover:text-link ml-1 inline size-3.5 align-[-2px] transition-[color,translate] duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 )}
               </h3>
               {talk.description && (

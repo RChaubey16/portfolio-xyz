@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Resume",
   description:
     "Professional resume of Ruturaj Chaubey, a Full Stack Developer with expertise in React, Next.js, and Node.js.",
+  alternates: { canonical: "/resume" },
 };
 
 export default function Home() {

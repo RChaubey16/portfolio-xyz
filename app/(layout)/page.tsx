@@ -1,4 +1,5 @@
 import { Clapperboard, Cpu } from "lucide-react";
+import type { Metadata } from "next";
 
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
@@ -8,6 +9,10 @@ import TextCard from "@/components/TextCard";
 import RecentWork from "@/components/Work/RecentWork";
 import FadeUp from "@/components/animation/FadeUp";
 import Intro from "@/components/introduction/Intro";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

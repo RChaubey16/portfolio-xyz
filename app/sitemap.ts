@@ -1,8 +1,7 @@
 import { MetadataRoute } from "next";
 
+import { SITE_URL as BASE_URL } from "@/lib/site";
 import { getAllCaseStudies } from "@/lib/work";
-
-const BASE_URL = "https://ruturaj.xyz";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

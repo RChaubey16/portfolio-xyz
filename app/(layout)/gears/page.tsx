@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Gears",
   description:
     "The tools, hardware, and software that Ruturaj Chaubey uses daily.",
+  alternates: { canonical: "/gears" },
 };
 
 function GearList({ items }: { items: (typeof config.gears)[number][] }) {

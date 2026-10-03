@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FooterFadeUp from "@/components/FooterFadeUp";
 import { MotionProvider } from "@/components/motion-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 import "./globals.css";
 
@@ -19,76 +20,135 @@ const fontMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
+const ogImage = {
+  url: "/images/banner.png",
+  width: 1806,
+  height: 658,
+  alt: "Ruturaj Chaubey, Full Stack Engineer",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ruturaj.xyz"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Ruturaj Chaubey",
+    // Name first: it's the exact query this page should rank for
+    default: "Ruturaj Chaubey | Full Stack Engineer",
     template: "%s | Ruturaj Chaubey",
   },
-  description:
-    "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
   keywords: [
     "Ruturaj Chaubey",
-    "Software Engineer",
+    "Ruturaj",
+    "Chaubey",
+    "Full Stack Engineer",
     "Full Stack Developer",
-    "Web Developer",
-    "Portfolio",
-    "React",
+    "QED42",
+    "Drupal",
     "Next.js",
-    "Node.js",
+    "React",
     "TypeScript",
+    "Pune",
   ],
-  authors: [{ name: "Ruturaj Chaubey" }],
-  creator: "Ruturaj Chaubey",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Ruturaj",
+    lastName: "Chaubey",
+    username: "RChaubey16",
     locale: "en_US",
-    url: "https://ruturaj.xyz",
-    title: "Ruturaj Chaubey",
-    description:
-      "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
-    siteName: "Ruturaj Chaubey Portfolio",
-    images: [{ url: "/images/banner.png" }],
+    title: "Ruturaj Chaubey | Full Stack Engineer",
+    description: SITE_DESCRIPTION,
+    siteName: SITE_NAME,
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruturaj Chaubey",
-    description:
-      "Full Stack Developer with 3+ years of experience, known for building scalable, high-performance web apps.",
+    title: "Ruturaj Chaubey | Full Stack Engineer",
+    description: SITE_DESCRIPTION,
+    site: "@RChaubey16",
     creator: "@RChaubey16",
-    images: ["/images/banner.png"],
+    images: [ogImage],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
+const personId = `${SITE_URL}/#person`;
+const websiteId = `${SITE_URL}/#website`;
+
+// WebSite tells Google the site's name (shown above the result); Person is the
+// entity behind it, linked to the same identity on other profiles via sameAs.
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Ruturaj Chaubey",
-  url: "https://ruturaj.xyz",
-  email: "ruturajchaubey16@gmail.com",
-  jobTitle: "Full Stack Engineer",
-  worksFor: {
-    "@type": "Organization",
-    name: "QED42",
-    url: "https://www.qed42.com",
-  },
-  sameAs: [
-    "https://github.com/RChaubey16",
-    "https://linkedin.com/in/ruturajchaubey",
-    "https://x.com/RChaubey16",
-  ],
-  knowsAbout: [
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Drupal",
-    "Full Stack Development",
-    "Web Development",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: SITE_URL,
+      name: SITE_NAME,
+      alternateName: ["Ruturaj", "ruturaj.xyz"],
+      description: SITE_DESCRIPTION,
+      inLanguage: "en",
+      publisher: { "@id": personId },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/#profilepage`,
+      url: SITE_URL,
+      name: "Ruturaj Chaubey | Full Stack Engineer",
+      isPartOf: { "@id": websiteId },
+      mainEntity: { "@id": personId },
+    },
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: SITE_NAME,
+      givenName: "Ruturaj",
+      familyName: "Chaubey",
+      url: SITE_URL,
+      image: `${SITE_URL}/images/me.jpeg`,
+      email: "mailto:ruturajchaubey16@gmail.com",
+      description: SITE_DESCRIPTION,
+      jobTitle: "Full Stack Engineer",
+      worksFor: {
+        "@type": "Organization",
+        name: "QED42",
+        url: "https://www.qed42.com",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Pune",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+      sameAs: [
+        "https://github.com/RChaubey16",
+        "https://linkedin.com/in/ruturajchaubey",
+        "https://x.com/RChaubey16",
+        "https://www.drupal.org/u/ruturaj-chaubey",
+      ],
+      knowsAbout: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "NestJS",
+        "Drupal",
+        "Headless CMS",
+        "Full Stack Development",
+      ],
+    },
   ],
 };
 

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /studio/
 
-Sitemap: https://ruturaj.xyz/sitemap.xml
+Sitemap: https://www.ruturaj.xyz/sitemap.xml
 
 # LLM-friendly content summary
-# llms.txt: https://ruturaj.xyz/llms.txt
+# llms.txt: https://www.ruturaj.xyz/llms.txt
