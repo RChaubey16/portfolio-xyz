@@ -21,7 +21,7 @@ const TerminalStatus = () => {
 
   return (
     <div
-      className="text-muted-foreground flex items-center gap-1.5 font-mono text-[13px]"
+      className="text-link flex items-center gap-1.5 font-mono text-[13px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -44,7 +44,7 @@ const TerminalStatus = () => {
           </motion.span>
         </AnimatePresence>
         <span
-          className="bg-muted-foreground/70 cursor-blink h-3 w-[6px] shrink-0"
+          className="bg-link/70 cursor-blink h-3 w-[6px] shrink-0"
           aria-hidden="true"
         />
       </span>
