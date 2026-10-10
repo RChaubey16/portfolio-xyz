@@ -1,9 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-
-import { useTheme } from "next-themes";
 
 type TechItem = {
   tech: string;
@@ -16,9 +12,6 @@ type TechItem = {
 };
 
 const TechCard = ({ tech, techHref, imageUrl, imageAltText }: TechItem) => {
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
-
   return (
     <Link
       href={techHref}
@@ -26,11 +19,20 @@ const TechCard = ({ tech, techHref, imageUrl, imageAltText }: TechItem) => {
       rel="noopener noreferrer"
       className="border-border text-foreground hover:bg-accent inline-flex items-center gap-1.5 rounded-md border px-2 py-1 text-xs font-medium transition-colors"
     >
+      {/* Render both and toggle via CSS so SSR markup matches the client theme */}
       <Image
-        src={isDark ? imageUrl.dark : imageUrl.light}
+        src={imageUrl.light}
         alt={imageAltText}
         width={14}
         height={14}
+        className="dark:hidden"
+      />
+      <Image
+        src={imageUrl.dark}
+        alt={imageAltText}
+        width={14}
+        height={14}
+        className="hidden dark:block"
       />
       {tech}
     </Link>
