@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowUpRight, GithubIcon } from "lucide-react";
-import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,8 +16,6 @@ import { ProjectCardProps } from "@/types/project";
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const { image, title, description, links, status, techStack } = project;
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
   const isLive = status.className === "status-live";
 
   const liveLink = links.find((l) => l.icon === "Globe");
@@ -52,12 +49,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     <TooltipTrigger asChild>
                       <span className="hover:bg-accent inline-flex rounded-md p-1.5 transition-colors">
                         <Image
-                          src={
-                            isDark ? tech.imageUrl.dark : tech.imageUrl.light
-                          }
+                          src={tech.imageUrl.light}
                           alt={tech.imageAltText}
                           width={16}
                           height={16}
+                          className="dark:hidden"
+                        />
+                        <Image
+                          src={tech.imageUrl.dark}
+                          alt={tech.imageAltText}
+                          width={16}
+                          height={16}
+                          className="hidden dark:block"
                         />
                       </span>
                     </TooltipTrigger>
