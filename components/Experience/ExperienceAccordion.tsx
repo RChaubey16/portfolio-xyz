@@ -6,39 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import config from "@/data/config.json";
+import { ROLES } from "@/lib/experience";
 
-import config from "../../data/config.json";
 import TechUsed from "../TechUsed";
-
-type ExperienceKey = keyof typeof config.experience;
-
-const ROLES: {
-  key: ExperienceKey;
-  company: string;
-  title: string;
-  duration: string;
-  current?: boolean;
-}[] = [
-  {
-    key: "full_stack_engineer",
-    company: "QED42",
-    title: "Engineer - Full Stack",
-    duration: "May 2023 – Present",
-    current: true,
-  },
-  {
-    key: "associate_engineer",
-    company: "QED42",
-    title: "Associate Engineer - Full Stack",
-    duration: "May 2022 – Apr 2023",
-  },
-  {
-    key: "intern",
-    company: "QED42",
-    title: "Intern",
-    duration: "Aug 2021 – Apr 2022",
-  },
-];
 
 export function ExperienceAccordion({ accordionState = "closed" }) {
   const accordionDefaultValue =

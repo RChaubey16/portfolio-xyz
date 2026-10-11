@@ -1,23 +1,7 @@
 import SectionHeading from "@/components/SectionHeading";
-import config from "@/data/config.json";
-import { ProjectData } from "@/types/project";
+import { featuredProjects } from "@/lib/projects";
 
 import ProjectCard from "./ProjectCard";
-
-export const projects: ProjectData[] =
-  config.projects as unknown as ProjectData[];
-
-// Only these projects are shown; others stay in config but are hidden
-const FEATURED_PROJECT_IDS = [
-  "neuron",
-  "echo",
-  "roast-my-drupal",
-  "what-the-hex",
-];
-
-const featuredProjects = projects.filter((proj) =>
-  FEATURED_PROJECT_IDS.includes(proj.id),
-);
 
 const Projects = ({ slice = true }) => {
   const useSlice = slice && featuredProjects.length > 4;
