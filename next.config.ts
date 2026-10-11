@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
     ];
     return config;
   },
+  async rewrites() {
+    return {
+      // beforeFiles, or the /work/[slug] page claims "<slug>.md" as its slug
+      beforeFiles: [
+        { source: "/work/:slug.md", destination: "/md/work/:slug" },
+      ],
+    };
+  },
   images: {
     remotePatterns: [
       {

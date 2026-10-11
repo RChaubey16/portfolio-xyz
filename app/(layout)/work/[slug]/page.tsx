@@ -10,10 +10,15 @@ import remarkGfm from "remark-gfm";
 
 import BackLink from "@/components/BackLink";
 import { TOC } from "@/components/Blog/TOC";
+import CopyPageButton from "@/components/CopyPageButton";
 import { MermaidDiagramDynamic } from "@/components/MermaidDiagramDynamic";
 import { Badge } from "@/components/ui/badge";
 import { remarkMermaid } from "@/lib/remark-mermaid";
 import { getAllCaseStudies, getCaseStudy } from "@/lib/work";
+import {
+  caseStudyMarkdownPath,
+  caseStudyToMarkdown,
+} from "@/lib/work-markdown";
 
 export async function generateStaticParams() {
   return getAllCaseStudies().map((s) => ({ slug: s.slug }));
@@ -55,7 +60,13 @@ export default async function CaseStudyPage({
 
   return (
     <article>
-      <BackLink href="/work" label="Work" />
+      <div className="flex items-center justify-between gap-4">
+        <BackLink href="/work" label="Work" />
+        <CopyPageButton
+          markdown={caseStudyToMarkdown(study)}
+          markdownPath={caseStudyMarkdownPath(slug)}
+        />
+      </div>
 
       <header className="mt-8">
         <div className="flex flex-wrap items-center gap-2">
