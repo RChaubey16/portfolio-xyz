@@ -39,15 +39,14 @@ components/
   Navbar.tsx
   Footer.tsx
   FooterFadeUp.tsx
-  TechCard.tsx / TechIcon.tsx / Technologies.tsx / TechUsed.tsx
+  TechCard.tsx / TechUsed.tsx
   MediaCard.tsx / SocialCard.tsx / TextCard.tsx
   SidebarIcons.tsx
   mode-toggle.tsx
   theme-provider.tsx
 
 data/
-  config.json       # All static site content: nav, tech list, experience, profile/socials
-  newConfig.json    # (draft/staging config)
+  config.json       # All static site content: profile/socials, experience, talks, projects, movies, gears
   supabase.ts       # Supabase client
   utils.ts          # Data utilities
 
@@ -75,7 +74,7 @@ types/
 
 ### Content / Data
 
-- Static content (nav links, tech stack, experience entries, profile) lives in `data/config.json` — edit there, not hardcoded in components
+- Static content (profile, socials, experience, talks, projects, movies, gears) lives in `data/config.json` — edit there, not hardcoded in components
 - Dynamic content (projects, photos) fetched from **Sanity CMS** via `@sanity/client`
 - Images from Sanity use `@sanity/image-url`; allowed remote image hostnames are whitelisted in `next.config.ts`
 
@@ -106,4 +105,4 @@ types/
 
 - Hosted on **Vercel**
 - Live site: `https://ruturajchaubey.com`
-- GitHub repo (referenced in nav config): `https://github.com/RChaubey16/ruturaj-xyz`
+- GitHub repo: `https://github.com/RChaubey16/ruturaj-xyz`

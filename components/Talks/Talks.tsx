@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import SectionHeading from "@/components/SectionHeading";
-import config from "@/data/newConfig.json";
+import config from "@/data/config.json";
 import { cn } from "@/lib/utils";
 
 interface Talk {

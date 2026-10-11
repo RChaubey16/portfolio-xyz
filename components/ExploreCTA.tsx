@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { ChevronRight } from "lucide-react";
 
-import config from "@/data/newConfig.json";
+import config from "@/data/config.json";
 import { getAllPosts } from "@/lib/blog";
 
 interface Talk {

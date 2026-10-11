@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 import PageHeader from "@/components/PageHeader";
 import FadeUp from "@/components/animation/FadeUp";
-import config from "@/data/newConfig.json";
+import config from "@/data/config.json";
 
 export const metadata: Metadata = {
   title: "Gears",

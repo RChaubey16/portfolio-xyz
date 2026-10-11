@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import config from "../../data/newConfig.json";
+import config from "../../data/config.json";
 import TechUsed from "../TechUsed";
 
 type ExperienceKey = keyof typeof config.experience;

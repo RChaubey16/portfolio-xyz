@@ -93,120 +93,125 @@ export function FireworksButton({
   const running = useRef(false);
 
   const animate = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    // Named inner loop so the frame can reschedule itself without referencing
+    // `animate` before its declaration completes
+    const frame = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // — Rockets —
-    const liveRockets: Rocket[] = [];
-    for (const r of rockets.current) {
-      r.trail.push({ x: r.x, y: r.y });
-      if (r.trail.length > TRAIL_LEN) r.trail.shift();
+      // — Rockets —
+      const liveRockets: Rocket[] = [];
+      for (const r of rockets.current) {
+        r.trail.push({ x: r.x, y: r.y });
+        if (r.trail.length > TRAIL_LEN) r.trail.shift();
 
-      r.vy += GRAVITY * 0.45; // thrust partially counters gravity
-      r.x += r.vx;
-      r.y += r.vy;
+        r.vy += GRAVITY * 0.45; // thrust partially counters gravity
+        r.x += r.vx;
+        r.y += r.vy;
 
-      // Trail line — segments drawn tail→head with increasing width and alpha
-      if (r.trail.length > 1) {
-        const pts = [...r.trail, { x: r.x, y: r.y }];
-        for (let i = 1; i < pts.length; i++) {
-          const t = i / pts.length;
+        // Trail line — segments drawn tail→head with increasing width and alpha
+        if (r.trail.length > 1) {
+          const pts = [...r.trail, { x: r.x, y: r.y }];
+          for (let i = 1; i < pts.length; i++) {
+            const t = i / pts.length;
+            ctx.save();
+            ctx.globalAlpha = t * 0.75;
+            ctx.strokeStyle = `hsl(${r.hue},100%,75%)`;
+            ctx.lineWidth = t * 3;
+            ctx.lineCap = "round";
+            ctx.shadowBlur = 8;
+            ctx.shadowColor = `hsl(${r.hue},100%,70%)`;
+            ctx.beginPath();
+            ctx.moveTo(pts[i - 1].x, pts[i - 1].y);
+            ctx.lineTo(pts[i].x, pts[i].y);
+            ctx.stroke();
+            ctx.restore();
+          }
+
+          // Bright white core on the newest half of the trail
+          const half = Math.floor(pts.length / 2);
           ctx.save();
-          ctx.globalAlpha = t * 0.75;
-          ctx.strokeStyle = `hsl(${r.hue},100%,75%)`;
-          ctx.lineWidth = t * 3;
+          ctx.globalAlpha = 0.85;
+          ctx.strokeStyle = "#fff";
+          ctx.lineWidth = 1.2;
           ctx.lineCap = "round";
-          ctx.shadowBlur = 8;
-          ctx.shadowColor = `hsl(${r.hue},100%,70%)`;
           ctx.beginPath();
-          ctx.moveTo(pts[i - 1].x, pts[i - 1].y);
-          ctx.lineTo(pts[i].x, pts[i].y);
+          ctx.moveTo(pts[half].x, pts[half].y);
+          for (let i = half + 1; i < pts.length; i++) {
+            ctx.lineTo(pts[i].x, pts[i].y);
+          }
           ctx.stroke();
           ctx.restore();
         }
 
-        // Bright white core on the newest half of the trail
-        const half = Math.floor(pts.length / 2);
+        // Rocket head glow
         ctx.save();
-        ctx.globalAlpha = 0.85;
-        ctx.strokeStyle = "#fff";
-        ctx.lineWidth = 1.2;
-        ctx.lineCap = "round";
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = `hsl(${r.hue},100%,85%)`;
+        ctx.fillStyle = "#fff";
+        ctx.globalAlpha = 0.95;
         ctx.beginPath();
-        ctx.moveTo(pts[half].x, pts[half].y);
-        for (let i = half + 1; i < pts.length; i++) {
-          ctx.lineTo(pts[i].x, pts[i].y);
-        }
-        ctx.stroke();
+        ctx.arc(r.x, r.y, 3, 0, Math.PI * 2);
+        ctx.fill();
         ctx.restore();
+
+        if (r.y <= r.peakY) {
+          burst(r, particles.current);
+        } else {
+          liveRockets.push(r);
+        }
       }
+      rockets.current = liveRockets;
 
-      // Rocket head glow
-      ctx.save();
-      ctx.shadowBlur = 14;
-      ctx.shadowColor = `hsl(${r.hue},100%,85%)`;
-      ctx.fillStyle = "#fff";
-      ctx.globalAlpha = 0.95;
-      ctx.beginPath();
-      ctx.arc(r.x, r.y, 3, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
+      // — Particles —
+      const liveParticles: Particle[] = [];
+      for (const p of particles.current) {
+        p.vy += GRAVITY;
+        p.vx *= DRAG;
+        p.vy *= DRAG;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= p.decay;
+        if (p.alpha <= 0) continue;
 
-      if (r.y <= r.peakY) {
-        burst(r, particles.current);
+        // Glitter: fast twinkle via sine on time
+        const a = p.glitter
+          ? p.alpha * (0.4 + 0.6 * Math.abs(Math.sin(Date.now() * 0.015 + p.x)))
+          : p.alpha;
+
+        // Outer glow
+        ctx.save();
+        ctx.globalAlpha = a * 0.25;
+        ctx.fillStyle = `hsl(${p.hue},100%,65%)`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * 2.8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Bright core
+        ctx.globalAlpha = a;
+        ctx.fillStyle = `hsl(${p.hue},100%,82%)`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
+        liveParticles.push(p);
+      }
+      particles.current = liveParticles;
+
+      if (rockets.current.length > 0 || particles.current.length > 0) {
+        rafRef.current = requestAnimationFrame(frame);
       } else {
-        liveRockets.push(r);
+        canvasRef.current?.remove();
+        canvasRef.current = null;
+        running.current = false;
       }
-    }
-    rockets.current = liveRockets;
-
-    // — Particles —
-    const liveParticles: Particle[] = [];
-    for (const p of particles.current) {
-      p.vy += GRAVITY;
-      p.vx *= DRAG;
-      p.vy *= DRAG;
-      p.x += p.vx;
-      p.y += p.vy;
-      p.alpha -= p.decay;
-      if (p.alpha <= 0) continue;
-
-      // Glitter: fast twinkle via sine on time
-      const a = p.glitter
-        ? p.alpha * (0.4 + 0.6 * Math.abs(Math.sin(Date.now() * 0.015 + p.x)))
-        : p.alpha;
-
-      // Outer glow
-      ctx.save();
-      ctx.globalAlpha = a * 0.25;
-      ctx.fillStyle = `hsl(${p.hue},100%,65%)`;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size * 2.8, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Bright core
-      ctx.globalAlpha = a;
-      ctx.fillStyle = `hsl(${p.hue},100%,82%)`;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-
-      liveParticles.push(p);
-    }
-    particles.current = liveParticles;
-
-    if (rockets.current.length > 0 || particles.current.length > 0) {
-      rafRef.current = requestAnimationFrame(animate);
-    } else {
-      canvasRef.current?.remove();
-      canvasRef.current = null;
-      running.current = false;
-    }
+    };
+    frame();
   }, []);
 
   const fire = useCallback(() => {

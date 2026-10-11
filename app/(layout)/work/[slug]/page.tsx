@@ -115,30 +115,27 @@ export default async function CaseStudyPage({
       <TOC headings={headings} />
 
       <div className="prose prose-neutral dark:prose-invert max-w-none">
-        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         <MDXRemote
           source={content}
           components={{ Mermaid: MermaidDiagramDynamic }}
-          options={
-            {
-              mdxOptions: {
-                remarkPlugins: [remarkGfm, remarkMermaid],
-                rehypePlugins: [
-                  rehypeSlug,
-                  [rehypeAutolinkHeadings, { behavior: "wrap" }],
-                  [
-                    rehypePrettyCode,
-                    {
-                      themes: {
-                        light: "github-light",
-                        dark: "github-dark",
-                      },
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm, remarkMermaid],
+              rehypePlugins: [
+                rehypeSlug,
+                [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                [
+                  rehypePrettyCode,
+                  {
+                    themes: {
+                      light: "github-light",
+                      dark: "github-dark",
                     },
-                  ],
+                  },
                 ],
-              },
-            } as any
-          }
+              ],
+            },
+          }}
         />
       </div>
     </article>

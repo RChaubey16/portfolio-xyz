@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Git worktrees carry their own .next/ build output, which exhausts memory
+    ".worktrees/**",
   ]),
 ]);
 

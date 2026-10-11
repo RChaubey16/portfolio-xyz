@@ -13,7 +13,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import configData from "../../data/newConfig.json";
+import configData from "../../data/config.json";
 
 const socialIcons = {
   LinkedIn: <FaLinkedinIn className="size-4" />,

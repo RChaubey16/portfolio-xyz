@@ -1,297 +1,32 @@
 {
-  "nav": {
-    "portfolio_github_repo": "https://github.com/RChaubey16/ruturaj-xyz"
-  },
-  "tech": [
+  "name": "Ruturaj Chaubey",
+  "description": [
+    "Full Stack Engineer with 3+ years of experience building high-performance, decoupled web platforms.",
+    "At QED42, he architects headless Drupal and Next.js solutions for enterprise clients including UNICEF and US-based organisations.",
+    "Beyond client work, he's an active Drupal community speaker and open source contributor based in Pune, India."
+  ],
+  "avatarImageUrl": "/images/me.jpeg",
+  "avatarImageAltText": "Ruturaj Chaubey",
+  "socials": [
     {
-      "id": "typescript",
-      "tech": "TypeScript",
-      "techHref": "https://www.typescriptlang.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
-      },
-      "imageAltText": "TypeScript logo"
+      "name": "GitHub",
+      "tooltip": "GitHub",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-github"
     },
     {
-      "id": "javascript",
-      "tech": "JavaScript",
-      "techHref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/JavaScript.svg"
-      },
-      "imageAltText": "JavaScript logo"
+      "name": "LinkedIn",
+      "tooltip": "LinkedIn",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-linkedin"
     },
     {
-      "id": "go",
-      "tech": "Go",
-      "techHref": "https://go.dev",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Go.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Go.svg"
-      },
-      "imageAltText": "Go lang logo"
+      "name": "Twitter",
+      "tooltip": "X (Twitter)",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-x"
     },
     {
-      "id": "python",
-      "tech": "Python",
-      "techHref": "https://www.python.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Python.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Python.svg"
-      },
-      "imageAltText": "Python logo"
-    },
-    {
-      "id": "php",
-      "tech": "PHP",
-      "techHref": "https://www.php.net",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
-      },
-      "imageAltText": "PHP logo"
-    },
-    {
-      "id": "fast-api",
-      "tech": "Fast API",
-      "techHref": "https://fastapi.tiangolo.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
-      },
-      "imageAltText": "Fast API logo"
-    },
-    {
-      "id": "nodejs",
-      "tech": "Node.js",
-      "techHref": "https://nodejs.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Node.js.svg"
-      },
-      "imageAltText": "Node.js logo"
-    },
-    {
-      "id": "nextjs",
-      "tech": "Next.js",
-      "techHref": "https://nextjs.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-        "dark": "/images/tech/nextjs-dark-icon.png"
-      },
-      "imageAltText": "Next.js logo"
-    },
-    {
-      "id": "react",
-      "tech": "React",
-      "techHref": "https://react.dev",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/React.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
-      },
-      "imageAltText": "React logo"
-    },
-    {
-      "id": "gatsby",
-      "tech": "Gatsby",
-      "techHref": "https://www.gatsbyjs.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
-      },
-      "imageAltText": "Gatsby logo"
-    },
-    {
-      "id": "tailwindcss",
-      "tech": "Tailwind CSS",
-      "techHref": "https://tailwindcss.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
-      },
-      "imageAltText": "Tailwind CSS logo"
-    },
-    {
-      "id": "sass-lang",
-      "tech": "Sass",
-      "techHref": "https://sass-lang.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Sass.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Sass.svg"
-      },
-      "imageAltText": "Sass logo"
-    },
-    {
-      "id": "shadcnui",
-      "tech": "Shadcn UI",
-      "techHref": "https://ui.shadcn.com",
-      "imageUrl": {
-        "light": "/images/tech/shadcn-light-icon.png",
-        "dark": "/images/tech/shadcn-dark-icon.png"
-      },
-      "imageAltText": "Shadcn UI logo"
-    },
-    {
-      "id": "redux",
-      "tech": "Redux",
-      "techHref": "https://redux.js.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Redux.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Redux.svg"
-      },
-      "imageAltText": "Redux logo"
-    },
-    {
-      "id": "graphql",
-      "tech": "GraphQL",
-      "techHref": "https://graphql.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
-      },
-      "imageAltText": "GraphQL logo"
-    },
-    {
-      "id": "mysql",
-      "tech": "MySQL",
-      "techHref": "https://www.mysql.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
-      },
-      "imageAltText": "MySQL logo"
-    },
-    {
-      "id": "postgresql",
-      "tech": "PostgreSQL",
-      "techHref": "https://www.postgresql.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
-      },
-      "imageAltText": "PostgreSQL logo"
-    },
-    {
-      "id": "mongodb",
-      "tech": "MongoDB",
-      "techHref": "https://www.mongodb.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/MongoDB.svg"
-      },
-      "imageAltText": "MongoDB logo"
-    },
-    {
-      "id": "supabase",
-      "tech": "Supabase",
-      "techHref": "https://supabase.com",
-      "imageUrl": {
-        "light": "/images/tech/supabase-icon.png",
-        "dark": "/images/tech/supabase-icon.png"
-      },
-      "imageAltText": "Supabase logo"
-    },
-    {
-      "id": "drupal",
-      "tech": "Drupal",
-      "techHref": "https://www.drupal.org",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
-      },
-      "imageAltText": "Drupal logo"
-    },
-    {
-      "id": "tanstack",
-      "tech": "Tanstack Start",
-      "techHref": "https://tanstack.com/",
-      "imageUrl": {
-        "light": "https://tanstack.com/images/logos/logo-color-100.png",
-        "dark": "https://tanstack.com/images/logos/logo-color-100.png"
-      },
-      "imageAltText": "Tanstack start logo"
-    },
-    {
-      "id": "sanity",
-      "tech": "Sanity",
-      "techHref": "https://www.sanity.io",
-      "imageUrl": {
-        "light": "/images/tech/sanity-icon.png",
-        "dark": "/images/tech/sanity-icon.png"
-      },
-      "imageAltText": "Sanity logo"
-    },
-    {
-      "id": "docker",
-      "tech": "Docker",
-      "techHref": "https://www.docker.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
-      },
-      "imageAltText": "Docker logo"
-    },
-    {
-      "id": "git",
-      "tech": "Git",
-      "techHref": "https://git-scm.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Git.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Git.svg"
-      },
-      "imageAltText": "Git logo"
-    },
-    {
-      "id": "postman",
-      "tech": "Postman",
-      "techHref": "https://postman.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Postman.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Postman.svg"
-      },
-      "imageAltText": "Postman logo"
-    },
-    {
-      "id": "figma",
-      "tech": "Figma",
-      "techHref": "https://www.figma.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
-      },
-      "imageAltText": "Figma logo"
-    },
-    {
-      "id": "vercel",
-      "tech": "Vercel",
-      "techHref": "https://www.vercel.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
-        "dark": "/images/tech/vercel-light.png"
-      },
-      "imageAltText": "Vercel logo"
-    },
-    {
-      "id": "cloudflare",
-      "tech": "Cloudflare",
-      "techHref": "https://www.cloudflare.com",
-      "imageUrl": {
-        "light": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
-        "dark": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
-      },
-      "imageAltText": "Cloudflare logo"
-    },
-    {
-      "id": "claude",
-      "tech": "Claude",
-      "techHref": "https://claude.ai",
-      "imageUrl": {
-        "light": "/images/tech/claude-icon.png",
-        "dark": "/images/tech/claude-icon.png"
-      },
-      "imageAltText": "Claude logo"
+      "name": "Drupal",
+      "tooltip": "Drupal",
+      "href": "https://atlas.ruturaj.xyz/s/ruturaj-drupal"
     }
   ],
   "experience": {
@@ -305,77 +40,112 @@
       ],
       "tech": [
         {
-          "name": "Next.js",
-          "href": "https://nextjs.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-          "darkLogoSrc": "/images/tech/nextjs-dark-icon.png"
+          "tech": "Next.js",
+          "techHref": "https://nextjs.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
         },
         {
-          "name": "Tailwind CSS",
-          "href": "https://tailwindcss.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
         },
         {
-          "id": "sass-lang",
-          "name": "Sass",
-          "href": "https://sass-lang.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Sass.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Sass.svg"
+          "tech": "Sass",
+          "techHref": "https://sass-lang.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Sass.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Sass.svg"
+          },
+          "imageAltText": "Sass logo"
         },
         {
-          "name": "Drupal",
-          "href": "https://www.drupal.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+          "tech": "Drupal",
+          "techHref": "https://www.drupal.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+          },
+          "imageAltText": "Drupal logo"
         },
         {
-          "name": "PHP",
-          "href": "https://www.php.net",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+          "tech": "PHP",
+          "techHref": "https://www.php.net",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+          },
+          "imageAltText": "PHP logo"
         },
         {
-          "name": "Fast API",
-          "href": "https://fastapi.tiangolo.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
+          "tech": "Fast API",
+          "techHref": "https://fastapi.tiangolo.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/FastAPI.svg"
+          },
+          "imageAltText": "Fast API logo"
         },
         {
-          "name": "Python",
-          "href": "https://www.python.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Python.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Python.svg"
+          "tech": "Python",
+          "techHref": "https://www.python.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Python.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Python.svg"
+          },
+          "imageAltText": "Python logo"
         },
         {
-          "name": "Supabase",
-          "href": "https://supabase.com",
-          "logoSrc": "/images/tech/supabase-icon.png",
-          "darkLogoSrc": "/images/tech/supabase-icon.png"
+          "tech": "Supabase",
+          "techHref": "https://supabase.com",
+          "imageUrl": {
+            "light": "/icons/tech/supabase.svg",
+            "dark": "/icons/tech/supabase.svg"
+          },
+          "imageAltText": "Supabase logo"
         },
         {
-          "name": "Postman",
-          "href": "https://postman.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Postman.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Postman.svg"
+          "tech": "Postman",
+          "techHref": "https://postman.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Postman.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Postman.svg"
+          },
+          "imageAltText": "Postman logo"
         },
         {
-          "name": "Figma",
-          "href": "https://www.figma.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+          "tech": "Figma",
+          "techHref": "https://www.figma.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+          },
+          "imageAltText": "Figma logo"
         },
         {
-          "name": "Cloudflare",
-          "href": "https://www.cloudflare.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+          "tech": "Cloudflare",
+          "techHref": "https://www.cloudflare.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+          },
+          "imageAltText": "Cloudflare logo"
         },
         {
-          "name": "Vercel",
-          "href": "https://www.vercel.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
-          "darkLogoSrc": "/images/tech/vercel-light.png"
+          "tech": "Vercel",
+          "techHref": "https://www.vercel.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+            "dark": "/icons/tech/vercel-light.png"
+          },
+          "imageAltText": "Vercel logo"
         }
       ]
     },
@@ -388,58 +158,85 @@
       ],
       "tech": [
         {
-          "name": "React",
-          "href": "https://react.dev",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/React.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/React.svg"
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
         },
         {
-          "name": "Redux",
-          "href": "https://redux.js.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Redux.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Redux.svg"
+          "tech": "Redux",
+          "techHref": "https://redux.js.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Redux.svg"
+          },
+          "imageAltText": "Redux logo"
         },
         {
-          "name": "Gatsby",
-          "href": "https://www.gatsbyjs.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
+          "tech": "Gatsby",
+          "techHref": "https://www.gatsbyjs.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Gatsby.svg"
+          },
+          "imageAltText": "Gatsby logo"
         },
         {
-          "name": "Tailwind CSS",
-          "href": "https://tailwindcss.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          "tech": "Tailwind CSS",
+          "techHref": "https://tailwindcss.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
         },
         {
-          "name": "Drupal",
-          "href": "https://www.drupal.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+          "tech": "Drupal",
+          "techHref": "https://www.drupal.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+          },
+          "imageAltText": "Drupal logo"
         },
         {
-          "name": "PHP",
-          "href": "https://www.php.net",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+          "tech": "PHP",
+          "techHref": "https://www.php.net",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+          },
+          "imageAltText": "PHP logo"
         },
         {
-          "name": "MySQL",
-          "href": "https://www.mysql.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
+          "tech": "MySQL",
+          "techHref": "https://www.mysql.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/MySQL.svg"
+          },
+          "imageAltText": "MySQL logo"
         },
         {
-          "name": "GraphQL",
-          "href": "https://graphql.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
+          "tech": "GraphQL",
+          "techHref": "https://graphql.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/GraphQL.svg"
+          },
+          "imageAltText": "GraphQL logo"
         },
         {
-          "name": "Figma",
-          "href": "https://www.figma.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+          "tech": "Figma",
+          "techHref": "https://www.figma.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+          },
+          "imageAltText": "Figma logo"
         }
       ]
     },
@@ -451,86 +248,701 @@
       ],
       "tech": [
         {
-          "name": "Drupal",
-          "href": "https://www.drupal.org",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+          "tech": "Drupal",
+          "techHref": "https://www.drupal.org",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
+          },
+          "imageAltText": "Drupal logo"
         },
         {
-          "name": "PHP",
-          "href": "https://www.php.net",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+          "tech": "PHP",
+          "techHref": "https://www.php.net",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PHP.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PHP.svg"
+          },
+          "imageAltText": "PHP logo"
         },
         {
-          "name": "React",
-          "href": "https://react.dev",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/React.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/React.svg"
+          "tech": "React",
+          "techHref": "https://react.dev",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
         },
         {
-          "name": "Figma",
-          "href": "https://www.figma.com",
-          "logoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg",
-          "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+          "tech": "Figma",
+          "techHref": "https://www.figma.com",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Figma.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Figma.svg"
+          },
+          "imageAltText": "Figma logo"
         }
       ]
     }
   },
-  "profile": {
-    "name": "Ruturaj",
-    "nameInMorseCode": ".-. ..- - ..- .-. .- .---",
-    "socials": [
-      {
-        "name": "GitHub",
-        "href": "https://github.com/RChaubey16",
-        "logoSrc": "/images/socials/github-logo.png",
-        "darkLogoSrc": "/images/socials/github-logo.png"
+  "talks": [
+    {
+      "id": "talk-5",
+      "title": "Inside Drupal CMS 2.0: Visual Building, AI, and Site Templates",
+      "event": "Drupal Pune Meetup",
+      "date": "2026-02-21",
+      "description": "Drupal CMS 2.0 introduces visual building, built-in AI, and ready-to-use site templates. A live walkthrough showing what these features mean for developers, content teams, and digital organizations.",
+      "link": "https://www.drupal.org/community/events/drupal-pune-meetup-february-21-2026-2026-06-21"
+    },
+    {
+      "id": "talk-3",
+      "title": "Everything AI in Drupal: Past, Present, and What's Next",
+      "event": "DrupalCamp Pune 2025",
+      "date": "2025-09-13",
+      "description": "A look at how AI has evolved within the Drupal ecosystem — from early integrations to the Drupal AI module. Covers where the project stands today and what the community can expect next.",
+      "link": "https://www.drupal.org/community/events/drupalcamp-pune-2025-2025-09-13"
+    },
+    {
+      "id": "talk-4",
+      "title": "From Static to Dynamic: Next.js Rendering Patterns with Drupal CMS",
+      "event": "DrupalCamp Pune 2025",
+      "date": "2025-09-13",
+      "description": "The Next.js App Router offers SSR, SSG, and ISR — but which fits which content type? Explores how to pair each rendering strategy with Drupal's content model when building a headless site.",
+      "link": "https://www.drupal.org/community/events/drupalcamp-pune-2025-2025-09-13"
+    },
+    {
+      "id": "talk-2",
+      "title": "All about Drupal CMS",
+      "event": "Pune Drupal CMS Launch Party",
+      "date": "2025-01-15",
+      "description": "A first look at Drupal CMS 1.0, built on Drupal core. Covers what it is, who it's for, and how it simplifies site building for editors and developers.",
+      "link": "https://www.drupal.org/community/events/pune-drupal-cms-launch-party-2025-01-15"
+    },
+    {
+      "id": "talk-1",
+      "title": "Transforming Experiences: A Guide to Transform API and Decoupled Layout Builder in Drupal",
+      "event": "Drupal Pune Meetup",
+      "date": "2023-12-16",
+      "description": "The Transform API bridges Drupal's content and frontend frameworks in headless architectures. Explores how it delivers structured JSON and handles responsive images for better performance on decoupled sites.",
+      "link": "https://www.drupal.org/community/events/drupal-pune-december23-meetup-2023-12-16"
+    }
+  ],
+  "projects": [
+    {
+      "id": "neuron",
+      "image": {
+        "src": "/images/projects/neuron.png",
+        "alt": "Neuron shared backend services platform dashboard"
       },
-      {
-        "name": "LinkedIn",
-        "href": "https://www.linkedin.com/in/ruturaj-chaubey-b453b41b1",
-        "logoSrc": "/images/socials/linkedin-logo.png",
-        "darkLogoSrc": "/images/socials/linkedin-logo.png"
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
       },
-      {
-        "name": "X (Twitter)",
-        "href": "https://x.com/RChaubey16",
-        "logoSrc": "/images/socials/x-logo.png",
-        "darkLogoSrc": "/images/socials/x-logo.png"
+      "title": "Neuron",
+      "description": "A shared backend platform that exposes reusable services — a URL shortener and queued email notifications with templates — behind a single API key. Includes a dashboard with Google sign-in for managing keys, using services directly, and tracking per-key usage analytics.",
+      "techStack": [
+        {
+          "id": "nestjs",
+          "tech": "NestJS",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Nest.js.svg"
+          },
+          "imageAltText": "NestJS logo"
+        },
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "prisma",
+          "tech": "Prisma",
+          "imageUrl": {
+            "light": "/icons/tech/prisma.svg",
+            "dark": "/icons/tech/prisma-white.svg"
+          },
+          "imageAltText": "Prisma logo"
+        },
+        {
+          "id": "supabase",
+          "tech": "Supabase",
+          "imageUrl": {
+            "light": "/icons/tech/supabase.svg",
+            "dark": "/icons/tech/supabase.svg"
+          },
+          "imageAltText": "Supabase logo"
+        },
+        {
+          "id": "redis",
+          "tech": "Redis",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Redis.svg"
+          },
+          "imageAltText": "Redis logo"
+        },
+        {
+          "id": "resend",
+          "tech": "Resend",
+          "imageUrl": {
+            "light": "/icons/tech/resend.svg",
+            "dark": "/icons/tech/resend-white.svg"
+          },
+          "imageAltText": "Resend logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        },
+        {
+          "id": "docker",
+          "tech": "Docker",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Docker.svg"
+          },
+          "imageAltText": "Docker logo"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://github.com/RChaubey16/neuron",
+          "icon": "GithubIcon"
+        },
+        {
+          "href": "https://neuron.ruturaj.xyz/",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "image": {
+        "src": "/images/projects/echo.png",
+        "alt": "Echo private quote and reflection library"
       },
-      {
-        "name": "Drupal",
-        "href": "https://www.drupal.org/u/ruturaj-chaubey",
-        "logoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-        "darkLogoSrc": "https://icon.icepanel.io/Technology/svg/Drupal.svg"
-      }
-    ],
-    "techStacks": [
-      {
-        "name": "TypeScript",
-        "href": "https://www.typescriptlang.org"
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
       },
-      {
-        "name": "Next.js",
-        "href": "https://nextjs.org"
+      "title": "Echo",
+      "description": "A private library for the quotes that stay with you, and what they meant to you at the time. Save a quote in seconds with quick capture, add a reflection, and organize with tags, collections and favorites. Full-text search finds anything, and Today's Echo, 'Echo me something' and scheduled Revisits bring quotes back over time. Google sign-in only, every request checked for ownership, and JSON/CSV export so your data stays yours.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "postgresql",
+          "tech": "PostgreSQL",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
+          },
+          "imageAltText": "PostgreSQL logo"
+        },
+        {
+          "id": "prisma",
+          "tech": "Prisma",
+          "imageUrl": {
+            "light": "/icons/tech/prisma.svg",
+            "dark": "/icons/tech/prisma-white.svg"
+          },
+          "imageAltText": "Prisma logo"
+        },
+        {
+          "id": "supabase",
+          "tech": "Supabase",
+          "imageUrl": {
+            "light": "/icons/tech/supabase.svg",
+            "dark": "/icons/tech/supabase.svg"
+          },
+          "imageAltText": "Supabase logo"
+        },
+        {
+          "id": "redis",
+          "tech": "Upstash Redis",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Redis.svg"
+          },
+          "imageAltText": "Redis logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        },
+        {
+          "id": "vercel",
+          "tech": "Vercel",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+            "dark": "/icons/tech/vercel-light.png"
+          },
+          "imageAltText": "Vercel logo"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://github.com/RChaubey16/echo",
+          "icon": "GithubIcon"
+        },
+        {
+          "href": "https://echo.ruturaj.xyz/",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
+      "id": "roast-my-drupal",
+      "image": {
+        "src": "/images/projects/roast-my-drupal.png",
+        "alt": "Roast My Drupal app showing a streamed roast and a contribution stats card"
       },
-      {
-        "name": "React",
-        "href": "https://react.dev"
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
       },
-      {
-        "name": "Go",
-        "href": "https://go.dev"
+      "title": "Roast My Drupal",
+      "description": "Paste a drupal.org username or profile URL and get roasted by an LLM using only your public Drupal activity: bio, badges, maintained projects (with release and issue health), and contribution stats. Pick a comedic persona like Chandler Bing or Gordon Ramsay. A single Next.js API route scrapes, parses, caches, and streams the roast from Gemini, with a live stats card alongside.",
+      "techStack": [
+        {
+          "id": "nextjs",
+          "tech": "Next.js",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+            "dark": "/icons/tech/nextjs-dark-icon.png"
+          },
+          "imageAltText": "Next.js logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "react",
+          "tech": "React",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "vercel-ai-sdk",
+          "tech": "Vercel AI SDK",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+            "dark": "/icons/tech/vercel-light.png"
+          },
+          "imageAltText": "Vercel logo"
+        },
+        {
+          "id": "gemini",
+          "tech": "Gemini",
+          "imageUrl": {
+            "light": "/icons/tech/gemini-icon.png",
+            "dark": "/icons/tech/gemini-icon.png"
+          },
+          "imageAltText": "Google Gemini logo"
+        },
+        {
+          "id": "cheerio",
+          "tech": "Cheerio",
+          "imageUrl": {
+            "light": "/icons/tech/cheerio.svg",
+            "dark": "/icons/tech/cheerio.svg"
+          },
+          "imageAltText": "Cheerio logo"
+        },
+        {
+          "id": "vercel-kv",
+          "tech": "Vercel KV",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+            "dark": "/icons/tech/vercel-light.png"
+          },
+          "imageAltText": "Vercel KV logo"
+        },
+        {
+          "id": "vitest",
+          "tech": "Vitest",
+          "imageUrl": {
+            "light": "/icons/tech/vitest.svg",
+            "dark": "/icons/tech/vitest.svg"
+          },
+          "imageAltText": "Vitest logo"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://github.com/RChaubey16/roast-my-drupal",
+          "icon": "GithubIcon"
+        },
+        {
+          "href": "https://roast-my-drupal.vercel.app/",
+          "icon": "Globe"
+        }
+      ]
+    },
+    {
+      "id": "what-the-hex",
+      "image": {
+        "src": "/images/projects/what-the-hex.png",
+        "alt": "What the hex color lookup tool"
       },
-      {
-        "name": "Node.js",
-        "href": "https://nodejs.org"
+      "status": {
+        "text": "All Systems Running",
+        "className": "status-live"
       },
-      {
-        "name": "Drupal",
-        "href": "https://www.drupal.org"
-      }
-    ]
-  }
+      "title": "What the Hex",
+      "description": "A fast, minimal color lookup tool for developers and designers. Paste a hex code, get the color name, preview, and ready-to-use CSS/SCSS variables — all in one place.",
+      "techStack": [
+        {
+          "id": "react",
+          "tech": "React",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/React.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/React.svg"
+          },
+          "imageAltText": "React logo"
+        },
+        {
+          "id": "typescript",
+          "tech": "TypeScript",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          },
+          "imageAltText": "TypeScript logo"
+        },
+        {
+          "id": "tailwindcss",
+          "tech": "Tailwind CSS",
+          "imageUrl": {
+            "light": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+            "dark": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          },
+          "imageAltText": "Tailwind CSS logo"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://github.com/RChaubey16/what-the-hex",
+          "icon": "GithubIcon"
+        },
+        {
+          "href": "https://what-the-hex.ruturaj.xyz",
+          "icon": "Globe"
+        }
+      ]
+    }
+  ],
+  "movies": [
+    {
+      "name": "The Lord of the Rings Trilogy",
+      "link": "https://www.google.com/search?q=The+Lord+of+the+Rings+Trilogy",
+      "image": "https://i.pinimg.com/736x/6e/2c/cd/6e2ccd0316a3a72e38f2ee0711331582.jpg"
+    },
+    {
+      "name": "Interstellar",
+      "link": "https://www.google.com/search?q=Interstellar+movie",
+      "image": "https://i.pinimg.com/1200x/53/90/43/539043631c7bdee39d16fe326897df6e.jpg"
+    },
+    {
+      "name": "Inception",
+      "link": "https://www.google.com/search?q=Inception+movie",
+      "image": "https://i.pinimg.com/1200x/b0/ae/a4/b0aea49646879a043ad9f6ec3002e99f.jpg"
+    },
+    {
+      "name": "Tenet",
+      "link": "https://www.google.com/search?q=Tenet+movie",
+      "image": "https://i.pinimg.com/736x/7e/76/4d/7e764df7635361b6ba94799a3547b6e1.jpg"
+    },
+    {
+      "name": "Oppenheimer",
+      "link": "https://www.google.com/search?q=Oppenheimer+movie",
+      "image": "https://i.pinimg.com/736x/06/c8/70/06c87059cd71c7b46d8d5e25d8aab08b.jpg"
+    },
+    {
+      "name": "Dunkirk",
+      "link": "https://www.google.com/search?q=Dunkirk+movie",
+      "image": "https://i.pinimg.com/736x/00/85/c5/0085c5fd13dfb88affacf94850419e5e.jpg"
+    },
+    {
+      "name": "The Dark Knight",
+      "link": "https://www.google.com/search?q=The+Dark+Knight+movie",
+      "image": "https://i.pinimg.com/736x/55/32/f3/5532f3932ea8d07ce83d745ce7c902cc.jpg"
+    },
+    {
+      "name": "Blade Runner 2049",
+      "link": "https://www.google.com/search?q=Blade+Runner+2049+movie",
+      "image": "https://i.pinimg.com/1200x/61/87/3e/61873ecfcef410b389d4629e87165001.jpg"
+    },
+    {
+      "name": "The Hobbit Trilogy",
+      "link": "https://www.google.com/search?q=The+Hobbit+Trilogy",
+      "image": "https://i.pinimg.com/1200x/67/24/0d/67240d3c1b98855b749e0a88de2475d5.jpg"
+    },
+    {
+      "name": "Dune",
+      "link": "https://www.google.com/search?q=Dune+movie",
+      "image": "https://i.pinimg.com/736x/ed/33/3b/ed333b5fdcc6535f28277e1c43ff808c.jpg"
+    },
+    {
+      "name": "The Wolf of Wall Street",
+      "link": "https://www.google.com/search?q=The+Wolf+of+Wall+Street+movie",
+      "image": "https://i.pinimg.com/1200x/e4/f7/36/e4f736f717cf4c7737f698c2d8ff117d.jpg"
+    },
+    {
+      "name": "The Big Short",
+      "link": "https://www.google.com/search?q=The+Big+Short+movie",
+      "image": "https://i.pinimg.com/1200x/87/2c/18/872c1894333f54d8b9331759af0fff7c.jpg"
+    },
+    {
+      "name": "The Secret Life of Walter Mitty",
+      "link": "https://www.google.com/search?q=The+Secret+Life+of+Walter+Mitty+movie",
+      "image": "https://i.pinimg.com/736x/89/7a/6a/897a6afc3197a04cb0fd10501010bcbb.jpg"
+    },
+    {
+      "name": "Into the Wild",
+      "link": "https://www.google.com/search?q=Into+the+Wild+movie",
+      "image": "https://i.pinimg.com/736x/02/22/59/022259c5b4d01c28ec16c24f0df60630.jpg"
+    },
+    {
+      "name": "La La Land",
+      "link": "https://www.google.com/search?q=La+La+Land+movie",
+      "image": "https://i.pinimg.com/1200x/b9/f8/23/b9f823d090d87982d232af65585e90dc.jpg"
+    },
+    {
+      "name": "About Time",
+      "link": "https://www.google.com/search?q=About+Time+movie",
+      "image": "https://i.pinimg.com/736x/81/38/85/8138854606a0f155c299b34fd4ea661f.jpg"
+    },
+    {
+      "name": "The Amazing Spider-Man 2",
+      "link": "https://www.google.com/search?q=The+Amazing+Spider-Man+2+movie",
+      "image": "https://i.pinimg.com/736x/a3/31/1b/a3311b2dd8d50d2bac220cda073e7a97.jpg"
+    },
+    {
+      "name": "F1",
+      "link": "https://www.google.com/search?q=F1+movie+2025",
+      "image": "https://i.pinimg.com/736x/62/de/93/62de93a1f5c05e5df63501eb069f2b68.jpg"
+    },
+    {
+      "name": "One Battle After Another",
+      "link": "https://www.google.com/search?q=One+Battle+After+Another+movie",
+      "image": "https://i.pinimg.com/1200x/fb/a4/2e/fba42e4c06a1d48a6413e9e4e64829ea.jpg"
+    }
+  ],
+  "tvSeries": [
+    {
+      "name": "Breaking Bad",
+      "link": "https://www.google.com/search?q=Breaking+Bad+TV+series",
+      "image": "https://i.pinimg.com/736x/8a/92/16/8a9216d301c8ff9f7a5f7624b9202339.jpg"
+    },
+    {
+      "name": "Peaky Blinders",
+      "link": "https://www.google.com/search?q=Peaky+Blinders+TV+series",
+      "image": "https://i.pinimg.com/1200x/70/84/56/708456ca0b2beb8930c84598918e448d.jpg"
+    },
+    {
+      "name": "Chernobyl",
+      "link": "https://www.google.com/search?q=Chernobyl+TV+series",
+      "image": "https://i.pinimg.com/1200x/7d/56/da/7d56da70893be8179a3da8c7729498c0.jpg"
+    },
+    {
+      "name": "The Queen's Gambit",
+      "link": "https://www.google.com/search?q=The+Queen%27s+Gambit+TV+series",
+      "image": "https://i.pinimg.com/1200x/e7/5c/af/e75caf1e3ba200afc7d2854bc1b1d8b1.jpg"
+    },
+    {
+      "name": "The Last of Us",
+      "link": "https://www.google.com/search?q=The+Last+of+Us+TV+series",
+      "image": "https://i.pinimg.com/1200x/9f/a0/d2/9fa0d216e7329f669cf15f33fcaa7223.jpg"
+    },
+    {
+      "name": "The Last Dance",
+      "link": "https://www.google.com/search?q=The+Last+Dance+TV+series",
+      "image": "https://i.pinimg.com/736x/c3/76/2b/c3762b3b7f9dd4cfc25ec8ec236b5002.jpg"
+    },
+    {
+      "name": "Drive to Survive",
+      "link": "https://www.google.com/search?q=Drive+to+Survive+TV+series",
+      "image": "https://i.pinimg.com/1200x/52/53/3d/52533dfdfec3718040ad727834e8637d.jpg"
+    },
+    {
+      "name": "Normal People",
+      "link": "https://www.google.com/search?q=Normal+People+TV+series",
+      "image": "https://i.pinimg.com/736x/14/33/b0/1433b059d08890dc1e64065a6b34d9aa.jpg"
+    },
+    {
+      "name": "Friends",
+      "link": "https://www.google.com/search?q=Friends+TV+series",
+      "image": "https://i.pinimg.com/736x/91/05/dd/9105dd82294edb89b65568defa44af9d.jpg"
+    },
+    {
+      "name": "How I Met Your Mother",
+      "link": "https://www.google.com/search?q=How+I+Met+Your+Mother+TV+series",
+      "image": "https://i.pinimg.com/1200x/e6/09/34/e6093422564ff35932aa72a2e66f631d.jpg"
+    },
+    {
+      "name": "The Big Bang Theory",
+      "link": "https://www.google.com/search?q=The+Big+Bang+Theory+TV+series",
+      "image": "https://i.pinimg.com/1200x/c3/10/36/c31036d4852b80722934a83d18602987.jpg"
+    },
+    {
+      "name": "Modern Family",
+      "link": "https://www.google.com/search?q=Modern+Family+TV+series",
+      "image": "https://i.pinimg.com/1200x/25/50/08/255008f8ac6d0433e72facb00378f5f1.jpg"
+    },
+    {
+      "name": "The Ranch",
+      "link": "https://www.google.com/search?q=The+Ranch+TV+series",
+      "image": "https://i.pinimg.com/1200x/af/29/77/af2977e76fd502e5c4c3a0e7ef30b707.jpg"
+    }
+  ],
+  "gears": [
+    {
+      "name": "MacBook Air M2",
+      "description": "Primary development machine",
+      "link": "https://www.amazon.com/s?k=MacBook+Air+M2",
+      "category": "hardware"
+    },
+    {
+      "name": "Lenovo ThinkPad E14",
+      "description": "Secondary laptop",
+      "link": "https://www.amazon.com/s?k=Lenovo+ThinkPad+E14",
+      "category": "hardware"
+    },
+    {
+      "name": "LG Ultrawide 34WN780",
+      "description": "34\" ultrawide monitor",
+      "link": "https://www.amazon.com/s?k=LG+34WN780+Ultrawide+Monitor",
+      "category": "hardware"
+    },
+    {
+      "name": "Logitech K380 Keyboard",
+      "description": "Compact multi-device wireless keyboard",
+      "link": "https://www.amazon.com/s?k=Logitech+K380+Keyboard",
+      "category": "hardware"
+    },
+    {
+      "name": "Logitech MX Master 3S",
+      "description": "Ergonomic wireless mouse",
+      "link": "https://www.amazon.com/s?k=Logitech+MX+Master+3S",
+      "category": "hardware"
+    },
+    {
+      "name": "iPhone 13",
+      "description": "Daily driver smartphone",
+      "link": "https://www.amazon.com/s?k=iPhone+13",
+      "category": "hardware"
+    },
+    {
+      "name": "Sony WH-CH520",
+      "description": "Wireless Bluetooth headphones",
+      "link": "https://www.amazon.com/s?k=Sony+WH-CH520",
+      "category": "hardware"
+    },
+    {
+      "name": "Oh My Zsh",
+      "description": "Terminal framework and shell customization",
+      "link": "https://ohmyz.sh",
+      "category": "software"
+    },
+    {
+      "name": "Antigravity IDE",
+      "description": "Primary code editor",
+      "link": "https://antigravity.google",
+      "category": "software"
+    },
+    {
+      "name": "Claude Code",
+      "description": "AI coding assistant",
+      "link": "https://claude.ai/code",
+      "category": "software"
+    },
+    {
+      "name": "Chrome & Brave",
+      "description": "Web browsers",
+      "link": "https://brave.com",
+      "category": "software"
+    },
+    {
+      "name": "Obsidian",
+      "description": "Note-taking and knowledge management",
+      "link": "https://obsidian.md",
+      "category": "software"
+    },
+    {
+      "name": "Spotify",
+      "description": "Music and podcasts",
+      "link": "https://spotify.com",
+      "category": "software"
+    }
+  ],
+  "footerImage": "/images/footer-cover.png"
 }

@@ -1,5 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
-import config from "@/data/newConfig.json";
+import config from "@/data/config.json";
 import { ProjectData } from "@/types/project";
 
 import ProjectCard from "./ProjectCard";
