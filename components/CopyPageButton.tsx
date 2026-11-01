@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 type CopyPageButtonProps = {
   markdown: string;
@@ -54,11 +55,51 @@ const CopyPageButton = ({ markdown, markdownPath }: CopyPageButtonProps) => {
         variant="outline"
         size="sm"
         onClick={copy}
-        className="rounded-r-none border-r-0 text-[13px] font-normal"
+        className="rounded-r-none border-r-0 px-2.5 text-[13px] font-normal"
       >
-        {copied ? <Check className="text-success" /> : <Copy />}
-        <span aria-live="polite">{copied ? "Copied" : "Copy page"}</span>
+        <span aria-hidden="true" className="grid *:[grid-area:1/1]">
+          <Copy
+            className={cn(
+              "transition-[opacity,scale,filter] duration-150 ease-(--ease-out-quint)",
+              copied
+                ? "scale-50 opacity-0 blur-[2px]"
+                : "scale-100 opacity-100 blur-none",
+            )}
+          />
+          <Check
+            className={cn(
+              "text-success transition-[opacity,scale,filter] duration-150 ease-(--ease-out-quint)",
+              copied
+                ? "scale-100 opacity-100 blur-none"
+                : "scale-50 opacity-0 blur-[2px]",
+            )}
+          />
+        </span>
+        <span className="grid *:[grid-area:1/1]">
+          <span
+            aria-hidden={copied}
+            className={cn(
+              "transition-opacity duration-150 ease-(--ease-out-quint)",
+              copied && "opacity-0",
+            )}
+          >
+            Copy page
+          </span>
+          <span
+            aria-hidden={!copied}
+            className={cn(
+              "transition-opacity duration-150 ease-(--ease-out-quint)",
+              !copied && "opacity-0",
+            )}
+          >
+            Copied
+          </span>
+        </span>
       </Button>
+      {/* Outside the button so it isn't folded into the button's accessible name */}
+      <span className="sr-only" aria-live="polite">
+        {copied ? "Copied to clipboard" : ""}
+      </span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
