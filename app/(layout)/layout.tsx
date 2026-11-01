@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
-import FooterFadeUp from "@/components/FooterFadeUp";
 import { MotionProvider } from "@/components/motion-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -177,9 +176,7 @@ export default function RootLayout({
               <main className="mx-auto mb-24 w-full max-w-2xl grow px-4 pt-10 md:px-0 md:pt-16">
                 {children}
               </main>
-              <FooterFadeUp>
-                <Footer />
-              </FooterFadeUp>
+              <Footer />
             </div>
           </MotionProvider>
         </ThemeProvider>

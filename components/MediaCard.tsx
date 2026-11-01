@@ -23,7 +23,7 @@ const MediaCard = ({ title, href, image }: MediaCardProps) => {
           alt={title}
           fill
           unoptimized
-          className="object-cover transition-transform duration-500 ease-(--ease-out-quint) group-hover:scale-[1.04]"
+          className="object-cover"
           sizes="(max-width: 672px) 50vw, 224px"
         />
       </div>

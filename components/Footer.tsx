@@ -32,13 +32,13 @@ const Footer = () => {
   const socials = config.socials;
   return (
     <footer className="mx-auto mb-10 w-full max-w-2xl px-4 md:px-0">
-      <div className="group bg-muted relative aspect-3/1 w-full overflow-hidden rounded-xl border">
+      <div className="bg-muted relative aspect-3/1 w-full overflow-hidden rounded-xl border">
         <Image
           src={footerImage}
           alt="Profile Cover"
           fill
           sizes="(max-width: 672px) 100vw, 672px"
-          className="object-cover transition-transform duration-700 ease-(--ease-out-quint) group-hover:scale-[1.02]"
+          className="object-cover"
         />
       </div>
       <nav aria-label="Site" className="mt-8">

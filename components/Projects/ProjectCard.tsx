@@ -105,7 +105,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             fill
             alt={image.alt}
             sizes="(max-width: 640px) 100vw, 208px"
-            className="object-cover object-top transition-transform duration-500 ease-(--ease-out-quint) group-hover:scale-[1.03]"
+            className="object-cover object-top"
           />
         </div>
       </div>

@@ -40,10 +40,7 @@ export function ExperienceAccordion({ accordionState = "closed" }) {
                       {role.company}
                       {role.current && (
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/15 px-2 py-0.5 text-xs font-medium text-green-700 dark:text-green-400">
-                          <span className="relative flex size-1.5">
-                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-500 opacity-75" />
-                            <span className="relative inline-flex size-1.5 rounded-full bg-green-500" />
-                          </span>
+                          <span className="inline-flex size-1.5 rounded-full bg-green-500" />
                           Working
                         </span>
                       )}
